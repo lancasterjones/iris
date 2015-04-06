@@ -52,13 +52,13 @@
 			Ventas de la Semana: 
 				<?php include 'includes/db_magento_connect.php';
 					$result = mysqli_query($connm,"SELECT 
-														sum(sales_flat_order.total_paid) Venta
-														,WEEK(sales_flat_order.created_at) Semana
-														,YEAR(sales_flat_order.created_at) Año
-													FROM shop_production.sales_flat_order sales_flat_order
-													WHERE sales_flat_order.status IN ('complete', 'processing')
-														AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
-													GROUP BY Semana");
+    sum(sales_flat_order.total_paid) Venta
+    ,WEEK(sales_flat_order.created_at) Semana
+    ,YEAR(sales_flat_order.created_at) Año
+  FROM shop_production.sales_flat_order sales_flat_order
+  WHERE     sales_flat_order.status IN ('complete', 'processing')
+    AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
+  GROUP BY Semana");
 					/*$venta = mysqli_fetch_row($mysqli_fetch_row($result);
 					$venta_us = $venta[0];
 					echo "<br> Venta";

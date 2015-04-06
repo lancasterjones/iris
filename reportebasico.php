@@ -50,7 +50,7 @@
 		<div class="container">
 			<div class="jumbotron">
 			Ventas de la Semana: 
-				<?php include 'includes/db_magento_connect.php'
+				<?php include 'includes/db_magento_connect.php';
 					$result = mysqli_query($connm,"SELECT 
 														sum(sales_flat_order.total_paid) Venta
 														,WEEK(sales_flat_order.created_at) Semana

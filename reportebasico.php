@@ -59,14 +59,14 @@
   WHERE     sales_flat_order.status IN ('complete', 'processing')
     AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
   GROUP BY Semana");
-					$venta = mysqli_fetch_row($result);
-					$venta_us = $venta[0];
-					echo "<br> Venta: ";
-					print_r($venta);
-					echo "<br> Venta US:";
-					print_r($venta_us);
-					echo "<br>";
-					echo $venta_us . "</br>";
+					$venta = mysqli_fetch_array($result);
+					$i = 0;
+          while( $row = $venta){
+            $i++;
+            echo "<br>" . $i;
+            echo $row["Venta"] . "<br>";
+            echo $row["Semana"] . "<br>";
+          }
 				?>
 				
 			</div>

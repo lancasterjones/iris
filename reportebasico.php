@@ -60,13 +60,13 @@
     AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
   GROUP BY Semana");
 					$venta = mysqli_fetch_row($result);
-					//$venta_us = $venta[0];
+					$venta_us = $venta[0];
 					echo "<br> Venta: ";
 					print_r($venta);
-					/*echo "<br> Venta US:";
+					echo "<br> Venta US:";
 					print_r($venta_us);
 					echo "<br>";
-					echo $venta_us . "</br>"; */
+					echo $venta_us . "</br>";
 				?>
 				
 			</div>

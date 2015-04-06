@@ -42,7 +42,7 @@
         <button type="submit" class="btn btn-default">Buscar</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://www.vende.io">Vende</a></li>
+        <li><a href="http://www.vende.io">Vende.io</a></li>
       </ul>
     </div>
   </div>
@@ -50,7 +50,7 @@
 		<div class="container">
 			<div class="jumbotron">
 			Ventas de la Semana: 
-				<?php include 'includes/db_magento_connect.php';
+				<?php require 'includes/db_magento_connect.php';
 					$query = "SELECT 
     sum(sales_flat_order.total_paid) Venta
     ,WEEK(sales_flat_order.created_at) Semana

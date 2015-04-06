@@ -58,13 +58,14 @@
   FROM shop_production.sales_flat_order sales_flat_order
   WHERE     sales_flat_order.status IN ('complete', 'processing')
     AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
-  GROUP BY Semana";
+    GROUP BY Semana
+    ORDER BY Semana DESC ";
 				
           $result = mysqli_query($connm,$query);
 
             while( $row = mysqli_fetch_array($result)) {
             
-            print_r($row);
+            echo "Semana " . $row['Semana'] . " $" . $row['Venta'] . "<br>";
           }
           mysqli_free_result($result);
           mysqli_close($connm);

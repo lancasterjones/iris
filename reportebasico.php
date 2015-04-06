@@ -49,7 +49,26 @@
 </nav>
 		<div class="container">
 			<div class="jumbotron">
-				Ventas de la Semana
+			Ventas de la Semana: 
+				<?php include 'includes/db_magento_connect.php'
+					$result = mysqli_query($connm,"SELECT 
+														sum(sales_flat_order.total_paid) Venta
+														,WEEK(sales_flat_order.created_at) Semana
+														,YEAR(sales_flat_order.created_at) Año
+													FROM shop_production.sales_flat_order sales_flat_order
+													WHERE sales_flat_order.status IN ('complete', 'processing')
+														AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
+													GROUP BY Semana");
+					$venta = mysqli_fetch_row($mysqli_fetch_row($showexpenses);
+					$venta_us = $venta[0];
+					echo "<br> Venta";
+					print_r($venta);
+					echo "<br> Venta US:";
+					print_r($venta_us);
+					echo "<br>";
+					echo $venta_us . "</br>";
+				?>
+				
 			</div>
 
 		</div>

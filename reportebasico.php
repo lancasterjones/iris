@@ -60,16 +60,13 @@
     AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
   GROUP BY Semana";
 				
-					$i = 0;
-          if($result = mysqli_query($connm,$query)) {
-            while( $row = mysqli_fetch_assoc($result)) {
-             $i++;
-            echo "<br>" . $i;
-            echo $row["Venta"] . "<br>";
-            echo $row["Semana"] . "<br>";
+          $result = mysqli_query($connm,$query);
+
+            while( $row = mysqli_fetch_array($result)) {
+            
+            print_r($row);
           }
           mysqli_free_result($result);
-          }
           mysqli_close($connm);
             
 				?>

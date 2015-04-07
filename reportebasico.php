@@ -3,6 +3,7 @@
     include_once 'includes/db_connect.php';
     include 'includes/data_base.php'
     sec_session_start();
+    ini_set('display_errors', 1);
 ?>
 <!DOCTYPE html>
 <html lang='es'>

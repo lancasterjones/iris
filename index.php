@@ -1,11 +1,8 @@
-<?php
-	//se inicia sesión
-	session_start();
-?>
+
 <!DOCTYPE html>
 <html lang='es'>
 	<head>
-		<title>Bienvenido || LOB</title>
+		<title>Bienvenido || IRIS</title>
 		<?php 
 			  include 'includes/head.php';
 		?>     

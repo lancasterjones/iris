@@ -1,7 +1,7 @@
 <?php
     include_once 'includes/acceso_seguro.php';
     include_once 'includes/db_connect.php';
-    include 'data_base.php'
+    include 'includes/data_base.php'
     sec_session_start();
 ?>
 <!DOCTYPE html>

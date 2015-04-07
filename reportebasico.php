@@ -14,7 +14,7 @@
           $semana = date("W")-2;
           $query = "SELECT 
             count(sales_flat_order.total_paid) Pedidos
-            sum(sales_flat_order.total_paid) Venta
+            ,sum(sales_flat_order.total_paid) Venta
             ,WEEK(sales_flat_order.created_at) Semana
             ,YEAR(sales_flat_order.created_at) Año
           FROM shop_production.sales_flat_order sales_flat_order
@@ -27,7 +27,7 @@
             while( $row = mysqli_fetch_array($result)) {
             if ($i == 0){
               $venta = $row['Venta'];
-              $pedidos =$row['Pedidos'];
+              $pedidos = $row['Pedidos'];
             }
           }
           mysqli_free_result($result);

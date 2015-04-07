@@ -69,7 +69,18 @@
           }
           mysqli_free_result($result);
           mysqli_close($connm);
-            
+          
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ventas Semanales <span style="float: right;">S14</span></h3>
+            </div>
+            <div class="panel-body">
+              Venta: 
+            </div>
+          </div>
+
+
+
 				?>
 				
 			</div>

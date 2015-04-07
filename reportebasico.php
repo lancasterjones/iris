@@ -1,10 +1,13 @@
 <?php
-
+    include_once 'includes/acceso_seguro.php';
+    include_once 'includes/db_connect.php';
+    include 'data_base.php'
+    sec_session_start();
 ?>
 <!DOCTYPE html>
 <html lang='es'>
 	<head>
-		<title>Bienvenido || LOB</title>
+		<title>Bienvenido || IRIS</title>
 		<?php 
 			  include 'includes/head.php';
 		?>     

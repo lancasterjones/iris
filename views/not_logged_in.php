@@ -28,7 +28,7 @@
             <div class='form-group'>
                 <label class="control-label col-sm-5" for="login_input_username">Usuario: </label>
                 <div class="col-sm-4">
-                    <input placeholder="Usuario" id="login_input_username" class="login_input" type="text" name="user_name" required />
+                    <input placeholder="Usuario" id="login_input_username" class="form-control" type="text" name="user_name" required />
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
             </div>
 
             <!--boton ingresar-->
-            <div style="max-width: 200px;">                
+            <div class="col-sm-4" style="max-width: 200px;">                
                 <button class="btn btn-success btn-block" name="login"> Ingresar
                 <span class="glyphicon glyphicon-lock"></span></button>
             </div>

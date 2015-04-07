@@ -9,6 +9,6 @@ $connm = new mysqli($servername, $username, $password, $db) or die("Error al con
 // Check connection
 if ($connm->connect_error) {
     die("Conexión a DB Sistema Productos falló: " . $connm->connect_error);
-}
+} 
 
 ?>

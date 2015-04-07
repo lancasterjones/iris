@@ -17,14 +17,13 @@ if (isset($login)) {
 <!-- login form box -->
 <form method="post" action="index.php" name="loginform">
 
-    <label for="login_input_username">Username</label>
+    <label for="login_input_username">Usuario</label>
     <input id="login_input_username" class="login_input" type="text" name="user_name" required />
 
-    <label for="login_input_password">Password</label>
+    <label for="login_input_password">Contraseña</label>
     <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" required />
 
     <input type="submit"  name="login" value="Log in" />
 
 </form>
 
-<a href="register.php">Register new account</a>

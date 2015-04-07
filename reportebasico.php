@@ -25,8 +25,10 @@
           $result = mysqli_query($connm,$query);
           $i = 0;
             while( $row = mysqli_fetch_array($result)) {
+            if ($i == 0){
               $venta = $row['Venta'];
-              $pedidos = $row['Pedidos'];
+              $pedidos =$row['Pedidos'];
+            }
           }
           mysqli_free_result($result);
 
@@ -94,7 +96,7 @@
             </div>
             <div class="panel-body">
               <p>Monto Venta: $<?php echo $venta; ?></p>
-              <p>Pedidos: <?php echo $pedidos; ?></p>
+              <p>Pedidos: <?php echo $pedidos; ?> </p>
               <p>Fraude: </p>
               <p>Acumulado del Mes: </p>
             </div>

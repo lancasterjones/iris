@@ -32,7 +32,7 @@
           }
           mysqli_free_result($result);
 
-           $fraudes = "SELECT 
+            $fraudes = "SELECT 
                          COUNT(sales_flat_order.total_paid) AS Pedidos,
                          SUM(sales_flat_order.total_paid) AS Venta,
                          WEEK(sales_flat_order.created_at) AS Semana,
@@ -40,8 +40,13 @@
                         FROM shop_production.sales_flat_order sales_flat_order
                         WHERE (    (    sales_flat_order.status IN ('riskified_declined')
                           AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
-                          AND WEEK(sales_flat_order.created_at) = 13)
+                          AND WEEK(sales_flat_order.created_at) = $semana)
                       ";
+            $result = mysqli_query($connm,$fraudes);
+             while( $row = mysqli_fetch_array($result)) {
+              $monto_fraudes = $row['Venta'];
+              $fraudes = $row['Pedidos'];
+          }
 
 
 
@@ -97,7 +102,7 @@
             <div class="panel-body">
               <p>Monto Venta: $<?php echo $venta; ?></p>
               <p>Pedidos: <?php echo $pedidos; ?> </p>
-              <p>Fraude: </p>
+              <p>Fraudes: <?php echo $fraudes; ?> </p>
               <p>Acumulado del Mes: </p>
             </div>
           </div>

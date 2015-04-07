@@ -23,7 +23,7 @@
         ?>
 
         <!-- login form box -->
-        <form class="form-horizontal" method="post" action="index.php" name="loginform">
+        <form class="form-horizontal" method="post" action="index.php" role="form" name="loginform">
             <!--Input ingresar usuario-->
             <div class='form-group'>
                 <label class="control-label col-sm-5" for="login_input_username">Usuario: </label>
@@ -34,15 +34,15 @@
 
             <!--Input ingresar contraseña-->
             <div class='form-group'>
-                <label class="control-label col-sm-5" for="login_input_password">Contraseña</label>
+                <label class="control-label col-sm-5" for="login_input_password">Contraseña: </label>
                 <div class="col-sm-4">
-                    <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" required />
+                    <input id="login_input_password" class="form-control" type="password" name="user_password" placeholder="Password" autocomplete="off" required />
                 </div>
             </div>
 
             <!--boton ingresar-->
             <div style="max-width: 200px;">                
-                <button type="submit" class="btn btn-success btn-block" name="login" value="Ingresar"> Ingresar
+                <button class="btn btn-success btn-block" name="login"> Ingresar
                 <span class="glyphicon glyphicon-lock"></span></button>
             </div>
             <hr>
@@ -50,3 +50,4 @@
         </form>
     </body>
 </html>
+

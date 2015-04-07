@@ -1,4 +1,16 @@
+<?php
+    $login = new Login();
 
+    // ... ask if we are logged in here:
+    if ($login->isUserLoggedIn() == false) {
+       echo "
+          <script>
+              location.href='index.php';
+          </script>
+       ";
+
+    } 
+?>
 <!DOCTYPE html>
 <html lang='es'>
 	<head>

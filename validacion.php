@@ -28,7 +28,7 @@
 			$_SESSION['validacion'] = TRUE;
 			echo "
 				<script>
-					location.href='fotografia.php';
+					location.href='reportebasico.php';
 				</script>
 			";
 	

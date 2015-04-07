@@ -18,29 +18,7 @@
 			</div>
 			</br><hr></br>
 
-			<form action="validacion.php" method="post" class="form-horizontal" role='form'>
-				<!--Formulario para usuario-->
-				<div class='form-group'>
-				    <label class="control-label col-sm-5" for="usuario">Usuario:</label>
-				    <div class="col-sm-4">			    
-				    	<input class="form-control" name="usuario" type="text" id="usuario" placeholder="Usuario">    
-				    </div>
-			  	</div>	
-			  	<!--Formulario para contraseña-->
-			  	<div class="form-group">			
-					<label class="control-label col-sm-5" for="password">Contraseña:</label>
-					<div class="col-sm-4">
-				    	<input class="form-control" name="pas" type="password" id="password" placeholder="Password">
-				    </div>				    
-				</div></br>
-				<!--Botón ingresar-->
-				<div style="max-width: 200px;">
-					<button ="ingresar" class="btn btn-success btn-block">
-					<span class="glyphicon glyphicon-lock"></span>  Ingresar
-					</button>
-				</div>
-					<hr>
-			</form>	
+			
 			</div>
 		</div>
 

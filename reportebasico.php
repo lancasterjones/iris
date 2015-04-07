@@ -62,10 +62,12 @@
     ORDER BY Semana DESC ";
 				
           $result = mysqli_query($connm,$query);
-
+          $i = 0;
             while( $row = mysqli_fetch_array($result)) {
-            
-            echo "Semana " . $row['Semana'] . " $" . $row['Venta'] . "<br>";
+            if ($i == 0){
+              $semana = $row['Semana'];
+              $venta = $row['Venta'];
+            }
           }
           mysqli_free_result($result);
           mysqli_close($connm);
@@ -73,10 +75,10 @@
           
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">Ventas Semanales <span style="float: right;">S14</span></h3>
+              <h3 class="panel-title" style="width: 50%">Ventas Semanales <span style="float: right;">S <?php echo $semana; ?></span></h3>
             </div>
             <div class="panel-body">
-              Venta: 
+              Venta: $<?php echo $venta; ?>
             </div>
           </div>
 

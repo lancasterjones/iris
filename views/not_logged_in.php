@@ -41,9 +41,9 @@
             </div>
             </br>
             <!--boton ingresar-->
-            <div align="center" style="max-width: 200px;">                
-                <button class="btn btn-success btn-block" name="login"> Ingresar
-                <span class="glyphicon glyphicon-lock"></span></button>
+            <div style="max-width: 200px;">                
+                <button class="btn btn-success btn-block" name="login"> 
+                <span class="glyphicon glyphicon-lock"></span>Ingresar</button>
             </div>
             </br>
             <hr>

@@ -109,6 +109,7 @@
         <button type="submit" class="btn btn-default">Buscar</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.php?logout">Logout</a></li>
         <li><a href="http://www.vende.io">Vende.io</a></li>
       </ul>
     </div>

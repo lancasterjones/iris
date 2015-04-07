@@ -102,7 +102,7 @@
             <div class="panel-body">
               <p>Monto Venta: $<?php echo $venta; ?></p>
               <p>Pedidos: <?php echo $pedidos; ?> </p>
-              <p>Fraudes: <?php echo $fraudes; ?> ($ <?php echo $monto_fraudes; ?>)</p>
+              <p>Fraudes: <?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</p>
               <p>Acumulado del Mes: </p>
             </div>
           </div>

@@ -26,7 +26,7 @@
           $i = 0;
             while( $row = mysqli_fetch_array($result)) {
               $venta = $row['Venta'];
-              $pedidos = $row['Pedidos']
+              $pedidos = $row['Pedidos'];
           }
           mysqli_free_result($result);
 

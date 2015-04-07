@@ -19,7 +19,7 @@
           FROM shop_production.sales_flat_order sales_flat_order
           WHERE     sales_flat_order.status IN ('complete', 'processing')
             AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
-            AND Semana = '$semana'
+            AND Semana = 12
             --GROUP BY Semana
             --ORDER BY Semana DESC ";
         

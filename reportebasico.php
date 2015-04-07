@@ -51,13 +51,15 @@
 			<div class="jumbotron">
 			Ventas de la Semana: 
 				<?php require 'includes/db_magento_connect.php';
+          $semana = date("W");
 					$query = "SELECT 
     sum(sales_flat_order.total_paid) Venta
     ,WEEK(sales_flat_order.created_at) Semana
     ,YEAR(sales_flat_order.created_at) Año
   FROM shop_production.sales_flat_order sales_flat_order
   WHERE     sales_flat_order.status IN ('complete', 'processing')
-    AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
+    AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE())) AND
+    AND Semana = $semana
     GROUP BY Semana
     ORDER BY Semana DESC ";
 				
@@ -65,7 +67,6 @@
           $i = 0;
             while( $row = mysqli_fetch_array($result)) {
             if ($i == 0){
-              $semana = $row['Semana'];
               $venta = $row['Venta'];
             }
           }

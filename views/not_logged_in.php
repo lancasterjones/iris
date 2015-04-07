@@ -45,6 +45,7 @@
                 <button class="btn btn-success btn-block" name="login"> Ingresar
                 <span class="glyphicon glyphicon-lock"></span></button>
             </div>
+            </br>
             <hr>
 
         </form>

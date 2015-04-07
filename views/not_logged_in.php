@@ -23,15 +23,18 @@
         ?>
 
         <!-- login form box -->
-        <form method="post" action="index.php" name="loginform">
+        <form class="form-horizontal" method="post" action="index.php" name="loginform">
 
             <label for="login_input_username">Usuario</label>
             <input id="login_input_username" class="login_input" type="text" name="user_name" required />
 
             <label for="login_input_password">Contraseña</label>
             <input id="login_input_password" class="login_input" type="password" name="user_password" autocomplete="off" required />
-
-            <input type="submit" class="btn btn-success btn-block" name="login" value="Ingresar" />
+            <!--boton ingresar-->
+            <div style="max-width: 200px;">
+                <span class="glyphicon glyphicon-lock"></span>
+                <input type="submit" class="btn btn-success btn-block" name="login" value="Ingresar" />
+            </div>
 
         </form>
     </body>

@@ -11,7 +11,7 @@
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';
-          $semana = date("W")-1;
+          $semana = date("W")-2;
           $query = "SELECT 
             sum(sales_flat_order.total_paid) Venta
             ,WEEK(sales_flat_order.created_at) Semana
@@ -19,7 +19,7 @@
           FROM shop_production.sales_flat_order sales_flat_order
           WHERE     sales_flat_order.status IN ('complete', 'processing')
             AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE())) AND
-            AND Semana = '$semana'
+            AND Semana = 12
             --GROUP BY Semana
             --ORDER BY Semana DESC ";
         

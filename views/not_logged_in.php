@@ -39,7 +39,7 @@
                     <input id="login_input_password" class="form-control" type="password" name="user_password" placeholder="Password" autocomplete="off" required />
                 </div>
             </div>
-
+            </br>
             <!--boton ingresar-->
             <div align="center" style="max-width: 200px;">                
                 <button class="btn btn-success btn-block" name="login"> Ingresar

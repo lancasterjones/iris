@@ -69,6 +69,7 @@
           }
           mysqli_free_result($result);
           mysqli_close($connm);
+        ?>
           
           <div class="panel panel-primary">
             <div class="panel-heading">
@@ -81,7 +82,7 @@
 
 
 
-				?>
+				
 				
 			</div>
 

@@ -21,34 +21,35 @@
             }
         }
         ?>
-
-        <!-- login form box -->
-        <form class="form-horizontal" method="post" action="index.php" role="form" name="loginform">
-            <!--Input ingresar usuario-->
-            <div class='form-group'>
-                <label class="control-label col-sm-5" for="login_input_username">Usuario: </label>
-                <div class="col-sm-4">
-                    <input placeholder="Usuario" id="login_input_username" class="form-control" type="text" name="user_name" required />
+        <div class="container" align="center">
+            <!-- login form box -->
+            <form class="form-horizontal" method="post" action="index.php" role="form" name="loginform">
+                <!--Input ingresar usuario-->
+                <div class='form-group'>
+                    <label class="control-label col-sm-5" for="login_input_username">Usuario: </label>
+                    <div class="col-sm-4">
+                        <input placeholder="Usuario" id="login_input_username" class="form-control" type="text" name="user_name" required />
+                    </div>
                 </div>
-            </div>
 
-            <!--Input ingresar contraseña-->
-            <div class='form-group'>
-                <label class="control-label col-sm-5" for="login_input_password">Contraseña: </label>
-                <div class="col-sm-4">
-                    <input id="login_input_password" class="form-control" type="password" name="user_password" placeholder="Password" autocomplete="off" required />
+                <!--Input ingresar contraseña-->
+                <div class='form-group'>
+                    <label class="control-label col-sm-5" for="login_input_password">Contraseña: </label>
+                    <div class="col-sm-4">
+                        <input id="login_input_password" class="form-control" type="password" name="user_password" placeholder="Password" autocomplete="off" required />
+                    </div>
                 </div>
-            </div>
-            </br>
-            <!--boton ingresar-->
-            <div style="max-width: 200px;">                
-                <button class="btn btn-success btn-block" name="login"> 
-                <span class="glyphicon glyphicon-lock"></span>Ingresar</button>
-            </div>
-            </br>
-            <hr>
+                </br>
+                <!--boton ingresar-->
+                <div style="max-width: 200px;">                
+                    <button class="btn btn-success btn-block" name="login"> 
+                    <span class="glyphicon glyphicon-lock"></span>Ingresar</button>
+                </div>
+                </br>
+                <hr>
 
-        </form>
+            </form>
+        </div>
     </body>
 </html>
 

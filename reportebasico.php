@@ -10,6 +10,30 @@
 		?>     
 	</head>
 	<body>
+  <?php require 'includes/db_magento_connect.php';
+          $semana = date("W")-1;
+          $query = "SELECT 
+    sum(sales_flat_order.total_paid) Venta
+    ,WEEK(sales_flat_order.created_at) Semana
+    ,YEAR(sales_flat_order.created_at) Año
+  FROM shop_production.sales_flat_order sales_flat_order
+  WHERE     sales_flat_order.status IN ('complete', 'processing')
+    AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE())) AND
+    AND Semana = $semana
+    GROUP BY Semana
+    ORDER BY Semana DESC ";
+        
+          $result = mysqli_query($connm,$query);
+          $i = 0;
+            while( $row = mysqli_fetch_array($result)) {
+            if ($i == 0){
+              $venta = $row['Venta'];
+            }
+          }
+          mysqli_free_result($result);
+          mysqli_close($connm);
+        ?>
+
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -49,34 +73,12 @@
 </nav>
 		<div class="container">
 			<div class="jumbotron">
-			Ventas de la Semana: 
-				<?php require 'includes/db_magento_connect.php';
-          $semana = date("W");
-					$query = "SELECT 
-    sum(sales_flat_order.total_paid) Venta
-    ,WEEK(sales_flat_order.created_at) Semana
-    ,YEAR(sales_flat_order.created_at) Año
-  FROM shop_production.sales_flat_order sales_flat_order
-  WHERE     sales_flat_order.status IN ('complete', 'processing')
-    AND (YEAR(sales_flat_order.created_at) = YEAR(CURDATE())) AND
-    AND Semana = $semana
-    GROUP BY Semana
-    ORDER BY Semana DESC ";
+			 <h1>Reporte de Ventas de la Semana: <?php echo $semana; ?> </h1>
 				
-          $result = mysqli_query($connm,$query);
-          $i = 0;
-            while( $row = mysqli_fetch_array($result)) {
-            if ($i == 0){
-              $venta = $row['Venta'];
-            }
-          }
-          mysqli_free_result($result);
-          mysqli_close($connm);
-        ?>
           
-          <div class="panel panel-primary">
+          <div class="panel panel-primary" style="width: 50%">
             <div class="panel-heading">
-              <h3 class="panel-title" style="width: 50%">Ventas Semanales <span style="float: right;">S <?php echo $semana; ?></span></h3>
+              <h3 class="panel-title">Ventas</h3>
             </div>
             <div class="panel-body">
               Venta: $<?php echo $venta; ?>

@@ -7,7 +7,7 @@ header {
   padding: 5px;
   text-align: center;
   overflow: auto;
-  background-color: #E0FFD6;
+  
 }
 
 #reporte_ul{
@@ -46,7 +46,7 @@ header {
   font-size: 50px;
   font-weight: 300;
   text-transform: uppercase;
-  background-color: #;
+  background-color: #E0FFD6;
 }
 
 /* text colors */

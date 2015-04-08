@@ -90,7 +90,6 @@
 
 
    <!--Rerporte de ventas-->
-   <div id="reporte">
      <header class="lv-bg">
           <h1 class="site-title">Reporte de ventas</h1>
           <p>Semana: <?php echo $semana; ?></p>
@@ -119,9 +118,6 @@
                 <td></td>
             </tr>
         </table>
-     </div>
-    </div>
-
-		
+     </div>		
 	</body>
 </html>

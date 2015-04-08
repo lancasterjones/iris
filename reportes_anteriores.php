@@ -98,7 +98,7 @@
           <div class="pull-right">
             <select class='form-control'>
               <?php
-                     $week = date("W");
+                     $week = date("W")-2;
 
                      for($sem = $week; $sem >= 1; $sem--)
                      {
@@ -117,7 +117,21 @@
             <tr class="tableizer-firstrow">
                 <th>Ventas</th>
                 <th></th>
-                <th></th>
+                <th>
+                    <select class='form-control'>
+              <?php
+                     $week = date("W")-2;
+
+                     for($sem = $week; $sem >= 1; $sem--)
+                     {
+                        echo "<option>";
+                        echo $sem;
+                        echo "</option>";  
+                     }
+                    
+              ?>                 
+            </select>
+                </th>
             </tr>
             <tr>
                 <td><canvas id="chart-area" width="100" height="100"/></canvas></td>

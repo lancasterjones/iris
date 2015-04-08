@@ -93,6 +93,13 @@
 
    </header>
 
+   <div class="container-fluid inner">
+      <table class="tableizer-table">
+          <tr class="tableizer-firtrow">
+              <th>Ventas</th>
+          </tr>
+      </table>
+   </div>
 
 
 		<div class="container">

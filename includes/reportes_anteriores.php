@@ -95,7 +95,7 @@
      <header align="center" class="lv-bg">
           <h2 class="site-title">Reporte de ventas</h2>
           <p>Semana: <?php echo $semana; ?></p>
-          <select class='selectpicker'>
+          <select class='selectpicker' multiple>
             <?php
                    $week = date("W")-1;
                   

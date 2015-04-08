@@ -89,7 +89,7 @@
    <!--Rerporte de ventas-->
    <header class="lv-bg">
         <h1 class="site-title">Reporte de ventas</h1>
-        <p>Iris Style</p>
+        <p>Semana: <?php echo $semana; ?></p>
 
    </header>
 
@@ -97,6 +97,12 @@
       <table class="tableizer-table">
           <tr class="tableizer-firtrow">
               <th>Ventas</th>
+          </tr>
+          <tr>
+              <td>
+                  <div class="c ab-bg"></div>
+              </td>
+              <td>Monto de venta</td>
           </tr>
       </table>
    </div>

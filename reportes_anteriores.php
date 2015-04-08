@@ -44,7 +44,14 @@
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';
-          $semana = date("W")-2;
+
+        if($_SERVER["REQUEST_METHOD"] == "GET")
+        {
+            $semana = $_GET["nSemana"];
+        }else
+        {
+            $semana = date("W")-2;
+        }          
           $query = "SELECT 
             count(sales_flat_order.total_paid) Pedidos
             ,sum(sales_flat_order.total_paid) Venta
@@ -92,8 +99,8 @@
 
 
    <!--Rerporte de ventas-->
-     <header align="center" class="lv-bg">
-          <h2 class="site-title">Reporte de ventas</h2>
+     <header align="center">
+          <h2 class="site-title">Reporte de ventas anteriores</h2>
           <p>Semana: <?php echo $semana; ?></p>          
      </header>
 

@@ -41,8 +41,6 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <script type="text/javascript" src="includes/Chart.js"></script>
   <script type="text/javascript" src="includes/script_reportes.js"></script>
-  <link rel="stylesheet" type="text/css" href="includes/bootstrap-select.css">
-  <script type="text/javascript" src="includes/bootstrap-select.js"></script>
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';
@@ -98,13 +96,18 @@
           <h2 class="site-title">Reporte de ventas</h2>
           <p>Semana: <?php echo $semana; ?></p>
           <div class="pull-right">
-            <select class='selectpicker' multiple>
+            <select class='form-control'>
               <?php
-                     $week = date("W")-1;
+                     $week = date("W");
+
+                     for($sem = 1; $sem < $week; $sem++)
+                     {
+                        echo "<option>";
+                        echo $sem;
+                        echo "</option>";  
+                     }
                     
-              ?>  
-               <option>13</option>
-               <option>14</option>
+              ?>                 
             </select>
           </div>
      </header>

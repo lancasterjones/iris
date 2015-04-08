@@ -97,6 +97,7 @@ table{
 table > tbody > tr.tableizer-firstrow > th {
   padding: 10px;
   background: lavenderblush;
+  box-shadow: 5px 5px 5px #fff;
 }
 
 body > div.container-fluid.inner > table > tbody > tr > td{

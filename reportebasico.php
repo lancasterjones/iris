@@ -93,7 +93,7 @@
 
    <!--Rerporte de ventas-->
      <header align="center" class="lv-bg">
-          <h1 class="site-title">Reporte de ventas</h1>
+          <h2 class="site-title">Reporte de ventas</h2>
           <p>Semana: <?php echo $semana; ?></p>
 
      </header>
@@ -111,7 +111,7 @@
                 <td>$ <?php echo $venta; ?></td>
             </tr>
             <tr>
-                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
+                <td><canvas id="chart-area2" width="100" height="100"/></canvas></td>
                 <td>Pedidos</td>
                 <td><?php echo $pedidos; ?></td>
             </tr>

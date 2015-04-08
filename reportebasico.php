@@ -36,6 +36,8 @@
     <link rel="stylesheet" type="text/css" href="includes/estilo_reportes.css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet" type="text/css">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';
@@ -118,29 +120,6 @@
    </div>
 
 
-		<div class="container">
-			<div class="jumbotron">
-			 <h1>Reporte de Ventas Semana: <?php echo $semana; ?> </h1>
-				
-          
-          <div class="panel panel-primary" style="width: 50%">
-            <div class="panel-heading">
-              <h3 class="panel-title">Ventas</h3>
-            </div>
-            <div class="panel-body">
-              <p>Monto Venta: $<?php echo $venta; ?></p>
-              <p>Pedidos: <?php echo $pedidos; ?> </p>
-              <p>Fraudes: <?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</p>
-              <p>Acumulado del Mes: </p>
-            </div>
-          </div>
-
-
-
-				
-				
-			</div>
-
-		</div>
+		
 	</body>
 </html>

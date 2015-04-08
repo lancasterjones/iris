@@ -10,6 +10,7 @@ header {
   padding: 5px;
   text-align: center;
   overflow: auto;
+  font: 400 16px 'Muli', sans-serif !important;
 }
 
 ul{

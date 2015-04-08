@@ -104,15 +104,14 @@
                 <th>Ventas</th>
                 <th></th>
                 <th>
+                    <select class='selectpicker'>
                     <?php
                            $week = date("W")-1;
-
-
-                           echo "<select class='selectpicker'> 
-                              <option>" . $week .
-                              "</option>
-                           </select>";
-                    ?>
+                          
+                    ?>  
+                     <option>13</option>
+                     <option>14</option>
+                  </select>
                 </th>
             </tr>
             <tr>

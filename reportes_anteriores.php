@@ -42,7 +42,7 @@
   <script type="text/javascript" src="includes/Chart.js"></script>
   <script type="text/javascript" src="includes/script_reportes.js"></script>
   <link rel="stylesheet" type="text/css" href="includes/bootstrap-select.css">
-  <script type="text/javascript" src="bootstrap-select.js"></script>
+  <script type="text/javascript" src="includes/bootstrap-select.js"></script>
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';

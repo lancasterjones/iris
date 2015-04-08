@@ -94,22 +94,7 @@
    <!--Rerporte de ventas-->
      <header align="center" class="lv-bg">
           <h2 class="site-title">Reporte de ventas</h2>
-          <p>Semana: <?php echo $semana; ?></p>
-          <div class="pull-right">
-            <select class='form-control'>
-              <?php
-                     $week = date("W")-2;
-
-                     for($sem = $week; $sem >= 1; $sem--)
-                     {
-                        echo "<option>";
-                        echo $sem;
-                        echo "</option>";  
-                     }
-                    
-              ?>                 
-            </select>
-          </div>
+          <p>Semana: <?php echo $semana; ?></p>          
      </header>
 
      <div class="container-fluid inner">
@@ -118,19 +103,20 @@
                 <th>Ventas</th>
                 <th></th>
                 <th>
+                    <i style="color:#fff" class="glyphicon glyphicon-ok"></i>
                     <select class='form-control'>
-              <?php
-                     $week = date("W")-2;
+                      <?php
+                             $week = date("W")-2;
 
-                     for($sem = $week; $sem >= 1; $sem--)
-                     {
-                        echo "<option>";
-                        echo $sem;
-                        echo "</option>";  
-                     }
-                    
-              ?>                 
-            </select>
+                             for($sem = $week; $sem >= 1; $sem--)
+                             {
+                                echo "<option>";
+                                echo $sem;
+                                echo "</option>";  
+                             }
+                            
+                      ?>                 
+                    </select>
                 </th>
             </tr>
             <tr>

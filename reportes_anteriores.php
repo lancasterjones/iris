@@ -101,9 +101,10 @@
         <table class="tableizer-table">
             <tr class="tableizer-firstrow">
                 <th>Ventas</th>
-                <th></th>
                 <th>
-                    <button type="submit" class="btn btn-primary"><i style="color:#fff" class="glyphicon glyphicon-ok"></i>Submit</button>                    
+                    <button type="submit" class="btn btn-primary"><i style="color:#fff" class="glyphicon glyphicon-ok"></i></button> 
+                </th>
+                <th>                                       
                     <select class='form-control'>
                       <?php
                              $week = date("W")-2;

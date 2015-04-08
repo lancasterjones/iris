@@ -106,6 +106,14 @@
               <td>Pedidos</td>
               <td><?php echo $pedidos; ?></td>
           </tr>
+          <tr>
+              <td>Fraudes</td>
+              <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
+          </tr>
+          <tr>
+              <td>Acumulado del mes</td>
+              <td></td>
+          </tr>
       </table>
    </div>
 

@@ -32,6 +32,10 @@
 		<?php 
 			  include 'includes/head.php';
 		?>     
+
+    <link rel="stylesheet" type="text/css" href="includes/estilo_reportes.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Muli:300,400" rel="stylesheet" type="text/css">
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';
@@ -80,6 +84,16 @@
 	<?php
     //menu de navegación
    include 'includes/menu.php' ?>
+
+
+   <!--Rerporte de ventas-->
+   <header class="lv-bg">
+        <h1 class="site-title">Reporte de ventas</h1>
+        <p>Iris Style</p>
+
+   </header>
+
+
 
 		<div class="container">
 			<div class="jumbotron">

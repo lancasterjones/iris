@@ -48,7 +48,7 @@
         $semana = 0;
         $query ="";
 
-        if($_SERVER["REQUEST_METHOD"] == "GET")
+        if($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $semana = $_GET["nSemana"];
             $query = "SELECT 

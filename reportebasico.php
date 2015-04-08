@@ -111,7 +111,7 @@
                 <td>$ <?php echo $venta; ?></td>
             </tr>
             <tr>
-                <td><canvas id="canvas" height="80" width="100"></canvas></td>
+                <td><canvas id="canvas" height="120" width="150"></canvas></td>
                 <td>Pedidos</td>
                 <td><?php echo $pedidos; ?></td>
             </tr>

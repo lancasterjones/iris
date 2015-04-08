@@ -101,8 +101,9 @@
           <tr>
               <td>
                   <div class="c ab-bg"></div>
+                  Monto de venta
               </td>
-              <td>Monto de venta</td>
+              <td>$<?php echo $venta; ?></td>
           </tr>
       </table>
    </div>

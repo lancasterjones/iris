@@ -106,15 +106,17 @@
                 <th></th>
             </tr>
             <tr>
-                <td><div class="c ab-bg"></div></td>
+                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
                 <td>Monto de venta</td>
                 <td>$ <?php echo $venta; ?></td>
             </tr>
             <tr>
+                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
                 <td>Pedidos</td>
                 <td><?php echo $pedidos; ?></td>
             </tr>
             <tr>
+                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
                 <td>Fraudes</td>
                 <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
             </tr>

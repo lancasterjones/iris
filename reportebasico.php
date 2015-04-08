@@ -99,9 +99,10 @@
      </header>
 
      <div class="container-fluid inner">
-        <div style="background-color: #E0FFD6" class="site-title">
+        <div class="site-title">
             Reporte de Ventas
         </div>
+        <p>Semana: <?php echo $semana; ?></p>
         <table class="tableizer-table">
             <tr class="tableizer-firstrow">
                 <th>Ventas</th>

@@ -98,7 +98,7 @@
 
      <div class="container-fluid inner">
         <table class="tableizer-table">
-            <tr class="tableizer-firtrow">
+            <tr class="tableizer-firstrow">
                 <th>Ventas</th>
             </tr>
             <tr>

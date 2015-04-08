@@ -95,7 +95,14 @@
      <header align="center" class="lv-bg">
           <h2 class="site-title">Reporte de ventas</h2>
           <p>Semana: <?php echo $semana; ?></p>
-
+          <select class='selectpicker'>
+            <?php
+                   $week = date("W")-1;
+                  
+            ?>  
+             <option>13</option>
+             <option>14</option>
+          </select>
      </header>
 
      <div class="container-fluid inner">
@@ -103,16 +110,7 @@
             <tr class="tableizer-firstrow">
                 <th>Ventas</th>
                 <th></th>
-                <th>
-                    <select class='selectpicker'>
-                    <?php
-                           $week = date("W")-1;
-                          
-                    ?>  
-                     <option>13</option>
-                     <option>14</option>
-                  </select>
-                </th>
+                <th></th>
             </tr>
             <tr>
                 <td><canvas id="chart-area" width="100" height="100"/></canvas></td>

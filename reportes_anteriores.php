@@ -120,6 +120,7 @@
      <div class="container-fluid inner">
         <table class="tableizer-table">
             <tr class="tableizer-firstrow">
+              <form action="reportes_anteriores.php" method="post">
                 <th>Ventas</th>
                 <th>
                     <button type="submit" class="btn btn-primary pull-right"><i style="color:#fff" class="glyphicon glyphicon-ok"></i></button> 
@@ -139,6 +140,7 @@
                       ?>                 
                     </select>
                 </th>
+              </form>
             </tr>
             <tr>
                 <td><canvas id="chart-area" width="100" height="100"/></canvas></td>

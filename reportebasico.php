@@ -116,7 +116,7 @@
                 <td><?php echo $pedidos; ?></td>
             </tr>
             <tr>
-                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
+                <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>
                 <td>Fraudes</td>
                 <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
             </tr>

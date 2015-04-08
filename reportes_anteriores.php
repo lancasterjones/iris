@@ -100,7 +100,7 @@
               <?php
                      $week = date("W");
 
-                     for($sem = 1; $sem < $week; $sem++)
+                     for($sem = $week; $sem >= 1; $sem--)
                      {
                         echo "<option>";
                         echo $sem;

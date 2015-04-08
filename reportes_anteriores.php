@@ -44,7 +44,7 @@
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';
-          $semana = date("W")-1;
+          $semana = date("W")-2;
           $query = "SELECT 
             count(sales_flat_order.total_paid) Pedidos
             ,sum(sales_flat_order.total_paid) Venta

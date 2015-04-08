@@ -90,7 +90,7 @@
 
 
    <!--Rerporte de ventas-->
-     <header class="lv-bg">
+     <header align="center" class="lv-bg">
           <h1 class="site-title">Reporte de ventas</h1>
           <p>Semana: <?php echo $semana; ?></p>
 
@@ -100,6 +100,8 @@
         <table class="tableizer-table">
             <tr class="tableizer-firstrow">
                 <th>Ventas</th>
+                <th></th>
+                <th></th>
             </tr>
             <tr>
                 <td><div class="c ab-bg"></div></td>

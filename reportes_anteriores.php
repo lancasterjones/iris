@@ -103,7 +103,7 @@
                 <th>Ventas</th>
                 <th></th>
                 <th>
-                    <i style="color:#fff" class="glyphicon glyphicon-ok"></i>
+                    <button type="submit" class="btn btn-primary"><i style="color:#fff" class="glyphicon glyphicon-ok"></i>Submit</button>                    
                     <select class='form-control'>
                       <?php
                              $week = date("W")-2;

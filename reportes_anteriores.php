@@ -126,7 +126,7 @@
                     <button type="submit" class="btn btn-primary pull-right"><i style="color:#fff" class="glyphicon glyphicon-ok"></i></button> 
                 </th>
                 <th>                                       
-                    <select class='form-control'>
+                    <select name="nSemana" class='form-control'>
                       <?php
                              $week = date("W")-2;
 

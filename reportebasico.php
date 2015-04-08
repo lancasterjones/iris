@@ -122,6 +122,7 @@
                 <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
             </tr>
         </table>
+        <canvas id="chart-area" width="100" height="100"/>
      </div>		
 	</body>
 </html>

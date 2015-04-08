@@ -99,10 +99,6 @@
      </header>
 
      <div class="container-fluid inner">
-        <div class="site-title">
-            Reporte de Ventas
-        </div>
-        <p>Semana: <?php echo $semana; ?></p>
         <table class="tableizer-table">
             <tr class="tableizer-firstrow">
                 <th>Ventas</th>

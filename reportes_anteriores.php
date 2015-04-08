@@ -102,7 +102,7 @@
             <tr class="tableizer-firstrow">
                 <th>Ventas</th>
                 <th>
-                    <button type="submit" class="btn btn-primary"><i style="color:#fff" class="glyphicon glyphicon-ok"></i></button> 
+                    <button type="submit" class="btn btn-primary pull-right"><i style="color:#fff" class="glyphicon glyphicon-ok"></i></button> 
                 </th>
                 <th>                                       
                     <select class='form-control'>

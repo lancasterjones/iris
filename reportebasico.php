@@ -102,6 +102,7 @@
                 <th>Ventas</th>
             </tr>
             <tr>
+                <td><div class="c ab-bg"></div></td>
                 <td>Monto de venta</td>
                 <td>$<?php echo $venta; ?></td>
             </tr>

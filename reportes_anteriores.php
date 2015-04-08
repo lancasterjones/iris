@@ -45,6 +45,8 @@
 	<body>
   <?php require 'includes/db_magento_connect.php';
 
+        $semana = 0;
+
         if($_SERVER["REQUEST_METHOD"] == "GET")
         {
             $semana = $_GET["nSemana"];

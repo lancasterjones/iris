@@ -90,36 +90,37 @@
 
 
    <!--Rerporte de ventas-->
-   <header class="lv-bg">
-        <h1 class="site-title">Reporte de ventas</h1>
-        <p>Semana: <?php echo $semana; ?></p>
+   <div id="reporte">
+     <header class="lv-bg">
+          <h1 class="site-title">Reporte de ventas</h1>
+          <p>Semana: <?php echo $semana; ?></p>
 
-   </header>
+     </header>
 
-   <div class="container-fluid inner">
-      <table class="tableizer-table">
-          <tr class="tableizer-firtrow">
-              <th>Ventas</th>
-          </tr>
-          <tr>
-              <td>Monto de venta</td>
-              <td>$<?php echo $venta; ?></td>
-          </tr>
-          <tr>
-              <td>Pedidos</td>
-              <td><?php echo $pedidos; ?></td>
-          </tr>
-          <tr>
-              <td>Fraudes</td>
-              <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
-          </tr>
-          <tr>
-              <td>Acumulado del mes</td>
-              <td></td>
-          </tr>
-      </table>
-   </div>
-
+     <div class="container-fluid inner">
+        <table class="tableizer-table">
+            <tr class="tableizer-firtrow">
+                <th>Ventas</th>
+            </tr>
+            <tr>
+                <td>Monto de venta</td>
+                <td>$<?php echo $venta; ?></td>
+            </tr>
+            <tr>
+                <td>Pedidos</td>
+                <td><?php echo $pedidos; ?></td>
+            </tr>
+            <tr>
+                <td>Fraudes</td>
+                <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
+            </tr>
+            <tr>
+                <td>Acumulado del mes</td>
+                <td></td>
+            </tr>
+        </table>
+     </div>
+    </div>
 
 		
 	</body>

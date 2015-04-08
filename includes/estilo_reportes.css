@@ -1,8 +1,8 @@
-/*body {
+#reporte {
   font: 400 16px 'Muli', sans-serif !important;
   margin: 0;
   padding: 0;
-}*/
+}
 
 header {
   margin: 0;
@@ -10,7 +10,7 @@ header {
   padding: 5px;
   text-align: center;
   overflow: auto;
-  font: 400 16px 'Muli', sans-serif !important;
+  
 }
 
 #reporte_ul{
@@ -49,6 +49,7 @@ header {
   font-size: 50px;
   font-weight: 300;
   text-transform: uppercase;
+  background-color: #;
 }
 
 /* text colors */

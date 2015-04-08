@@ -111,7 +111,7 @@
                 <td>$ <?php echo $venta; ?></td>
             </tr>
             <tr>
-                <td><canvas id="canvas" height="120" width="150"></canvas></td>
+                <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
                 <td>Pedidos</td>
                 <td><?php echo $pedidos; ?></td>
             </tr>
@@ -121,7 +121,7 @@
                 <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
             </tr>
             <tr>
-                <td><canvas id="canvas_line" width="120" height="120"/></td>
+                <td><canvas id="canvas" width="120" height="120"/></td>
                 <td>Acumulado del mes</td>
                 <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
             </tr>

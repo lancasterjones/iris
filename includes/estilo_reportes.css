@@ -40,6 +40,7 @@ header {
 
 .container-fluid h2 {
   font-family: 'Montserrat', sans-serif;
+  max-width: 50%;
 }
 
 .site-title {

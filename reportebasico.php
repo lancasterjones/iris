@@ -99,11 +99,12 @@
               <th>Ventas</th>
           </tr>
           <tr>
-              <td>
-                  <div class="c ab-bg"></div>
-                  Monto de venta
-              </td>
+              <td>Monto de venta</td>
               <td>$<?php echo $venta; ?></td>
+          </tr>
+          <tr>
+              <td>Pedidos</td>
+              <td><?php echo $pedidos; ?></td>
           </tr>
       </table>
    </div>

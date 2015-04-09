@@ -178,9 +178,9 @@
                     $fin = $week - 10;
                        for($sem = $week; $sem > $fin; $sem--)
                        {
-                          echo "<tr><td><a href='reportes_anteriores.php?semana=".$sem."><div>Semana ";
+                          echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php\"'>Semana ";
                           echo $sem;
-                          echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></a></td></tr>";  
+                          echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></td></tr>";  
                        }
                 ?>                
             </tr>

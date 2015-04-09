@@ -116,7 +116,7 @@
                   <tr>
                       <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
                       <td>Monto de venta</td>
-                      <td>$'. $venta .'</td>
+                      <td>$'. number_format($venta).'</td>
                   </tr>
                   <tr>
                       <td><canvas id="canvas_line" height="120" width="150"></canvas></td>

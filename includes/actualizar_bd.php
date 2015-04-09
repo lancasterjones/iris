@@ -71,11 +71,14 @@ ORDER BY 1 DESC, sales_bestsellers_aggregated_daily.qty_ordered DESC";
 		
 
 	//almacenar esa info en arreglo
-		$contenedor = array();
+		$contenedor = array(array());
 		$result = mysqli_query($connm,$query);		
+    $contador = 0;
 		
 		while ($consulta = mysqli_fetch_array($result)) {
-			$contenedor = $consulta['foto'];
+			$contenedor[$contador][0] = $consulta['foto'];
+      $contenedor[$contador][1] = $consulta['mes'];
+      $contador++;
 		}
 		
 

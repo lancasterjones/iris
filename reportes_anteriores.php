@@ -43,9 +43,11 @@
   <script type="text/javascript" src="includes/script_reportes.js"></script>
 	</head>
 	<body>
-  <?php require 'includes/db_magento_connect.php';
+  <?php 
 
-       $semana = $_GET["semana"];
+       require 'includes/db_magento_connect.php';
+
+       $semana = $_GET["semana"];  //asigna a la variable valor pasado a través de url
         $query ="";
 
         if($semana > 0)
@@ -59,7 +61,27 @@
           WHERE     sales_flat_order.status IN ('complete', 'processing')
             AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
             AND WEEK(sales_flat_order.created_at) = $semana";
+        }else
+        {
+          // Menú para elegir semana anterior
+          //=============================================
+          //Se imprime solo si no se ha pasado ningún va
+
+            echo "<div class='container-fluid inner'>";
+            echo "<table class='tableizer-table'>";
+            echo "<tr class='tableizer-firstrow'>";
+            echo "<th>Archivo Semanas Anteriores</th></tr>";
+            $week = date("W")-2;
+            $fin = $week - 10;
+               for($sem = $week; $sem > $fin; $sem--)
+               {
+                  echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
+                  echo $sem;
+                  echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></td></tr>";  
+               }
+               echo "</table></div>";
         }
+
         
           $result = mysqli_query($connm,$query);
           $i = 0;
@@ -108,24 +130,8 @@
             <tr class="tableizer-firstrow">
               <form action="reportes_anteriores.php" method="post">
                 <th>Ventas</th>
-                <th>
-                    <button type="submit" class="btn btn-primary pull-right"><i style="color:#fff" class="glyphicon glyphicon-ok"></i></button> 
-                </th>
-                <th>                                       
-                    <select name="nSemana" class='form-control'>
-                      <?php
-                             $week = date("W")-2;
-
-                             for($sem = $week; $sem >= 1; $sem--)
-                             {
-                                echo "<option>";
-                                echo $sem;
-                                echo "</option>";  
-                             }
-                            
-                      ?>                 
-                    </select>
-                </th>
+                <th></th>
+                <th></th>
               </form>
             </tr>
             <tr>
@@ -150,30 +156,6 @@
             </tr>
         </table>
      </div>	
-
-
-     <!--Menú de semanas anteriores-->
-
-
-     <div class="container-fluid inner">
-        <table class="tableizer-table">
-            <tr class="tableizer-firstrow">
-                <th>Archivo Semanas Anteriores</th>
-            </tr>
-            <tr>
-                <?php
-                    $week = date("W")-2;
-                    $fin = $week - 10;
-                       for($sem = $week; $sem > $fin; $sem--)
-                       {
-                          echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
-                          echo $sem;
-                          echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></td></tr>";  
-                       }
-                ?>                
-            </tr>
-        </table>
-     </div>
 
 	</body>
 </html>

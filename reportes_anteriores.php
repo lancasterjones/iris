@@ -126,7 +126,7 @@
                   <tr>
                       <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>
                       <td>Fraudes</td>
-                      <td>'. $fraudes .'($'. $monto_fraudes. ')</td>
+                      <td>'. $fraudes .'($'. number_format($monto_fraudes) . ')</td>
                   </tr>
                   <tr>
                       <td><canvas id="canvas" width="120" height="120"/></td>

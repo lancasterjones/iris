@@ -68,17 +68,24 @@ GROUP BY CONCAT(
             MONTH(sales_bestsellers_aggregated_daily.period)),
          catalog_product_entity.sku
 ORDER BY 1 DESC, sales_bestsellers_aggregated_daily.qty_ordered DESC";
-		$result = mysqli_query($connm,$query);		
-		$consulta = mysqli_fetch_array($result);
-		echo $query;
+		
 
 	//almacenar esa info en arreglo
+		$contenedor = array();
+		$result = mysqli_query($connm,$query);		
+		$consulta = mysqli_fetch_array($result);
+		while ($consulta) {
+			$contenedor = $consulta;
+		}
+		
 
 	//imprimir esa información
-		print_r($consulta);
-		echo $consulta;
+		print_r($contenedor);
+		echo $contenedor;
 
 	//conectar bd vende
+
+
 
 	//llenar tabla vende con arreglo
 	

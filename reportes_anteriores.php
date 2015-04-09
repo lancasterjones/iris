@@ -145,12 +145,12 @@
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
                       <th>Lo + visto</th>
-                      <th<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210_2.jpg"></th>                      
+                      <th</th>                      
                     </form>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
-                      <td></td>
+                      <td><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210_2.jpg"></td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>

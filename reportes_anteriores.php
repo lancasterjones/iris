@@ -137,6 +137,43 @@
                   </tr>
               </table>
            </div> 
+
+           <!--Es el reporte numero dos-->
+
+
+           <div class="container-fluid inner">
+              <table class="tableizer-table">
+                  <tr class="tableizer-firstrow">
+                      <th>Productos</th>
+                      <th></th>
+                      <th>
+                        <div onclick="location.href=\'reportes_anteriores.php\'">
+                            <i style="cursor: pointer; font-size: 24px" class="glyphicon glyphicon-circle-arrow-left pull-right"></i>
+                        </div>
+                      </th>
+                    </form>
+                  </tr>
+                  <tr>
+                      <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
+                      <td>Monto de venta</td>
+                      <td>$'. number_format($venta).'</td>
+                  </tr>
+                  <tr>
+                      <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
+                      <td>Pedidos</td>
+                      <td>'. $pedidos . '</td>
+                  </tr>
+                  <tr>
+                      <td>Monto de venta</td>
+                  </tr>
+                  <tr>
+                      <td>Monto de venta</td>
+                  </tr>
+                  <tr>
+                      <td>Monto de venta</td>
+                  </tr>
+
+
            ';
 
         }else

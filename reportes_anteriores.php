@@ -167,7 +167,11 @@
                   <tr>
                       <td>SRL-4086</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210.jpg"></td>
-                      <td>5</td>
+                      <td>
+                          <div align="center" class="media-middle">
+                            <i style="font-size:60px;" class="glyphicon glyphicon-ok"></i>
+                          </div>
+                      </td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>

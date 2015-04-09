@@ -99,7 +99,7 @@
             echo '
            <header align="center">
                 <h2 class="site-title">Reporte de ventas anteriores</h2>
-                <p>Semana: <?php echo $semana; ?></p>          
+                <p>Semana:'. $semana .'</p>          
            </header>
 
            <div class="container-fluid inner">
@@ -114,12 +114,12 @@
                   <tr>
                       <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
                       <td>Monto de venta</td>
-                      <td>$ <?php echo $venta; ?></td>
+                      <td>$'. $venta .'</td>
                   </tr>
                   <tr>
                       <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
                       <td>Pedidos</td>
-                      <td><?php echo $pedidos; ?></td>
+                      <td><'. $pedidos . '</td>
                   </tr>
                   <tr>
                       <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>

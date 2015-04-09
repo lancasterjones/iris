@@ -60,7 +60,19 @@
           WHERE     sales_flat_order.status IN ('complete', 'processing')
             AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
             AND WEEK(sales_flat_order.created_at) = $semana";
-        
+        }else
+        {
+            $semana = date("W")-2;
+            $query = "SELECT 
+            count(sales_flat_order.total_paid) Pedidos
+            ,sum(sales_flat_order.total_paid) Venta
+            ,WEEK(sales_flat_order.created_at) Semana
+            ,YEAR(sales_flat_order.created_at) Año
+          FROM shop_production.sales_flat_order sales_flat_order
+          WHERE     sales_flat_order.status IN ('complete', 'processing')
+            AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
+            AND WEEK(sales_flat_order.created_at) = $semana";
+        }
         
           $result = mysqli_query($connm,$query);
           $i = 0;

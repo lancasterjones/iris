@@ -181,7 +181,7 @@
                        {
                           echo "<tr><td>Semana ";
                           echo $sem;
-                          echo "</td></tr>";  
+                          echo "<i class='glyphicon glyphicon-folder-open'></i></td></tr>";  
                        }
                 ?>                
             </tr>

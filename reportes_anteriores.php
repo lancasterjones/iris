@@ -173,6 +173,20 @@
             <tr class="tableizer-fistrow">
                 <th>Archivo Semanas Anteriores</th>
             </tr>
+            <tr>
+                <?php
+                    $week = date("W")-2;
+                    $fin = $week - 10;
+                    echo "<td>Semana ";
+                       for($sem = $week; $sem >= $fin; $sem--)
+                       {
+                          echo "<option>";
+                          echo $sem;
+                          echo "</option>";  
+                       }
+                    echo "</td>";
+                ?>                
+            </tr>
         </table>
      </div>
 

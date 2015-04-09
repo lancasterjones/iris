@@ -177,7 +177,7 @@
                 <?php
                     $week = date("W")-2;
                     $fin = $week - 10;
-                       for($sem = $week; $sem >= $fin; $sem--)
+                       for($sem = $week; $sem > $fin; $sem--)
                        {
                           echo "<tr><td>Semana ";
                           echo $sem;

@@ -128,5 +128,8 @@
         </table>
         <canvas id="chart-area" width="100" height="100"/>
      </div>		
+     <button class="btn btn-primary">
+          Actualizar
+     </button>
 	</body>
 </html>

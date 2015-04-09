@@ -45,7 +45,6 @@
   <style type="text/css">
       .pic{
         width: 200px;
-        height: 300px;
       }
   </style>
 	</head>

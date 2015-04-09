@@ -116,12 +116,8 @@
           $contenedor = array(array());   
           $contador = 0;
 
-          while ($consulta = mysqli_fetch_array($result)) {
+          while ($consulta = mysqli_fetch_array($resultado)) {
             $contenedor[$contador][0] = $consulta['sku'];
-            $contenedor[$contador][1] = $consulta['mes'];
-            $contenedor[$contador][2] = $consulta['precio'];
-            $contenedor[$contador][3] = $consulta['foto'];
-            $contenedor[$contador][4] = $consulta['qty'];
             $contador++;
           }
 

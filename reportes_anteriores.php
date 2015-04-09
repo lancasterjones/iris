@@ -113,14 +113,7 @@
           }
 
 
-
-          mysqli_close($connm);
-        ?>
-
-
-
-
-   <!--Rerporte de ventas-->
+   echo '
      <header align="center">
           <h2 class="site-title">Reporte de ventas anteriores</h2>
           <p>Semana: <?php echo $semana; ?></p>          
@@ -156,7 +149,11 @@
                 <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
             </tr>
         </table>
-     </div>	
+     </div> 
+     ';
+
+          mysqli_close($connm);
+        ?>
 
 	</body>
 </html>

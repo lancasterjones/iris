@@ -152,28 +152,34 @@
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
                       <th>Lo + visto</th>
-                      <th</th>                      
+                      <th></th>                      
+                      <th></th>                      
                     </form>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210_2.jpg"></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
 
           <!--Es el reporte numero tres-->
@@ -183,28 +189,34 @@
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
                       <th>Lo + vendido</th>
-                      <th></th>                      
+                      <th></th> 
+                      <th></th>                     
                     </form>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
+                      <td>5</td>
                   </tr>
            ';
 

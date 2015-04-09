@@ -128,8 +128,28 @@
         </table>
         <canvas id="chart-area" width="100" height="100"/>
      </div>		
-     <button class="btn btn-primary">
+     <button id="masVendidos" class="btn btn-primary pull-right">
           Actualizar
      </button>
+
+      <script>
+          $(document).ready(function(){
+            $('#masVendidos').click(function(){
+              var clickBtnValue = $(this).val();
+              var ajaxurl = '/actualizar_bd.php',
+              data =  {'action': clickBtnValue};
+              $.post(ajaxurl, data, function (response) {
+                  $("#refresh").remove();
+                  $("#sync").append('<span id="syncconf" class="glyphicon glyphicon-ok icono" aria-hidden="true" style="float:right"></span>');
+                  setTimeout(function() {
+                    $("#syncconf").remove();
+                     },3000);
+               // alert("action performed successfully");
+                });
+              });
+            });
+      </script>
+
+
 	</body>
 </html>

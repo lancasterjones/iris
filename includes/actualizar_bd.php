@@ -73,9 +73,9 @@ ORDER BY 1 DESC, sales_bestsellers_aggregated_daily.qty_ordered DESC";
 	//almacenar esa info en arreglo
 		$contenedor = array();
 		$result = mysqli_query($connm,$query);		
-		$consulta = mysqli_fetch_array($result);
-		while ($consulta) {
-			$contenedor = $consulta;
+		
+		while ($consulta = mysqli_fetch_array($result)) {
+			$contenedor = $consulta['foto'];
 		}
 		
 

@@ -61,31 +61,7 @@
           WHERE     sales_flat_order.status IN ('complete', 'processing')
             AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
             AND WEEK(sales_flat_order.created_at) = $semana";
-        }else
-        {
-          // Menú para elegir semana anterior
-          //=============================================
-          //Se imprime solo si no se ha pasado ningún valor a través de la url
 
-            //menu de navegación
-           include 'includes/menu.php';
-
-            echo "<div class='container-fluid inner'>";
-            echo "<table class='tableizer-table'>";
-            echo "<tr class='tableizer-firstrow'>";
-            echo "<th>Archivo Semanas Anteriores</th></tr>";
-            $week = date("W")-2;
-            $fin = $week - 10;
-               for($sem = $week; $sem > $fin; $sem--)
-               {
-                  echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
-                  echo $sem;
-                  echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></td></tr>";  
-               }
-               echo "</table></div>";
-        }
-
-        
           $result = mysqli_query($connm,$query);
           $i = 0;
             while( $row = mysqli_fetch_array($result)) {
@@ -113,46 +89,76 @@
           }
 
 
-   echo '
-     <header align="center">
-          <h2 class="site-title">Reporte de ventas anteriores</h2>
-          <p>Semana: <?php echo $semana; ?></p>          
-     </header>
-
-     <div class="container-fluid inner">
-        <table class="tableizer-table">
-            <tr class="tableizer-firstrow">
-              <form action="reportes_anteriores.php" method="post">
-                <th>Ventas</th>
-                <th></th>
-                <th></th>
-              </form>
-            </tr>
-            <tr>
-                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
-                <td>Monto de venta</td>
-                <td>$ <?php echo $venta; ?></td>
-            </tr>
-            <tr>
-                <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
-                <td>Pedidos</td>
-                <td><?php echo $pedidos; ?></td>
-            </tr>
-            <tr>
-                <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>
-                <td>Fraudes</td>
-                <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
-            </tr>
-            <tr>
-                <td><canvas id="canvas" width="120" height="120"/></td>
-                <td>Acumulado del mes</td>
-                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
-            </tr>
-        </table>
-     </div> 
-     ';
-
+   
           mysqli_close($connm);
+
+
+         //menu de navegación
+           include 'includes/menu.php';
+
+            echo '
+           <header align="center">
+                <h2 class="site-title">Reporte de ventas anteriores</h2>
+                <p>Semana: <?php echo $semana; ?></p>          
+           </header>
+
+           <div class="container-fluid inner">
+              <table class="tableizer-table">
+                  <tr class="tableizer-firstrow">
+                    <form action="reportes_anteriores.php" method="post">
+                      <th>Ventas</th>
+                      <th></th>
+                      <th></th>
+                    </form>
+                  </tr>
+                  <tr>
+                      <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
+                      <td>Monto de venta</td>
+                      <td>$ <?php echo $venta; ?></td>
+                  </tr>
+                  <tr>
+                      <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
+                      <td>Pedidos</td>
+                      <td><?php echo $pedidos; ?></td>
+                  </tr>
+                  <tr>
+                      <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>
+                      <td>Fraudes</td>
+                      <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
+                  </tr>
+                  <tr>
+                      <td><canvas id="canvas" width="120" height="120"/></td>
+                      <td>Acumulado del mes</td>
+                      <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
+                  </tr>
+              </table>
+           </div> 
+           ';
+
+        }else
+        {
+          // Menú para elegir semana anterior
+          //=============================================
+          //Se imprime solo si no se ha pasado ningún valor a través de la url
+
+            //menu de navegación
+           include 'includes/menu.php';
+
+            echo "<div class='container-fluid inner'>";
+            echo "<table class='tableizer-table'>";
+            echo "<tr class='tableizer-firstrow'>";
+            echo "<th>Archivo Semanas Anteriores</th></tr>";
+            $week = date("W")-2;
+            $fin = $week - 10;
+               for($sem = $week; $sem > $fin; $sem--)
+               {
+                  echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
+                  echo $sem;
+                  echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></td></tr>";  
+               }
+               echo "</table></div>";
+        }      
+          
         ?>
 
 	</body>

@@ -99,7 +99,7 @@
             echo '
            <header align="center">
                 <h2 class="site-title">Reporte de ventas anteriores</h2>
-                <p>Semana:'. $semana .'</p>          
+                <p>Semana: '. $semana .'</p>          
            </header>
 
            <div class="container-fluid inner">
@@ -109,8 +109,8 @@
                       <th>Ventas</th>
                       <th></th>
                       <th>
-                        <div style="color:red;" onclick="location.href=\'reportes_anteriores.php\'">
-                            <i align="center" style="cursor: pointer; position: center;" class="glyphicon glyphicon-triangle-left"></i>
+                        <div onclick="location.href=\'reportes_anteriores.php\'">
+                            <i style="cursor: pointer; font-size: 24px" class="gglyphicon glyphicon-circle-arrow-left pull-right"></i>
                         </div>
                       </th>
                     </form>
@@ -164,7 +164,7 @@
                {
                   echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
                   echo $sem;
-                  echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></td></tr>";  
+                  echo "<i class='glyphicon glyphicon-zoom-in pull-right'></i></div></td></tr>";  
                }
                echo "</table></div>";
         }      

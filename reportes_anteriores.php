@@ -144,28 +144,28 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th>SKU</th>
-                      <th>Foto</th>                      
+                      <th>Lo + visto</th>
+                      <th<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210_2.jpg"></th>                      
                     </form>
                   </tr>
                   <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
+                      <td>SRL-4086</td>
                       <td></td>
                   </tr>
                   <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
+                      <td>SRL-4086</td>
                       <td></td>
                   </tr>
                   <tr>
+                      <td>SRL-4086</td>
                       <td></td>
+                  </tr>
+                  <tr>
+                      <td>SRL-4086</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td>SRL-4086</td>
                       <td></td>
                   </tr>
 
@@ -175,28 +175,28 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th>SKU</th>
-                      <th>Foto</th>                      
+                      <th>Lo + vendido</th>
+                      <th></th>                      
                     </form>
                   </tr>
                   <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
+                      <td>SRL-4086</td>
                       <td></td>
                   </tr>
                   <tr>
-                      <td></td>
-                      <td></td>
-                  </tr>
-                  <tr>
-                      <td></td>
+                      <td>SRL-4086</td>
                       <td></td>
                   </tr>
                   <tr>
+                      <td>SRL-4086</td>
                       <td></td>
+                  </tr>
+                  <tr>
+                      <td>SRL-4086</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td>SRL-4086</td>
                       <td></td>
                   </tr>
            ';

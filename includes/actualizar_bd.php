@@ -93,12 +93,12 @@
     }else{ echo "Conexion MySql Ok";}
 
     //Se elimina información en tabla envios server VENDE 
-    mysqli_query($con,"TRUNCATE TABLE clientes");
+    mysqli_query($con,"TRUNCATE TABLE mas_vendidos");
 
 	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($sku, $mes, $precio, $cantidad, $foto))
+      foreach ($contenedor as list($foto, $mes, $precio, $cantidad, $sku))
     {
-        mysqli_query($con,"INSERT INTO clientes(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$cantidad', '$foto')");
+        mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$cantidad', '$foto')");
     }
 
 	

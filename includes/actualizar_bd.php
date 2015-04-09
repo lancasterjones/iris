@@ -71,10 +71,10 @@
     $contador = 0;
 		
 		while ($consulta = mysqli_fetch_array($result)) {
-			$contenedor[$contador][0] = $consulta['foto'];
+			$contenedor[$contador][0] = $consulta['sku'];
       $contenedor[$contador][1] = $consulta['mes'];
       $contenedor[$contador][2] = $consulta['precio'];
-      $contenedor[$contador][3] = $consulta['sku'];
+      $contenedor[$contador][3] = $consulta['foto'];
       $contenedor[$contador][4] = $consulta['qty'];
       $contador++;
 		}
@@ -96,9 +96,9 @@
     mysqli_query($con,"TRUNCATE TABLE mas_vendidos");
 
 	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($foto, $mes, $precio, $cantidad, $sku))
+      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad))
     {
-        mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$cantidad', '$foto')");
+        mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
     }
 
 	

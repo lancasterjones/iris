@@ -112,9 +112,10 @@
                 ORDER BY mes DESC
           ";
 
-          $restultado = mysqli_query($con, $query_marzo);
+          $resultado = mysqli_query($con, $query_marzo);
           $contenedor = array(array());   
           $contador = 0;
+          $consulta = mysqli_fetch_array($resultado);
 
           while ($consulta = mysqli_fetch_array($resultado)) {
             $contenedor[$contador][0] = $consulta['sku'];

@@ -108,7 +108,9 @@
                     <form action="reportes_anteriores.php" method="post">
                       <th>Ventas</th>
                       <th></th>
-                      <th></th>
+                      <th>
+                        <div style="color:red;" onclick="location.href=\'reportes_anteriores.php\'">Otra consulta</div>
+                      </th>
                     </form>
                   </tr>
                   <tr>

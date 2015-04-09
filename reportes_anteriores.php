@@ -163,22 +163,22 @@
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
-                      <td>http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210.jpg</td>
+                      <td><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210.jpg"></td>
                       <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
-                      <td>http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210c_1.jpg</td>
+                      <td><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210c_1.jpg"></td>
                       <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
-                      <td>http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210b_1.jpg</td>
+                      <td><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210b_1.jpg"></td>
                       <td>5</td>
                   </tr>
                   <tr>
                       <td>SRL-4086</td>
-                      <td>http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/b/dbts0119.jpg</td>
+                      <td><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/b/dbts0119.jpg"></td>
                       <td>5</td>
                   </tr>
 

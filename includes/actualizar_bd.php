@@ -4,6 +4,7 @@
 	//traer información
 		include "includes/querymasvendidos.php";
 		$result = mysqli_query($connm,$query);		
+		echo $query;
 
 	//almacenar esa info en arreglo
 

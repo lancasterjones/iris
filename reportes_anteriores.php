@@ -110,7 +110,7 @@
                       <th></th>
                       <th>
                         <div onclick="location.href=\'reportes_anteriores.php\'">
-                            <i style="cursor: pointer; font-size: 24px" class="gglyphicon glyphicon-circle-arrow-left pull-right"></i>
+                            <i style="cursor: pointer; font-size: 24px" class="glyphicon glyphicon-circle-arrow-left pull-right"></i>
                         </div>
                       </th>
                     </form>

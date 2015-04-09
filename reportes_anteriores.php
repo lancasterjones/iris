@@ -179,7 +179,7 @@
                     </form>
                   </tr>
                   <tr>
-                      <td>'. $contador[0][0] .'</td>
+                      <td>'. $contenedor[0][0] .'</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210_2.jpg"></td>
                       <td>
                         <div align="center" class="media-middle">

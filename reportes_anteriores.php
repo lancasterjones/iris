@@ -179,9 +179,9 @@
                     $fin = $week - 10;
                        for($sem = $week; $sem >= $fin; $sem--)
                        {
-                          echo "<td>Semana ";
+                          echo "<tr><td>Semana ";
                           echo $sem;
-                          echo "</td>";  
+                          echo "</td></tr>";  
                        }
                 ?>                
             </tr>

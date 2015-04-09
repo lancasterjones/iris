@@ -45,7 +45,7 @@
 	<body>
   <?php require 'includes/db_magento_connect.php';
 
-       $semana = $HTTP_GET_VARS["semana"];
+       $semana = $_GET["semana"];
         $query ="";
 
         if($semana > 0)

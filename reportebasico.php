@@ -138,7 +138,7 @@
             $('#masVendidos').click(function(){
               $("#masVendidos").append('<span id="refresh" class="glyphicon glyphicon-refresh icono" aria-hidden="true" style="float:right"></span>');
               var clickBtnValue = $(this).val();
-              var ajaxurl = '/actualizar_bd.php',
+              var ajaxurl = 'includes/actualizar_bd.php',
               data =  {'action': clickBtnValue};
               $.post(ajaxurl, data, function (response) {
                   $("#refresh").remove();

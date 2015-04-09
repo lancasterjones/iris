@@ -135,12 +135,13 @@
       <script>
           $(document).ready(function(){
             $('#masVendidos').click(function(){
+              $("#masVendidos").append('<span id="refresh" class="glyphicon glyphicon-refresh icono" aria-hidden="true" style="float:right"></span>');
               var clickBtnValue = $(this).val();
               var ajaxurl = '/actualizar_bd.php',
               data =  {'action': clickBtnValue};
               $.post(ajaxurl, data, function (response) {
                   $("#refresh").remove();
-                  $("#sync").append('<span id="syncconf" class="glyphicon glyphicon-ok icono" aria-hidden="true" style="float:right"></span>');
+                  $("#masVendidos").append('<span id="syncconf" class="glyphicon glyphicon-ok icono" aria-hidden="true" style="float:right"></span>');
                   setTimeout(function() {
                     $("#syncconf").remove();
                      },3000);

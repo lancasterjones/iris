@@ -144,6 +144,12 @@
             //menu de navegación
            include 'includes/menu.php';
 
+            echo '
+                <header align="center">
+                    <h2 class="site-title">Reporte de ventas anteriores</h2>
+                    <p>Elige la semana que deseas consultar</p>          
+               </header>
+            ';
             echo "<div class='container-fluid inner'>";
             echo "<table class='tableizer-table'>";
             echo "<tr class='tableizer-firstrow'>";

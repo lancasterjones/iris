@@ -109,7 +109,7 @@
                       <th>Ventas</th>
                       <th></th>
                       <th>
-                        <div style="color:red;" onclick="location.href=\'reportes_anteriores.php\'"><i class="glyphicon glyphicon-menu-left"></i></div>
+                        <div style="color:red;" onclick="location.href=\'reportes_anteriores.php\'"><i class="glyphicon glyphicon-triangle-left"></i></div>
                       </th>
                     </form>
                   </tr>

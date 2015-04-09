@@ -179,9 +179,9 @@
                     $fin = $week - 10;
                        for($sem = $week; $sem > $fin; $sem--)
                        {
-                          echo "<tr><td>Semana ";
+                          echo "<form action='download_view.php' method='post'><tr><td>Semana ";
                           echo $sem;
-                          echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></td></tr>";  
+                          echo "<a href='download_view.php?semana=".$sem."'><i class='glyphicon glyphicon-cloud-download pull-right'></i></a></td></tr></form>";  
                        }
                 ?>                
             </tr>

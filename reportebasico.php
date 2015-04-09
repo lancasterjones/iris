@@ -126,8 +126,7 @@
                 <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
             </tr>
         </table>
-        <canvas id="chart-area" width="100" height="100"/>  
-       <button id="masVendidos" class="btn btn-success pull-right">
+       <button id="masVendidos" class="btn btn-primary pull-right">
             Actualizar
             <i style="float:right" class="glyphicon glyphicon-hdd icono"></i>
        </button>

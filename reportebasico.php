@@ -130,6 +130,7 @@
      </div>		
      <button id="masVendidos" class="btn btn-primary pull-right">
           Actualizar
+          <i style="float:right" class="glyphicon glyphicon-hdd icono"></i>
      </button>
 
       <script>

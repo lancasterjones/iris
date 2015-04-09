@@ -65,7 +65,10 @@
         {
           // Menú para elegir semana anterior
           //=============================================
-          //Se imprime solo si no se ha pasado ningún va
+          //Se imprime solo si no se ha pasado ningún valor a través de la url
+
+            //menu de navegación
+           include 'includes/menu.php' ?>
 
             echo "<div class='container-fluid inner'>";
             echo "<table class='tableizer-table'>";
@@ -115,8 +118,6 @@
         ?>
 
 	<?php
-    //menu de navegación
-   include 'includes/menu.php' ?>
 
 
    <!--Rerporte de ventas-->

@@ -48,9 +48,8 @@
         $semana = 0;
         $query ="";
 
-        if($_SERVER["REQUEST_METHOD"] == "POST")
+        if($semana > 0)
         {
-            $semana = $_POST["nSemana"];
             $query = "SELECT 
             count(sales_flat_order.total_paid) Pedidos
             ,sum(sales_flat_order.total_paid) Venta
@@ -179,9 +178,9 @@
                     $fin = $week - 10;
                        for($sem = $week; $sem > $fin; $sem--)
                        {
-                          echo "<tr><a href='reportes_anteriores.php?semana=".$sem."'><td>Semana ";
+                          echo "<tr><td><a href='reportes_anteriores.php?semana=".$sem."<div>Semana ";
                           echo $sem;
-                          echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></td></a></tr>";  
+                          echo "<i class='glyphicon glyphicon-cloud-download pull-right'></i></div></a></td></tr>";  
                        }
                 ?>                
             </tr>

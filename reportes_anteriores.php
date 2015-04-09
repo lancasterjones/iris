@@ -68,7 +68,7 @@
           //Se imprime solo si no se ha pasado ningún valor a través de la url
 
             //menu de navegación
-           include 'includes/menu.php' ?>
+           include 'includes/menu.php'
 
             echo "<div class='container-fluid inner'>";
             echo "<table class='tableizer-table'>";
@@ -117,7 +117,7 @@
           mysqli_close($connm);
         ?>
 
-	<?php
+
 
 
    <!--Rerporte de ventas-->

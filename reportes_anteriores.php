@@ -99,6 +99,33 @@
           mysqli_close($connm);
 
 
+          //conexión a base de datos Vende para reportes mas vistos y mas vendidos
+
+          //conectar bd vende
+          $con=mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
+          if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          }else{ echo "Conexion MySql Ok";}
+          $query_marzo = "
+                SELECT * FROM mas_vendidos
+                WHERE mes = '201503'
+                ORDER BY mes DESC
+          ";
+
+          $restultado = mysqli_query($con, $query_marzo);
+          $contenedor = array(array());   
+          $contador = 0;
+
+          while ($consulta = mysqli_fetch_array($result)) {
+            $contenedor[$contador][0] = $consulta['sku'];
+            $contenedor[$contador][1] = $consulta['mes'];
+            $contenedor[$contador][2] = $consulta['precio'];
+            $contenedor[$contador][3] = $consulta['foto'];
+            $contenedor[$contador][4] = $consulta['qty'];
+            $contador++;
+          }
+
+
          //menu de navegación
            include 'includes/menu.php';
 
@@ -156,7 +183,7 @@
                     </form>
                   </tr>
                   <tr>
-                      <td>SRL-4086</td>
+                      <td>'. $contador[0][0] .'</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210_2.jpg"></td>
                       <td>
                         <div align="center" class="media-middle">

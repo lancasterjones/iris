@@ -177,14 +177,12 @@
                 <?php
                     $week = date("W")-2;
                     $fin = $week - 10;
-                    echo "<td>Semana ";
                        for($sem = $week; $sem >= $fin; $sem--)
                        {
-                          echo "<option>";
+                          echo "<td>Semana ";
                           echo $sem;
-                          echo "</option>";  
+                          echo "</td>";  
                        }
-                    echo "</td>";
                 ?>                
             </tr>
         </table>

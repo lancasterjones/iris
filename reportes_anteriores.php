@@ -121,12 +121,12 @@
                   <tr>
                       <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
                       <td>Pedidos</td>
-                      <td><'. $pedidos . '</td>
+                      <td>'. $pedidos . '</td>
                   </tr>
                   <tr>
                       <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>
                       <td>Fraudes</td>
-                      <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
+                      <td>'. $fraudes .'($'. $monto_fraudes. ')</td>
                   </tr>
                   <tr>
                       <td><canvas id="canvas" width="120" height="120"/></td>

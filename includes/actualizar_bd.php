@@ -8,7 +8,7 @@
 	//almacenar esa info en arreglo
 
 	//imprimir esa información
-		print_r($result)
+		print_r($result);
 
 	//conectar bd vende
 

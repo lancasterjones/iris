@@ -153,7 +153,7 @@
                </header>
             ';
             echo "<div class='container-fluid inner'>";
-            echo "<table class='tableizer-table'>";
+            echo "<table style='cursor:pointer;' class='tableizer-table'>";
             echo "<tr class='tableizer-firstrow'>";
             echo "<th>Archivo Semanas Anteriores</th></tr>";
             $week = date("W")-2;

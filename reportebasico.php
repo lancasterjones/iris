@@ -204,7 +204,7 @@
           }
 
 
-
+          ?>
 
           echo '
           <div class="container-fluid inner">
@@ -215,7 +215,7 @@
                       <th></th>                                          
                   </tr>';
 
-
+          <?php
                   $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
@@ -238,8 +238,8 @@
                    $icono = "";
                 }
 
-
-           echo   '</table></div>
+                ?>
+           </table></div>
 
           <!--
            ======================================================================
@@ -253,7 +253,7 @@
                       <th></th>
                   </tr>';
 
-
+                  <?php
                   $fila = 0;
                   $icon = "";
                   for($fila = 0; $fila < $nVistos; $fila++)
@@ -280,8 +280,9 @@
                   </tr>';
                 }
            
-          echo  "</table></div>";
-      ?>
+           ?>
+          </table></div>
+      
 
 
 

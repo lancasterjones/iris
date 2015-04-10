@@ -287,13 +287,23 @@
                       <th></th> 
                       <th></th>
                   </tr>';
+
+
+                  $x = 0;
+                  $icon = "ok";
                   for($x = 0; $x < 10; $x++)
                   {
                     echo '
                   <tr>
                       <td>'. $contenedor[$x][3] .'</td>
-                      <td></td>
-                      <td>5</td>
+                      <td>
+                          <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][4] .'"></td>
+                      </td>
+                      <td>
+                          <div align="center" class="media-middle">
+                            <i style="font-size:60px;" class="glyphicon glyphicon-'. $icon.'"></i>
+                          </div>
+                      </td>
                   </tr>';
                 }
            

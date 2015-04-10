@@ -152,5 +152,137 @@
       </script>
 
 
+      <?php
+        //=====================================================================
+        //Reporte lo mas visto y lo mas vendido
+
+
+        //conexión a base de datos Vende para reportes mas vistos y mas vendidos
+
+          //conectar bd vende
+          $con=mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
+          if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          }
+
+
+          //query mas vendidos
+          $sql = "
+                SELECT * FROM mas_vendidos
+                WHERE mes = '2015".$semana."'
+                ORDER BY mes DESC
+          ";
+
+          //query masvistos
+          $sqlvistos = "
+                SELECT * FROM mas_vistos
+                WHERE mes = '2015".$semana."'
+                ORDER BY mes DESC
+          ";
+
+          $resultado = mysqli_query($con, $sql);
+          $masvistos = mysqli_query($con, $sqlvistos);
+          //numero de filas query masvistos
+          $nVistos = mysqli_num_rows($masvistos);
+          $contenedor = array(array());   
+          $contador = 0;
+
+          while ($consulta = mysqli_fetch_array($resultado)) {
+            $contenedor[$contador][0] = $consulta['sku'];
+            $contenedor[$contador][1] = $consulta['foto'];
+            $contenedor[$contador][2] = $consulta['cantidad'];
+            $contador++;
+          }
+          //contador masvistos
+          $contador = 0;
+          while ($cons_masvistos = mysqli_fetch_array($masvistos)){
+            $contenedor[$contador][3] = $cons_masvistos['modelo'];
+            $contenedor[$contador][4] = $cons_masvistos['foto'];
+            $contenedor[$contador][5] = $cons_masvistos['qty'];
+            $contador++;
+          }
+
+
+
+
+          echo '
+          <div class="container-fluid inner">
+              <table class="tableizer-table">
+                  <tr class="tableizer-firstrow">
+                      <th><h3>Lo + vendido</h3></th>
+                      <th></th>                      
+                      <th></th>                                          
+                  </tr>';
+
+
+                  $fila = 0;
+                  for($fila = 0; $fila < 10; $fila++)
+                  {
+                      if($contenedor[$fila][2] > 0)
+                      {
+                          $icono = "ok";
+                      }else if($contenedor[$fila][2] == 0)
+                      {
+                          $icono = "remove";
+                      }
+                  echo '<tr>
+                      <td>'. $contenedor[$fila][0] .'</td>
+                      <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][1] .'"></td>
+                      <td>
+                        <div align="center" class="media-middle">
+                          <i style="font-size:60px;" class="glyphicon glyphicon-'. $icono.'"></i>
+                        </div>
+                      </td>
+                  </tr>';
+                   $icono = "";
+                }
+
+
+           echo   '</table></div>
+
+          <!--
+           ======================================================================
+           Es el reporte numero tres-->
+
+           <div class="container-fluid inner">
+              <table class="tableizer-table">
+                  <tr class="tableizer-firstrow">
+                      <th><h3>Lo + visto</h3></th>
+                      <th></th> 
+                      <th></th>
+                  </tr>';
+
+
+                  $fila = 0;
+                  $icon = "";
+                  for($fila = 0; $fila < $nVistos; $fila++)
+                  {
+                    if($contenedor[$fila][5] > 0)
+                      {
+                          $icon = "ok";
+                      }else 
+                      {
+                          $icon = "remove";
+                      }
+
+                    echo '
+                  <tr>
+                      <td>'. $contenedor[$fila][3] .'</td>
+                      <td>
+                          <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][4] .'"></td>
+                      </td>
+                      <td>
+                          <div align="center" class="media-middle">
+                            <i style="font-size:60px;" class="glyphicon glyphicon-'. $icon.'"></i>
+                          </div>
+                      </td>
+                  </tr>';
+                }
+           
+          echo  "</table></div>";
+      ?>
+
+
+
 	</body>
 </html>

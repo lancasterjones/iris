@@ -183,7 +183,7 @@
 
 
                   $fila = 0;
-                  for()
+                  for($fila = 0; $fila < 10; $fila++)
                   {
 
                   echo '<tr>
@@ -195,7 +195,6 @@
                         </div>
                       </td>
                   </tr>';
-                  $fila++;
                 }
 
 

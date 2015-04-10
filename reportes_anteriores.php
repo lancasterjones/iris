@@ -219,7 +219,9 @@
               </table>
            </div> 
 
-           <!--Es el reporte numero dos-->
+           <!--
+           ==========================
+           Es el reporte numero dos-->
 
 
            <div class="container-fluid inner">
@@ -256,8 +258,9 @@
 
            echo   '</table>
 
-          <!--Es el reporte numero tres-->
-
+          <!--
+           ======================================================================
+           Es el reporte numero tres-->
 
            <div class="container-fluid inner">
               <table class="tableizer-table">

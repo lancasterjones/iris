@@ -156,13 +156,24 @@
           if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
           }else{ echo "Conexion MySql Ok";}
+
+
+          //query mas vendidos
           $sql = "
                 SELECT * FROM mas_vendidos
                 WHERE mes = '2015".$w."'
                 ORDER BY mes DESC
           ";
 
+          //query masvistos
+          $sql_masvistos = "
+                SELECT * FROM mas_vistos
+                WHERE mes = 2015".$w."'
+                ORDER BY mes DESC
+          ";
+
           $resultado = mysqli_query($con, $sql);
+          $res_masvistos = mysqli_query($con, $sql_masvistos);
           $contenedor = array(array());   
           $contador = 0;
 
@@ -171,6 +182,13 @@
             $contenedor[$contador][1] = $consulta['foto'];
             $contenedor[$contador][2] = $consulta['cantidad'];
             $contador++;
+          }
+          //contador masvistos
+          $c = 0;
+          while ($cons_masvistos = mysqli_fetch_array($res_masvistos)){
+            $contenedor[$c][3] = $cons_masvistos['modelo'];
+            $contenedor[$c][4] = $cons_masvistos['foto'];
+            $contenedor[$c][5] = $cons_masvistos['qty'];
           }
 
 
@@ -220,7 +238,7 @@
            </div> 
 
            <!--
-           ==========================
+           ==========================================================================
            Es el reporte numero dos-->
 
 
@@ -273,7 +291,7 @@
                   {
                     echo '
                   <tr>
-                      <td>SRL-4086</td>
+                      <td>'. $contenedor[$x][3] .'</td>
                       <td></td>
                       <td>5</td>
                   </tr>';

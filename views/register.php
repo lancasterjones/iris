@@ -1,7 +1,7 @@
 <?php
 
 
-  include '../includes/head.php';
+  include 'includes/head.php';
         
 
 // show potential errors / feedback (from registration object)

@@ -175,7 +175,7 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th>Lo + visto</th>
+                      <th>Lo + vendido</th>
                       <th></th>                      
                       <th></th>                      
                     </form>
@@ -197,7 +197,7 @@
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][1] .'"></td>
                       <td>
                         <div align="center" class="media-middle">
-                          <i style="font-size:60px;" class="glyphicon glyphicon-'. $icono .'"></i>
+                          <i style="font-size:60px;" class="glyphicon glyphicon-'. $icono . $contenedor[$fila][2] .'"></i>
                         </div>
                       </td>
                   </tr>';
@@ -213,7 +213,7 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th>Lo + vendido</th>
+                      <th>Lo + visto</th>
                       <th></th> 
                       <th></th>                     
                     </form>

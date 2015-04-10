@@ -291,9 +291,17 @@
 
 
                   $x = 0;
-                  $icon = "ok";
+                  $icon = "";
                   for($x = 0; $x < 10; $x++)
                   {
+                    if($contenedor[$x][5] > 0)
+                      {
+                          $icon = "ok";
+                      }else 
+                      {
+                          $icon = "remove";
+                      }
+
                     echo '
                   <tr>
                       <td>'. $contenedor[$x][3] .'</td>

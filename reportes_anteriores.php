@@ -105,17 +105,33 @@
           $m = $calcular_mes->format('M');
 
           // variable w indica el numero de mes a consultar
-          /*if($calcular_mes->format('M') == "Mar")
-          {
-             $w = "03";
-          }*/
-
+          
           switch ($m) {
-            case 'Mar':
-               $w = "03";
-              break;
             case 'Jan':
                $w = "01";
+            case 'Feb':
+               $w = "02";
+            case 'Mar':
+               $w = "03";
+            case 'Apr':
+               $w = "04";
+            case 'May':
+               $w = "05";
+            case 'Jun':
+               $w = "06";
+            case 'Jul':
+               $w = "07";
+            case 'Aug':
+               $w = "08";
+            case 'Sep':
+               $w = "09";
+            case 'Oct':
+               $w = "10";
+            case 'Nov':
+               $w = "11";
+            case 'Dec':
+               $w = "12";
+              break;
             default:
               break;
           }

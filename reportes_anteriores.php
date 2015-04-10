@@ -99,6 +99,9 @@
           mysqli_close($connm);
 
 
+          
+
+
           //conexión a base de datos Vende para reportes mas vistos y mas vendidos
 
           //conectar bd vende
@@ -219,7 +222,7 @@
                     </form>
                   </tr>
                   <tr>
-                      <td>SRL-4086</td>
+                      <td></td>
                       <td></td>
                       <td>5</td>
                   </tr>

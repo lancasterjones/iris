@@ -102,12 +102,22 @@
           $year = 2015;
           $calcular_mes = new DateTime();
           $calcular_mes->setISODate($year, $semana);
-          $calcular_mes->format('M');
+          $m = $calcular_mes->format('M');
 
           // variable w indica el numero de mes a consultar
-          if($calcular_mes->format('M') == "Mar")
+          /*if($calcular_mes->format('M') == "Mar")
           {
              $w = "03";
+          }*/
+
+          switch ($m) {
+            case 'Mar':
+               $w = "03";
+              break;
+            case 'Jan':
+               $w = "01";
+            default:
+              break;
           }
 
 

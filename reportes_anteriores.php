@@ -185,13 +185,19 @@
                   $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
-
+                      if($contenedor[$fila][2] == 0)
+                      {
+                          $icono = "remove";
+                      }else
+                      {
+                          $icono = "ok";
+                      }
                   echo '<tr>
                       <td>'. $contenedor[$fila][0] .'</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][1] .'"></td>
                       <td>
                         <div align="center" class="media-middle">
-                          <i style="font-size:60px;" class="glyphicon glyphicon-ok"></i>
+                          <i style="font-size:60px;" class="glyphicon glyphicon-'. $icono .'"></i>
                         </div>
                       </td>
                   </tr>';

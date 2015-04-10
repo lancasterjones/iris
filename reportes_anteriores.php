@@ -255,7 +255,7 @@
                   $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
-                      if($contenedor[$fila][2] > 0)
+                      if($contenedor[$fila][3] > 0)
                       {
                           $icono = "ok";
                       }else if($contenedor[$fila][2] == 0)
@@ -290,11 +290,11 @@
                   </tr>';
 
 
-                  $x = 0;
+                  $fila = 0;
                   $icon = "";
-                  for($x = 0; $x < 10; $x++)
+                  for($fila = 0; $fila < 10; $fila++)
                   {
-                    if($contenedor[$x][5] > 0)
+                    if($contenedor[$fila][5] > 0)
                       {
                           $icon = "ok";
                       }else 
@@ -304,9 +304,9 @@
 
                     echo '
                   <tr>
-                      <td>'. $contenedor[$x][3] .'</td>
+                      <td>'. $contenedor[$fila][3] .'</td>
                       <td>
-                          <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][4] .'"></td>
+                          <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][4] .'"></td>
                       </td>
                       <td>
                           <div align="center" class="media-middle">

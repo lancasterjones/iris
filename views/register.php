@@ -1,4 +1,9 @@
 <?php
+
+
+  include '../includes/head.php';
+        
+
 // show potential errors / feedback (from registration object)
 if (isset($registration)) {
     if ($registration->errors) {

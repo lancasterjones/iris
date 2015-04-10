@@ -267,32 +267,16 @@
                       <th></th> 
                       <th></th>                     
                     </form>
-                  </tr>
-                  <tr>
-                      <td></td>
-                      <td></td>
-                      <td>5</td>
-                  </tr>
+                  </tr>';
+                  for($x = 0; $x < 10; $x++)
+                  {
+                    echo '
                   <tr>
                       <td>SRL-4086</td>
                       <td></td>
                       <td>5</td>
-                  </tr>
-                  <tr>
-                      <td>SRL-4086</td>
-                      <td></td>
-                      <td>5</td>
-                  </tr>
-                  <tr>
-                      <td>SRL-4086</td>
-                      <td></td>
-                      <td>5</td>
-                  </tr>
-                  <tr>
-                      <td>SRL-4086</td>
-                      <td></td>
-                      <td>5</td>
-                  </tr>
+                  </tr>';
+                }
            ';
 
         }else

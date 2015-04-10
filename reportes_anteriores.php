@@ -274,7 +274,7 @@
                 }
 
 
-           echo   '</table>
+           echo   '</table></div>
 
           <!--
            ======================================================================
@@ -307,7 +307,7 @@
                   </tr>';
                 }
            
-          echo  "</table>";
+          echo  "</table></div>";
         }else
         {
           // Menú para elegir semana anterior

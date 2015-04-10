@@ -102,10 +102,10 @@
 
           $calcular_mes = new DateTime();
           $calcular_mes->setISODate($semana);
-          $m = $calcular_mes->format('M');
+          $calcular_mes->format('M');
 
           // variable w indica el numero de mes a consultar
-          if($m == "Mar")
+          if($calcular_mes->format('M') == "Mar")
           {
              $w = 03;
           }

@@ -90,6 +90,7 @@
 
           mysqli_close($connm);
 
+            $year = date("Y");
             $calcular_mes = new DateTime();
             $calcular_mes->setISODate($year, $semana);
             $m = $calcular_mes->format('M');

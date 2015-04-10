@@ -174,6 +174,8 @@
 
           $resultado = mysqli_query($con, $sql);
           $masvistos = mysqli_query($con, $sqlvistos);
+          //numero de filas query masvistos
+          $nVistos = $mysql_num_rows($masvistos);
           $contenedor = array(array());   
           $contador = 0;
 
@@ -253,7 +255,7 @@
 
 
                   $fila = 0;
-                  for($fila = 0; $fila < 10; $fila++)
+                  for($fila = 0; $fila < $nVistos; $fila++)
                   {
                       if($contenedor[$fila][2] > 0)
                       {

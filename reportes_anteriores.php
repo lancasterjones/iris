@@ -99,9 +99,9 @@
           mysqli_close($connm);
 
           //convertir semana a mes
-
+          $year = 2015;
           $calcular_mes = new DateTime();
-          $calcular_mes->setISODate($semana);
+          $calcular_mes->setISODate($year, $semana);
           $calcular_mes->format('M');
 
           // variable w indica el numero de mes a consultar

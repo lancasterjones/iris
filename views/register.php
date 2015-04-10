@@ -22,22 +22,27 @@ if (isset($registration)) {
 <div class="container" align="center">
 
     <!-- register form -->
-    <form method="post" action="register.php" name="registerform">
+    <form method="post" action="register.php" class="form-horizontal" role="form" name="registerform">
+        <div class='form-group'>
+            <!-- the user name input field uses a HTML5 pattern check -->
+            <label for="login_input_username">Usuario: </label>
+            <input id="login_input_username" class="login_input" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />
+        </div>
 
-        <!-- the user name input field uses a HTML5 pattern check -->
-        <label for="login_input_username">Usuario: </label>
-        <input id="login_input_username" class="login_input" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />
-
-        <!-- the email input field uses a HTML5 email type check -->
-        <label for="login_input_email">Compañía</label>
-        <input id="login_input_email" class="login_input" type="tet" name="user_email" required />
-
-        <label for="login_input_password_new">Contraseña: (min. 6 characters)</label>
-        <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
-
-        <label for="login_input_password_repeat">Repetir Contraseña: </label>
-        <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
-        <input type="submit"  name="register" value="Register" />
+        <div class='form-group'>
+            <!-- the email input field uses a HTML5 email type check -->
+            <label for="login_input_email">Compañía</label>
+            <input id="login_input_email" class="login_input" type="tet" name="user_email" required />
+        </div>
+        <div class='form-group'>
+            <label for="login_input_password_new">Contraseña: (min. 6 characters)</label>
+            <input id="login_input_password_new" class="login_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
+        </div>
+        <div class='form-group'>
+            <label for="login_input_password_repeat">Repetir Contraseña: </label>
+            <input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
+            <input type="submit"  name="register" value="Register" />
+        </div>
 
     </form>
 

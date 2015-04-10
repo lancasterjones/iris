@@ -105,7 +105,7 @@
           $m = $calcular_mes->format('M');
 
           // variable w indica el numero de mes a consultar
-          if($ == "Mar")
+          if($m == "Mar")
           {
              $w = 03;
           }

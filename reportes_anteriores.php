@@ -98,8 +98,18 @@
    
           mysqli_close($connm);
 
+          //convertir semana a mes
 
-          
+          $calcular_mes = new DateTime();
+          $calcular_mes->setISODate($semana);
+          $m = $calcular_mes->format('M');
+
+          // variable w indica el numero de mes a consultar
+          if($ == "Mar")
+          {
+             $w = 03;
+          }
+
 
 
           //conexión a base de datos Vende para reportes mas vistos y mas vendidos
@@ -111,7 +121,7 @@
           }else{ echo "Conexion MySql Ok";}
           $sql = "
                 SELECT * FROM mas_vendidos
-                WHERE mes = '201503'
+                WHERE mes = '2015".$w."'
                 ORDER BY mes DESC
           ";
 

@@ -189,7 +189,7 @@
             $contenedor[$contador][3] = $cons_masvistos['modelo'];
             $contenedor[$contador][4] = $cons_masvistos['foto'];
             $contenedor[$contador][5] = $cons_masvistos['qty'];
-            $ccontador++;
+            $contador++;
           }
 
 

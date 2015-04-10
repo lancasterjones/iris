@@ -119,6 +119,8 @@
 
           while ($consulta = mysqli_fetch_array($resultado)) {
             $contenedor[$contador][0] = $consulta['sku'];
+            $contenedor[$contador][1] = $consulta['foto'];
+            $contenedor[$contador][2] = $consulta['qty'];
             $contador++;
           }
 

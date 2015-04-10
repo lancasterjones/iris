@@ -255,7 +255,7 @@
 
 
                   $fila = 0;
-                  for($fila = 0; $fila < $nVistos; $fila++)
+                  for($fila = 0; $fila < 10; $fila++)
                   {
                       if($contenedor[$fila][2] > 0)
                       {
@@ -294,7 +294,7 @@
 
                   $fila = 0;
                   $icon = "";
-                  for($fila = 0; $fila < 10; $fila++)
+                  for($fila = 0; $fila < $nVistos; $fila++)
                   {
                     if($contenedor[$fila][5] > 0)
                       {

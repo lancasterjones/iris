@@ -3,6 +3,7 @@
 		include 'db_magento_connect.php';
 	//traer información
 		include 'querymasvendidos.php';
+    include 'querymasvistos.php';
 
 		
 	//almacenar esa info en arreglo

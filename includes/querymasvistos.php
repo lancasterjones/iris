@@ -1,5 +1,6 @@
 <?php
-sql= "SELECT CONCAT(
+$sql= "
+SELECT CONCAT(
           YEAR(report_viewed_product_aggregated_monthly.period),
           IF(MONTH(report_viewed_product_aggregated_monthly.period) < 10,
              '0',

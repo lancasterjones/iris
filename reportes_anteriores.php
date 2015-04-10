@@ -115,7 +115,6 @@
           $resultado = mysqli_query($con, $query_marzo);
           $contenedor = array(array());   
           $contador = 0;
-          $consulta = mysqli_fetch_array($resultado);
 
           while ($consulta = mysqli_fetch_array($resultado)) {
             $contenedor[$contador][0] = $consulta['sku'];
@@ -180,40 +179,27 @@
                       <th></th>                      
                       <th></th>                      
                     </form>
-                  </tr>
-                  <tr>
-                      <td>'. $contenedor[0][0] .'</td>
+                  </tr>';
+
+
+                  $fila = 0;
+                  for()
+                  {
+
+                  echo '<tr>
+                      <td>'. $contenedor[$fila][0] .'</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210_2.jpg"></td>
                       <td>
                         <div align="center" class="media-middle">
                           <i style="font-size:60px;" class="glyphicon glyphicon-ok"></i>
                         </div>
                       </td>
-                  </tr>
-                  <tr>
-                      <td>'. $contenedor[1][0] .'</td>
-                      <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210.jpg"></td>
-                      <td>
-                          <div align="center" class="media-middle">
-                            <i style="font-size:60px;" class="glyphicon glyphicon-ok"></i>
-                          </div>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>SRL-4086</td>
-                      <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210c_1.jpg"></td>
-                      <td>5</td>
-                  </tr>
-                  <tr>
-                      <td>SRL-4086</td>
-                      <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/v/dvcr0210b_1.jpg"></td>
-                      <td>5</td>
-                  </tr>
-                  <tr>
-                      <td>SRL-4086</td>
-                      <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/d/b/dbts0119.jpg"></td>
-                      <td>5</td>
-                  </tr>
+                  </tr>';
+                  $fila++;
+                }
+
+
+           echo   '</table>
 
           <!--Es el reporte numero tres-->
 

@@ -119,7 +119,7 @@
           while ($consulta = mysqli_fetch_array($resultado)) {
             $contenedor[$contador][0] = $consulta['sku'];
             $contenedor[$contador][1] = $consulta['foto'];
-            $contenedor[$contador][2] = $consulta['qty'];
+            $contenedor[$contador][2] = $consulta['cantidad'];
             $contador++;
           }
 
@@ -197,7 +197,7 @@
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][1] .'"></td>
                       <td>
                         <div align="center" class="media-middle">
-                          <i style="font-size:60px;" class="glyphicon glyphicon-'. $icono . $contenedor[$fila][2] .'"></i>
+                          <i style="font-size:60px;" class="glyphicon glyphicon-'. $icono.'"></i>
                         </div>
                       </td>
                   </tr>';

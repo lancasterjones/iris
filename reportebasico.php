@@ -41,6 +41,11 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <script type="text/javascript" src="includes/Chart.js"></script>
   <script type="text/javascript" src="includes/script_reportes.js"></script>
+  <style type="text/css">
+      .pic{
+        width: 200px;
+      }
+  </style>
 	</head>
 	<body>
   <?php require 'includes/db_magento_connect.php';

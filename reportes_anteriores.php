@@ -168,7 +168,7 @@
           //query masvistos
           $sqlvistos = "
                 SELECT * FROM mas_vistos
-                WHERE mes = 2015".$w."'
+                WHERE mes = '2015".$w."'
                 ORDER BY mes DESC
           ";
 

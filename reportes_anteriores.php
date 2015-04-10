@@ -208,7 +208,7 @@
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
                     <form action="reportes_anteriores.php" method="post">
-                      <th>Ventas</th>
+                      <th><h3>Ventas</h3></th>
                       <th></th>
                       <th>
                         <div onclick="location.href=\'reportes_anteriores.php\'">
@@ -286,7 +286,7 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th>Lo + visto</th>
+                      <th><h3>Lo + visto</h3></th>
                       <th></th> 
                       <th></th>
                   </tr>';

@@ -102,7 +102,7 @@
 
 
           //query mas vendidos
-          $sql = "
+          $sqlvendidos = "
                 SELECT * FROM mas_vendidos
                 WHERE mes = '2015".$semana."'
                 ORDER BY mes DESC
@@ -115,7 +115,7 @@
                 ORDER BY mes DESC
           ";
 
-          $resultado = mysqli_query($con, $sql);
+          $resultado = mysqli_query($con, $sqlvendidos);
           $masvistos = mysqli_query($con, $sqlvistos);
           //numero de filas query masvistos
           $nVistos = mysqli_num_rows($masvistos);

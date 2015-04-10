@@ -155,7 +155,7 @@
           $con=mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
           if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
-          }else{ echo "Conexion MySql Ok";}
+          }
 
 
           //query mas vendidos

@@ -104,14 +104,14 @@
           //query mas vendidos
           $sqlvendidos = "
                 SELECT * FROM mas_vendidos
-                WHERE mes = '2015".$semana."'
+                WHERE mes = 201503
                 ORDER BY mes DESC
           ";
 
           //query masvistos
           $sqlvistos = "
                 SELECT * FROM mas_vistos
-                WHERE mes = '2015".$semana."'
+                WHERE mes = 201503
                 ORDER BY mes DESC
           ";
 

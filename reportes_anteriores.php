@@ -175,7 +175,7 @@
           $resultado = mysqli_query($con, $sql);
           $masvistos = mysqli_query($con, $sqlvistos);
           //numero de filas query masvistos
-          $nVistos = $mysql_num_rows($masvistos);
+          $nVistos = mysqli_num_rows($masvistos);
           $contenedor = array(array());   
           $contador = 0;
 

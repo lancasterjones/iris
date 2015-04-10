@@ -109,13 +109,13 @@
           if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
           }else{ echo "Conexion MySql Ok";}
-          $query_marzo = "
+          $sql = "
                 SELECT * FROM mas_vendidos
                 WHERE mes = '201503'
                 ORDER BY mes DESC
           ";
 
-          $resultado = mysqli_query($con, $query_marzo);
+          $resultado = mysqli_query($con, $sql);
           $contenedor = array(array());   
           $contador = 0;
 

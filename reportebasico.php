@@ -98,20 +98,20 @@
           $con=mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
           if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
-          }
+          }else echo "Conexion OK";
 
 
           //query mas vendidos
           $sql = "
                 SELECT * FROM mas_vendidos
-                WHERE mes = '2015".$w."'
+                WHERE mes = '2015".$semana."'
                 ORDER BY mes DESC
           ";
 
           //query masvistos
           $sqlvistos = "
                 SELECT * FROM mas_vistos
-                WHERE mes = '2015".$w."'
+                WHERE mes = '2015".$semana."'
                 ORDER BY mes DESC
           ";
 

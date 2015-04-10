@@ -202,9 +202,6 @@
                       <th><h3>Ventas</h3></th>
                       <th></th>
                       <th>
-                        <div onclick="location.href=\'reportes_anteriores.php\'">
-                            <i style="cursor: pointer; font-size: 24px" class="glyphicon glyphicon-circle-arrow-left pull-right"></i>
-                        </div>
                       </th>
                     </form>
                   </tr>
@@ -309,7 +306,12 @@
                   </tr>';
                 }
            
-          echo  "</table></div>";
+          echo  '</table>
+            <button id="masVendidos" class="btn btn-primary pull-right">
+            Actualizar
+            <i style="float:right" class="glyphicon glyphicon-hdd icono"></i>
+       </button>
+          </div>';
         
   ?>
 	</body>

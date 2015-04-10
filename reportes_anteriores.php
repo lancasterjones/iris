@@ -255,7 +255,7 @@
                   $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
-                      if($contenedor[$fila][3] > 0)
+                      if($contenedor[$fila][2] > 0)
                       {
                           $icono = "ok";
                       }else if($contenedor[$fila][2] == 0)
@@ -263,7 +263,7 @@
                           $icono = "remove";
                       }
                   echo '<tr>
-                      <td>'. $contenedor[$fila][0] .'</td>
+                      <td>'. $contenedor[$fila][3] .'</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][1] .'"></td>
                       <td>
                         <div align="center" class="media-middle">

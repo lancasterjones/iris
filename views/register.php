@@ -35,7 +35,7 @@ if (isset($registration)) {
             <input id="login_input_email" class="form-control" type="tet" name="user_email" required />
         </div>
         <div class='form-group'>
-            <label class="control-label col-sm-5" for="login_input_password_new">Contraseña: (min. 6 characters)</label>
+            <label class="control-label col-sm-5" for="login_input_password_new">Contraseña: </label>
             <input id="login_input_password_new" class="form-control" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
         </div>
         <div class='form-group'>
@@ -47,5 +47,5 @@ if (isset($registration)) {
     </form>
 
     <!-- backlink -->
-    <a href="index.php">Back to Login Page</a>      
+    <a href="index.php">Regresar</a>      
 </div>

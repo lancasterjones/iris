@@ -227,8 +227,7 @@
                   <tr class="tableizer-firstrow">
                       <th>Lo + vendido</th>
                       <th></th>                      
-                      <th></th>                      
-                    </form>
+                      <th></th>                                          
                   </tr>';
 
 
@@ -265,8 +264,7 @@
                   <tr class="tableizer-firstrow">
                       <th>Lo + visto</th>
                       <th></th> 
-                      <th></th>                     
-                    </form>
+                      <th></th>
                   </tr>';
                   for($x = 0; $x < 10; $x++)
                   {
@@ -278,7 +276,7 @@
                   </tr>';
                 }
            
-
+          echo  "</table>";
         }else
         {
           // Menú para elegir semana anterior

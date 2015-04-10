@@ -189,6 +189,7 @@
             $contenedor[$c][3] = $cons_masvistos['modelo'];
             $contenedor[$c][4] = $cons_masvistos['foto'];
             $contenedor[$c][5] = $cons_masvistos['qty'];
+            $c++;
           }
 
 

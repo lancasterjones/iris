@@ -185,12 +185,12 @@
                   $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
-                      if($contenedor[$fila][2] == 0)
-                      {
-                          $icono = "remove";
-                      }else
+                      if($contenedor[$fila][2] > 0)
                       {
                           $icono = "ok";
+                      }else if($contenedor[$fila][2] == 0)
+                      {
+                          $icono = "remove";
                       }
                   echo '<tr>
                       <td>'. $contenedor[$fila][0] .'</td>

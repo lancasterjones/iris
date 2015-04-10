@@ -248,7 +248,7 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th>Lo + vendido</th>
+                      <th><h3>Lo + vendido</h3></th>
                       <th></th>                      
                       <th></th>                                          
                   </tr>';

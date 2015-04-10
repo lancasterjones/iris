@@ -29,6 +29,11 @@
     //ciclo para almacenar mas vistos
     while($row_vistos = mysqli_fetch_array($result_masvistos)){
       $contenedor[$c][5] = $row_vistos['modelo'];
+      $contenedor[$c][6] = $row_vistos['mes'];
+      $contenedor[$c][7] = $row_vistos['precio'];
+      $contenedor[$c][8] = $row_vistos['vistas'];
+      $contenedor[$c][9] = $row_vistos['qty'];
+      $contenedor[$c][10] = $row_vistos['foto'];
       $c++;
     }
 
@@ -49,10 +54,10 @@
     mysqli_query($con,"TRUNCATE TABLE mas_vistos");
 
 	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo))
+      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic))
     {
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
-        mysqli_query($con, "INSERT INTO mas_vistos(modelo) VALUES ('$modelo') ");
+        mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
     }
 
 	

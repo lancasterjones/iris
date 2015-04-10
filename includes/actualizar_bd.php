@@ -8,8 +8,13 @@
 		
 	//almacenar esa info en arreglo
 		$contenedor = array(array());
+    //query mas vendidos
 		$result = mysqli_query($connm,$query);		
+    //query mas vistos
+    $result_masvistos = mysqli_query($connm, $sql);
     $contador = 0;
+
+    //ciclo para almacenar mas vendidos
 		
 		while ($consulta = mysqli_fetch_array($result)) {
 			$contenedor[$contador][0] = $consulta['sku'];
@@ -19,7 +24,13 @@
       $contenedor[$contador][4] = $consulta['qty'];
       $contador++;
 		}
-		
+    //contador del ciclo
+		$c = 0;
+    //ciclo para almacenar mas vistos
+    while($row_vistos = mysqli_fetch_array($result_masvistos)){
+      $contenedor[$c][5] = $row_vistos['modelo'];
+      $c++;
+    }
 
 	//imprimir esa información
 		print_r($contenedor);
@@ -33,13 +44,15 @@
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }else{ echo "Conexion MySql Ok";}
 
-    //Se elimina información en tabla envios server VENDE 
+    //Se elimina información en tabla masVendidos y masVistos server VENDE 
     mysqli_query($con,"TRUNCATE TABLE mas_vendidos");
+    mysqli_query($con,"TRUNCATE TABLE mas_vistos");
 
 	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad))
+      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo))
     {
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
+        mysqli_query($con, "INSERT INTO mas_vistos(modelo) VALUES ('$modelo') ");
     }
 
 	

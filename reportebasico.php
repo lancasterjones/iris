@@ -89,9 +89,56 @@
 
 
           mysqli_close($connm);
-        ?>
 
-	<?php
+            $calcular_mes = new DateTime();
+            $calcular_mes->setISODate($year, $semana);
+            $m = $calcular_mes->format('M');
+
+            // variable w indica el numero de mes a consultar
+            
+            switch ($m) {
+              case 'Jan':
+                 $w = "01";
+                 break;
+              case 'Feb':
+                 $w = "02";
+                 break;
+              case 'Mar':
+                 $w = "03";
+                 break;
+              case 'Apr':
+                 $w = "04";
+                 break;
+              case 'May':
+                 $w = "05";
+                 break;
+              case 'Jun':
+                 $w = "06";
+                 break;
+              case 'Jul':
+                 $w = "07";
+                 break;
+              case 'Aug':
+                 $w = "08";
+                 break;
+              case 'Sep':
+                 $w = "09";
+                 break;
+              case 'Oct':
+                 $w = "10";
+                 break;
+              case 'Nov':
+                 $w = "11";
+                 break;
+              case 'Dec':
+                 $w = "12";
+                break;
+              default:
+                break;
+            }
+
+
+
          //conexión a base de datos Vende para reportes mas vistos y mas vendidos
 
           //conectar bd vende
@@ -104,14 +151,14 @@
           //query mas vendidos
           $sqlvendidos = "
                 SELECT * FROM mas_vendidos
-                WHERE mes = 201503
+                WHERE mes = 2015".$w."
                 ORDER BY mes DESC
           ";
 
           //query masvistos
           $sqlvistos = "
                 SELECT * FROM mas_vistos
-                WHERE mes = 201503
+                WHERE mes = 2015".$w."
                 ORDER BY mes DESC
           ";
 

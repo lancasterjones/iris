@@ -92,77 +92,7 @@
         ?>
 
 	<?php
-    //menu de navegación
-   include 'includes/menu.php' ?>
-
-
-   <!--Rerporte de ventas-->
-     <header align="center" class="lv-bg">
-          <h2 class="site-title">Reporte de ventas</h2>
-          <p>Semana: <?php echo $semana; ?></p>
-
-     </header>
-
-     <div class="container-fluid inner">
-        <table class="tableizer-table">
-            <tr class="tableizer-firstrow">
-                <th>Ventas</th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr>
-                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
-                <td>Monto de venta</td>
-                <td>$ <?php echo $venta; ?></td>
-            </tr>
-            <tr>
-                <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
-                <td>Pedidos</td>
-                <td><?php echo $pedidos; ?></td>
-            </tr>
-            <tr>
-                <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>
-                <td>Fraudes</td>
-                <td><?php echo $fraudes; ?> ($<?php echo $monto_fraudes; ?>)</td>
-            </tr>
-            <tr>
-                <td><canvas id="canvas" width="120" height="120"/></td>
-                <td>Acumulado del mes</td>
-                <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
-            </tr>
-        </table>
-       <button id="masVendidos" class="btn btn-primary pull-right">
-            Actualizar
-            <i style="float:right" class="glyphicon glyphicon-hdd icono"></i>
-       </button>
-     </div>	
-
-      <script>
-          $(document).ready(function(){
-            $('#masVendidos').click(function(){
-              $("#masVendidos").append('<span id="refresh" class="glyphicon glyphicon-refresh icono" aria-hidden="true" style="float:right"></span>');
-              var clickBtnValue = $(this).val();
-              var ajaxurl = 'includes/actualizar_bd.php',
-              data =  {'action': clickBtnValue};
-              $.post(ajaxurl, data, function (response) {
-                  $("#refresh").remove();
-                  $("#masVendidos").append('<span id="syncconf" class="glyphicon glyphicon-ok icono" aria-hidden="true" style="float:right"></span>');
-                  setTimeout(function() {
-                    $("#syncconf").remove();
-                     },3000);
-               // alert("action performed successfully");
-                });
-              });
-            });
-      </script>
-
-
-      <?php
-        //=====================================================================
-        //Reporte lo mas visto y lo mas vendido
-
-
-        //conexión a base de datos Vende para reportes mas vistos y mas vendidos
+         //conexión a base de datos Vende para reportes mas vistos y mas vendidos
 
           //conectar bd vende
           $con=mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
@@ -172,22 +102,21 @@
 
 
           //query mas vendidos
-          $sqlvendidos = "
+          $sql = "
                 SELECT * FROM mas_vendidos
-                WHERE mes = 201513
+                WHERE mes = '2015".$w."'
                 ORDER BY mes DESC
           ";
 
           //query masvistos
           $sqlvistos = "
                 SELECT * FROM mas_vistos
-                WHERE mes = '2015".$semana."'
+                WHERE mes = '2015".$w."'
                 ORDER BY mes DESC
           ";
 
-          $resultado = mysqli_query($con, $sqlvendidos);
+          $resultado = mysqli_query($con, $sql);
           $masvistos = mysqli_query($con, $sqlvistos);
-
           //numero de filas query masvistos
           $nVistos = mysqli_num_rows($masvistos);
           $contenedor = array(array());   
@@ -209,18 +138,65 @@
           }
 
 
-          ?>
+         //menu de navegación
+           include 'includes/menu.php';
 
-          
-          <div class="container-fluid inner">
+            echo '
+           <header align="center">
+                <h2 class="site-title">Reporte de ventas anteriores</h2>
+                <p>Semana: '. $semana .'</p>          
+           </header>
+
+           <div class="container-fluid inner">
+              <table class="tableizer-table">
+                  <tr class="tableizer-firstrow">
+                    <form action="reportes_anteriores.php" method="post">
+                      <th><h3>Ventas</h3></th>
+                      <th></th>
+                      <th>
+                        <div onclick="location.href=\'reportes_anteriores.php\'">
+                            <i style="cursor: pointer; font-size: 24px" class="glyphicon glyphicon-circle-arrow-left pull-right"></i>
+                        </div>
+                      </th>
+                    </form>
+                  </tr>
+                  <tr>
+                      <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
+                      <td>Monto de venta</td>
+                      <td>$'. number_format($venta).'</td>
+                  </tr>
+                  <tr>
+                      <td><canvas id="canvas_line" height="120" width="150"></canvas></td>
+                      <td>Pedidos</td>
+                      <td>'. $pedidos . '</td>
+                  </tr>
+                  <tr>
+                      <td><canvas id="canvas_radar" width="120" height="120"/></canvas></td>
+                      <td>Fraudes</td>
+                      <td>'. $fraudes .'($'. number_format($monto_fraudes) . ')</td>
+                  </tr>
+                  <tr>
+                      <td><canvas id="canvas" width="120" height="120"/></td>
+                      <td>Acumulado del mes</td>
+                      <td><canvas id="chart-area" width="100" height="100"/></canvas></td>
+                  </tr>
+              </table>
+           </div> 
+
+           <!--
+           ==========================================================================
+           Es el reporte numero dos-->
+
+
+           <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
                       <th><h3>Lo + vendido</h3></th>
                       <th></th>                      
                       <th></th>                                          
-                  </tr>
+                  </tr>';
 
-          <?php
+
                   $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
@@ -243,8 +219,8 @@
                    $icono = "";
                 }
 
-                ?>
-           </table>
+
+           echo   '</table></div>
 
           <!--
            ======================================================================
@@ -256,9 +232,9 @@
                       <th><h3>Lo + visto</h3></th>
                       <th></th> 
                       <th></th>
-                  </tr>
+                  </tr>';
 
-                  <?php
+
                   $fila = 0;
                   $icon = "";
                   for($fila = 0; $fila < $nVistos; $fila++)
@@ -285,11 +261,39 @@
                   </tr>';
                 }
            
-           ?>
-          </table></div>
+          echo  "</table></div>";
+        }else
+        {
+          // Menú para elegir semana anterior
+          //=============================================
+          //Se imprime solo si no se ha pasado ningún valor a través de la url
+
+            //menu de navegación
+           include 'includes/menu.php';
+
+            echo '
+                <header align="center">
+                    <h2 class="site-title">Reporte de ventas anteriores</h2>
+                    <p>Elige la semana que deseas consultar</p>          
+               </header>
+            ';
+            echo "<div class='container-fluid inner'>";
+            echo "<table style='cursor:pointer;' class='tableizer-table'>";
+            echo "<tr class='tableizer-firstrow'>";
+            echo "<th>Archivo Semanas Anteriores</th></tr>";
+            $week = date("W")-2;
+            $fin = $week - 10;
+               for($sem = $week; $sem > $fin; $sem--)
+               {
+                  echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
+                  echo $sem;
+                  echo "<i class='glyphicon glyphicon-zoom-in pull-right'></i></div></td></tr>";  
+               }
+               echo "</table></div>";
+        }      
       
 
 
-
+  ?>
 	</body>
 </html>

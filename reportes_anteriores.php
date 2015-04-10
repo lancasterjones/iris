@@ -166,14 +166,14 @@
           ";
 
           //query masvistos
-          $sql_masvistos = "
+          $sqlvistos = "
                 SELECT * FROM mas_vistos
                 WHERE mes = 2015".$w."'
                 ORDER BY mes DESC
           ";
 
           $resultado = mysqli_query($con, $sql);
-          $res_masvistos = mysqli_query($con, $sql_masvistos);
+          $masvistos = mysqli_query($con, $sqlvistos);
           $contenedor = array(array());   
           $contador = 0;
 
@@ -184,12 +184,12 @@
             $contador++;
           }
           //contador masvistos
-          $c = 0;
-          while ($cons_masvistos = mysqli_fetch_array($res_masvistos)){
-            $contenedor[$c][3] = $cons_masvistos['modelo'];
-            $contenedor[$c][4] = $cons_masvistos['foto'];
-            $contenedor[$c][5] = $cons_masvistos['qty'];
-            $c++;
+          $contador = 0;
+          while ($cons_masvistos = mysqli_fetch_array($masvistos)){
+            $contenedor[$contador][3] = $cons_masvistos['modelo'];
+            $contenedor[$contador][4] = $cons_masvistos['foto'];
+            $contenedor[$contador][5] = $cons_masvistos['qty'];
+            $ccontador++;
           }
 
 
@@ -263,7 +263,7 @@
                           $icono = "remove";
                       }
                   echo '<tr>
-                      <td>'. $contenedor[$fila][3] .'</td>
+                      <td>'. $contenedor[$fila][0] .'</td>
                       <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$fila][1] .'"></td>
                       <td>
                         <div align="center" class="media-middle">

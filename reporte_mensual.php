@@ -40,10 +40,12 @@
       <?php
           include 'includes/menu.php';
       ?>
-          <canvas id="canvas_line" height="250" width="700"></canvas>
-          <canvas id="canvas" width="120" height="120"></canvas>
-          <canvas id="canvas_radar" width="120" height="120"/></canvas>
-          <canvas id="chart-area" width="100" height="100"/></canvas>
+          <div style="width: 600px; height: 300px;">
+            <canvas id="canvas_line"></canvas>
+          </div>
+          <canvas id="canvas"></canvas>
+          <canvas id="canvas_radar"/></canvas>
+          <canvas id="chart-area"/></canvas>
      
   </body>
 

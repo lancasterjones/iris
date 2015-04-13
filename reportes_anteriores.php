@@ -336,10 +336,10 @@
 
                     if($contenedor[$x][5] > 0)
                       {
-                          $icon = "ok";
+                          $inv = "<span></span>";
                       }else 
                       {
-                          $icon = "remove";
+                          $inv = '<img style="top: 0px;" src="imgs/sininv.png">';
                       }
                       echo '
                             <tr>
@@ -347,10 +347,9 @@
                                   <div style="position:relative; padding: 0px 25%;">
                                     <img style="position: absolute;" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                     $contenedor[$x][1] . '">
-                                    <div style="position: absolute;">
-                                      <img style="top: 0px;" src="imgs/sininv.png">
-                                    
-                                    <div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
+                                    <div style="position: absolute;">'
+                                      . $inv .                                    
+                                    '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
                                   </div></div>
                               </td>
                               <td>

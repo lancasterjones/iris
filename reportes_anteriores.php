@@ -328,7 +328,7 @@
           echo '
            <div class="container-fluid inner">
               <table class="tableizer-table">
-                  <tr class="tableizer-firstrow">
+                  <tr class="tableizer-firstrow" style="padding: 0px;">
                       <th><img src="imgs/+vendido.png"></th>
                       <th><img src="imgs/+visto.png"></th>                                          
                   </tr>';
@@ -353,7 +353,7 @@
 
                                   <div style="position:relative; padding: 0px 25%;">
                                     <div style="position: absolute;">
-                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/small_image/120x/040ec09b1e35df139433887a97daa66f/'. 
                                       $contenedor[$x][1] . '">
                                     </div>
                                     <div style="position: absolute;">'
@@ -370,7 +370,7 @@
 
                                     <div style="position:relative; padding: 0px 25%;">
                                       <div style="position: absolute;">
-                                        <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                        <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/small_image/120x/040ec09b1e35df139433887a97daa66f/'. 
                                         $contenedor[$x][4] . '">
                                       </div>
                                       <div style="position: absolute;">'

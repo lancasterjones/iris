@@ -344,14 +344,14 @@
                       echo '
                             <tr>
                               <td>
-                                  <div style="position: relative;">
-                                    <img style="margin: 20%;" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                  <div style="position:relative; padding: 2% 25%;">
+                                    <img style="position: absolute;" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                     $contenedor[$x][1] . '">
                                     <div style="position: absolute;">
-                                      <img style="margin: 20%;" src="imgs/sininv.png">
-                                    </div>
-                                    <div style="margin: 0 20%;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
-                                  </div>
+                                      <img style="top: 0px;" src="imgs/sininv.png">
+                                    
+                                    <div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
+                                  </div></div>
                               </td>
                               <td>
                                   <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.

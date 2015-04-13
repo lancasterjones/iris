@@ -242,7 +242,7 @@
 
            <!--
            ==========================================================================
-           Es el reporte numero dos-->
+           Es el reporte numero dos
 
 
            <div class="container-fluid inner">
@@ -251,10 +251,10 @@
                       <th><h3>Lo + vendido</h3></th>
                       <th></th>                      
                       <th></th>                                          
-                  </tr>';
+                  </tr>-->';
 
 
-                  $fila = 0;
+                  /*$fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
                       if($contenedor[$fila][2] > 0)
@@ -292,7 +292,7 @@
                   </tr>-->';
 
 
-                 /* $fila = 0;
+                 $fila = 0;
                   $icon = "";
                   for($fila = 0; $fila < $nVistos; $fila++)
                   {

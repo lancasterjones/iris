@@ -360,7 +360,8 @@
                                   </div></div>
                               </td>
                             </tr>
-                            <td>
+                            <tr>
+                              <td>
                                   <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
                                    $contenedor[$x][4] . '"><div style="margin: 0 20%;"><b>'. $contenedor[$x][3] .'</b></div>                                   
                               </td>

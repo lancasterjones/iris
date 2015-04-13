@@ -345,7 +345,7 @@
                             <tr>
                               <td>
                                   <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
-                                  $contenedor[$x][1] . '"><div class="media-middle">' . $contenedor[$x][0] .'<i class="glyphicon glyphicon-'. $icon.'"></i></div>
+                                  $contenedor[$x][1] . '"><div class="media-middle"><b>' . $contenedor[$x][0] .'<b></div>
                               </td>
                               <td>
                                   <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.

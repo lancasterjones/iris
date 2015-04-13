@@ -149,7 +149,7 @@
           $con=mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
           if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
-          }else echo "Conexion OK";
+          }
 
 
           //query mas vendidos
@@ -374,7 +374,8 @@
                                   echo '
                                       <td></td>
                                   ';
-                              }     
+                              }   
+                              //valida si existe imagen que mostrar para tabla más vistos  
                               if($contenedor[$x][4])
                               {
                                 echo '<td class="alta"  >
@@ -408,6 +409,7 @@
 
   ?>
   <script>
+      //script para botón actualizar
           $(document).ready(function(){
             $('#masVendidos').click(function(){
               $("#masVendidos").append('<span id="refresh" class="glyphicon glyphicon-refresh icono" aria-hidden="true" style="float:right"></span>');

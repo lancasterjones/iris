@@ -353,7 +353,7 @@
 
                                   <div style="position:relative; padding: 0px 25%;">
                                     <div style="position: absolute;">
-                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/small_image/120x/040ec09b1e35df139433887a97daa66f/'. 
+                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                       $contenedor[$x][1] . '">
                                     </div>
                                     <div style="position: absolute;">'
@@ -370,7 +370,7 @@
 
                                     <div style="position:relative; padding: 0px 25%;">
                                       <div style="position: absolute;">
-                                        <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/cache/4/small_image/120x/040ec09b1e35df139433887a97daa66f/'. 
+                                        <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                         $contenedor[$x][4] . '">
                                       </div>
                                       <div style="position: absolute;">'

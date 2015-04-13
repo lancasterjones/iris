@@ -333,10 +333,25 @@
           //ciclo que imprime las fias de la tabla
                   for($x = 0; $x < 10; $x++)
                   {
+
+                    if($contenedor[$x][5] > 0)
+                      {
+                          $icon = "ok";
+                      }else 
+                      {
+                          $icon = "remove";
+                      }
                       echo '
                             <tr>
-                              <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][1] . $contenedor[$x][0] .'"></td>
-                              <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][4] . $contenedor[$x][3] .'"></td>
+                              <td>
+                                  <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                  $contenedor[$x][1] . '<div>' . $contenedor[$x][0] .'</div">
+                              </td>
+                              <td>
+                                  <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
+                                   $contenedor[$x][4] . '<div>'. $contenedor[$x][3] .'</div><div>
+                                   <i style="font-size:60px;" class="glyphicon glyphicon-'. $icon.'"></i></div>">
+                              </td>
                             </tr>
                       ';
                     }

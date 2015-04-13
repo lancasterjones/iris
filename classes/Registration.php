@@ -82,11 +82,11 @@ class Registration
                 $user_password_hash = password_hash($user_password, PASSWORD_DEFAULT);
 
                 // check if user or email address already exists
-                $sql = "SELECT * FROM users WHERE user_name = '" . $user_name . "' OR user_email = '" . $user_email . "';";
+                $sql = "SELECT * FROM users WHERE user_name = '" . $user_name . "';";
                 $query_check_user_name = $this->db_connection->query($sql);
 
                 if ($query_check_user_name->num_rows == 1) {
-                    $this->errors[] = "Sorry, that username / email address is already taken.";
+                    $this->errors[] = "Sorry, that username is already taken.";
                 } else {
                     // write new user's data into database
                     $sql = "INSERT INTO users (user_name, user_password_hash, user_email)

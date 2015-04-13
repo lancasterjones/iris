@@ -319,38 +319,6 @@
                 }
            
           echo  "</table></div>";
-        }else
-        {
-          // Menú para elegir semana anterior
-          //=============================================
-          //Se imprime solo si no se ha pasado ningún valor a través de la url
-
-            //menu de navegación
-           include 'includes/menu.php';
-
-            echo '
-                <header align="center">
-                    <h2 class="site-title">Reporte de ventas anteriores</h2>
-                    <p>Elige la semana que deseas consultar</p>          
-               </header>
-            ';
-            echo "<div class='container-fluid inner'>";
-            echo "<table style='cursor:pointer;' class='tableizer-table'>";
-            echo "<tr class='tableizer-firstrow'>";
-            echo "<th>Archivo Semanas Anteriores</th></tr>";
-            $week = date("W")-2;
-            $fin = $week - 10;
-               for($sem = $week; $sem > $fin; $sem--)
-               {
-                  echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
-                  echo $sem;
-                  echo "<i class='glyphicon glyphicon-zoom-in pull-right'></i></div></td></tr>";  
-               }
-               echo "</table></div>";
-
-
-
-
 
               //PRUEBA DE REPORTE CONCENTRADO
 
@@ -381,6 +349,34 @@
           echo '</table></div>';
 
 
+        }else
+        {
+          // Menú para elegir semana anterior
+          //=============================================
+          //Se imprime solo si no se ha pasado ningún valor a través de la url
+
+            //menu de navegación
+           include 'includes/menu.php';
+
+            echo '
+                <header align="center">
+                    <h2 class="site-title">Reporte de ventas anteriores</h2>
+                    <p>Elige la semana que deseas consultar</p>          
+               </header>
+            ';
+            echo "<div class='container-fluid inner'>";
+            echo "<table style='cursor:pointer;' class='tableizer-table'>";
+            echo "<tr class='tableizer-firstrow'>";
+            echo "<th>Archivo Semanas Anteriores</th></tr>";
+            $week = date("W")-2;
+            $fin = $week - 10;
+               for($sem = $week; $sem > $fin; $sem--)
+               {
+                  echo "<tr><td><div onclick='location.href=\"reportes_anteriores.php?semana=".$sem."\"'>Semana ";
+                  echo $sem;
+                  echo "<i class='glyphicon glyphicon-zoom-in pull-right'></i></div></td></tr>";  
+               }
+               echo "</table></div>";  
 
 
 

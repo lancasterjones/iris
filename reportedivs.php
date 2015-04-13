@@ -46,6 +46,35 @@
       .pic{
         width: 100px;
       }
+      .container {
+    position: absolute;
+    width: 250px;
+}
+
+.masvistos, .masvendidos {
+    float: left;
+    width: 120px;
+    display: inline-block;
+}
+.fichafoto {
+    position: relative;
+    height: 116px;
+}
+.foto {
+    position: absolute;
+}
+.producto {
+    z-index: 0;
+}
+.inventario {
+    z-index: 1;
+}
+img {
+    width: 100px
+}
+.sku {
+    text-align: center;
+}
   </style>
   </head>
   <body>
@@ -417,6 +446,70 @@
         }      
           
         ?>
+<!-- INICIO DIVS -->
+<div class="container">
+    <div class="masvendidos">
+        <div class="ficha">
+            <div class="fichafoto">
+                <div class="producto foto">
+                    <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/c/c/ccck0008.jpg" />
+                </div>
+                <div class="inventario foto">
+                    <img src="http://iris.vende.io/imgs/sininv.png" />
+                </div>
+            </div>
+            <div class="sku">SKU</div>
+        </div>
+                <div class="ficha">
+            <div class="fichafoto">
+                <div class="producto foto">
+                    <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/c/c/ccck0008.jpg" />
+                </div>
+                <div class="inventario foto">
+                    <img src="http://iris.vende.io/imgs/sininv.png" />
+                </div>
+            </div>
+            <div class="sku">SKU</div>
+        </div>
+    </div>
+    <div class="masvistos">
+        <div class="ficha">
+            <div class="fichafoto">
+                <div class="producto foto">
+                    <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/c/c/ccck0008.jpg" />
+                </div>
+                <div class="inventario foto">
+                    <img src="http://iris.vende.io/imgs/sininv.png" />
+                </div>
+            </div>
+            <div class="sku">SKU</div>
+        </div>
+                <div class="ficha">
+            <div class="fichafoto">
+                <div class="producto foto">
+                    <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/c/c/ccck0008.jpg" />
+                </div>
+                <div class="inventario foto">
+                    <img src="http://iris.vende.io/imgs/sininv.png" />
+                </div>
+            </div>
+            <div class="sku">SKU</div>
+        </div>
+         <div class="ficha">
+            <div class="fichafoto">
+                <div class="producto foto">
+                    <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/c/c/ccck0008.jpg" />
+                </div>
+                <div class="inventario foto">
+                    <img src="http://iris.vende.io/imgs/sininv.png" />
+                </div>
+            </div>
+            <div class="sku">SKU</div>
+        </div>
+    </div>
+</div>
+<!-- FIN DIVS -->
+
 
   </body>
 </html>

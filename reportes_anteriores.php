@@ -347,6 +347,31 @@
                   echo "<i class='glyphicon glyphicon-zoom-in pull-right'></i></div></td></tr>";  
                }
                echo "</table></div>";
+
+
+
+
+
+              //PRUEBA DE REPORTE CONCENTRADO
+
+          echo '
+           <div class="container-fluid inner">
+              <table class="tableizer-table">
+                  <tr class="tableizer-firstrow">
+                      <th><h3>Lo + vendido</h3></th>
+                      <th></th>                      
+                      <th></th>                                          
+                  </tr>';
+
+                  
+
+          echo '</table></div>';
+
+
+
+
+
+
         }      
           
         ?>

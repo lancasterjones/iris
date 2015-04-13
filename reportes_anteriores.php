@@ -350,9 +350,9 @@
                                       $contenedor[$x][1] . '">
                                     </div>
                                     <div style="position: absolute;">'
-                                      . $inv .                                    
-                                    '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
-                                  </div></div>
+                                      . $inv .                                   
+                                    '</div><div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
+                                  </div>
                               </td>
                               <td>
                                   <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.

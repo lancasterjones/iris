@@ -330,6 +330,11 @@
                       <th><img src="imgs/+visto.png"></th>                                          
                   </tr></table>';
 
+
+          echo '
+              <div style="float: left;position:relative; top: -50px; padding: 0px 25%;">
+              ';
+
           //ciclo que imprime las fias de la tabla
                   for($x = 0; $x < 10; $x++)
                   {
@@ -342,7 +347,7 @@
                           $inv = '<img style="top: 0px;" src="imgs/sininv.png">';
                       }
                       echo '
-                                  <div style="float: left;position:relative; top: -50px; padding: 0px 25%;">
+                                  
                                     <div style="position: absolute;">
                                       <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                       $contenedor[$x][1] . '">
@@ -350,19 +355,19 @@
                                     <div style="position: absolute;">'
                                       . $inv .                                   
                                     '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
-                                  </div></div>
-                             
-                              <div style="float:right;">
-                                  <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
-                                   $contenedor[$x][4] . '"><div style="margin: 0 20%;"><b>'. $contenedor[$x][3] .'</b></div>                                   
-                              </div>
+                                  </div>
                       ';
                     }
 
 
 
 
-          echo '</div>';
+          echo '</div>
+                             
+                              <div style="float:right;">
+                                  <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
+                                   $contenedor[$x][4] . '"><div style="margin: 0 20%;"><b>'. $contenedor[$x][3] .'</b></div>                                   
+                              </div></div>';
 
 
         }else

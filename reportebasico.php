@@ -230,7 +230,7 @@
 
            <!--
            ==========================================================================
-           Es el reporte numero dos-->
+           Es el reporte numero dos
 
 
            <div class="container-fluid inner">
@@ -239,10 +239,10 @@
                       <th><h3>Lo + vendido</h3></th>
                       <th></th>                      
                       <th></th>                                          
-                  </tr>';
+                  </tr>-->';
 
 
-                  $fila = 0;
+                 /* $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
                       if($contenedor[$fila][2] > 0)
@@ -311,8 +311,82 @@
             Actualizar
             <i style="float:right" class="glyphicon glyphicon-hdd icono"></i>
        </button>
-          </div>';
+          </div>';*/
         
+
+              //ARRIBA REPORTES ANTERIORES
+            //====================================================================================================
+              //ABAJO REPORTE CONCENTRADO
+
+          echo '
+           <div class="container-fluid inner">
+              <table class="tableizer-table">
+                  <tr class="tableizer-firstrow" style="padding: 0px;">
+                      <th><img src="imgs/+vendido.png"></th>
+                      <th><img src="imgs/+visto.png"></th>                                          
+                  </tr>';
+
+
+
+          //ciclo que imprime las fias de la tabla
+                  for($x = 0; $x < 10; $x++)
+                  {
+
+                    if($contenedor[$x][5] > 0)
+                      {
+                          $inv = "</br>";
+                      }else 
+                      {
+                          $inv = '<img style="top: 0px;" src="imgs/sininv.png">';
+                      }
+                      echo '
+                            <tr>
+                              <td class="alta">
+                                  <div style="position:relative; top: -50px;">
+
+                                  <div style="position:relative; padding: 0px 25%;">
+                                    <div style="position: absolute;">
+                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                      $contenedor[$x][1] . '">
+                                    </div>
+                                    <div style="position: absolute;">'
+                                      . $inv .  
+                                    '</div>
+                                  </div></div>
+
+                                  <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][0] .'</b></div>
+                              </td>';       
+                              if($contenedor[$x][4])
+                              {
+                                echo '<td class="alta"  >
+                                    <div style="position:relative; top: -50px;">
+
+                                    <div style="position:relative; padding: 0px 25%;">
+                                      <div style="position: absolute;">
+                                        <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                        $contenedor[$x][4] . '">
+                                      </div>
+                                      <div style="position: absolute;">'
+                                        . $inv .  
+                                      '</div>
+                                    </div></div>   
+                                    <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][3] .'</b></div>                               
+                                </td>
+                              </tr>
+
+                              ';
+                            }else
+                            {
+                              echo '
+                                  <td></td></tr>
+                              ';
+                            }
+
+
+                  }
+
+                  echo '</table></div>';
+
   ?>
   <script>
           $(document).ready(function(){

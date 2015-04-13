@@ -355,9 +355,10 @@
                                     </div>
                                     <div style="position: absolute;">'
                                       . $inv .  
-                                    '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
-                                  </div>
+                                    '</div>
                                   </div></div>
+
+                                  <div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
                               </td>                            
                               <td>
                                   <div style="position:relative; top: -50px; padding: 0px 20%;">

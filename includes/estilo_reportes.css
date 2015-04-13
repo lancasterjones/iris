@@ -106,7 +106,7 @@ body > div.container-fluid.inner > table > tbody > tr > td{
   width: 170px;
   padding: 10px;
   background: #f8f8f8;
-  height: 150px;
+  min-height: 170px;
 }
 
 body > div.container-fluid.inner > table > tbody > tr > td:hover{

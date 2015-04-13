@@ -27,11 +27,11 @@
 ?>
 <!DOCTYPE html>
 <html lang='es'>
-	<head>
-		<title>Bienvenido || IRIS</title>
-		<?php 
-			  include 'includes/head.php';
-		?>     
+  <head>
+    <title>Bienvenido || IRIS</title>
+    <?php 
+        include 'includes/head.php';
+    ?>     
 
     <link rel="stylesheet" type="text/css" href="includes/estilo_reportes.css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet" type="text/css">
@@ -47,8 +47,8 @@
         width: 100px;
       }
   </style>
-	</head>
-	<body>
+  </head>
+  <body>
   <?php 
 
        require 'includes/db_magento_connect.php';
@@ -281,7 +281,7 @@
 
           <!--
            ======================================================================
-           Es el reporte numero tres-->
+           Es el reporte numero tres
 
            <div class="container-fluid inner">
               <table class="tableizer-table">
@@ -289,10 +289,10 @@
                       <th><h3>Lo + visto</h3></th>
                       <th></th> 
                       <th></th>
-                  </tr>';
+                  </tr>-->';
 
 
-                  $fila = 0;
+                 /* $fila = 0;
                   $icon = "";
                   for($fila = 0; $fila < $nVistos; $fila++)
                   {
@@ -318,7 +318,7 @@
                   </tr>';
                 }
            
-          echo  "</table></div>";
+          echo  "</table></div>";*/
 
               //PRUEBA DE REPORTE CONCENTRADO
 
@@ -331,9 +331,6 @@
                   </tr>';
 
 
-          echo '
-              <div style="float: left;position:relative; top: -50px; padding: 0px 25%;">
-              ';
 
           //ciclo que imprime las fias de la tabla
                   for($x = 0; $x < 10; $x++)
@@ -347,65 +344,43 @@
                           $inv = '<img style="top: 0px;" src="imgs/sininv.png">';
                       }
                       echo '
-<<<<<<< HEAD
-                                  
-=======
-                            <tr>
-                              <td>
-<<<<<<< HEAD
-                                  <div style="position:relative; top: -50px; padding: 0px 25%;">
->>>>>>> parent of c1cc51b... Se elimina tabla
-<<<<<<< HEAD
-=======
                             <tr>
                               <td>
                                   <div style="position:relative; top: -50px; padding: 0px 25%;">
->>>>>>> parent of c1cc51b... Se elimina tabla
-=======
+
                                   <div style="position:relative; padding: 0px 25%;">
->>>>>>> parent of 1cfc7d2... Alineación de foto y se comentan rep anteriores
-=======
->>>>>>> parent of 25dea93... Revert "Se elimina tabla"
                                     <div style="position: absolute;">
                                       <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                       $contenedor[$x][1] . '">
                                     </div>
                                     <div style="position: absolute;">'
-                                      . $inv .                                   
-<<<<<<< HEAD
+                                      . $inv .  
                                     '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
-<<<<<<< HEAD
                                   </div>
-=======
                                   </div></div>
-=======
-                                    '</div><div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
-                                  </div>
->>>>>>> parent of 1cfc7d2... Alineación de foto y se comentan rep anteriores
-                              </td>
+                              </td>                            
                               <td>
-                                  <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
-                                   $contenedor[$x][4] . '"><div style="margin: 0 20%;"><b>'. $contenedor[$x][3] .'</b></div>                                   
+                                  <div style="position:relative; top: -50px; padding: 0px 25%;">
+
+                                  <div style="position:relative; padding: 0px 25%;">
+                                    <div style="position: absolute;">
+                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                      $contenedor[$x][4] . '">
+                                    </div>
+                                    <div style="position: absolute;">'
+                                      . $inv .  
+                                    '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][3] .'</b></div>
+                                  </div>
+                                  </div></div>                                  
                               </td>
                             </tr>
->>>>>>> parent of c1cc51b... Se elimina tabla
-                      ';
-                    }
+
+                            ';
 
 
+                  }
 
-
-<<<<<<< HEAD
-          echo '</div>
-                             
-                              <div style="float:right;">
-                                  <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
-                                   $contenedor[$x][4] . '"><div style="margin: 0 20%;"><b>'. $contenedor[$x][3] .'</b></div>                                   
-                              </div></div>';
-=======
-          echo '</table></div>';
->>>>>>> parent of c1cc51b... Se elimina tabla
-
+                  echo '</table></div>';
 
         }else
         {
@@ -443,5 +418,5 @@
           
         ?>
 
-	</body>
+  </body>
 </html>

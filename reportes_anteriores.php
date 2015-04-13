@@ -326,8 +326,8 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th><h3>Lo + vendido</h3></th>
-                      <th><h3>Lo + visto</h3></th>                                          
+                      <th><img src="imgs/+vendido.png"></th>
+                      <th><img src="imgs/+visto.png"></th>                                          
                   </tr>';
 
           //ciclo que imprime las fias de la tabla
@@ -345,11 +345,11 @@
                             <tr>
                               <td>
                                   <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
-                                  $contenedor[$x][1] . '<div>' . $contenedor[$x][0] .'</div">
+                                  $contenedor[$x][1] . '><div>' . $contenedor[$x][0] .'</div">
                               </td>
                               <td>
                                   <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
-                                   $contenedor[$x][4] . '<div>'. $contenedor[$x][3] .'</div><div>
+                                   $contenedor[$x][4] . '><div>'. $contenedor[$x][3] .'</div><div>
                                    <i style="font-size:60px;" class="glyphicon glyphicon-'. $icon.'"></i></div>">
                               </td>
                             </tr>

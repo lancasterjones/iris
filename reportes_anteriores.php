@@ -44,7 +44,7 @@
 
   <style type="text/css">
       .pic{
-        width: 200px;
+        width: 100px;
       }
   </style>
 	</head>
@@ -345,12 +345,11 @@
                             <tr>
                               <td>
                                   <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
-                                  $contenedor[$x][1] . '"><div>' . $contenedor[$x][0] .'</div>
+                                  $contenedor[$x][1] . '"><div class="media-middle">' . $contenedor[$x][0] .'<i class="glyphicon glyphicon-'. $icon.'"></i></div>
                               </td>
                               <td>
                                   <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
-                                   $contenedor[$x][4] . '"><div>'. $contenedor[$x][3] .'</div><div>
-                                   <i class="glyphicon glyphicon-'. $icon.'"></i></div>
+                                   $contenedor[$x][4] . '"><div class="media-middle">'. $contenedor[$x][3] .'<i class="glyphicon glyphicon-'. $icon.'"></i></div>                                   
                               </td>
                             </tr>
                       ';

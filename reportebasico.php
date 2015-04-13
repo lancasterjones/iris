@@ -43,7 +43,7 @@
   <script type="text/javascript" src="includes/script_reportes.js"></script>
   <style type="text/css">
       .pic{
-        width: 200px;
+        width: 100px;
       }
       .alta{
         height: 170px;
@@ -194,7 +194,7 @@
 
             echo '
            <header align="center">
-                <h2 class="site-title">Reporte de ventas anteriores</h2>
+                <h2 class="site-title">Reporte de Ventas</h2>
                 <p>Semana: '. $semana .'</p>          
            </header>
 

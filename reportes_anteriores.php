@@ -362,25 +362,32 @@
                                   </div></div>
 
                                   <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][0] .'</b></div>
-                              </td>       
+                              </td>';       
+                              if($contenedor[$x][4])
+                              {
+                                echo '<td class="alta"  >
+                                    <div style="position:relative; top: -50px;">
 
-                              <td class="alta">
-                                  <div style="position:relative; top: -50px;">
+                                    <div style="position:relative; padding: 0px 25%;">
+                                      <div style="position: absolute;">
+                                        <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                        $contenedor[$x][4] . '">
+                                      </div>
+                                      <div style="position: absolute;">'
+                                        . $inv .  
+                                      '</div>
+                                    </div></div>   
+                                    <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][3] .'</b></div>                               
+                                </td>
+                              </tr>
 
-                                  <div style="position:relative; padding: 0px 25%;">
-                                    <div style="position: absolute;">
-                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
-                                      $contenedor[$x][4] . '">
-                                    </div>
-                                    <div style="position: absolute;">'
-                                      . $inv .  
-                                    '</div>
-                                  </div></div>   
-                                  <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][3] .'</b></div>                               
-                              </td>
-                            </tr>
-
-                            ';
+                              ';
+                            }else
+                            {
+                              echo '
+                                  <td></td></tr>
+                              ';
+                            }
 
 
                   }

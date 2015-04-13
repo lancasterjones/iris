@@ -346,7 +346,7 @@
                       echo '
                             <tr>
                               <td>
-                                  <div style="position:relative; top: -50px; padding: 0px 20%;">
+                                  <div style="position:relative; top: -50px;">
 
                                   <div style="position:relative; padding: 0px 25%;">
                                     <div style="position: absolute;">
@@ -358,7 +358,7 @@
                                     '</div>
                                   </div></div>
 
-                                  <div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
+                                  <div style="position: relative; top:70px; left:50px;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
                               </td>                            
                               <td>
                                   <div style="position:relative; top: -50px; padding: 0px 20%;">

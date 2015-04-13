@@ -45,6 +45,9 @@
       .pic{
         width: 200px;
       }
+      .alta{
+        height: 170px;
+      }
   </style>
   </head>
   <body>

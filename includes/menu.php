@@ -14,7 +14,7 @@
 	      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
 	        <ul class="nav navbar-nav">
 	          <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
-	          <li><a href="#">KPIs</a></li>
+	          <!--<li><a href="#">KPIs</a></li>-->
 	          <li class="dropdown">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reportes Semanales <span class="caret"></span></a>
 	            <ul class="dropdown-menu" role="menu">
@@ -24,11 +24,11 @@
 	            </ul>
 	          </li>
 	        </ul>
-	        <form class="navbar-form navbar-left" role="search">
+	        <!--<form class="navbar-form navbar-left" role="search">
 	          <div class="form-group">
 	            <input type="text" class="form-control" placeholder="Buscar en sitio...">
 	          </div>
-	          <button type="submit" class="btn btn-default">Buscar</button>
+	          <button type="submit" class="btn btn-default">Buscar</button>-->
 	        </form>
 	        <ul class="nav navbar-nav navbar-right">
 	          <li><a href="index.php?logout">Logout</a></li>

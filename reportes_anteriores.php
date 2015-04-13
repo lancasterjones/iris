@@ -336,7 +336,7 @@
 
                     if($contenedor[$x][5] > 0)
                       {
-                          $inv = "<span></span>";
+                          $inv = "</br>";
                       }else 
                       {
                           $inv = '<img style="top: 0px;" src="imgs/sininv.png">';

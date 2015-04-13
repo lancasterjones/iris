@@ -335,13 +335,21 @@
                   for($x = 0; $x < 10; $x++)
                   {
 
-                    if($contenedor[$x][5] > 0)
+                    if($contenedor[$x][2] > 0)
                       {
                           $inv = "</br>";
                       }else 
                       {
                           $inv = '<img style="top: 0px;" src="imgs/sininv.png">';
                       }
+                    if($contenedor[$x][5] > 0)
+                      {
+                          $inv_vist = "</br>";
+                      }else 
+                      {
+                          $inv_vist = '<img style="top: 0px;" src="imgs/sininv.png">';
+                      }
+
                       echo '
                             <tr>
                               <td class="alta">
@@ -370,7 +378,7 @@
                                         $contenedor[$x][4] . '">
                                       </div>
                                       <div style="position: absolute;">'
-                                        . $inv .  
+                                        . $inv_vist .  
                                       '</div>
                                     </div></div>   
                                     <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][3] .'</b></div>                               

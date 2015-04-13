@@ -344,7 +344,7 @@
                       echo '
                             <tr>
                               <td>
-                                  <div style="position:relative; padding: 2% 25%;">
+                                  <div style="position:relative; padding: 0px 25%;">
                                     <img style="position: absolute;" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                     $contenedor[$x][1] . '">
                                     <div style="position: absolute;">

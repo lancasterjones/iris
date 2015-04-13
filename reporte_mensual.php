@@ -40,9 +40,9 @@
       <?php
           include 'includes/menu.php';
       ?>
-      <div>
           <canvas id="canvas_line" height="250" width="700"></canvas>
-      </div>
+          <canvas id="canvas" width="120" height="120"></canvas>
+     
   </body>
 
 </html>

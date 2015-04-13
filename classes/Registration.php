@@ -46,15 +46,15 @@ class Registration
             $this->errors[] = "Password has a minimum length of 6 characters";
         } elseif (strlen($_POST['user_name']) > 64 || strlen($_POST['user_name']) < 2) {
             $this->errors[] = "Username cannot be shorter than 2 or longer than 64 characters";
-        }  elseif (empty($_POST['company'])) {
-            $this->errors[] = "Escribe el nombre de la empresa por favor";
-        } elseif (strlen($_POST['company']) > 64) {
+        }  elseif (empty($_POST['user_email'])) {
+            $this->errors[] = "Escribe nombre de la empresa por favor";
+        } elseif (strlen($_POST['user_email']) > 64) {
             $this->errors[] = "No puedes exceder más de 64 caracteres";
         } elseif (!empty($_POST['user_name'])
             && strlen($_POST['user_name']) <= 64
             && strlen($_POST['user_name']) >= 2
-            && !empty($_POST['company'])
-            && strlen($_POST['company']) <= 64
+            && !empty($_POST['user_email'])
+            && strlen($_POST['user_email']) <= 64
             && !empty($_POST['user_password_new'])
             && !empty($_POST['user_password_repeat'])
             && ($_POST['user_password_new'] === $_POST['user_password_repeat'])

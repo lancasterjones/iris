@@ -46,6 +46,9 @@
       .pic{
         width: 100px;
       }
+      .alta{
+        height: 170px;
+      }
   </style>
 	</head>
 	<body>
@@ -333,7 +336,7 @@
 
 
           //ciclo que imprime las fias de la tabla
-                  for($x = 0; $x < $tamano; $x++)
+                  for($x = 0; $x < 10; $x++)
                   {
 
                     if($contenedor[$x][5] > 0)
@@ -345,7 +348,7 @@
                       }
                       echo '
                             <tr>
-                              <td>
+                              <td class="alta">
                                   <div style="position:relative; top: -50px;">
 
                                   <div style="position:relative; padding: 0px 25%;">
@@ -359,8 +362,9 @@
                                   </div></div>
 
                                   <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][0] .'</b></div>
-                              </td>                            
-                              <td>
+                              </td>       
+
+                              <td class="alta">
                                   <div style="position:relative; top: -50px;">
 
                                   <div style="position:relative; padding: 0px 25%;">

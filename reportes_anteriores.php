@@ -335,8 +335,8 @@
                   {
                       echo '
                             <tr>
-                              <td>FOTO</td>
-                              <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][4] . $contenedor[$fila][3] .'"></td>
+                              <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][1] . $contenedor[$x][0] .'"></td>
+                              <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][4] . $contenedor[$x][3] .'"></td>
                             </tr>
                       ';
                     }

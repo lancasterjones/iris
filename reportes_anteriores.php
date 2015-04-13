@@ -175,7 +175,7 @@
           $resultado = mysqli_query($con, $sql);
           $masvistos = mysqli_query($con, $sqlvistos);
           //numero de filas query masvistos
-          $nVistos = mysqli_num_rows($masvistos);
+          $tamano = mysqli_num_rows($masvistos);
           $contenedor = array(array());   
           $contador = 0;
 
@@ -333,7 +333,7 @@
 
 
           //ciclo que imprime las fias de la tabla
-                  for($x = 0; $x < 10; $x++)
+                  for($x = 0; $x < $tamano; $x++)
                   {
 
                     if($contenedor[$x][5] > 0)

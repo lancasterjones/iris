@@ -350,7 +350,7 @@
                               <td>
                                   <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.
                                    $contenedor[$x][4] . '"><div>'. $contenedor[$x][3] .'</div><div>
-                                   <i style="font-size:60px;" class="glyphicon glyphicon-'. $icon.'"></i></div>
+                                   <i class="glyphicon glyphicon-'. $icon.'"></i></div>
                               </td>
                             </tr>
                       ';

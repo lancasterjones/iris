@@ -18,9 +18,9 @@
 	          <li class="dropdown">
 	            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reportes Semanales <span class="caret"></span></a>
 	            <ul class="dropdown-menu" role="menu">
-	              <li><a href="reportebasico.php">Última Semana</a></li>
+	              <li><a href="reportebasico.php">Semana Actual</a></li>
 	              <li class="divider"></li>
-	              <li><a href="reportes_anteriores.php">Anteriores</a></li>
+	              <li><a href="reportes_anteriores.php">Semanas Anteriores</a></li>
 	            </ul>
 	          </li>
 	        </ul>

@@ -28,7 +28,7 @@
 <!DOCTYPE html>
 <html lang='es'>
   <head>
-    <title>Bienvenido || IRIS</title>
+    <title>Reportes || IRIS</title>
     <?php 
         include 'includes/head.php';
 
@@ -42,6 +42,8 @@
       ?>
           <canvas id="canvas_line" height="250" width="700"></canvas>
           <canvas id="canvas" width="120" height="120"></canvas>
+          <canvas id="canvas_radar" width="120" height="120"/></canvas>
+          <canvas id="chart-area" width="100" height="100"/></canvas>
      
   </body>
 

@@ -31,12 +31,18 @@
     <title>Bienvenido || IRIS</title>
     <?php 
         include 'includes/head.php';
+
     ?>
+    <script type="text/javascript" src="includes/Chart.js"></script>
+    <script type="text/javascript" src="includes/script_reportes.js"></script>
   </head>
   <body>
       <?php
           include 'includes/menu.php';
       ?>
+      <div>
+          <canvas id="canvas_line" height="250" width="70%"></canvas>
+      </div>
   </body>
 
 </html>

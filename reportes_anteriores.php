@@ -242,7 +242,7 @@
 
            <!--
            ==========================================================================
-           Es el reporte numero dos
+           Es el reporte numero dos-->
 
 
            <div class="container-fluid inner">
@@ -251,10 +251,10 @@
                       <th><h3>Lo + vendido</h3></th>
                       <th></th>                      
                       <th></th>                                          
-                  </tr>-->';
+                  </tr>';
 
 
-                 /* $fila = 0;
+                  $fila = 0;
                   for($fila = 0; $fila < 10; $fila++)
                   {
                       if($contenedor[$fila][2] > 0)
@@ -318,7 +318,7 @@
                   </tr>';
                 }
            
-          echo  "</table></div>";*/
+          echo  "</table></div>";
 
               //PRUEBA DE REPORTE CONCENTRADO
 
@@ -356,6 +356,7 @@
 =======
                             <tr>
                               <td>
+<<<<<<< HEAD
                                   <div style="position:relative; top: -50px; padding: 0px 25%;">
 >>>>>>> parent of c1cc51b... Se elimina tabla
 =======
@@ -363,17 +364,25 @@
                               <td>
                                   <div style="position:relative; top: -50px; padding: 0px 25%;">
 >>>>>>> parent of c1cc51b... Se elimina tabla
+=======
+                                  <div style="position:relative; padding: 0px 25%;">
+>>>>>>> parent of 1cfc7d2... Alineación de foto y se comentan rep anteriores
                                     <div style="position: absolute;">
                                       <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
                                       $contenedor[$x][1] . '">
                                     </div>
                                     <div style="position: absolute;">'
                                       . $inv .                                   
+<<<<<<< HEAD
                                     '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
 <<<<<<< HEAD
                                   </div>
 =======
                                   </div></div>
+=======
+                                    '</div><div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
+                                  </div>
+>>>>>>> parent of 1cfc7d2... Alineación de foto y se comentan rep anteriores
                               </td>
                               <td>
                                   <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.

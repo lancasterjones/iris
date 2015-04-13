@@ -345,8 +345,10 @@
                             <tr>
                               <td>
                                   <div style="position:relative; padding: 0px 25%;">
-                                    <img style="position: absolute;" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
-                                    $contenedor[$x][1] . '">
+                                    <div style="position: absolute;">
+                                      <img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                      $contenedor[$x][1] . '">
+                                    </div>
                                     <div style="position: absolute;">'
                                       . $inv .                                    
                                     '<div style="position: relative;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>

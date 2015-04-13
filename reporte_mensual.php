@@ -41,7 +41,7 @@
           include 'includes/menu.php';
       ?>
       <div>
-          <canvas id="canvas_line" height="250" width="70%"></canvas>
+          <canvas id="canvas_line" height="250px" width="700px"></canvas>
       </div>
   </body>
 

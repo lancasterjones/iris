@@ -27,11 +27,11 @@
 ?>
 <!DOCTYPE html>
 <html lang='es'>
-	<head>
-		<title>Bienvenido || IRIS</title>
-		<?php 
-			  include 'includes/head.php';
-		?>     
+  <head>
+    <title>Bienvenido || IRIS</title>
+    <?php 
+        include 'includes/head.php';
+    ?>     
 
     <link rel="stylesheet" type="text/css" href="includes/estilo_reportes.css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet" type="text/css">
@@ -46,8 +46,8 @@
         width: 200px;
       }
   </style>
-	</head>
-	<body>
+  </head>
+  <body>
   <?php require 'includes/db_magento_connect.php';
           $semana = date("W")-1;
           $query = "SELECT 
@@ -332,5 +332,5 @@
               });
             });
       </script>
-	</body>
+  </body>
 </html>

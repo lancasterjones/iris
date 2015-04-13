@@ -344,8 +344,10 @@
                       echo '
                             <tr>
                               <td>
-                                  <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
-                                  $contenedor[$x][1] . '"><div style="margin: 0 20%;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
+                                  <img style="margin: 20%; position: relative;" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. 
+                                  $contenedor[$x][1] . '">
+                                  <img style="margin: 20%; position: absolute;" src="imgs/siniv.png">
+                                  <div style="margin: 0 20%;" class="media-middle"><b>' . $contenedor[$x][0] .'</b></div>
                               </td>
                               <td>
                                   <img style="margin: 20%" class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'.

@@ -349,7 +349,9 @@
                       {
                           $inv_vist = '<img style="top: 0px;" src="imgs/sininv.png">';
                       }
-
+                      //valida si existe un codigo, si es así imprime una nueva tabla con la imagen y el codigo
+                      if($contenedor[$x][0])
+                      {
                       echo '
                             <tr>
                               <td class="alta">
@@ -366,7 +368,13 @@
                                   </div></div>
 
                                   <div style="position: relative; top:70px; left:50px;"><b>' . $contenedor[$x][0] .'</b></div>
-                              </td>';       
+                              </td>';  
+                              }else//si no existe codigo, solo imprime la tabla en blanco
+                              {
+                                  echo '
+                                      <td></td></tr>
+                                  ';
+                              }     
                               if($contenedor[$x][4])
                               {
                                 echo '<td class="alta"  >

@@ -346,7 +346,7 @@
                       echo '
                             <tr>
                               <td>
-                                  <div style="position:relative; top: -50px; padding: 0px 25%;">
+                                  <div style="position:relative; top: -50px; padding: 0px 20%;">
 
                                   <div style="position:relative; padding: 0px 25%;">
                                     <div style="position: absolute;">
@@ -360,7 +360,7 @@
                                   </div></div>
                               </td>                            
                               <td>
-                                  <div style="position:relative; top: -50px; padding: 0px 25%;">
+                                  <div style="position:relative; top: -50px; padding: 0px 20%;">
 
                                   <div style="position:relative; padding: 0px 25%;">
                                     <div style="position: absolute;">

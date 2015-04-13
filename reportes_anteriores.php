@@ -326,22 +326,24 @@
            <div class="container-fluid inner">
               <table class="tableizer-table">
                   <tr class="tableizer-firstrow">
-                      <th><h3>PRUEBA</h3></th>
-                      <th></th>                                          
+                      <th><h3>Lo + vendido</h3></th>
+                      <th><h3>Lo + visto</h3></th>                                          
                   </tr>';
 
-
-          echo '
-                <tr>
-                  <td>FOTO</td>
-                  <td>FOTO</td>
-                </tr>
-                <tr>
-                  <td>CODIGO</td>
-                  <td>CODIGO</td>
-                </tr>
-          ';
-
+          //ciclo que imprime las fias de la tabla
+                  for($x = 0; $x < 10; $x++)
+                  {
+                      echo '
+                            <tr>
+                              <td>FOTO</td>
+                              <td><img class="pic" src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/'. $contenedor[$x][4] .'"></td></td>
+                            </tr>
+                            <tr>
+                              <td>CODIGO</td>
+                              <td>CODIGO</td>
+                            </tr>
+                      ';
+                    }
 
 
 

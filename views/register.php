@@ -26,13 +26,13 @@ if (isset($registration)) {
         <div class='form-group'>
             <!-- the user name input field uses a HTML5 pattern check -->
             <label class="control-label col-sm-5" for="login_input_username">Usuario: </label>
-            <input id="login_input_username" class="form-control" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />
+            <input id="login_input_username" class="form-control" type="text" name="user_name" required />
         </div>
 
         <div class='form-group'>
             <!-- the email input field uses a HTML5 email type check -->
             <label class="control-label col-sm-5" for="login_input_email">Compañía</label>
-            <input id="login_input_email" class="form-control" type="text" name="user_email" required />
+            <input id="login_input_email" class="form-control" type="text" name="company" required />
         </div>
         <div class='form-group'>
             <label class="control-label col-sm-5" for="login_input_password_new">Contraseña: </label>

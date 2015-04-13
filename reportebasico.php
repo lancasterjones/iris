@@ -372,7 +372,7 @@
                               }else//si no existe codigo, solo imprime la tabla en blanco
                               {
                                   echo '
-                                      <td></td></tr>
+                                      <td></td>
                                   ';
                               }     
                               if($contenedor[$x][4])

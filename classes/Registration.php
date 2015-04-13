@@ -58,7 +58,6 @@ class Registration
             && preg_match('/^[a-z\d]{2,64}$/i', $_POST['user_name'])
             && !empty($_POST['user_email'])
             && strlen($_POST['user_email']) <= 64
-            && filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)
             && !empty($_POST['user_password_new'])
             && !empty($_POST['user_password_repeat'])
             && ($_POST['user_password_new'] === $_POST['user_password_repeat'])

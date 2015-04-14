@@ -40,12 +40,9 @@
       <?php
           include 'includes/menu.php';
       ?>
-          <div style="width: 600px; height: 300px;">
-            <canvas id="canvas_line"></canvas>
-          </div>
-          <canvas id="canvas"></canvas>
-          <canvas id="canvas_radar"/></canvas>
-          <canvas id="chart-area"/></canvas>
+         <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
      
   </body>
 

@@ -41,8 +41,82 @@
           include 'includes/menu.php';
       ?>
          <script src="http://code.highcharts.com/highcharts.js"></script>
-<script src="http://code.highcharts.com/modules/exporting.js"></script>
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+         <script src="http://code.highcharts.com/modules/exporting.js"></script>
+         <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+         <script>
+              $(function () {
+                $('#container').highcharts({
+                    chart: {
+                        zoomType: 'xy'
+                    },
+                    title: {
+                        text: 'Ventas por Semana'
+                    },
+                    subtitle: {
+                        text: 'www.lob.com.mx'
+                    },
+                    xAxis: [{
+                        categories: ['S1', 'S2', 'S3', 'S4'],
+                        crosshair: true
+                    }],
+                    yAxis: [{ // Primary yAxis
+                        min: 1,
+                        labels: {
+                            format: '${value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        },
+                        title: {
+                            text: 'Ventas',
+                            style: {
+                                color: Highcharts.getOptions().colors[1]
+                            }
+                        }
+                    }, { // Secondary yAxis
+                        title: {
+                            text: 'Pedidos',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        labels: {
+                            format: '{value}',
+                            style: {
+                                color: Highcharts.getOptions().colors[0]
+                            }
+                        },
+                        opposite: true
+                    }],
+                    tooltip: {
+                        shared: true
+                    },
+                    series: [{
+                        name: 'Pedidos',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [41, 40, 34, 44],
+                    }, {
+                        name: 'Fraudes',
+                        type: 'column',
+                        yAxis: 1,
+                        data: [3, 2, 5, 5],
+                        color: 'red'
+                    }, {
+                        name: 'Venta',
+                        type: 'spline',
+                        data: [26559, 32450, 20970, 29070],
+                        tooltip: {
+                            valuePrefix: '$ '
+                        }
+
+                    }]
+                });
+            });
+         </script>
      
   </body>
 

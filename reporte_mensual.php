@@ -123,6 +123,8 @@
             <tr>
                 <th>Mes</th>
                 <th>Semana</th>
+                <th>Mes_F</th>
+                <th>Semana_F</th>
             </tr>
             
                 
@@ -134,11 +136,71 @@
                       if($x>8 && $x <=13) $mes = "MARZO";
                       if($x>13 && $x <=17) $mes = "ABRIL";
                       echo "<tr><td>" . $mes . "</td>";
+                      echo "<td>". $x."</td>";
+                   
+
+                    $semana = $x;
+
+
+                    $year = 2015;
+          $calcular_mes = new DateTime();
+          $calcular_mes->setISODate($year, $semana);
+          $m = $calcular_mes->format('M');
+
+          // variable w indica el numero de mes a consultar
+          
+          switch ($m) {
+            case 'Jan':
+               $w = "01";
+               break;
+            case 'Feb':
+               $w = "02";
+               break;
+            case 'Mar':
+               $w = "03";
+               break;
+            case 'Apr':
+               $w = "04";
+               break;
+            case 'May':
+               $w = "05";
+               break;
+            case 'Jun':
+               $w = "06";
+               break;
+            case 'Jul':
+               $w = "07";
+               break;
+            case 'Aug':
+               $w = "08";
+               break;
+            case 'Sep':
+               $w = "09";
+               break;
+            case 'Oct':
+               $w = "10";
+               break;
+            case 'Nov':
+               $w = "11";
+               break;
+            case 'Dec':
+               $w = "12";
+              break;
+            default:
+              break;
+          }
+
+
+          echo "<td>" . $m . "</td>";
                       echo "<td>". $x."</td></tr>";
-                    }
+
+ }
+
                 ?>
             
          </table>
+
+
      
   </body>
 

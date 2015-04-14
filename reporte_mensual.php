@@ -132,7 +132,7 @@
                       if($x<=5) $mes = "ENERO";
                       if($x>5 && $x <=8) $mes = "FEBRERO";
                       if($x>8 && $x <=13) $mes = "MARZO";
-                        else $mes = "ABRIL";
+                      if($x>13 && $x <=17) $mes = "ABRIL";
                       echo "<tr><td>" . $mes . "</td>";
                       echo "<td>". $x."</td></tr>";
                     }

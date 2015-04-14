@@ -46,6 +46,7 @@
 
 
 
+
          <script>
               $(function () {
                 $('#container').highcharts({
@@ -98,7 +99,7 @@
                         name: 'Pedidos',
                         type: 'column',
                         yAxis: 1,
-                        data: [41, 40, 34, 44],
+                        data: [<?php $uno = 100; echo $uno; ?>, 40, 34, 44],
                     }, {
                         name: 'Fraudes',
                         type: 'column',

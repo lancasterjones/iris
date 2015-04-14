@@ -139,7 +139,7 @@
                       echo "<td>". $x."</td>";
                    
 
-                    $semana = $x;
+                    $semana = $x+1;
 
 
                     $year = 2015;

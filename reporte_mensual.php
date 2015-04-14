@@ -118,6 +118,25 @@
                 });
             });
          </script>
+
+         <table>
+            <tr>
+                <th>Mes</th>
+                <th>Semana</th>
+            </tr>
+            <tr>
+                
+                <?php
+                    for($x = 1; $x <18; $x++)
+                    {
+                      if($x<=5) $mes = "ENERO";
+                      if($x>5 && $x <=8) $mes = "FEBRERO";
+                      echo "<td>" . $mes . "</td>";
+                      echo "<td>". $x."</td>";
+                    }
+                ?>
+            </tr>
+         </table>
      
   </body>
 

@@ -125,6 +125,7 @@
                 <th>Semana</th>
                 <th>Mes_F</th>
                 <th>Semana_F</th>
+                <th>dia_F</th>
             </tr>
             
                 
@@ -146,6 +147,7 @@
           $calcular_mes = new DateTime();
           $calcular_mes->setISODate($year, $semana);
           $m = $calcular_mes->format('M');
+          $dia = $calcular_mes->format('d');
 
           // variable w indica el numero de mes a consultar
           
@@ -192,7 +194,8 @@
 
 
           echo "<td>" . $m . "</td>";
-                      echo "<td>". $x."</td></tr>";
+                      echo "<td>". $x."</td>";
+                      echo "<td>". $dia."</td></tr>";
 
  }
 

@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 /* require_once ('/libraries/GoogleClientApi/Google_Client.php');
 require_once ('/libraries/GoogleClientApi/contrib/Google_AnalyticsService.php');
 

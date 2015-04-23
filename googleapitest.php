@@ -1,9 +1,13 @@
 <?php
 session_start();
+
+ require_once '/libraries/GoogleClientAPI/src/Google/autoload.php'; // or wherever autoload.php is located
+
+/*
 require_once ('/libraries/GoogleClientAPI/src/Google/Client.php');
 require_once ('/libraries/GoogleClientAPI/src/Google/Service/Analytics.php');
 
-/*
+
 $scriptUri = "http://".$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];
 
 $client = new Google_Client();

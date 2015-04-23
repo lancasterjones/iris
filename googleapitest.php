@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once ('/libraries/GoogleClientApi/Google_Client.php');
+//session_start();
+/* require_once ('/libraries/GoogleClientApi/Google_Client.php');
 require_once ('/libraries/GoogleClientApi/contrib/Google_AnalyticsService.php');
 
 $scriptUri = "http://".$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];
@@ -35,7 +35,8 @@ if (!$client->getAccessToken()) { // auth call to google
     $authUrl = $client->createAuthUrl();
     header("Location: ".$authUrl);
     die;
-}
+} 
+*/
 echo 'Hello, world.';
 
 ?>

@@ -8,8 +8,8 @@ $scriptUri = "http://".$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];
 $client = new Google_Client();
 $client->setAccessType('online'); // default: offline
 $client->setApplicationName('My Application name');
-$client->setClientId('INSERT HERE');
-$client->setClientSecret('INSERT HERE');
+$client->setClientId('421555446319-0h80flbkju1vqagjkbsc9jl7ahjoubug.apps.googleusercontent.com');
+$client->setClientSecret('JqHvAtOgzkbM_CqrxGL1MhU0');
 $client->setRedirectUri($scriptUri);
 $client->setDeveloperKey('INSERT HERE'); // API key
 

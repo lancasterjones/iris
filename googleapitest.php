@@ -5,8 +5,9 @@ session_start();
 
 
   $client = new Google_Client();
-  $client->setApplicationName("Client_Library_Examples");
-  $client->setDeveloperKey("AIzaSyDfOXaHjoTSQbIOHX-p6HROTOZmIS4QIEA");
+$client->setClientId(421555446319-0h80flbkju1vqagjkbsc9jl7ahjoubug.apps.googleusercontent.com);
+$client->setClientSecret(JqHvAtOgzkbM_CqrxGL1MhU0);
+$client->setRedirectUri($redirect_uri);
 
   $service = new Google_Service_Books($client);
   $optParams = array('filter' => 'free-ebooks');

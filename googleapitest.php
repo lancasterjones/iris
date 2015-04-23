@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once dirname(__FILE__).'/GoogleClientApi/Google_Client.php';
-require_once dirname(__FILE__).'/GoogleClientApi/contrib/Google_AnalyticsService.php';
+require_once dirname(__FILE__).'/libraries/GoogleClientApi/Google_Client.php';
+require_once dirname(__FILE__).'/libraries/GoogleClientApi/contrib/Google_AnalyticsService.php';
 
 $scriptUri = "http://".$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];
 

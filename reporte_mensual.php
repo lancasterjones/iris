@@ -79,11 +79,11 @@
 
             //calcular las semanas contenidas en cada mes
           $calcular_mes = new DateTime();
+          $x = 0;
           for($week = 1; $week < 54; $week++){ 
             $calcular_mes->setISODate($current_year, $week);
             $mes_formato = $calcular_mes->format('n');
-                if($mes_formato == 4){
-                      $x = 0;
+                if($mes_formato == 4){                      
                       $semanaReporte[$x] = $week;
                       echo $semanaReporte[$x] . " " ;
                       $x++;

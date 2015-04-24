@@ -148,7 +148,7 @@
                         text: 'www.lob.com.mx'
                     },
                     xAxis: [{
-                        categories: [<?php echo "'S " . $semanaReporte[0] . "' "?>, 'S2', 'S3', 'S4'],
+                        categories: [<?php echo "'S " . $semanaReporte[0] . "', 'S " . $semanaReporte[1]. "'"?>, 'S3', 'S4'],
                         crosshair: true
                     }],
                     yAxis: [{ // Primary yAxis

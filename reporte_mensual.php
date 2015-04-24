@@ -77,19 +77,34 @@
              //arreglo con semanas
              $semanaReporte = array();
 
-            //calcular las semanas contenidas en cada mes
-          $calcular_mes = new DateTime();
-          $x = 0;
-          for($week = 1; $week < 54; $week++){ 
-            $calcular_mes->setISODate($current_year, $week);
-            $mes_formato = $calcular_mes->format('n');
-            echo $mes_formato . " ";
-                if($mes_formato == 4){                      
-                      $semanaReporte[$x] = $week;
-                      echo $semanaReporte[$x] . " ";
-                      $x++;
+             //calcular primer semana del año
+             $semAnalisis = new DateTime();
+              for($n = 1; $n <3; $n++){
+                $semAnalisis->setISODate($current_year, $n);
+                      $primer_semana = $semAnalisis->format('n');
+                if($primer_semana == 1){
+                  $semanaUno = $n;
+                  echo "Anio inicia en la semana " . $semanaUno;
                 }
-          }
+              }
+
+            //calcular ultima semana del año
+
+
+
+            //calcular las semanas contenidas en cada mes
+            $calcular_mes = new DateTime();
+            $x = 0;
+            for($week = $semanaUno; $week < 54; $week++){ 
+              $calcular_mes->setISODate($current_year, $week);
+              $mes_formato = $calcular_mes->format('n');
+              echo $mes_formato . " ";
+                  if($mes_formato == 4){                      
+                        $semanaReporte[$x] = $week;
+                        echo $semanaReporte[$x] . " ";
+                        $x++;
+                  }
+            }
 
             
            

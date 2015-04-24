@@ -171,6 +171,7 @@
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
+         <?php include "/includes/side_menu.php"; ?>
          <div id="container" style="max-width: 85%; height: 400px; margin: 0 auto"></div>
          <script>
               $(function () {

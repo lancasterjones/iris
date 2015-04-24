@@ -54,7 +54,7 @@
             //Mes actual
             $mes_actual = date("m");
             switch($mes_actual){
-                case '04':
+                case 04:
                   $mes_actual = "Abril";
                   break;
             }

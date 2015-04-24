@@ -113,8 +113,8 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 
 
 			//dibuja piechart
-
-			window.onload = function(){
+/*
+			 window.onload = function(){
 				//selecciona etiqueta canvas para piechart
 				var ctx = document.getElementById("chart-area").getContext("2d");
 				window.myPie = new Chart(ctx).Pie(pieData);
@@ -130,4 +130,5 @@ var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
 				window.myLine = new Chart(contx).Line(lineChartData, {
 					responsive: true
 		});
-			};
+			}; */
+

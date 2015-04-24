@@ -207,7 +207,12 @@
                     }, {
                         name: 'Venta',
                         type: 'spline',
-                        data: [26559, 32450, 20970, 29070],
+                        data: [<?php
+                          for($i = 0; $i < $columnasReporte; $i++){
+                            echo $venta[$x] . ", ";
+                          }
+
+                        ?>],
                         tooltip: {
                             valuePrefix: '$ '
                         }

@@ -120,7 +120,7 @@
                           //este query trae el valor de fraudes en la semana indicada
                         $fraudes = '
                               SELECT fraudes FROM magento_venta
-                              WHERE week = 14;
+                              WHERE week = 14
                         ';
                         echo "posicion : " . $x;
                         //Almacenamiento de datos de consulta query ventas y pedidos
@@ -218,7 +218,11 @@
                         name: 'Fraudes',
                         type: 'column',
                         yAxis: 1,
-                        data: [3, 2, 5, 5],
+                        data: [<?php
+                          for($i = 0; $i < $columnasReporte; $i++){
+                              echo $fraud[$i] . ", ";
+                          }
+                        ?>],
                         color: 'red'
                     }, {
                         name: 'Venta',

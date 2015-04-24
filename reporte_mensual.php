@@ -107,7 +107,7 @@
             for($week = $semanaUno; $week < 54; $week++){ 
               $calcular_mes->setISODate($current_year, $week);
               $mes_formato = $calcular_mes->format('n');
-                  if($mes_formato == $mes_actual){                      
+                  if($mes_formato == 4){                      
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
                         echo "semana: " . $semanaReporte[$x];

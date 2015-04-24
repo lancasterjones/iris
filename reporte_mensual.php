@@ -85,7 +85,7 @@
             $mes_formato = $calcular_mes->format('n');
                 if($mes_formato == 4){                      
                       $semanaReporte[$x] = $week;
-                      echo $semanaReporte[$x] . " " ;
+                      echo $semanaReporte[$x] . " " $x;
                       $x++;
                 }
           }
@@ -135,7 +135,7 @@
                         text: 'www.lob.com.mx'
                     },
                     xAxis: [{
-                        categories: [<?php echo "S " . $semanaReporte[0];?>, 'S2', 'S3', 'S4'],
+                        categories: [<?php echo "S ";?>, 'S2', 'S3', 'S4'],
                         crosshair: true
                     }],
                     yAxis: [{ // Primary yAxis

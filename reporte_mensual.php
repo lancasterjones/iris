@@ -58,15 +58,22 @@
             $current_year = date("Y");
 
             //Mes actual
-            $mes_actual = date("m");
+            $mes_actual = date("n");
+
+            //asignar mes
+           /* $valorMes = $_GET['mes'];
+            if($valorMes != $mes_actual){
+              $mes_actual = $valorMes;
+            }*/
+
             switch($mes_actual){
-                case 03:
+                case 3:
                   $mes_actual = "Mayo";
                   break;
-                case 04:
+                case 4:
                   $mes_actual = "Abril";
                   break;
-                case 05:
+                case 5:
                   $mes_actual = "Mayo";
                   break;
             }
@@ -100,7 +107,7 @@
             for($week = $semanaUno; $week < 54; $week++){ 
               $calcular_mes->setISODate($current_year, $week);
               $mes_formato = $calcular_mes->format('n');
-                  if($mes_formato == 4){                      
+                  if($mes_formato == $mes_actual){                      
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
                         echo "semana: " . $semanaReporte[$x];

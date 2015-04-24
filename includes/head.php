@@ -16,5 +16,7 @@ echo '
     <link rel="shortcut icon" href="http://vende.io/wp-content/themes/primary/favicon.ico" />
     <!--Estilo reporte-->
     <link href="http://docs.justinav.info/cfbc.css" rel="stylesheet" type="text/css"> 
+    <!--Estilo Side Menu -->
+    <link rel="stylesheet" href="/css/sidemenu.css rel="stylesheet" type="text/css" />
 ';
 ?>

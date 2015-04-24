@@ -24,8 +24,9 @@
 						<li><a href="?mes=4">Abril</a></li>
 					</ul>
 				</li>
-				<li ><a href="#">Perfil<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-				<li ><a href="#">Mensajes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+				<li ><a href="#">Categorías<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pie-chart"></span></a></li>
+				<li ><a href="#">Los Más Vendidos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
+				<li ><a href="#">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
 			</ul>
 		</div>
 	</div>

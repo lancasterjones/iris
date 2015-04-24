@@ -194,7 +194,7 @@
                         type: 'column',
                         yAxis: 1,
                         data: [<?php 
-                        for($i = 0; $ < $columnasReporte; $i++)
+                        for($i = 0; $i < $columnasReporte; $i++)
                         echo $pedidos[$i] . ", ";
                         ?>],
                     }, {

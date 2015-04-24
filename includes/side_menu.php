@@ -13,17 +13,17 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+				<li class="active"><a href="/">Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
 				<li ><a href="#">Perfil<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
 				<li ><a href="#">Mensajes<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros Meses <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
 					<ul class="dropdown-menu forAnimate" role="menu">
-						<li><a href="#">Enero</a></li>
-						<li><a href="#">Febrero</a></li>
-						<li><a href="#">Marzo</a></li>
+						<li><a href="?mes=1">Enero</a></li>
+						<li><a href="?mes=2">Febrero</a></li>
+						<li><a href="?mes=3">Marzo</a></li>
 						<li class="divider"></li>
-						<li><a href="#">Abril</a></li>
+						<li><a href="?mes=4">Abril</a></li>
 					</ul>
 				</li>
 			</ul>

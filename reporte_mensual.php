@@ -132,24 +132,6 @@
            $columnasReporte =  count($semanaReporte);
            echo "Columnas:  " . $columnasReporte . " Pedidos: " . $pedidos[0];
 
-            
-
-            
-           /* $pedidos = array(); // los pedidos se van a almacenar en un array
-            $i = 0; // contador del arreglo
-
-
-            //se guarda en un array valores de ventas y pedidos
-            while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
-                $venta = $array_consulta_pedidos['Venta'];
-                $pedidos = $array_consulta_pedidos['Pedidos'];
-            }*/
-
-
-
-
-
-
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
@@ -211,7 +193,7 @@
                         name: 'Pedidos',
                         type: 'column',
                         yAxis: 1,
-                        data: [<?php echo $pedidos[0] ?>, 40, 34, 44],
+                        data: [<?php echo $pedidos[0] . ", " . $pedidos[1]?>, 34, 44],
                     }, {
                         name: 'Fraudes',
                         type: 'column',

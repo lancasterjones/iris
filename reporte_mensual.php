@@ -60,10 +60,14 @@
             //Mes actual
             $mes_actual = date("n");
 
+            //este valor compara al mes que resulta del analisis de cada semana
+            $mesComparar = date('n');
+
             //asignar mes
            $valorMes = $_GET['mes'];
             if($valorMes != $mes_actual){
               $mes_actual = $valorMes;
+              $mesComparar = $valorMes;
             }
 
             switch($mes_actual){
@@ -99,7 +103,6 @@
 
 
             //calcular las semanas contenidas en cada mes
-            $mesComparar = date('n');
             $calcular_mes = new DateTime();
             $x = 0;
             $pedidos = array();

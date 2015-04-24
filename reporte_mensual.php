@@ -193,7 +193,10 @@
                         name: 'Pedidos',
                         type: 'column',
                         yAxis: 1,
-                        data: [<?php echo $pedidos[0] . ", " . $pedidos[1]?>, 34, 44],
+                        data: [<?php 
+                        for($i = 0; $ < $columnasReporte; $i++)
+                        echo $pedidos[$i] . ", ";
+                        ?>],
                     }, {
                         name: 'Fraudes',
                         type: 'column',

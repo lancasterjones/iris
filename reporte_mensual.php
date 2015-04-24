@@ -136,7 +136,7 @@
                         text: 'www.lob.com.mx'
                     },
                     xAxis: [{
-                        categories: [<?php echo "S";?>, 'S2', 'S3', 'S4'],
+                        categories: ['S1', 'S2', 'S3', 'S4'],
                         crosshair: true
                     }],
                     yAxis: [{ // Primary yAxis

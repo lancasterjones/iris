@@ -53,8 +53,7 @@
       ?>
          <script src="http://code.highcharts.com/highcharts.js"></script>
          <script src="http://code.highcharts.com/modules/exporting.js"></script>
-         <!--Div contenedor de la grafica reporte mensual-->
-         <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+         
 
          <?php
 
@@ -89,7 +88,7 @@
               }
 
             //calcular ultima semana del año
-
+              
 
 
             //calcular las semanas contenidas en cada mes
@@ -137,7 +136,8 @@
 
          ?>
 
-
+         <!--Div contenedor de la grafica reporte mensual-->
+         <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
          <script>
               $(function () {
                 $('#container').highcharts({

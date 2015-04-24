@@ -83,12 +83,14 @@
                       $primer_semana = $semAnalisis->format('n');
                 if($primer_semana == 1){
                   $semanaUno = $n;
+                  $ajusteSemana = 1 - $semanaUno;
                   echo "Anio inicia en la semana " . $semanaUno;
+                  echo "El valor de ajuste este año es: " . $ajusteSemana;
                 }
               }
 
             //calcular ultima semana del año
-              
+
 
 
             //calcular las semanas contenidas en cada mes

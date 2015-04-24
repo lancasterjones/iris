@@ -57,7 +57,9 @@
          <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
          <?php
+
           //Almacenamiento de datos de consulta query ventas y pedidos
+            $semana = 17;
             $consulta_pedidos = mysqli_query($connm, $query);
             while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
                 $venta = $array_consulta_pedidos['Venta'];

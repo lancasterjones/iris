@@ -45,12 +45,26 @@
   <body>
       <?php
           include 'includes/menu.php';
+          //conectar con base de datos
+          include 'includes/db_magento_connect.php';
+
+          //script con queries para generar info de reportes
+          include 'includes/queries_reportes.php';
       ?>
          <script src="http://code.highcharts.com/highcharts.js"></script>
          <script src="http://code.highcharts.com/modules/exporting.js"></script>
+         <!--Div contenedor de la grafica reporte mensual-->
          <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
          <?php
+          //Almacenamiento de datos de consulta query ventas y pedidos
+            $consulta_pedidos = mysqli_query($connm, $query);
+            while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
+                $venta = $array_consulta_pedidos['Venta'];
+                $pedidos = $array_consulta_pedidos['Pedidos'];
+            }
+
+
             //Mes actual
             $mes_actual = date("m");
             switch($mes_actual){
@@ -58,7 +72,6 @@
                   $mes_actual = "Abril";
                   break;
             }
-
          ?>
 
 
@@ -114,7 +127,7 @@
                         name: 'Pedidos',
                         type: 'column',
                         yAxis: 1,
-                        data: [<?php $uno = 100; echo $uno; ?>, 40, 34, 44],
+                        data: [<?php echo $pedidos; ?>, 40, 34, 44],
                     }, {
                         name: 'Fraudes',
                         type: 'column',

@@ -87,17 +87,7 @@
 
 
 
-            //query que obtiene ventas y pedidos
-            $query = "
-              SELECT 
-              count(sales_flat_order.total_paid) Pedidos
-              ,sum(sales_flat_order.total_paid) Venta
-              ,WEEK(sales_flat_order.created_at) Semana
-              ,YEAR(sales_flat_order.created_at) Año
-           FROM shop_production.sales_flat_order sales_flat_order
-           WHERE     sales_flat_order.status IN ('complete', 'processing')
-            AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
-            AND WEEK(sales_flat_order.created_at) = $semana";
+            
 
 
             //calcular las semanas contenidas en cada mes
@@ -112,6 +102,18 @@
                         de cuando empieza*/
                         echo "semana: " . $semanaReporte[$x];
                         $semana = $semanaReporte[$x];
+                        //query que obtiene ventas y pedidos
+                        $query = "
+                          SELECT 
+                            count(sales_flat_order.total_paid) Pedidos
+                            ,sum(sales_flat_order.total_paid) Venta
+                            ,WEEK(sales_flat_order.created_at) Semana
+                            ,YEAR(sales_flat_order.created_at) Año
+                          FROM shop_production.sales_flat_order sales_flat_order
+                          WHERE sales_flat_order.status IN ('complete', 'processing')
+                              AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
+                              AND WEEK(sales_flat_order.created_at) = $semana";
+
                         echo "posicion : " . $x;
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);

@@ -86,7 +86,6 @@
 
 
 
-
             
 
 
@@ -94,6 +93,7 @@
             $calcular_mes = new DateTime();
             $x = 0;
             $pedidos = array();
+            $venta = array();
             for($week = $semanaUno; $week < 54; $week++){ 
               $calcular_mes->setISODate($current_year, $week);
               $mes_formato = $calcular_mes->format('n');
@@ -118,11 +118,12 @@
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);
                         while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
-                            $venta = $array_consulta_pedidos['Venta'];
+                            $venta[$x] = $array_consulta_pedidos['Venta'];
                             $pedidos[$x] = $array_consulta_pedidos['Pedidos'];
 
                         }
                         echo "query: " . $pedidos[$x];
+                        echo "venta: " . $venta[$x];
 
                         $x++;
                   }

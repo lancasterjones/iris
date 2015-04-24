@@ -35,12 +35,6 @@
     ?>
     <script type="text/javascript" src="includes/Chart.js"></script>
     <script type="text/javascript" src="includes/script_reportes.js"></script>
-    <style>
-      #highcharts-0{
-        width: 90% !important;
-        margin: 0 auto !important;
-      }
-    </style>
   </head>
   <body>
       <?php
@@ -57,12 +51,15 @@
 
          <?php
 
-            //año acutla
+            //año actual
             $current_year = date("Y");
 
             //Mes actual
             $mes_actual = date("m");
             switch($mes_actual){
+                case 03:
+                  $mes_actual = "Mayo";
+                  break;
                 case 04:
                   $mes_actual = "Abril";
                   break;
@@ -84,8 +81,6 @@
                 if($primer_semana == 1){
                   $semanaUno = $n;
                   $ajusteSemana = $semanaUno - 1;
-                  echo "Anio inicia en la semana " . $semanaUno;
-                  echo "El valor de ajuste este año es: " . $ajusteSemana;
                 }
               }
 
@@ -140,7 +135,7 @@
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
-         <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+         <div id="container" style="max-width: 90%; height: 400px; margin: 0 auto"></div>
          <script>
               $(function () {
                 $('#container').highcharts({

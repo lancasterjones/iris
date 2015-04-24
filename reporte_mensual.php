@@ -61,10 +61,10 @@
             $mes_actual = date("n");
 
             //asignar mes
-           /* $valorMes = $_GET['mes'];
+           $valorMes = $_GET['mes'];
             if($valorMes != $mes_actual){
               $mes_actual = $valorMes;
-            }*/
+            }
 
             switch($mes_actual){
                 case 3:

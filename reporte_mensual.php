@@ -135,8 +135,10 @@
                         $fraudes = "
                               SELECT fraudes FROM magento_venta
                               WHERE week = $semana";
+                        if ($debug == 1){
                         echo "posicion : " . $x;
                         echo "<h1>Semana: " . $semana . "</h1>";
+                      }
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);
                         //almacenar datos de query fraudes
@@ -151,10 +153,11 @@
                         while($array_consulta_fraudes = mysqli_fetch_array($consulta_fraudes)){
                           $fraud[$x] = $array_consulta_fraudes['fraudes'];
                         }
-                        echo "query: " . $pedidos[$x];
-                        echo "venta: " . $venta[$x];
-                        echo "Fraudes : " . $fraud[$x];
-
+                        if ($debug == 1){
+                          echo "query: " . $pedidos[$x];
+                          echo "venta: " . $venta[$x];
+                          echo "Fraudes : " . $fraud[$x];
+                        }
                         $x++;
                   }
             }
@@ -256,6 +259,10 @@
             });
          </script>
 
+
+      <?php
+        if ($debug == 1){
+      ?>
          <table>
             <tr>
                 <th>Mes</th>
@@ -340,6 +347,7 @@
                 ?>
             
          </table>
+         <?php } ?>
      
   </body>
 

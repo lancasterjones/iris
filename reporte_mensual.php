@@ -133,6 +133,7 @@
                               WHERE week = 14
                         ';
                         echo "posicion : " . $x;
+                        echo "<h1Semana: " . $semana . "<h1>";
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);
                         //almacenar datos de query fraudes

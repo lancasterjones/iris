@@ -76,7 +76,8 @@
                 $pedidos = $array_consulta_pedidos['Pedidos'];
             }
 
-
+            //año acutla
+            $current_year = date("Y");
 
             //Mes actual
             $mes_actual = date("m");
@@ -98,7 +99,7 @@
                         zoomType: 'xy'
                     },
                     title: {
-                        text: 'Reporte Mensual: <?php echo $mes_actual; ?>' 
+                        text: 'Reporte Mensual: <?php echo $mes_actual . " " . $current_year; ?>' 
                     },
                     subtitle: {
                         text: 'www.lob.com.mx'

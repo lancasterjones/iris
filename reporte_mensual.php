@@ -68,8 +68,6 @@
                   break;
             }
 
-             $semana = date("W")-1;
-
              //arreglo con semanas
              $semanaReporte = array();
 
@@ -88,23 +86,6 @@
 
 
 
-            //calcular las semanas contenidas en cada mes
-            $calcular_mes = new DateTime();
-            $x = 0;
-            for($week = $semanaUno; $week < 54; $week++){ 
-              $calcular_mes->setISODate($current_year, $week);
-              $mes_formato = $calcular_mes->format('n');
-                  if($mes_formato == 4){                      
-                        $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
-                        de cuando empieza*/
-                        echo $semanaReporte[$x] . " ";                
-                        $x++;
-                  }
-            }
-
-           //contar elementos del array, para saber la cantidad de columnas a imprimir
-           $columnasReporte =  count($semanaReporte);
-           
 
             //query que obtiene ventas y pedidos
             $query = "
@@ -118,14 +99,45 @@
             AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
             AND WEEK(sales_flat_order.created_at) = $semana";
 
-            //Almacenamiento de datos de consulta query ventas y pedidos
-            $consulta_pedidos = mysqli_query($connm, $query);
+
+            //calcular las semanas contenidas en cada mes
+            $calcular_mes = new DateTime();
+            $x = 0;
+            $pedidos = array();
+            for($week = $semanaUno; $week < 54; $week++){ 
+              $calcular_mes->setISODate($current_year, $week);
+              $mes_formato = $calcular_mes->format('n');
+                  if($mes_formato == 4){                      
+                        $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
+                        de cuando empieza*/
+                        $semana = $semanaReporte[$x];
+                        //Almacenamiento de datos de consulta query ventas y pedidos
+                        $consulta_pedidos = mysqli_query($connm, $query);
+                        while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
+                            $venta = $array_consulta_pedidos['Venta'];
+                            $pedidos[$x] = $array_consulta_pedidos['Pedidos'];
+                        }
+
+
+                        $x++;
+                  }
+            }
+
+           //contar elementos del array, para saber la cantidad de columnas a imprimir
+           $columnasReporte =  count($semanaReporte);
+
+            
+
+            
+           /* $pedidos = array(); // los pedidos se van a almacenar en un array
+            $i = 0; // contador del arreglo
+
 
             //se guarda en un array valores de ventas y pedidos
             while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
                 $venta = $array_consulta_pedidos['Venta'];
                 $pedidos = $array_consulta_pedidos['Pedidos'];
-            }
+            }*/
 
 
 
@@ -135,7 +147,7 @@
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
-         <div id="container" style="max-width: 90%; height: 400px; margin: 0 auto"></div>
+         <div id="container" style="max-width: 85%; height: 400px; margin: 0 auto"></div>
          <script>
               $(function () {
                 $('#container').highcharts({
@@ -154,7 +166,6 @@
                             echo "'S " . $semanaReporte[$x] . "', "; 
                          }
                         ?>
-
                                       ],
                         crosshair: true
                     }],
@@ -301,7 +312,7 @@
 
          <?php
               echo  "Ventas " . $venta;
-  echo "Pedidos " . $pedidos;
+  echo "Pedidos " . $pedidos[0];
          ?>
      
   </body>

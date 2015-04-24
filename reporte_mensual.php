@@ -64,6 +64,9 @@
                 $pedidos = $array_consulta_pedidos['Pedidos'];
             }
 
+            echo $pedidos . " ";
+            echo $ventas;
+
 
             //Mes actual
             $mes_actual = date("m");
@@ -130,7 +133,7 @@
                         name: 'Pedidos',
                         type: 'column',
                         yAxis: 1,
-                        data: [<?php echo $pedidos; ?>, 40, 34, 44],
+                        data: [100, 40, 34, 44],
                     }, {
                         name: 'Fraudes',
                         type: 'column',

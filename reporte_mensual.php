@@ -1,4 +1,5 @@
 <?php
+    $debug = 0;
     if (version_compare(PHP_VERSION, '5.3.7', '<')) {
         exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
     } else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
@@ -24,6 +25,7 @@
        ";
 
     } 
+    
 ?>
 <!DOCTYPE html>
 <html lang='es'>
@@ -114,7 +116,9 @@
                   if($mes_formato == $mesComparar){                      
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
+                        if ($debug == 1){
                         echo "semana: " . $semanaReporte[$x];
+                      }
                         $semana = $semanaReporte[$x];
                         //query que obtiene ventas y pedidos
                         $query = "

@@ -209,7 +209,7 @@
                         type: 'spline',
                         data: [<?php
                           for($i = 0; $i < $columnasReporte; $i++){
-                            echo $venta[$x] . ", ";
+                            echo $venta[$i] . ", ";
                           }
 
                         ?>],

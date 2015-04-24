@@ -112,13 +112,15 @@
                         de cuando empieza*/
                         echo "semana: " . $semanaReporte[$x];
                         $semana = $semanaReporte[$x];
+                        echo "posicion : " . $x;
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);
                         while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
                             $venta = $array_consulta_pedidos['Venta'];
                             $pedidos[$x] = $array_consulta_pedidos['Pedidos'];
-                        }
 
+                        }
+                        echo "query: " . $pedidos[$x];
 
                         $x++;
                   }

@@ -85,7 +85,7 @@
             $mes_formato = $calcular_mes->format('n');
                 if($mes_formato == 4){                      
                       $semanaReporte[$x] = $week;
-                      echo $semanaReporte[$x] . " " $x;
+                      echo $semanaReporte[$x] . " ";
                       $x++;
                 }
           }

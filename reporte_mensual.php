@@ -150,7 +150,7 @@
                     },
                     xAxis: [{
                         categories: [<?php 
-                        for($x = 0; $x < 4; $x++){
+                        for($x = 0; $x < $columnasReporte; $x++){
                             echo "'S " . $semanaReporte[$x] . "', "; 
                          }
                         ?>

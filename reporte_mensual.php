@@ -37,7 +37,7 @@
     <script type="text/javascript" src="includes/script_reportes.js"></script>
     <style>
       #highcharts-0{
-        width: 80% !important;
+        width: 90% !important;
         margin: 0 auto !important;
       }
     </style>
@@ -135,7 +135,7 @@
                         text: 'www.lob.com.mx'
                     },
                     xAxis: [{
-                        categories: [<?php echo "'S1'";?>, 'S2', 'S3', 'S4'],
+                        categories: [<?php echo "S " . $semanaReporte[0];?>, 'S2', 'S3', 'S4'],
                         crosshair: true
                     }],
                     yAxis: [{ // Primary yAxis

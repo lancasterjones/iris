@@ -58,24 +58,6 @@
 
          <?php
 
-          //Almacenamiento de datos de consulta query ventas y pedidos
-            $semana = date("W")-1;
-            $query = "
-      SELECT 
-              count(sales_flat_order.total_paid) Pedidos
-              ,sum(sales_flat_order.total_paid) Venta
-              ,WEEK(sales_flat_order.created_at) Semana
-              ,YEAR(sales_flat_order.created_at) Año
-           FROM shop_production.sales_flat_order sales_flat_order
-           WHERE     sales_flat_order.status IN ('complete', 'processing')
-            AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
-            AND WEEK(sales_flat_order.created_at) = $semana";
-            $consulta_pedidos = mysqli_query($connm, $query);
-            while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
-                $venta = $array_consulta_pedidos['Venta'];
-                $pedidos = $array_consulta_pedidos['Pedidos'];
-            }
-
             //año acutla
             $current_year = date("Y");
 
@@ -89,6 +71,46 @@
                   $mes_actual = "Mayo";
                   break;
             }
+
+             $semana = date("W")-1;
+
+            //calcular las semanas contenidas en cada mes
+          $calcular_mes = new DateTime();
+          for($week = 1; $week < 54; $week++){
+            $calcular_mes->setISODate($current_year, $week);
+            $mes_formato = $calcular_mes->format('n');
+            echo $mes_formato;
+          }
+
+            
+           
+
+            //query que obtiene ventas y pedidos
+            $query = "
+              SELECT 
+              count(sales_flat_order.total_paid) Pedidos
+              ,sum(sales_flat_order.total_paid) Venta
+              ,WEEK(sales_flat_order.created_at) Semana
+              ,YEAR(sales_flat_order.created_at) Año
+           FROM shop_production.sales_flat_order sales_flat_order
+           WHERE     sales_flat_order.status IN ('complete', 'processing')
+            AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
+            AND WEEK(sales_flat_order.created_at) = $semana";
+
+            //Almacenamiento de datos de consulta query ventas y pedidos
+            $consulta_pedidos = mysqli_query($connm, $query);
+
+            //se guarda en un array valores de ventas y pedidos
+            while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
+                $venta = $array_consulta_pedidos['Venta'];
+                $pedidos = $array_consulta_pedidos['Pedidos'];
+            }
+
+
+
+
+
+
          ?>
 
 
@@ -250,7 +272,7 @@
          </table>
 
          <?php
-              echo  "Ventas " . $ventas;
+              echo  "Ventas " . $venta;
   echo "Pedidos " . $pedidos;
          ?>
      

@@ -83,6 +83,7 @@
           for($week = 1; $week < 54; $week++){ 
             $calcular_mes->setISODate($current_year, $week);
             $mes_formato = $calcular_mes->format('n');
+            echo $mes_formato . " ";
                 if($mes_formato == 4){                      
                       $semanaReporte[$x] = $week;
                       echo $semanaReporte[$x] . " ";
@@ -135,7 +136,7 @@
                         text: 'www.lob.com.mx'
                     },
                     xAxis: [{
-                        categories: [<?php echo "S ";?>, 'S2', 'S3', 'S4'],
+                        categories: [<?php echo "S";?>, 'S2', 'S3', 'S4'],
                         crosshair: true
                     }],
                     yAxis: [{ // Primary yAxis

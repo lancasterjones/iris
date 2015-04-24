@@ -50,7 +50,11 @@
          <script src="http://code.highcharts.com/modules/exporting.js"></script>
          <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
+         <?php
+            //Mes actual
+            $mes_actual = date("m");
 
+         ?>
 
 
          <script>
@@ -60,7 +64,7 @@
                         zoomType: 'xy'
                     },
                     title: {
-                        text: 'Ventas por Semana'
+                        text: 'Reporte Mensual: <?php echo $mes_actual; ?>' 
                     },
                     subtitle: {
                         text: 'www.lob.com.mx'

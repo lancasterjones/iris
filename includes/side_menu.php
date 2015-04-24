@@ -17,9 +17,9 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros Meses <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span></a>
 					<ul class="dropdown-menu forAnimate" role="menu">
-						<li><a href="?mes=1">Enero</a></li>
-						<li><a href="?mes=2">Febrero</a></li>
-						<li><a href="?mes=3">Marzo</a></li>
+						<li><a style="color:white;" href="?mes=1">Enero</a></li>
+						<li><a style="color:white;" href="?mes=2">Febrero</a></li>
+						<li><a style="color:white;" href="?mes=3">Marzo</a></li>
 						<li class="divider"></li>
 						<li><a href="?mes=4">Abril</a></li>
 					</ul>

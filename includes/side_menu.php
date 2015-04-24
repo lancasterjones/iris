@@ -20,8 +20,7 @@
 						<li><a style="color:white;" href="?mes=1">Enero</a></li>
 						<li><a style="color:white;" href="?mes=2">Febrero</a></li>
 						<li><a style="color:white;" href="?mes=3">Marzo</a></li>
-						<li class="divider"></li>
-						<li><a href="?mes=4">Abril</a></li>
+						<li><a style="color:white;" href="?mes=4">Abril</a></li>
 					</ul>
 				</li>
 				<li ><a href="#">Categorías<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicons-pie-chart"><i class="fa fa-pie-chart"></i></span></a></li>

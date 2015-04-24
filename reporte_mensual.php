@@ -130,6 +130,7 @@
 
            //contar elementos del array, para saber la cantidad de columnas a imprimir
            $columnasReporte =  count($semanaReporte);
+           echo "Columnas:  " . $columnasReporte . " Pedidos: " . $pedidos[0];
 
             
 
@@ -210,7 +211,7 @@
                         name: 'Pedidos',
                         type: 'column',
                         yAxis: 1,
-                        data: [100, 40, 34, 44],
+                        data: [<?php echo $pedidos[0] ?>, 40, 34, 44],
                     }, {
                         name: 'Fraudes',
                         type: 'column',
@@ -314,11 +315,6 @@
                 ?>
             
          </table>
-
-         <?php
-              echo  "Ventas " . $venta;
-  echo "Pedidos " . $pedidos[0];
-         ?>
      
   </body>
 

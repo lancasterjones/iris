@@ -15,8 +15,8 @@ echo '
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="http://vende.io/wp-content/themes/primary/favicon.ico" />
     <!--Estilo reporte-->
-    <link href="http://docs.justinav.info/cfbc.css" rel="stylesheet" type="text/css"> 
+    <link rel="stylesheet" href="http://docs.justinav.info/cfbc.css" type="text/css"> 
     <!--Estilo Side Menu -->
-    <link rel="stylesheet" href="css/side_menu.css rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/side_menu.css" type="text/css" />
 ';
 ?>

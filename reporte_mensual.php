@@ -83,7 +83,7 @@
                       $primer_semana = $semAnalisis->format('n');
                 if($primer_semana == 1){
                   $semanaUno = $n;
-                  $ajusteSemana = 1 - $semanaUno;
+                  $ajusteSemana = $semanaUno - 1;
                   echo "Anio inicia en la semana " . $semanaUno;
                   echo "El valor de ajuste este año es: " . $ajusteSemana;
                 }
@@ -101,8 +101,9 @@
               $mes_formato = $calcular_mes->format('n');
               echo $mes_formato . " ";
                   if($mes_formato == 4){                      
-                        $semanaReporte[$x] = $week;
-                        echo $semanaReporte[$x] . " ";
+                        $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
+                        de cuando empieza*/
+                        echo $semanaReporte[$x] . " ";                
                         $x++;
                   }
             }

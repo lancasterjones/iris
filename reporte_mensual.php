@@ -59,15 +59,23 @@
          <?php
 
           //Almacenamiento de datos de consulta query ventas y pedidos
-            $semana = 17;
+            $semana = date("W")-1;
+            $query = "
+      SELECT 
+              count(sales_flat_order.total_paid) Pedidos
+              ,sum(sales_flat_order.total_paid) Venta
+              ,WEEK(sales_flat_order.created_at) Semana
+              ,YEAR(sales_flat_order.created_at) Año
+           FROM shop_production.sales_flat_order sales_flat_order
+           WHERE     sales_flat_order.status IN ('complete', 'processing')
+            AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
+            AND WEEK(sales_flat_order.created_at) = $semana";
             $consulta_pedidos = mysqli_query($connm, $query);
             while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
                 $venta = $array_consulta_pedidos['Venta'];
                 $pedidos = $array_consulta_pedidos['Pedidos'];
             }
 
-            echo $pedidos . " ";
-            echo $ventas;
 
 
             //Mes actual
@@ -235,11 +243,15 @@
 
  }
 
+
                 ?>
             
          </table>
 
-
+         <?php
+              echo  "Ventas " . $ventas;
+  echo "Pedidos " . $pedidos;
+         ?>
      
   </body>
 

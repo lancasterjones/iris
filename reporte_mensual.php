@@ -99,6 +99,7 @@
 
 
             //calcular las semanas contenidas en cada mes
+            $mesComparar = date('n');
             $calcular_mes = new DateTime();
             $x = 0;
             $pedidos = array();
@@ -107,7 +108,7 @@
             for($week = $semanaUno; $week < 54; $week++){ 
               $calcular_mes->setISODate($current_year, $week);
               $mes_formato = $calcular_mes->format('n');
-                  if($mes_formato == 4){                      
+                  if($mes_formato == $mesComparar){                      
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
                         echo "semana: " . $semanaReporte[$x];

@@ -42,6 +42,9 @@
           //conectar con base de datos
           include 'includes/db_magento_connect.php';
 
+          //conectar base de datos Vende
+          include 'includes/data_base.php';
+
           //script con queries para generar info de reportes
           include 'includes/queries_reportes.php';
       ?>
@@ -94,6 +97,7 @@
             $x = 0;
             $pedidos = array();
             $venta = array();
+            $fraud = array();
             for($week = $semanaUno; $week < 54; $week++){ 
               $calcular_mes->setISODate($current_year, $week);
               $mes_formato = $calcular_mes->format('n');
@@ -113,17 +117,29 @@
                           WHERE sales_flat_order.status IN ('complete', 'processing')
                               AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
                               AND WEEK(sales_flat_order.created_at) = $semana";
-
+                          //este query trae el valor de fraudes en la semana indicada
+                        $fraudes = '
+                              SELECT fraudes FROM magento_venta
+                              WHERE week = $semana;
+                        ';
                         echo "posicion : " . $x;
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);
+                        //almacenar datos de query fraudes
+                        $consulta_fraudes = mysqli_query($conn, $fraudes);
+                        //este ciclo llena los array venta y pedidos
                         while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
                             $venta[$x] = $array_consulta_pedidos['Venta'];
                             $pedidos[$x] = $array_consulta_pedidos['Pedidos'];
 
                         }
+                        //este query llena el array fraudes
+                        while($array_consulta_fraudes = mysqli_fetch_array($consulta_fraudes)){
+                          $fraud[$x] = $array_consulta_fraudes['fraudes'];
+                        }
                         echo "query: " . $pedidos[$x];
                         echo "venta: " . $venta[$x];
+                        echo "Fraudes : " . $fraud[$x];
 
                         $x++;
                   }

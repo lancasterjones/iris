@@ -128,10 +128,9 @@
                               AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
                               AND WEEK(sales_flat_order.created_at) = $semana";
                           //este query trae el valor de fraudes en la semana indicada
-                        $fraudes = '
+                        $fraudes = "
                               SELECT fraudes FROM magento_venta
-                              WHERE week = 14
-                        ';
+                              WHERE week = $semana";
                         echo "posicion : " . $x;
                         echo "<h1>Semana: " . $semana . "</h1>";
                         //Almacenamiento de datos de consulta query ventas y pedidos

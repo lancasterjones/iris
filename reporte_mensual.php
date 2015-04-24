@@ -71,6 +71,9 @@
                 case 04:
                   $mes_actual = "Abril";
                   break;
+                case 05:
+                  $mes_actual = "Mayo";
+                  break;
             }
          ?>
 

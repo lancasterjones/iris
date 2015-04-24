@@ -110,6 +110,7 @@
                   if($mes_formato == 4){                      
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
+                        echo "semana: " . $semanaReporte[$x];
                         $semana = $semanaReporte[$x];
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);

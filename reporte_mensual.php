@@ -102,7 +102,8 @@
                   }
             }
 
-            
+           //contar elementos del array, para saber la cantidad de columnas a imprimir
+           $columnasReporte =  count($semanaReporte);
            
 
             //query que obtiene ventas y pedidos
@@ -148,7 +149,13 @@
                         text: 'www.lob.com.mx'
                     },
                     xAxis: [{
-                        categories: [<?php echo "'S " . $semanaReporte[0] . "', 'S " . $semanaReporte[1]. "'"?>, 'S3', 'S4'],
+                        categories: [<?php 
+                        for($x = 0; $x < 4; $x++){
+                            echo "'S " . $semanaReporte[$x] . "', "; 
+                         }
+                        ?>
+
+                                      ],
                         crosshair: true
                     }],
                     yAxis: [{ // Primary yAxis

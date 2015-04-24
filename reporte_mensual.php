@@ -35,6 +35,12 @@
     ?>
     <script type="text/javascript" src="includes/Chart.js"></script>
     <script type="text/javascript" src="includes/script_reportes.js"></script>
+    <style>
+      #highcharts-0{
+        width: 80% !important;
+        margin: 0 auto !important;
+      }
+    </style>
   </head>
   <body>
       <?php

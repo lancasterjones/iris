@@ -88,7 +88,6 @@
             //calcular ultima semana del año
 
 
-
             
 
 
@@ -160,7 +159,7 @@
                         zoomType: 'xy'
                     },
                     title: {
-                        text: 'Reporte Mensual: <?php echo $mes_actual . " " . $current_year; ?>' 
+                        text: '<i class="glyphicon glyphicon-circle-arrow-left"></i>Reporte Mensual: <?php echo $mes_actual . " " . $current_year; ?>' 
                     },
                     subtitle: {
                         text: 'www.lob.com.mx'

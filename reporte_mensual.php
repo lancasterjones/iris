@@ -164,8 +164,10 @@
 
            //contar elementos del array, para saber la cantidad de columnas a imprimir
            $columnasReporte =  count($semanaReporte);
+           
+           if ($debug == 1){
            echo "Columnas:  " . $columnasReporte . " Pedidos: " . $pedidos[0];
-
+         }
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->

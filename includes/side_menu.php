@@ -40,11 +40,7 @@
 						?>
 						<li><a style="color:white;" href="?mes=<?php echo $x;?>"><?php echo $mes . " '" .$current_year; ?> </a>
 						<?php
-							if($x == 1){
-								$x = 12;
-								$limte = $mes_actual;
-								$current_year = $current_year - 1;
-							}
+								
 						  }
 						?>
 					</ul>

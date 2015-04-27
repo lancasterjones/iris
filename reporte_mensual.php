@@ -184,7 +184,7 @@
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
-         <div id="container" style="float: right; min-width: 80%; height: 400px; margin: 10% auto"></div>
+         <div id="container" style="float: left; min-width: 80%; height: 400px; margin: 10% auto"></div>
          <script>
               $(function () {
                 $('#container').highcharts({

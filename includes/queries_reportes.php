@@ -8,7 +8,7 @@
 	            ,WEEK(sales_flat_order.created_at) Semana
 	            ,YEAR(sales_flat_order.created_at) Año
            FROM shop_production.sales_flat_order sales_flat_order
-           GROUP BY Semana";
+           GROUP BY Semana, Año";
 
 
      //query para fraudes

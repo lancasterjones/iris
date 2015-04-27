@@ -89,7 +89,7 @@
 
 		/*colors dropdown box text */
 		.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
-			color: #777;
+			color: #fff;
 		}
 
 		/*gives sidebar width/height*/

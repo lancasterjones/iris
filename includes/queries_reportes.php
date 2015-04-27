@@ -8,8 +8,7 @@
 	            ,WEEK(sales_flat_order.created_at) Semana
 	            ,YEAR(sales_flat_order.created_at) Año
            FROM shop_production.sales_flat_order sales_flat_order
-           WHERE     sales_flat_order.status IN ('complete', 'processing')
-            AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())";
+           GROUP BY Semana";
 
 
      //query para fraudes

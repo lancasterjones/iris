@@ -1,7 +1,7 @@
 <?php 
 	//año actual
     $current_year = date("Y");
-    $mes_actual = date('n');
+    
 ?>
 
 <nav class="navbar navbar-inverse sidebar" role="navigation">
@@ -24,9 +24,10 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros Meses <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span></a>
 					<ul class="dropdown-menu forAnimate" role="menu">
 						<?php 
-							for($x = $mes_actual; $x <= 1; $x--){
+							$mes_actual = date('n');
+							for($x = $mes_actual; $x >= 1; $x--){
 								//este switch cambia el numero por una palabra para identificar el nombre del mes
-							    switch($mes_actual){
+							    switch($x){
 							        case 1: $mes = "Enero "; break;
 							        case 2: $mes = "Febrero "; break;
 							        case 3: $mes = "Marzo "; break;

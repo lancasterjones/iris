@@ -40,7 +40,6 @@
   </head>
   <body>
       <?php
-          include 'includes/menu.php';
           include 'includes/side_menu.php';
           //conectar con base de datos
           include 'includes/db_magento_connect.php';

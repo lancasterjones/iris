@@ -48,6 +48,7 @@
       $contenedor[$z][11] = $row_reportes['Pedidos'];
       $contenedor[$z][12] = $row_reportes['Venta'];
       $contenedor[$z][13] = $row_reportes['Semana'];
+      $contenedor[$z][14] = $row_reportes['Año'];
       $z++;
     }
 
@@ -74,7 +75,7 @@
     {
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
         mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
-        mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad) VALUES ('$pedidos', '$venta')" );
+        mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente) VALUES ('$pedidos', '$venta', '$semana', 'LOB')");
     }
 
 	

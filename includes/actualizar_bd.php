@@ -1,4 +1,5 @@
 <?php
+
 	//conectar con magento
 		include 'db_magento_connect.php';
 
@@ -45,6 +46,8 @@
     $z = 0; //contador de ciclo
     while($row_reportes = mysqli_fetch_array($result_reportes)){
       $contenedor[$z][11] = $row_reportes['Pedidos'];
+      $contenedor[$z][12] = $row_reportes['Venta'];
+      $contenedor[$z][13] = $row_reportes['Semana'];
       $z++;
     }
 
@@ -67,11 +70,11 @@
     mysqli_query($con, "TRUNCATE TABLE magento_venta");
 
 	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos))
+      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos, $venta, $semana))
     {
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
         mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
-        mysqli_query($con, "INSERT INTO magento_venta(cliente) VALUES ('lob')" );
+        mysqli_query($con, "INSERT INTO magento_venta(pedidos) VALUES ('$pedidos')" );
     }
 
 	

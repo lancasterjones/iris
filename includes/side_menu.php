@@ -58,7 +58,7 @@
 <script>
 	function actualizar(){
 		$.get("includes/actualizar_bd.php");
-
+		alert("Sincronización completa!");
 		return false;
 	}
 </script>

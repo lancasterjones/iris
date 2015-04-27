@@ -37,6 +37,11 @@
     ?>
     <script type="text/javascript" src="includes/Chart.js"></script>
     <script type="text/javascript" src="includes/script_reportes.js"></script>
+    <style type="text/css">
+      #mesPasado:hover{
+        color: black;
+      }
+    </style>
   </head>
   <body>
       <?php
@@ -64,13 +69,6 @@
             //Mes actual
             $mes_actual = date("n");
 
-
-            //asignar mes
-           /*$valorMes = $_GET['mes'];
-            if($valorMes != $mes_actual){
-              $mes_actual = $valorMes;
-              $mesComparar = $valorMes;
-            }*/
             /*Si el sistema recibe un parametro a traves del metodo get, significa que se seleccionó un mes anterior y se modifica el valor de las variables, sino, el valor de las varibles es del mes actual*/
             if(count($_GET)>0){
               $valorMes = $_GET['mes'];

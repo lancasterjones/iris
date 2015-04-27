@@ -185,6 +185,7 @@
 
          <!--Div contenedor de la grafica reporte mensual-->
          <div id="container" style="float: left; max-width: 85%; height: 400px; margin: 0 auto"></div>
+         <p style="position: absolute; top: 1000px;">Prueba</p>
          <script>
               $(function () {
                 $('#container').highcharts({

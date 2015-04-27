@@ -58,6 +58,7 @@
     {
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
         mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
+        mysqli_query($con, "INSERT INTO magento_venta(fraudes) VALUES ('$sku')" );
     }
 
 	

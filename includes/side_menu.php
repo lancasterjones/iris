@@ -20,7 +20,8 @@
 						<?php 
     						$current_year = date("y");
 							$mes_actual = date('n');
-							for($x = $mes_actual; $x >= 1; $x--){
+							$limite = 1;
+							for($x = $mes_actual; $x >= $limite; $x--){
 								//este switch cambia el numero por una palabra para identificar el nombre del mes
 							    switch($x){
 							        case 1: $mes = "Enero "; break;
@@ -40,7 +41,8 @@
 						<li><a style="color:white;" href="?mes=<?php echo $x;?>"><?php echo $mes . " '" .$current_year; ?> </a>
 						<?php
 							if($x == 1){
-								$x = 12 - $mes_actual;
+								$x = 12;
+								$limte = 12 - $mes_actual;
 								$current_year = $current_year - 1;
 							}
 						  }

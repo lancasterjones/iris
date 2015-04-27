@@ -1,9 +1,11 @@
 <?php
 	//conectar con magento
 		include 'db_magento_connect.php';
+
 	//traer información
 		include 'querymasvendidos.php';
     include 'querymasvistos.php';
+    include 'queries_reportes.php';
 
 		
 	//almacenar esa info en arreglo
@@ -12,6 +14,9 @@
 		$result = mysqli_query($connm,$query);		
     //query mas vistos
     $result_masvistos = mysqli_query($connm, $sql);
+
+    //resultado de query reportes
+    $result_reportes = mysqli_query($connm, $query_reportes);
     $contador = 0;
 
     //ciclo para almacenar mas vendidos
@@ -37,6 +42,13 @@
       $c++;
     }
 
+    $z = 0; //contador de ciclo
+    while($row_reportes = mysqli_fetch_array($result_reportes)){
+      $contenedor[$z][11] = $row_reportes['Pedidos'];
+      $z++;
+    }
+
+
 	//imprimir esa información
 		print_r($contenedor);
 		echo $contenedor;
@@ -55,11 +67,11 @@
     mysqli_query($con, "TRUNCATE TABLE magento_venta");
 
 	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic))
+      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos))
     {
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
         mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
-        mysqli_query($con, "INSERT INTO magento_venta(fraudes) VALUES ('$sku')" );
+        mysqli_query($con, "INSERT INTO magento_venta(fraudes) VALUES ('$pedidos')" );
     }
 
 	

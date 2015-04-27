@@ -1,7 +1,7 @@
 <?php
 
 	//ventas y pedidos
-	$query = "
+	$query_reportes = "
 			SELECT 
 	            count(sales_flat_order.total_paid) Pedidos
 	            ,sum(sales_flat_order.total_paid) Venta

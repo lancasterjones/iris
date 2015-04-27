@@ -41,7 +41,7 @@
 							        case 12: $mes = "Diciembre "; break;
 							    }
 						?>
-						<li><a style="color:white;" href="?mes=<?php echo $x;?>"><?php echo $mes . $current_year?> </a>
+						<li><a style="color:white;" href="?mes=<?php echo $x;?>"><?php echo $mes . $current_year; ?> </a>
 						<?php
 						  }
 						?>

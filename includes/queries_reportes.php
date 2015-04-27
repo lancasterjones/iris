@@ -20,7 +20,7 @@
              WEEK(sales_flat_order.created_at) AS Semana,
              YEAR(sales_flat_order.created_at) AS Year
             FROM shop_production.sales_flat_order sales_flat_order
-            WHERE (    (    sales_flat_order.status IN ('riskified_declined')  ) 
-            GROUP BY Semana, Year )";
+            WHERE (    (    sales_flat_order.status IN ('riskified_declined')         )          )
+            GROUP BY Semana, Year";
 
 ?>

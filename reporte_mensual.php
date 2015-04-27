@@ -74,16 +74,25 @@
               $mesComparar = $valorMes;
             }
 
+            if(count($_GET)>0){
+              echo "Metodo get ok";
+            }else{
+              echo "No se detectó metodo get";
+            }
+            //este switch cambia el numero por una palabra para identificar el nombre del mes
             switch($mes_actual){
-                case 3:
-                  $mes_actual = "Mayo";
-                  break;
-                case 4:
-                  $mes_actual = "Abril";
-                  break;
-                case 5:
-                  $mes_actual = "Mayo";
-                  break;
+                case 1: $mes_actual = "Enero"; break;
+                case 2: $mes_actual = "Febrero"; break;
+                case 3: $mes_actual = "Mayo"; break;
+                case 4: $mes_actual = "Abril"; break;
+                case 5: $mes_actual = "Mayo"; break;
+                case 6: $mes_actual = "Junio"; break;
+                case 7: $mes_actual = "Julio"; break;
+                case 8: $mes_actual = "Agosto"; break;
+                case 9: $mes_actual = "Septiembre"; break;
+                case 10: $mes_actual = "Octubre"; break;
+                case 11: $mes_actual = "Noviembre"; break;
+                case 12: $mes_actual = "Diciembre"; break;
             }
 
              //arreglo con semanas

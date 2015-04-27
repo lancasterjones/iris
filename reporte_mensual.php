@@ -40,11 +40,8 @@
   </head>
   <body>
       <?php
-          include 'includes/side_menu.php';
           //conectar con base de datos
           include 'includes/db_magento_connect.php';
-
-
 
           //conectar base de datos Vende
           include 'includes/data_base.php';
@@ -183,8 +180,14 @@
          }
          ?>
 
-         <!--Div contenedor de la grafica reporte mensual-->
-         <div id="container" style="float: left; max-width: 85%; height: 400px; margin: 0 auto"></div>
+         <div style="clear: both">
+
+            <?php include 'includes/side_menu.php'; //menú lateral ?>
+
+           <!--Div contenedor de la grafica reporte mensual-->
+           <div id="container" style="float: right; max-width: 85%; height: 400px;"></div>
+         </div>
+
          <p style="position: absolute; top: 1000px;">Prueba</p>
          <script>
               $(function () {

@@ -64,26 +64,28 @@
             //Mes actual
             $mes_actual = date("n");
 
-            //este valor compara al mes que resulta del analisis de cada semana
-            $mesComparar = date('n');
 
             //asignar mes
-           $valorMes = $_GET['mes'];
+           /*$valorMes = $_GET['mes'];
             if($valorMes != $mes_actual){
               $mes_actual = $valorMes;
               $mesComparar = $valorMes;
-            }
-
+            }*/
+            /*Si el sistema recibe un parametro a traves del metodo get, significa que se seleccionó un mes anterior y se modifica el valor de las variables, sino, el valor de las varibles es del mes actual*/
             if(count($_GET)>0){
-              echo "Metodo get ok";
+              $valorMes = $_GET['mes'];
+              $mes_actual = $valorMes;
+              //este valor compara al mes que resulta del analisis de cada semana
+              $mesComparar = $valorMes;
             }else{
-              echo "No se detectó metodo get";
+              $mes_actual = date('n');
+              $mesComparar = $mes_actual;
             }
             //este switch cambia el numero por una palabra para identificar el nombre del mes
             switch($mes_actual){
                 case 1: $mes_actual = "Enero"; break;
                 case 2: $mes_actual = "Febrero"; break;
-                case 3: $mes_actual = "Mayo"; break;
+                case 3: $mes_actual = "Marzo"; break;
                 case 4: $mes_actual = "Abril"; break;
                 case 5: $mes_actual = "Mayo"; break;
                 case 6: $mes_actual = "Junio"; break;

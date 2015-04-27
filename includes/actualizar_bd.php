@@ -18,7 +18,7 @@
 
     //resultado de query reportes
     $result_reportes = mysqli_query($connm, $query_reportes);
-    $result_fraudes = mysqli_query($connm, $query_fraudes);
+    $result_fraudes = mysqli_query($connm, $fraudes);
     $contador = 0;
 
     //ciclo para almacenar mas vendidos

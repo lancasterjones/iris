@@ -18,11 +18,9 @@
              COUNT(sales_flat_order.total_paid) AS Pedidos,
              SUM(sales_flat_order.total_paid) AS Venta,
              WEEK(sales_flat_order.created_at) AS Semana,
-             YEAR(sales_flat_order.created_at) AS Año
+             YEAR(sales_flat_order.created_at) AS Year
             FROM shop_production.sales_flat_order sales_flat_order
-            WHERE (    (    sales_flat_order.status IN ('riskified_declined')
-              AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE()))
-              AND WEEK(sales_flat_order.created_at) = $semana)
-          ";
+            WHERE (    (    sales_flat_order.status IN ('riskified_declined')  ) 
+            GROUP BY Semana, Year )";
 
 ?>

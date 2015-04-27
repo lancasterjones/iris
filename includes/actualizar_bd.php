@@ -18,6 +18,7 @@
 
     //resultado de query reportes
     $result_reportes = mysqli_query($connm, $query_reportes);
+    $result_fraudes = mysqli_query($connm, $query_fraudes);
     $contador = 0;
 
     //ciclo para almacenar mas vendidos
@@ -51,6 +52,11 @@
       $contenedor[$z][14] = $row_reportes['Year'];
       $z++;
     }
+    $z = 0;
+    while ($row_fraudes = mysqli_fetch_array($result_fraudes)){
+      $contenedor[$z][15] = $row_fraudes['Pedidos'];
+      $z++
+    }
 
 
 	//imprimir esa información
@@ -71,11 +77,11 @@
     mysqli_query($con, "TRUNCATE TABLE magento_venta");
 
 	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos, $venta, $semana, $year))
+      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos, $venta, $semana, $year, $fraudes))
     {
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
         mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
-        mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year) VALUES ('$pedidos', '$venta', '$semana', 'LOB', '$year')");
+        mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year, fraudes) VALUES ('$pedidos', '$venta', '$semana', 'LOB', '$year', '$fraudes')");
     }
 
 	

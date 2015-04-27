@@ -6,7 +6,7 @@
 	            count(sales_flat_order.total_paid) Pedidos
 	            ,sum(sales_flat_order.total_paid) Venta
 	            ,WEEK(sales_flat_order.created_at) Semana
-	            ,YEAR(sales_flat_order.created_at) Año
+	            ,YEAR(sales_flat_order.created_at) Year
            FROM shop_production.sales_flat_order sales_flat_order
            GROUP BY Semana, Año";
 

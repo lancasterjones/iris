@@ -55,7 +55,7 @@
     $z = 0;
     while ($row_fraudes = mysqli_fetch_array($result_fraudes)){
       $contenedor[$z][15] = $row_fraudes['Pedidos'];
-      $z++
+      $z++;
     }
 
 

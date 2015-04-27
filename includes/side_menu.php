@@ -1,6 +1,6 @@
 <?php 
 	//año actual
-    $current_year = date("Y");
+    $current_year = date("y");
     
 ?>
 
@@ -42,7 +42,7 @@
 							        case 12: $mes = "Diciembre "; break;
 							    }
 						?>
-						<li><a style="color:white;" href="?mes=<?php echo $x;?>"><?php echo $mes . $current_year; ?> </a>
+						<li><a style="color:white;" href="?mes=<?php echo $x;?>"><?php echo $mes . "'" .$current_year; ?> </a>
 						<?php
 						  }
 						?>

@@ -42,7 +42,7 @@
 						<?php
 							if($x == 1){
 								$x = 12;
-								$limte = 12 - $mes_actual;
+								$limte = $mes_actual;
 								$current_year = $current_year - 1;
 							}
 						  }

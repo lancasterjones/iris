@@ -259,13 +259,16 @@
 
                     <?php
                         if($limite >= 4){
+                          if($limite < 8) {
+                            $limite_dos = $limite;
+                          }else $limite_dos = 8;
                     ?>
 
                       <div class="item">
                       <div class="row">
 
                       <?php
-                          for($y = 4; $y < $limite; $y++)
+                          for($y = 4; $y < $limite_dos; $y++)
                           {
                      ?>                  
 

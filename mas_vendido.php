@@ -50,34 +50,56 @@
       ?>
 
       <div class="container" style="width: 75% !important; float: left; margin: 10% auto;">
-          <div class="row">
-              <div class="col-md-12">
-                  <div id="Carousel" class="carousel slide">
-                      <ol class="carousel indicators">
-                          <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                      </ol>
-                      <div class="carousel-inner">
-                          <div class="item-active">
-                              <div class="row">
-                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg"></a></div>
-                              </div>
-                          </div>
-                          <div class="item">
-                            <div class="row">
-                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="imgs/+vendido.png"></a></div>
-                            </div>
-                          </div>
-                          </div>
-                            <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                            <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <div class="row">
+        <div class="col-md-12">
+                    <div id="Carousel" class="carousel slide">
+                     
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                        <li data-target="#Carousel" data-slide-to="2"></li>
+                    </ol>
+                     
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        
+                    <div class="item active">
+                      <div class="row">
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                      </div><!--.row-->
+                    </div><!--.item-->
+                     
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                      </div><!--.row-->
+                    </div><!--.item-->
+                     
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                      </div><!--.row-->
+                    </div><!--.item-->
+                     
+                    </div><!--.carousel-inner-->
+                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!--.Carousel-->
+                     
+        </div>
       </div>
+    </div><!--.container-->
 
-
+     
   </body>
 </html>
          

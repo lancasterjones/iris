@@ -49,7 +49,9 @@
           include 'includes/data_base.php';
 
 
-          $year = date('Y');
+          $year = date('Y'); // año actual
+
+          //si se pasa valor a variabla a traves de metodo get se asigna ese valor al mes, si no, el valor del mes actual
           if(count($_GET) > 0){
             $mes = $_GET['mes'];
           }else{
@@ -68,6 +70,9 @@
               $contenedor[$x][0] = $row_vendidos['foto'];
               $x++; 
           }
+
+          //cuenta los elementos del array para crear espacios para imagenes
+          $limite = count($contenedor);
       ?>
 
 
@@ -90,7 +95,8 @@
                     <div class="item active">
                       <div class="row">
                         <?php
-                            for($x = 0; $x < 3; $x++){
+                            //se resta uno a limite para iniciar x con cero debido a que es el primer indice del arreglo
+                            for($x = 0; $x < $limite-1; $x++){
                          ?>
                         <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;"></a></div>
 

@@ -101,7 +101,7 @@
                     <div class="item active">
                       <div class="row">
                         <?php
-                            for($x = 0; $x < $limite; $x++){
+                            for($x = 0; $x < 4; $x++){
                          ?>
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
@@ -113,13 +113,36 @@
                         <?php }  ?>
                       </div><!--.row-->
                     </div><!--.item-->
-                     
-                    <div class="item">
+
+
+                    <?php
+                        if($limite >= 4){
+                    ?>
+
+                      <div class="item">
                       <div class="row">
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                      </div><!--.row-->
-                    </div><!--.item-->
+
+                      <?php
+                          for($y = 4; $y < $limite; $y++)
+                          {
+                     ?>                  
+
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                        </div>
+                      
                     
+                    <?php
+                            } //cierre for
+
+                    ?>
+                          </div><!--.row-->
+                    </div><!--.item-->
+                    <?php
+                        }//cierre de if
+                    ?>
                                        
                     </div><!--.carousel-inner-->
                       <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>

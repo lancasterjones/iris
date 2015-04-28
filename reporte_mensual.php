@@ -64,7 +64,10 @@
             //Mes actual
             $mes_actual = date("n");
 
-            /*Si el sistema recibe un parametro a traves del metodo get, significa que se seleccionó un mes anterior y se modifica el valor de las variables, sino, el valor de las varibles es del mes actual*/
+            /*Si el sistema recibe un parametro a traves del metodo get, 
+            significa que se seleccionó un mes anterior y se modifica el 
+            valor de las variables, sino, el valor de las varibles es del 
+            mes actual*/
             if(count($_GET)>0){
               $valorMes = $_GET['mes'];
               $mes_actual = $valorMes;
@@ -210,17 +213,17 @@
             $limite = 10;
           }
 
-      ?>
+      
 
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
-         <div id="container" style="float: left; min-width: 80%; height: 400px; margin: 7% auto"></div>
+         <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 10% auto 10% 20%"></div>
         </br>
 
         <!--Slide los más vendidos-->
 
-        <div class="container" style="width: 70% !important; margin: 0 auto;">
+        <div class="container" style="width: 70% !important; margin: 20% auto 0 20%;">
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">

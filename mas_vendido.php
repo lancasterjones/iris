@@ -102,7 +102,12 @@
                         <?php
                             for($x = 0; $x < $limite; $x++){
                          ?>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                          <p>prueba</p>
+                        </div>
 
                         <?php }  ?>
                       </div><!--.row-->

@@ -18,7 +18,6 @@
 
     //resultado de query reportes
     $result_reportes = mysqli_query($connm, $query_reportes);
-    $result_fraudes = mysqli_query($connm, $fraudes);
     $contador = 0;
 
     //ciclo para almacenar mas vendidos
@@ -50,14 +49,9 @@
       $contenedor[$z][12] = $row_reportes['Venta'];
       $contenedor[$z][13] = $row_reportes['Semana'];
       $contenedor[$z][14] = $row_reportes['Year'];
+      $contenedor[$z][15] = $row_reportes['fraudes'];
       $z++;
     }
-    $z = 0;
-    while ($row_fraudes = mysqli_fetch_array($result_fraudes)){
-      $contenedor[$z][15] = $row_fraudes['Pedidos'];
-      $z++;
-    }
-
 
 	//imprimir esa información
 		print_r($contenedor);

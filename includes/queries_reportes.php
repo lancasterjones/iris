@@ -2,13 +2,14 @@
 
 	//ventas y pedidos
 	$query_reportes = "
-			SELECT 
-	            count(sales_flat_order.total_paid) Pedidos
-	            ,sum(sales_flat_order.total_paid) Venta
-	            ,WEEK(sales_flat_order.created_at, 1) Semana
-	            ,YEAR(sales_flat_order.created_at) Year
-           FROM shop_production.sales_flat_order sales_flat_order
-           GROUP BY Semana, Year";
+			SELECT
+    count(sales_flat_order.total_paid) Pedidos
+    ,sum(sales_flat_order.total_paid) Venta
+    ,WEEK(sales_flat_order.created_at,7) Semana
+    ,LEFT(YEARWEEK(sales_flat_order.created_at,7),4) Año
+  FROM shop_production.sales_flat_order sales_flat_order
+  WHERE sales_flat_order.status IN ('complete', 'processing')
+     GROUP BY YEARWEEK(sales_flat_order.created_at,7), WEEK(sales_flat_order.created_at,7)";
 
 
      //query para fraudes

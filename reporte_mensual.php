@@ -349,7 +349,7 @@
         <div class="container" id="losMasVistos" style="width: 70% !important; margin: 20% auto 0 20%;">
         <div class="row">
         <div class="col-md-12">
-                    <div id="Carousel" class="carousel slide">
+                    <div id="Carousel_vistos" class="carousel slide">
                      
                      <?php
 

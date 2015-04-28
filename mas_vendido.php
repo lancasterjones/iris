@@ -81,9 +81,10 @@
                         <?php
                             for($x = 0; $x < 3; $x++){
                          ?>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;"></a></div><!--.row-->
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;"></a></div>
 
                         <?php }  ?>
+                      </div><!--.row-->
                     </div><!--.item-->
                      
                     <div class="item">

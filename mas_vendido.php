@@ -71,8 +71,13 @@
               $x++; 
           }
 
-          //cuenta los elementos del array para crear espacios para imagenes
-          $limite = count($contenedor);
+          //cuenta los elementos del array para crear espacios para imagenes, crea máximo 10 espacios
+          if(count($contendor) <= 10){
+            $limite = count($contendor);
+          }else{
+            $limite = 10;
+          }
+
       ?>
 
 
@@ -95,7 +100,6 @@
                     <div class="item active">
                       <div class="row">
                         <?php
-                            //se resta uno a limite para iniciar x con cero debido a que es el primer indice del arreglo
                             for($x = 0; $x < $limite; $x++){
                          ?>
                         <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;"></a></div>
@@ -112,16 +116,8 @@
                         <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
                       </div><!--.row-->
                     </div><!--.item-->
-                     
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                      </div><!--.row-->
-                    </div><!--.item-->
-                     
+                    
+                                       
                     </div><!--.carousel-inner-->
                       <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
                       <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>

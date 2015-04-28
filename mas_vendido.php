@@ -68,6 +68,7 @@
           $x = 0; //contador
           while($row_vendidos = mysqli_fetch_array($res_vendidos)){
               $contenedor[$x][0] = $row_vendidos['foto'];
+              $contenedor[$x][1] = $row_vendidos['sku'];
               $x++; 
           }
 
@@ -106,7 +107,7 @@
                           <a href="#" class="thumbnail">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
-                          <p>prueba</p>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$x][1]; ?></h4>
                         </div>
 
                         <?php }  ?>

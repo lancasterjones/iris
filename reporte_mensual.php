@@ -135,7 +135,7 @@
                         echo "<h1>Semana: " . $semana . "</h1>";
                       }
                         //Almacenamiento de datos de consulta query ventas y pedidos
-                        $consulta_pedidos = mysqli_query($connm, $query);
+                        $consulta_pedidos = mysqli_query($conn, $query);
                         //este ciclo llena los array venta y pedidos
                         while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
                             $venta[$x] = $array_consulta_pedidos['cantidad'];

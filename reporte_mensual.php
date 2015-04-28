@@ -42,10 +42,9 @@
   <body>
       <?php
           include 'includes/side_menu.php';
+
           //conectar con base de datos
           include 'includes/db_magento_connect.php';
-
-
 
           //conectar base de datos Vende
           include 'includes/data_base.php';
@@ -175,10 +174,127 @@
            if ($debug == 1){
            echo "Columnas:  " . $columnasReporte . " Pedidos: " . $pedidos[0];
          }
+
+
+         /*=============================================================================
+          Script para menú slide mas vendidos
+         */
+
+          $year = date('Y'); // año actual
+
+          //si se pasa valor a variabla a traves de metodo get se asigna ese valor al mes, si no, el valor del mes actual
+          if(count($_GET) > 0){
+            $mes_vendidos = "0" . $_GET['mes'];
+          }else{
+            $mes_vendidos = date('m');
+          }
+
+          //query consulta los mas vendidos
+          $query_vendidos = "SELECT * FROM mas_vendidos
+                             WHERE mes = " . $year . $mes_vendidos .
+                             " ORDER BY mes DESC";
+          //array con la consulta
+          $res_vendidos = mysqli_query($conn, $query_vendidos);
+          $contenedor = array(); //array almacena todos los resultados
+          $x = 0; //contador
+          while($row_vendidos = mysqli_fetch_array($res_vendidos)){
+              $contenedor[$x][0] = $row_vendidos['foto'];
+              $contenedor[$x][1] = $row_vendidos['sku'];
+              $x++; 
+          }
+
+          //cuenta los elementos del array para crear espacios para imagenes, crea máximo 10 espacios
+          if(count($contenedor) < 10){
+            $limite = count($contenedor);
+          }else{
+            $limite = 10;
+          }
+
+      ?>
+
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
          <div id="container" style="float: left; min-width: 80%; height: 400px; margin: 7% auto"></div>
+        </br>
+
+        <!--Slide los más vendidos-->
+
+        <div class="container" style="width: 70% !important; margin: 0 auto;">
+        <div class="row">
+        <div class="col-md-12">
+                    <div id="Carousel" class="carousel slide">
+                     
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                        <li data-target="#Carousel" data-slide-to="2"></li>
+                    </ol>
+                     
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        
+                    <div class="item active">
+                      <div class="row">
+                        <?php
+                            if($limite > 4){
+                                $limite_uno = 4;
+                            }else $limite_uno = $limite;
+                            for($x = 0; $x < $limite_uno; $x++){
+                         ?>
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$x][1]; ?></h4>
+                        </div>
+
+                        <?php }  ?>
+                      </div><!--.row-->
+                    </div><!--.item-->
+
+
+                    <?php
+                        if($limite >= 4){
+                    ?>
+
+                      <div class="item">
+                      <div class="row">
+
+                      <?php
+                          for($y = 4; $y < $limite; $y++)
+                          {
+                     ?>                  
+
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                        </div>
+                      
+                    
+                    <?php
+                            } //cierre for
+
+                    ?>
+                          </div><!--.row-->
+                    </div><!--.item-->
+                    <?php
+                        }//cierre de if
+                    ?>
+                                       
+                    </div><!--.carousel-inner-->
+                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!--.Carousel-->
+                     
+        </div>
+      </div>
+    </div><!--.container-->
+
+
+
+
 
          <!--Botones para avanzar o atrasar el mes de consulta--
          <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-menu-left"></i></button>

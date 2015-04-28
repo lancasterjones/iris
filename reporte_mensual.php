@@ -223,7 +223,7 @@
 
         <!--Slide los más vendidos-->
 
-        <div class="container" style="width: 70% !important; margin: 20% auto 0 20%;">
+        <div class="container" id="losMasVendidos" style="width: 70% !important; margin: 20% auto 0 20%;">
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">

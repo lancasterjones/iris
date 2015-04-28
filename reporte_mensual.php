@@ -43,9 +43,6 @@
       <?php
           include 'includes/side_menu.php';
 
-          //conectar con base de datos
-          include 'includes/db_magento_connect.php';
-
           //conectar base de datos Vende
           include 'includes/data_base.php';
 

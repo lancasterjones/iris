@@ -167,14 +167,14 @@
 
           //si se pasa valor a variabla a traves de metodo get se asigna ese valor al mes, si no, el valor del mes actual
           if(count($_GET) > 0){
-            $mes_vendidos = "0" . $_GET['mes'];
+            $mes_reportes = "0" . $_GET['mes'];
           }else{
-            $mes_vendidos = date('m');
+            $mes_reportes = date('m');
           }
 
           //query consulta los mas vendidos
           $query_vendidos = "SELECT * FROM mas_vendidos
-                             WHERE mes = " . $year . $mes_vendidos .
+                             WHERE mes = " . $year . $mes_reportes .
                              " ORDER BY mes DESC";
           //array con la consulta
           $res_vendidos = mysqli_query($conn, $query_vendidos);
@@ -193,7 +193,27 @@
             $limite = 10;
           }
 
-      
+           /*=============================================================================
+          Script para menú slide mas vistos
+         */
+          $cont_vistos = array();
+          $query_vistos = "SELECT * FROM mas_vistos
+                           WHERE mes =" .$year . $mes_reportes .
+                           " ORDER BY mes DESC";
+          $res_vistos = mysqli_query($conn, $query_vistos);
+          $x = 0;
+          while($row_vistos = mysqli_fetch_array($res_vistos))
+          {
+            $cont_vistos[$x][0] = $row_vistos['foto'];
+            $cont_vistos[$x][1] = $row_vistos['modelo'];
+            $x++;
+          }
+
+          if(count($cont_vistos) < 10){
+            $limit_vistos = count($cont_vistos);
+          }else{
+            $limit_vistos = 10;
+          }
 
          ?>
 
@@ -323,7 +343,128 @@
       </div>
     </div><!--.container-->
 
+  </br>
+           <!--Slide los más vistos-->
 
+        <div class="container" id="losMasVistos" style="width: 70% !important; margin: 20% auto 0 20%;">
+        <div class="row">
+        <div class="col-md-12">
+                    <div id="Carousel" class="carousel slide">
+                     
+                     <?php
+
+                     ?>
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                        <li data-target="#Carousel" data-slide-to="2"></li>
+                    </ol>
+                     
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        
+                    <div class="item active">
+                      <div class="row">
+                        <?php
+                            if($limit_vistos > 4){
+                                $limite_uno = 4;
+                            }else $limite_uno = $limit_vistos;
+                            for($x = 0; $x < $limite_uno; $x++){
+                         ?>
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $cont_vistos[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$x][1]; ?></h4>
+                        </div>
+
+                        <?php }  ?>
+                      </div><!--.row-->
+                    </div><!--.item-->
+
+                    <!--Segunda serie de fotos, de la 5 a la 8-->
+                    <?php
+                        if($limit_vistos >= 4){
+                          if($limit_vistos < 8) {
+                            $limite_dos = $limit_vistos;
+                          }else $limite_dos = 8;
+                    ?>
+
+                      <div class="item">
+                      <div class="row">
+
+                      <?php
+                          for($y = 4; $y < $limite_dos; $y++)
+                          {
+                     ?>                  
+
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$y][1]; ?></h4>
+                        </div>
+                      
+                    
+                    <?php
+                            } //cierre for
+
+                    ?>
+                          </div><!--.row-->
+                    </div><!--.item-->
+                    <?php
+                        }//cierre de if
+                    ?>
+
+
+                     <!--Segunda serie de fotos, de la 9 a la 10-->
+                     <?php
+                        if($limit_vistos >= 8){
+                          if($limit_vistos < 10) {
+                            $limite_tres = $limit_vistos;
+                          }else $limite_tres = 10;
+                    ?>
+
+                      <div class="item">
+                      <div class="row">
+                     <?php
+                          for($y = 8; $y < $limite_tres; $y++)
+                          {
+                     ?>                  
+
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$y][1]; ?></h4>
+                        </div>
+                      
+                    
+                    <?php
+                            } //cierre for
+
+                    ?>
+                          </div><!--.row-->
+                    </div><!--.item-->
+                    <?php
+                        }//cierre de if
+                    ?>  
+
+                      <?php
+                        //el boton de avanzar se muestra solo si hay mas de 4 fotos
+                        if($limit_vistos > 4){
+                      ?>                 
+                    </div><!--.carousel-inner-->
+                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div><!--.Carousel-->
+                    <?php 
+                            }
+                    ?>
+                     
+        </div>
+      </div>
+    </div><!--.container-->
 
 
 

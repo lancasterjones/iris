@@ -276,6 +276,7 @@
                           <a href="#" class="thumbnail">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>
                         </div>
                       
                     

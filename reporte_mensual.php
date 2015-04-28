@@ -355,9 +355,9 @@
 
                      ?>
                     <ol class="carousel-indicators">
-                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel" data-slide-to="1"></li>
-                        <li data-target="#Carousel" data-slide-to="2"></li>
+                        <li data-target="#Carousel_vistos" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel_vistos" data-slide-to="1"></li>
+                        <li data-target="#Carousel_vistos" data-slide-to="2"></li>
                     </ol>
                      
                     <!-- Carousel items -->
@@ -455,8 +455,8 @@
                         if($limit_vistos > 4){
                       ?>                 
                     </div><!--.carousel-inner-->
-                      <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                      <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                      <a data-slide="prev" href="#Carousel_vistos" class="left carousel-control">‹</a>
+                      <a data-slide="next" href="#Carousel_vistos" class="right carousel-control">›</a>
                     </div><!--.Carousel-->
                     <?php 
                             }

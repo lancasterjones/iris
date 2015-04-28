@@ -59,8 +59,17 @@
                       <div class="carousel-inner">
                           <div class="item-active">
                               <div class="row">
-                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src=""></a></div>
+                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="imgs/+vendido.png"></a></div>
                               </div>
+                          </div>
+                          <div class="item">
+                            <div class="row">
+                                <div class="col-md-3"><a href="#" class="thumbnail"><img src="imgs/+vendido.png"></a></div>
+                            </div>
+                          </div>
+                          </div>
+                            <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                            <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
                           </div>
                       </div>
                   </div>

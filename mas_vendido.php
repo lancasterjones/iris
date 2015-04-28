@@ -49,7 +49,7 @@
           include 'includes/data_base.php';
       ?>
 
-      <div class="container">
+      <div class="container" style="width: 75% !important; float: left; margin: 10% auto;">
           <div class="row">
               <div class="col-md-12">
                   <div id="Carousel" class="carousel slide">

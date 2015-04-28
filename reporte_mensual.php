@@ -228,6 +228,9 @@
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">
                      
+                     <?php
+
+                     ?>
                     <ol class="carousel-indicators">
                         <li data-target="#Carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#Carousel" data-slide-to="1"></li>
@@ -324,13 +327,16 @@
                         }//cierre de if
                     ?>
 
-
-
-                                       
+                      <?php
+                        if($limite > 4){
+                      ?>                 
                     </div><!--.carousel-inner-->
                       <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
                       <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
                     </div><!--.Carousel-->
+                    <?php 
+                            }
+                    ?>
                      
         </div>
       </div>

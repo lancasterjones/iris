@@ -49,7 +49,7 @@
           include 'includes/data_base.php';
       ?>
 
-      <div class="container" style="width: 75% !important; float: left; margin: 10% auto;">
+      <div class="container" style="width: 72% !important; float: left; margin: 15% 3%;">
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">
@@ -66,9 +66,9 @@
                     <div class="item active">
                       <div class="row">
                         <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
                       </div><!--.row-->
                     </div><!--.item-->
                      

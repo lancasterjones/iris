@@ -84,7 +84,7 @@
 
 
 
-      <div class="container" style="width: 72% !important; float: left; margin: 15% 3%;">
+      <div class="container" style="width: 70% !important; margin: 0 auto;">
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">
@@ -101,7 +101,10 @@
                     <div class="item active">
                       <div class="row">
                         <?php
-                            for($x = 0; $x < 4; $x++){
+                            if($limite > 4){
+                                $limite_uno = 4;
+                            }else $limite_uno = $limite;
+                            for($x = 0; $x < $limite_uno; $x++){
                          ?>
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">

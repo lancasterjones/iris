@@ -48,14 +48,25 @@
           //conectar base de datos Vende
           include 'includes/data_base.php';
 
+
+          $year = date('Y');
+          if(count($_GET) > 0){
+            $mes = $_GET['mes'];
+          }else{
+            $mes = date('m');
+          }
+
+          //query consulta los mas vendidos
           $query_vendidos = "SELECT * FROM mas_vendidos
-                             ORDER BY mes DESC";
+                             WHERE mes = " . $year . $mes .
+                             " ORDER BY mes DESC";
+          //array con la consulta
           $res_vendidos = mysqli_query($conn, $query_vendidos);
-          $contenedor = array();
-          $x = 0;
+          $contenedor = array(); //array almacena todos los resultados
+          $x = 0; //contador
           while($row_vendidos = mysqli_fetch_array($res_vendidos)){
               $contenedor[$x][0] = $row_vendidos['foto'];
-              $x++;
+              $x++; 
           }
       ?>
 

@@ -131,18 +131,7 @@
                         $semana = $semanaReporte[$x];
                         //query que obtiene ventas y pedidos
                         $query = "
-                          SELECT 
-                            count(sales_flat_order.total_paid) Pedidos
-                            ,sum(sales_flat_order.total_paid) Venta
-                            ,WEEK(sales_flat_order.created_at) Semana
-                            ,YEAR(sales_flat_order.created_at) Año
-                          FROM shop_production.sales_flat_order sales_flat_order
-                          WHERE sales_flat_order.status IN ('complete', 'processing')
-                              AND YEAR(sales_flat_order.created_at) = YEAR(CURDATE())
-                              AND WEEK(sales_flat_order.created_at) = $semana";
-                          //este query trae el valor de fraudes en la semana indicada
-                        $fraudes = "
-                              SELECT fraudes FROM magento_venta
+                              SELECT * FROM magento_venta
                               WHERE week = $semana";
                         if ($debug == 1){
                         echo "posicion : " . $x;
@@ -150,17 +139,11 @@
                       }
                         //Almacenamiento de datos de consulta query ventas y pedidos
                         $consulta_pedidos = mysqli_query($connm, $query);
-                        //almacenar datos de query fraudes
-                        $consulta_fraudes = mysqli_query($conn, $fraudes);
                         //este ciclo llena los array venta y pedidos
                         while($array_consulta_pedidos = mysqli_fetch_array($consulta_pedidos)){
-                            $venta[$x] = $array_consulta_pedidos['Venta'];
-                            $pedidos[$x] = $array_consulta_pedidos['Pedidos'];
-
-                        }
-                        //este query llena el array fraudes
-                        while($array_consulta_fraudes = mysqli_fetch_array($consulta_fraudes)){
-                          $fraud[$x] = $array_consulta_fraudes['fraudes'];
+                            $venta[$x] = $array_consulta_pedidos['cantidad'];
+                            $pedidos[$x] = $array_consulta_pedidos['pedidos'];
+                            $fraud[$x] = $array_consulta_pedidos['fraudes'];
                         }
                         if ($debug == 1){
                           echo "query: " . $pedidos[$x];
@@ -325,9 +308,10 @@
                     </div><!--.item-->
                     <?php
                         }//cierre de if
-                    ?>
+                    ?>  
 
                       <?php
+                        //el boton de avanzar se muestra solo si hay mas de 4 fotos
                         if($limite > 4){
                       ?>                 
                     </div><!--.carousel-inner-->

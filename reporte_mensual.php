@@ -37,11 +37,7 @@
     ?>
     <script type="text/javascript" src="includes/Chart.js"></script>
     <script type="text/javascript" src="includes/script_reportes.js"></script>
-    <style type="text/css">
-      #mesPasado:hover{
-        color: black;
-      }
-    </style>
+    
   </head>
   <body>
       <?php
@@ -183,6 +179,10 @@
 
          <!--Div contenedor de la grafica reporte mensual-->
          <div id="container" style="float: left; min-width: 80%; height: 400px; margin: 7% auto"></div>
+
+         <!--Botones para avanzar o atrasar el mes de consulta-->
+         <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-menu-left"></i></button>
+         <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-menu-right"></i></button>
          <script>
               $(function () {
                 $('#container').highcharts({

@@ -21,5 +21,7 @@ echo '
     <link rel="stylesheet" href="css/side_menu.css" type="text/css" />
     <!--Script Side Menu -->
     <script src="includes/side_menu.js"></script>
+    <!--Estilo de botones circulares-->
+    <link rel="stylesheet" href="css/boton_circular.css" type="text/css"/>
 ';
 ?>

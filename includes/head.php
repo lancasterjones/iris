@@ -25,5 +25,6 @@ echo '
     <link rel="stylesheet" href="css/boton_circular.css" type="text/css"/>
     <!--Estilo para el slider tipo carrusel-->
     <link rel="stylesheet" href="css/simple_carousel.css" type="text/css"/>
+    <script src="includes/simple_carousel.js"></script>
 ';
 ?>

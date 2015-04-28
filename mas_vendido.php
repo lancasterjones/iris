@@ -72,7 +72,7 @@
           }
 
           //cuenta los elementos del array para crear espacios para imagenes, crea máximo 10 espacios
-          if(count($contendor) <= 10){
+          if(count($contenedor) < 10){
             $limite = count($contendor);
           }else{
             $limite = 10;

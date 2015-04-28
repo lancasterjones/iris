@@ -59,7 +59,7 @@
                       <div class="carousel-inner">
                           <div class="item-active">
                               <div class="row">
-                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="imgs/+vendido.png"></a></div>
+                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg"></a></div>
                               </div>
                           </div>
                           <div class="item">

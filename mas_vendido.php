@@ -53,7 +53,7 @@
 
           //si se pasa valor a variabla a traves de metodo get se asigna ese valor al mes, si no, el valor del mes actual
           if(count($_GET) > 0){
-            $mes = $_GET['mes'];
+            $mes = "0" . $_GET['mes'];
           }else{
             $mes = date('m');
           }
@@ -116,9 +116,6 @@
                      
                     <div class="item">
                       <div class="row">
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
                         <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" style="max-width:100%;"></a></div>
                       </div><!--.row-->
                     </div><!--.item-->

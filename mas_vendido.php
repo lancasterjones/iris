@@ -47,7 +47,20 @@
 
           //conectar base de datos Vende
           include 'includes/data_base.php';
+
+          $query_vendidos = "SELECT * FROM mas_vendidos
+                             ORDER BY mes DESC";
+          $res_vendidos = mysqli_query($conn, $query_vendidos);
+          $contenedor = array();
+          $x = 0;
+          while($row_vendidos = mysqli_fetch_array($res_vendidos)){
+              $contenedor[$x][0] = $row_vendidos['foto'];
+              $x++;
+          }
       ?>
+
+
+
 
       <div class="container" style="width: 72% !important; float: left; margin: 15% 3%;">
         <div class="row">
@@ -65,11 +78,12 @@
                         
                     <div class="item active">
                       <div class="row">
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
-                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product/a/-/a-4079c.jpg" alt="Image" style="max-width:100%;"></a></div>
-                      </div><!--.row-->
+                        <?php
+                            for($x = 0; $x < 3; $x++){
+                         ?>
+                        <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;"></a></div><!--.row-->
+
+                        <?php }  ?>
                     </div><!--.item-->
                      
                     <div class="item">

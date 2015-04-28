@@ -96,7 +96,7 @@
                       <div class="row">
                         <?php
                             //se resta uno a limite para iniciar x con cero debido a que es el primer indice del arreglo
-                            for($x = 0; $x < $limite-1; $x++){
+                            for($x = 0; $x < $limite; $x++){
                          ?>
                         <div class="col-md-3"><a href="#" class="thumbnail"><img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;"></a></div>
 

@@ -256,7 +256,7 @@
                       </div><!--.row-->
                     </div><!--.item-->
 
-
+                    <!--Segunda serie de fotos, de la 5 a la 8-->
                     <?php
                         if($limite >= 4){
                           if($limite < 8) {
@@ -289,6 +289,43 @@
                     <?php
                         }//cierre de if
                     ?>
+
+
+                     <!--Segunda serie de fotos, de la 9 a la 10-->
+                     <?php
+                        if($limite >= 8){
+                          if($limite < 10) {
+                            $limite_tres = $limite;
+                          }else $limite_tres = 10;
+                    ?>
+
+                      <div class="item">
+                      <div class="row">
+                     <?php
+                          for($y = 8; $y < $limite_tres; $y++)
+                          {
+                     ?>                  
+
+                        <div class="col-md-3">
+                          <a href="#" class="thumbnail">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                          </a>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>
+                        </div>
+                      
+                    
+                    <?php
+                            } //cierre for
+
+                    ?>
+                          </div><!--.row-->
+                    </div><!--.item-->
+                    <?php
+                        }//cierre de if
+                    ?>
+
+
+
                                        
                     </div><!--.carousel-inner-->
                       <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>

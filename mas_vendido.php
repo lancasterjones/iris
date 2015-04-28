@@ -48,6 +48,27 @@
           //conectar base de datos Vende
           include 'includes/data_base.php';
       ?>
+
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div id="Carousel" class="carousel slide">
+                      <ol class="carousel indicators">
+                          <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                          <div class="item-active">
+                              <div class="row">
+                                  <div class="col-md-3"><a href="#" class="thumbnail"><img src=""></a></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
   </body>
 </html>
          

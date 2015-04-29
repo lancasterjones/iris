@@ -230,10 +230,15 @@
                             echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">                       
                           </a>
                           <?php  if($contenedor[$x][2] == 0){ //se muestra cuando el inventario es cero ?>
-                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
-                              <p>Sin Inventario</p>
+                              <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                                  <p>Sin Inventario</p>
+                              </div>
+                          <?php } //cierre sin inv
+                                else{ ?>
+                                  <div style="position: relative; text-align:center; width: 100%; background-color: #18bc9c; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                                  <p><i style="margin-right: 3px;" class="glyphicon glyphicon-ok "></i></p>
                           </div>
-                          <?php } //cierre sin inv ?>
+                              <?php }?>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$x][1]; ?></h4>
                         </div>
 
@@ -259,10 +264,15 @@
                             echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <?php  if($contenedor[$y][2] == 0){ //se muestra cuando el inventario es cero ?>
-                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
-                              <p>Sin Inventario</p>
+                              <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                                  <p>Sin Inventario</p>
+                              </div>
+                          <?php } //cierre sin inv
+                                else{ ?>
+                                  <div style="position: relative; text-align:center; width: 100%; background-color: #18bc9c; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                                  <p><i style="margin-right: 3px;" class="glyphicon glyphicon-ok "></i></p>
                           </div>
-                          <?php } //cierre sin inv ?>
+                              <?php }?>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>
                         </div>  
                     <?php } //cierre for   ?>
@@ -284,10 +294,15 @@
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <?php  if($contenedor[$y][2] == 0){ //se muestra cuando el inventario es cero ?>
-                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
-                              <p>Sin Inventario</p>
+                              <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                                  <p>Sin Inventario</p>
+                              </div>
+                          <?php } //cierre sin inv
+                                else{ ?>
+                                  <div style="position: relative; text-align:center; width: 100%; background-color: #18bc9c; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                                  <p><i style="margin-right: 3px;" class="glyphicon glyphicon-ok "></i></p>
                           </div>
-                          <?php } //cierre sin inv ?>
+                              <?php }?>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>
                         </div>
                              <?php } //cierre for   ?>
@@ -303,10 +318,10 @@
         </div>
       </div>
     </div><!--.container-->
-  </br></br>
+  </br>
 
            <!--==========================Slide los más vistos============================================-->
-        <div class="container" id="losMasVistos" style="width: 70% !important; margin: 20% auto 0 20%;">
+        <div class="container" id="losMasVistos" style="width: 70% !important; margin: 10% auto 0px 20%;">
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel_vistos" class="carousel slide">
@@ -403,7 +418,7 @@
                       <div class="row">
                      <?php for($y = 8; $y < $limite_tres; $y++)    {     ?> 
                         <div class="col-md-3">
-                          <a href="#" class="thumbnail">
+                          <a href="#" class="thumbnail" style="margin: 0px;">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                             echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>

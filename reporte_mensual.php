@@ -344,11 +344,12 @@
                                 $tagInventario = "Sin Inventario"; 
                             } 
                             else {
-                              $colorInventario = "18BC9C" //inventario mayor a cero  
+                              $colorInventario = "18BC9C"; //inventario mayor a cero  
                               $tagInventario = '<i style="margin-right: 3px;" class="glyphicon glyphicon-ok ">';
                            }
                           ?>
-                            <div style="position: relative; text-align:center; width: 100%; background-color: #<?php echo $colorInventario; ?>; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                            <div style="position: relative; text-align:center; width: 100%; background-color: #<?php 
+                            echo $colorInventario; ?>; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
                                 <p><?php echo $tagInventario; ?></p>
                             </div>                          
                           <h4 style="position: relative; margin: 0px 10%;"><?php 

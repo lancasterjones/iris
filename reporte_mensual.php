@@ -228,15 +228,16 @@
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">
                      
-                     <?php
-
-                     ?>
+                     <?php if($limite > 0){  ?>
                     <ol class="carousel-indicators">
                         <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <?php if($limite >= 4) {?>
                         <li data-target="#Carousel" data-slide-to="1"></li>
+                        <?php } if($limite >= 8){?>
                         <li data-target="#Carousel" data-slide-to="2"></li>
+                        <?php } ?>
                     </ol>
-                     
+                     <?php } //if mayor a cero?>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         
@@ -373,63 +374,43 @@
                       <div class="item">
                       <div class="row">
 
-                      <?php
-                          for($y = 4; $y < $limite_dos; $y++)
-                          {
-                     ?>                  
-
+                      <?php  for($y = 4; $y < $limite_dos; $y++)    {   ?>                  
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
-                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
+                            echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$y][1]; ?></h4>
-                        </div>
-                      
-                    
-                    <?php
-                            } //cierre for
-
-                    ?>
+                        </div>  
+                    <?php } //cierre for         ?>
                           </div><!--.row-->
                     </div><!--.item-->
-                    <?php
-                        }//cierre de if
-                    ?>
+                    <?php   }//cierre de if    ?>
 
 
                      <!--Segunda serie de fotos, de la 9 a la 10-->
                      <?php
                         if($limit_vistos >= 8){
+                          //numero de espacios de fotos 
                           if($limit_vistos < 10) {
                             $limite_tres = $limit_vistos;
                           }else $limite_tres = 10;
                     ?>
-
                       <div class="item">
                       <div class="row">
-                     <?php
-                          for($y = 8; $y < $limite_tres; $y++)
-                          {
-                     ?>                  
+                     <?php for($y = 8; $y < $limite_tres; $y++)    {     ?>                  
 
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
-                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
+                            echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$y][1]; ?></h4>
-                        </div>
-                      
-                    
-                    <?php
-                            } //cierre for
-
-                    ?>
+                        </div>   
+                      <?php   } //cierre for     ?>
                           </div><!--.row-->
-                    </div><!--.item-->
-                    <?php
-                        }//cierre de if
-                    ?>  
-         
+                        </div><!--.item-->
+                      <?php   }//cierre de if    ?>           
                     </div><!--.carousel-inner-->
                       <?php  if($limit_vistos > 4){ 
                         //el boton de avanzar se muestra solo si hay mas de 4 fotos   ?>        

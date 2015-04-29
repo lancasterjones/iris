@@ -31,17 +31,13 @@
 <html lang='es'>
   <head>
     <title>Reportes || IRIS</title>
-    <?php 
-        include 'includes/head.php';
-
-    ?>
+    <?php include 'includes/head.php';    ?>
     <script type="text/javascript" src="includes/Chart.js"></script>
     <script type="text/javascript" src="includes/script_reportes.js"></script>
     
   </head>
   <body>
-      <?php
-          include 'includes/side_menu.php';
+      <?php include 'includes/side_menu.php';
 
           //conectar base de datos Vende
           include 'includes/data_base.php';
@@ -50,16 +46,11 @@
           include 'includes/queries_reportes.php';
       ?>
          <script src="http://code.highcharts.com/highcharts.js"></script>
-         <script src="http://code.highcharts.com/modules/exporting.js"></script>
-         
+         <script src="http://code.highcharts.com/modules/exporting.js"></script>      
 
-         <?php
-
-            //año actual
-            $current_year = date("Y");
-
-            //Mes actual
-            $mes_actual = date("n");
+         <?php            
+            $current_year = date("Y");   //año actual            
+            $mes_actual = date("n");//Mes actual
 
             /*Si el sistema recibe un parametro a traves del metodo get, 
             significa que se seleccionó un mes anterior y se modifica el 
@@ -89,9 +80,8 @@
                 case 11: $mes_actual = "Noviembre"; break;
                 case 12: $mes_actual = "Diciembre"; break;
             }
-
-             //arreglo con semanas
-             $semanaReporte = array();
+            
+             $semanaReporte = array();  //arreglo con semanas
 
              //calcular primer semana del año
              $semAnalisis = new DateTime();
@@ -122,9 +112,7 @@
                   if($mes_formato == $mesComparar){                      
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
-                        if ($debug == 1){
-                        echo "semana: " . $semanaReporte[$x];
-                      }
+                        if ($debug == 1){  echo "semana: " . $semanaReporte[$x];  }
                         $semana = $semanaReporte[$x];
                         //query que obtiene ventas y pedidos
                         $query = "
@@ -164,20 +152,16 @@
          */
 
           $year = date('Y'); // año actual
-
           //si se pasa valor a variabla a traves de metodo get se asigna ese valor al mes, si no, el valor del mes actual
-          if(count($_GET) > 0){
-            $mes_reportes = "0" . $_GET['mes'];
-          }else{
-            $mes_reportes = date('m');
-          }
+          if(count($_GET) > 0){ $mes_reportes = "0" . $_GET['mes'];  }
+          else $mes_reportes = date('m');
 
           //query consulta los mas vendidos
           $query_vendidos = "SELECT * FROM mas_vendidos
                              WHERE mes = " . $year . $mes_reportes .
                              " ORDER BY mes DESC";
-          //array con la consulta
-          $res_vendidos = mysqli_query($conn, $query_vendidos);
+          
+          $res_vendidos = mysqli_query($conn, $query_vendidos);  //array con la consulta
           $contenedor = array(); //array almacena todos los resultados
           $x = 0; //contador
           while($row_vendidos = mysqli_fetch_array($res_vendidos)){
@@ -187,11 +171,8 @@
           }
 
           //cuenta los elementos del array para crear espacios para imagenes, crea máximo 10 espacios
-          if(count($contenedor) < 10){
-            $limite = count($contenedor);
-          }else{
-            $limite = 10;
-          }
+          if(count($contenedor) < 10){    $limite = count($contenedor);   }
+          else  $limite = 10;
 
            /*=============================================================================
           Script para menú slide mas vistos
@@ -251,7 +232,8 @@
                          ?>
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
-                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
+                            echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$x][1]; ?></h4>
                         </div>
@@ -271,23 +253,15 @@
                       <div class="item">
                       <div class="row">
 
-                      <?php
-                          for($y = 4; $y < $limite_dos; $y++)
-                          {
-                     ?>                  
-
+                      <?php for($y = 4; $y < $limite_dos; $y++)   {    ?>                  
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
-                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
+                            echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>
-                        </div>
-                      
-                    
-                    <?php
-                            } //cierre for
-
-                    ?>
+                        </div>  
+                    <?php } //cierre for   ?>
                           </div><!--.row-->
                     </div><!--.item-->
                     <?php   }//cierre de if  ?>
@@ -331,14 +305,16 @@
         <div class="col-md-12">
                     <div id="Carousel_vistos" class="carousel slide">
                      
-                     <?php
-
-                     ?>
+                     <?php if($limit_vistos > 0){  ?>
                     <ol class="carousel-indicators">
                         <li data-target="#Carousel_vistos" data-slide-to="0" class="active"></li>
+                        <?php if($limit_vistos >= 4) {?>
                         <li data-target="#Carousel_vistos" data-slide-to="1"></li>
+                        <?php } if($limit_vistos >= 8){?>
                         <li data-target="#Carousel_vistos" data-slide-to="2"></li>
+                        <?php } ?>
                     </ol>
+                     <?php } //if mayor a cero?>
                      
                     <!-- Carousel items -->
                     <div class="carousel-inner">
@@ -353,9 +329,11 @@
                          ?>
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
-                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $cont_vistos[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
+                            echo $cont_vistos[$x][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
-                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$x][1]; ?></h4>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php 
+                          echo $cont_vistos[$x][1]; ?></h4>
                         </div>
                         <?php }  ?>
                       </div><!--.row-->
@@ -370,10 +348,8 @@
                             $limite_dos = $limit_vistos;
                           }else $limite_dos = 8;
                     ?>
-
                       <div class="item">
                       <div class="row">
-
                       <?php  for($y = 4; $y < $limite_dos; $y++)    {   ?>                  
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
@@ -398,8 +374,7 @@
                     ?>
                       <div class="item">
                       <div class="row">
-                     <?php for($y = 8; $y < $limite_tres; $y++)    {     ?>                  
-
+                     <?php for($y = 8; $y < $limite_tres; $y++)    {     ?> 
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
@@ -422,11 +397,6 @@
       </div>
     </div><!--.container-->
 
-
-
-         <!--Botones para avanzar o atrasar el mes de consulta--
-         <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-menu-left"></i></button>
-         <button type="button" class="btn btn-default btn-circle btn-lg"><i class="glyphicon glyphicon-menu-right"></i></button>-->
          <script>
               $(function () {
                 $('#container').highcharts({

@@ -280,6 +280,11 @@
                           <a href="#" class="thumbnail">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
+                          <?php  if($contenedor[$y][2] == 0){ //se muestra cuando el inventario es cero ?>
+                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                              <p>Sin Inventario</p>
+                          </div>
+                          <?php } //cierre sin inv ?>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>
                         </div>
                              <?php } //cierre for   ?>

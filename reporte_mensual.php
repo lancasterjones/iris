@@ -338,6 +338,10 @@
   </br>
 
            <!--==========================Slide los más vistos============================================-->
+           <div style="color: black; float: left;">
+              <h1>Lo + Visto</h1>
+            </div>
+
         <div class="container" id="losMasVistos" style="width: 70% !important; margin: 10% auto 0px 20%;">
         <div class="row">
         <div class="col-md-12">

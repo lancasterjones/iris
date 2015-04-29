@@ -200,7 +200,7 @@
          <div class="pull-left" style="margin: 5% 0 0 25%; ">
            <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">
          </div>
-         <a href="#losMasVistos"></a>
+         <a href="#losMasVistos">Los mas vistos</a>
          <!--Logo cliente-->
          <div class="pull-right" style="margin: 5% 10% 0 0">
            <img style="width: 100px;" src="http://d1x736u1i353au.cloudfront.net/media/images/default/logoLOB_1_1__3_.png">

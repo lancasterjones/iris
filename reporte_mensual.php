@@ -192,7 +192,7 @@
           }
          ?>
          <!--Logo vende-->
-         <div class="pull-right" style="5% 0 0 0">
+         <div class="pull-left" style="5% 0 0 0">
            <img style="width: 100px; margin: 5% 10% 0 0;" src="imgs/vende.png">
          </div>
 

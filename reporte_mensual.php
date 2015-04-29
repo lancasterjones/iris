@@ -338,7 +338,7 @@
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                             echo $cont_vistos[$x][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
-                          <?php  if($cont_vistos[$y][2] == 0){ //se muestra cuando el inventario es cero ?>
+                          <?php  if($cont_vistos[$x][2] == 0){ //se muestra cuando el inventario es cero ?>
                               <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
                                   <p>Sin Inventario</p>
                               </div>

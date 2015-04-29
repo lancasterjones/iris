@@ -343,7 +343,7 @@
       </div>
     </div><!--.container-->
 
-  </br>
+  </br></br>
            <!--Slide los más vistos-->
 
         <div class="container" id="losMasVistos" style="width: 70% !important; margin: 20% auto 0 20%;">

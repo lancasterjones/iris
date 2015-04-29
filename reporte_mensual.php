@@ -191,8 +191,9 @@
             $limit_vistos = 10;
           }
          ?>
+         <!--Logo cliente-->
          <div class="pull-right">
-          <img style="width: 100px;" src="http://d1x736u1i353au.cloudfront.net/media/images/default/logoLOB_1_1__3_.png">
+           <img style="width: 100px; margin: 5% 10% 0 0;" src="http://d1x736u1i353au.cloudfront.net/media/images/default/logoLOB_1_1__3_.png">
          </div>
 
          <!--Div contenedor de la grafica reporte mensual-->

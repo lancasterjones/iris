@@ -338,11 +338,19 @@
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                             echo $cont_vistos[$x][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
-                          <?php  if($cont_vistos[$x][2] == 0){ //se muestra cuando el inventario es cero ?>
-                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
-                              <p>Sin Inventario</p>
-                          </div>
-                          <?php } //cierre sin inv ?>
+                          <?php                            
+                          if($cont_vistos[$x][2] == 0){ 
+                                $colorInventario = "D10056"; //cero inventario
+                                $tagInventario = "Sin Inventario"; 
+                            } 
+                            else {
+                              $colorInventario = "18BC9C" //inventario mayor a cero  
+                              $tagInventario = '<i style="margin-right: 3px;" class="glyphicon glyphicon-ok ">';
+                           }
+                          ?>
+                            <div style="position: relative; text-align:center; width: 100%; background-color: #<?php echo $colorInventario; ?>; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                                <p><?php echo $tagInventario; ?></p>
+                            </div>                          
                           <h4 style="position: relative; margin: 0px 10%;"><?php 
                           echo $cont_vistos[$x][1]; ?></h4>
                         </div>

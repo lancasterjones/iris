@@ -31,7 +31,7 @@
                 ['Primavera-Verano',   45.0],
                 ['Otoño-Invierno',       26.8],
                 {
-                    name: 'Chrome',
+                    name: 'Lookbook',
                     y: 12.8,
                     sliced: true,
                     selected: true

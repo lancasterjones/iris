@@ -191,6 +191,13 @@
             $limit_vistos = 10;
           }
          ?>
+         <script>
+             $(document).ready(function(){
+                $(function(){
+                  $('html').smoothScroll(500);
+                });
+             });
+         </script>
          <!--Logo vende-->
          <div class="pull-left" style="margin: 5% 0 0 25%; ">
            <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">

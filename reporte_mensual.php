@@ -228,9 +228,12 @@
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
                             <div style="position: relative;">
-                              <div style="position: absolute;">
+                              <div style="position: relative;">
                                 <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                                 echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                              </div>
+                              <div style="position: relative;">
+                                <img src="imgs/sininv.png" style="max-width:100%;">
                               </div>
                             </div>
                           </a>

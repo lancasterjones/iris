@@ -289,11 +289,7 @@
                     ?>
                           </div><!--.row-->
                     </div><!--.item-->
-                    <?php
-                        }//cierre de if
-                    ?>
-
-
+                    <?php   }//cierre de if  ?>
                      <!--Segunda serie de fotos, de la 9 a la 10-->
                      <?php
                         if($limite >= 8){
@@ -301,31 +297,19 @@
                             $limite_tres = $limite;
                           }else $limite_tres = 10;
                     ?>
-
                       <div class="item">
                       <div class="row">
-                     <?php
-                          for($y = 8; $y < $limite_tres; $y++)
-                          {
-                     ?>                  
-
+                     <?php  for($y = 8; $y < $limite_tres; $y++) { //fotos 1 a 4 ?>  
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>
                         </div>
-                      
-                    
-                    <?php
-                            } //cierre for
-
-                    ?>
+                             <?php } //cierre for   ?>
                           </div><!--.row-->
                     </div><!--.item-->
-                    <?php
-                        }//cierre de if
-                    ?>  
+                   <?php  }//cierre de if  ?>  
                       </div><!--.carousel-inner-->
                       <?php if($limite > 4){ //el boton de avanzar se muestra solo si hay mas de 4 fotos ?> 
                       <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
@@ -335,10 +319,12 @@
         </div>
       </div>
     </div><!--.container-->
-
   </br></br>
-           <!--Slide los más vistos-->
 
+
+
+
+           <!--Slide los más vistos-->
         <div class="container" id="losMasVistos" style="width: 70% !important; margin: 20% auto 0 20%;">
         <div class="row">
         <div class="col-md-12">
@@ -370,10 +356,11 @@
                           </a>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$x][1]; ?></h4>
                         </div>
-
                         <?php }  ?>
                       </div><!--.row-->
                     </div><!--.item-->
+
+
 
                     <!--Segunda serie de fotos, de la 5 a la 8-->
                     <?php
@@ -442,19 +429,14 @@
                     <?php
                         }//cierre de if
                     ?>  
-
-                      <?php
-                        //el boton de avanzar se muestra solo si hay mas de 4 fotos
-                        if($limit_vistos > 4){
-                      ?>                 
+         
                     </div><!--.carousel-inner-->
+                      <?php  if($limit_vistos > 4){ 
+                        //el boton de avanzar se muestra solo si hay mas de 4 fotos   ?>        
                       <a data-slide="prev" href="#Carousel_vistos" class="left carousel-control">‹</a>
-                      <a data-slide="next" href="#Carousel_vistos" class="right carousel-control">›</a>
-                    </div><!--.Carousel-->
-                    <?php 
-                            }
-                    ?>
-                     
+                      <a data-slide="next" href="#Carousel_vistos" class="right carousel-control">›</a>                 
+                    <?php   }   ?>
+                    </div><!--.Carousel-->    
         </div>
       </div>
     </div><!--.container-->

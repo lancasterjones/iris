@@ -155,12 +155,10 @@
           //si se pasa valor a variabla a traves de metodo get se asigna ese valor al mes, si no, el valor del mes actual
           if(count($_GET) > 0){ $mes_reportes = "0" . $_GET['mes'];  }
           else $mes_reportes = date('m');
-
           //query consulta los mas vendidos
           $query_vendidos = "SELECT * FROM mas_vendidos
                              WHERE mes = " . $year . $mes_reportes .
-                             " ORDER BY mes DESC";
-          
+                             " ORDER BY mes DESC";          
           $res_vendidos = mysqli_query($conn, $query_vendidos);  //array con la consulta
           $contenedor = array(); //array almacena todos los resultados
           $x = 0; //contador
@@ -169,7 +167,6 @@
               $contenedor[$x][1] = $row_vendidos['sku'];
               $x++; 
           }
-
           //cuenta los elementos del array para crear espacios para imagenes, crea máximo 10 espacios
           if(count($contenedor) < 10){    $limite = count($contenedor);   }
           else  $limite = 10;
@@ -189,13 +186,11 @@
             $cont_vistos[$x][1] = $row_vistos['modelo'];
             $x++;
           }
-
           if(count($cont_vistos) < 10){
             $limit_vistos = count($cont_vistos);
           }else{
             $limit_vistos = 10;
           }
-
          ?>
 
          <!--Div contenedor de la grafica reporte mensual-->
@@ -232,8 +227,12 @@
                          ?>
                         <div class="col-md-3">
                           <a href="#" class="thumbnail">
-                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
-                            echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                            <div style="position: relative;">
+                              <div style="position: absolute;">
+                                <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
+                                echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
+                              </div>
+                            </div>
                           </a>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$x][1]; ?></h4>
                         </div>
@@ -296,10 +295,7 @@
     </div><!--.container-->
   </br></br>
 
-
-
-
-           <!--Slide los más vistos-->
+           <!--==========================Slide los más vistos============================================-->
         <div class="container" id="losMasVistos" style="width: 70% !important; margin: 20% auto 0 20%;">
         <div class="row">
         <div class="col-md-12">
@@ -356,7 +352,8 @@
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                             echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
-                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$y][1]; ?></h4>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php 
+                          echo $cont_vistos[$y][1]; ?></h4>
                         </div>  
                     <?php } //cierre for         ?>
                           </div><!--.row-->
@@ -380,7 +377,8 @@
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                             echo $cont_vistos[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
-                          <h4 style="position: relative; margin: 0px 10%;"><?php echo $cont_vistos[$y][1]; ?></h4>
+                          <h4 style="position: relative; margin: 0px 10%;"><?php 
+                          echo $cont_vistos[$y][1]; ?></h4>
                         </div>   
                       <?php   } //cierre for     ?>
                           </div><!--.row-->

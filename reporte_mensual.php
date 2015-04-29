@@ -211,14 +211,13 @@
          <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div>
         </br>
         <!--Div contenedor de la grafica de pie-->
-        <div id="piechart" style="float: left; min-width: 50%; height: 400px; margin: 7% auto 5% 20%"></div>
+        <div id="piechart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
       </br>
         <!--Slide los más vendidos-->
-        <div style="color: black; float: left; margin: 0 0 0 30%;">
+        <div style="color: black; float: left; margin: 40% 0 0 30%;">
           <h1>Lo + Vendido</h1>
         </div>
-
-        <div class="container" id="losMasVendidos" style="width: 70% !important; margin: 20% auto 0 20%;">
+        <div class="container" id="losMasVendidos" style="width: 70% !important; margin: 65% auto 0 20%;">
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">

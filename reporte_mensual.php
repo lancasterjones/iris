@@ -211,7 +211,7 @@
         </br>
 
         <!--Slide los más vendidos-->
-        <div style="color: black; float: left;">
+        <div style="color: black; float: left; margin: 0 0 0 30%;">
           <h1>Lo + Vendido</h1>
         </div>
 
@@ -338,7 +338,7 @@
   </br>
 
            <!--==========================Slide los más vistos============================================-->
-           <div style="color: black; float: left;">
+           <div style="color: black; float: left; margin: 0 0 0 30%;">
               <h1>Lo + Visto</h1>
             </div>
 

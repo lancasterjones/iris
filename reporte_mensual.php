@@ -232,11 +232,7 @@
                                 echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">
                               </div>
                           </a>
-                          <?php  if($contenedor[$x][2] == 0){ //se muestra cuando el inventario es cero ?>
-                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
-                              <p>Sin Inventario</p>
-                          </div>
-                          <?php } //cierre sin inv ?>
+                          
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$x][1]; ?></h4>
                         </div>
 

@@ -43,7 +43,7 @@
                 <!--boton ingresar-->
                 <div style="max-width: 200px;">                
                     <button class="btn btn-success btn-block" name="login"> 
-                    <span class="glyphicon glyphicon-lock"></span>Ingresar</button>
+                    Ingresar<span style="margin: 0 0 0 4px;" class="glyphicon glyphicon-lock"></span></button>
                 </div>
                 </br>
                 <hr>

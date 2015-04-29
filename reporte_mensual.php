@@ -192,13 +192,13 @@
           }
          ?>
          <!--Logo vende-->
-         <div class="pull-left" style="5% 0 0 0">
-           <img style="width: 100px; margin: 5% 10% 0 0;" src="imgs/vende.png">
+         <div class="pull-left" style="margin: 5% 0 0 25%; ">
+           <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">
          </div>
 
          <!--Logo cliente-->
-         <div class="pull-right" style="5% 10% 0 0">
-           <img style="width: 100px; margin: 5% 10% 0 0;" src="http://d1x736u1i353au.cloudfront.net/media/images/default/logoLOB_1_1__3_.png">
+         <div class="pull-right" style="margin: 5% 10% 0 0">
+           <img style="width: 100px;" src="http://d1x736u1i353au.cloudfront.net/media/images/default/logoLOB_1_1__3_.png">
          </div>
 
          <!--Div contenedor de la grafica reporte mensual-->

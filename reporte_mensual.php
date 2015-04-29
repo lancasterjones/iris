@@ -376,6 +376,7 @@
                                   <div style="position: relative; text-align:center; width: 100%; background-color: #18bc9c; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
                                   <p>Inventario <i style="margin-right: 3px;" class="glyphicon glyphicon-ok "></i></p>
                           </div>
+                              <?php }?>
                           <h4 style="position: relative; margin: 0px 10%;"><?php 
                           echo $cont_vistos[$y][1]; ?></h4>
                         </div>  

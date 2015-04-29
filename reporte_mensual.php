@@ -227,10 +227,15 @@
                             for($x = 0; $x < $limite_uno; $x++){
                          ?>
                         <div class="col-md-3">
-                          <a href="#" class="thumbnail">
-                                <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
-                                echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">                       
+                          <a href="#" class="thumbnail" style="margin: 0px">
+                            <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
+                            echo $contenedor[$x][0]; ?>" alt="Image" style="max-width:100%;">                       
                           </a>
+                          <?php  if($contenedor[$x][2] == 0){ //se muestra cuando el inventario es cero ?>
+                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                              <p>Sin Inventario</p>
+                          </div>
+                          <?php } //cierre sin inv ?>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$x][1]; ?></h4>
                         </div>
 
@@ -277,7 +282,7 @@
                       <div class="row">
                      <?php  for($y = 8; $y < $limite_tres; $y++) { //fotos 1 a 4 ?>  
                         <div class="col-md-3">
-                          <a href="#" class="thumbnail">
+                          <a href="#" class="thumbnail" style="margin: 0px">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
                           <?php  if($contenedor[$y][2] == 0){ //se muestra cuando el inventario es cero ?>

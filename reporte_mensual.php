@@ -520,7 +520,7 @@
                               echo $fraud[$i] . ", ";
                           }
                         ?>],
-                        color: 'red'
+                        color: '#c82536'
                     }, {
                         name: 'Venta',
                         type: 'spline',

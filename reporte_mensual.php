@@ -257,11 +257,11 @@
 
                       <?php for($y = 4; $y < $limite_dos; $y++)   {    ?>                  
                         <div class="col-md-3">
-                          <a href="#" class="thumbnail">
+                          <a href="#" class="thumbnail" style="margin: 0px">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                             echo $contenedor[$y][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
-                          <div style="position: relative; background-color: red; high: 5px;">
+                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
                               <p>Sin Inventario</p>
                           </div>
                           <h4 style="position: relative; margin: 0px 10%;"><?php echo $contenedor[$y][1]; ?></h4>

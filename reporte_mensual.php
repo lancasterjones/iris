@@ -191,6 +191,9 @@
             $limit_vistos = 10;
           }
          ?>
+         <div class="pull-right">
+          <img style="width: 100px;" src="http://d1x736u1i353au.cloudfront.net/media/images/default/logoLOB_1_1__3_.png">
+         </div>
 
          <!--Div contenedor de la grafica reporte mensual-->
          <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 10% auto 10% 20%"></div>

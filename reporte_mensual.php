@@ -211,6 +211,9 @@
         </br>
 
         <!--Slide los más vendidos-->
+        <div style="color: black; float: left;">
+          <h1>Lo + Vendido</h1>
+        </div>
 
         <div class="container" id="losMasVendidos" style="width: 70% !important; margin: 20% auto 0 20%;">
         <div class="row">

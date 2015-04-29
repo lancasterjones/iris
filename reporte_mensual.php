@@ -138,15 +138,12 @@
                         $x++;
                   }
             }
-
            //contar elementos del array, para saber la cantidad de columnas a imprimir
            $columnasReporte =  count($semanaReporte);
            
            if ($debug == 1){
            echo "Columnas:  " . $columnasReporte . " Pedidos: " . $pedidos[0];
          }
-
-
          /*=============================================================================
           Script para menú slide mas vendidos
          */
@@ -185,6 +182,7 @@
           {
             $cont_vistos[$x][0] = $row_vistos['foto'];
             $cont_vistos[$x][1] = $row_vistos['modelo'];
+            $cont_vistos[$x][2] = $row_vistos['qty'];
             $x++;
           }
           if(count($cont_vistos) < 10){
@@ -336,10 +334,15 @@
                             for($x = 0; $x < $limite_uno; $x++){
                          ?>
                         <div class="col-md-3">
-                          <a href="#" class="thumbnail">
+                          <a href="#" class="thumbnail" style="margin: 0px;">
                             <img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php 
                             echo $cont_vistos[$x][0]; ?>" alt="Image" style="max-width:100%;">
                           </a>
+                          <?php  if($cont_vistos[$x][2] == 0){ //se muestra cuando el inventario es cero ?>
+                          <div style="position: relative; text-align:center; width: 100%; background-color: #D10056; color: white; high: 15px; margin: 2px auto; border-radius: 0 0 5px 2px;">
+                              <p>Sin Inventario</p>
+                          </div>
+                          <?php } //cierre sin inv ?>
                           <h4 style="position: relative; margin: 0px 10%;"><?php 
                           echo $cont_vistos[$x][1]; ?></h4>
                         </div>

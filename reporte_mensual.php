@@ -326,19 +326,12 @@
                     <?php
                         }//cierre de if
                     ?>  
-
-                      <?php
-                        //el boton de avanzar se muestra solo si hay mas de 4 fotos
-                        if($limite > 4){
-                      ?>                 
-                    </div><!--.carousel-inner-->
+                      </div><!--.carousel-inner-->
+                      <?php if($limite > 4){ //el boton de avanzar se muestra solo si hay mas de 4 fotos ?> 
                       <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
                       <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                      <?php  }  // cierre condicion botones  ?>
                     </div><!--.Carousel-->
-                    <?php 
-                            }
-                    ?>
-                     
         </div>
       </div>
     </div><!--.container-->

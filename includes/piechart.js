@@ -6,7 +6,7 @@
             plotShadow: false
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'Sistema IRIS'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -28,17 +28,17 @@
             type: 'pie',
             name: 'Browser share',
             data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
+                ['Primavera-Verano',   45.0],
+                ['Otoño-Invierno',       26.8],
                 {
                     name: 'Chrome',
                     y: 12.8,
                     sliced: true,
                     selected: true
                 },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
+                ['Caballero',    8.5],
+                ['Dama',     6.2],
+                ['FW',   0.7]
             ]
         }]
     });

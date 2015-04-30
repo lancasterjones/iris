@@ -502,14 +502,14 @@
     $(function () {
 
     var colors = Highcharts.getOptions().colors,
-        categories = ['El', '', 'Ella'],
+        categories = ['El', 'Ella', 'Ella'],
         data = [{
             y: 50,
             color: colors[0],
             drilldown: {
                 name: 'Caballero',
                 categories: ['FW', 'Accesorios', 'Partes Altas', 'Partes Altas'],
-                data: [<?php echo $cont_dona[0][0];?>, 7.35, 33.06, 2.81],
+                data: [<?php echo $cont_dona[0][4] . ", " . $cont_dona[0][5] . ", " . $cont_dona[0][6] . ", " . $cont_dona[0][7];?>],
                 color: colors[0]
             }
         }, {

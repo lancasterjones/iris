@@ -198,6 +198,7 @@
           $cont_dona = array();
           while($row_dona = mysqli_fetch_array($res_dona)){
             $cont_dona[$x][0] = $row_dona['ella_footwear'];
+            $cont_dona[$x][1] = $row_dona['ella_accesorios'];
             $x++;
           }
 
@@ -222,8 +223,10 @@
         <!--Div contenedor de la grafica de dona-->
           <div class="container" style="position: relative; width: 70%; margin-left: 20%; margin-right: 10%;">
             <h1><?php
-                for($y = 0; $y < 5; $y++);
+                for($y = 0; $y < 5; $y++){
                   echo $cont_dona[$y][0];
+                  echo $cont_dona[$y][1];}
+
             ?></h1> 
              <hr>
                 <div id="donut" style="float: left; width: 80%; margin: 0 auto"></div>       

@@ -1,7 +1,7 @@
 $(function () {
 
     var colors = Highcharts.getOptions().colors,
-        categories = ['MSIE', 'Chrome', 'Safari', 'Opera'],
+        categories = ['El', 'Ella', 'Safari', 'Opera'],
         data = [{
             y: 55.11,
             color: colors[0],

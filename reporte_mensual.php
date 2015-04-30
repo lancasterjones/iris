@@ -209,12 +209,15 @@
 
          <!--Div contenedor de la grafica reporte mensual-->
          <section style="clear: both">
-           <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div>
+            <div >
+              <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div> 
+            </div>
           </br>
           <hr>
         <!--Div contenedor de la grafica de pie-->
-        
-          <div id="piechart" style="float: left; min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto auto 35%"></div>
+          <div style="float: left; ">
+            <div id="piechart" style="float: left; min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto auto 35%"></div>
+          </div>
         </section>
       </br>
         <!--Slide los más vendidos-->

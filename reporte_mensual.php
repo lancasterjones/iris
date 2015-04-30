@@ -208,10 +208,12 @@
          </div>
 
          <!--Div contenedor de la grafica reporte mensual-->
-         <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div>
-        </br>
+         <section style="clear: both">
+           <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div>
+          </br>
+          <hr>
         <!--Div contenedor de la grafica de pie-->
-        <section>
+        
           <div id="piechart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 20% auto auto 35%"></div>
         </section>
       </br>

@@ -191,8 +191,9 @@
             $limit_vistos = 10;
           }
           //====================Script para grafica de dona===========================
-          $weekDona = date('W')-$columnasReporte;
-          $query_dona = "SELECT * FROM magento_venta WHERE week > 13 AND year = 2015";
+          $weekDona = date('W')-$columnasReporte;          
+          $query_dona = "SELECT * FROM magento_venta WHERE week > " .
+                          $weekDona ." AND year = ". $current_year .' "';
           $res_dona = mysqli_query($conn, $query_dona);
           $x = 0;
           $cont_dona = array();
@@ -224,8 +225,8 @@
           <div class="container" style="position: relative; width: 70%; margin-left: 20%; margin-right: 10%;">
             <h1><?php
                 for($y = 0; $y < 5; $y++){
-                  echo $cont_dona[$y][0];
-                  echo $cont_dona[$y][1];}
+                  echo " fw" .$cont_dona[$y][0];
+                  echo " ac". $cont_dona[$y][1];}
 
             ?></h1> 
              <hr>

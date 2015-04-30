@@ -208,17 +208,16 @@
          </div>
 
          <!--Div contenedor de la grafica reporte mensual-->
-         <section style="clear: both">
-            <div >
+     
+            <div class="container">
               <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div> 
             </div>
           </br>
           <hr>
         <!--Div contenedor de la grafica de pie-->
-          <div style="float: left; width: 80%; margin-left: 25%;">
+          <div class="container" style="float: left; width: 70%; margin-left: 30%;">
             <div id="piechart" style="float: left; width: 80%; margin: 0 auto"></div>
           </div>
-        </section>
       </br>
         <!--Slide los más vendidos-->
         <div style="color: black; float: left; margin-left: 30%;">

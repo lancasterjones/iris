@@ -26,19 +26,10 @@
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'Categoría',
             data: [
-                ['Primavera-Verano',   45.0],
-                ['Otoño-Invierno',       26.8],
-                {
-                    name: 'Lookbook',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Caballero',    8.5],
-                ['Dama',     6.2],
-                ['FW',   0.7]
+                ['Dama', 73],
+                ['Caballero',       26.8]
             ]
         }]
     });

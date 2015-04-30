@@ -193,7 +193,7 @@
           //====================Script para grafica de dona===========================
           $weekDona = date('W')-5;          
           $query_dona = "SELECT * FROM magento_venta WHERE week > " .
-                          $weekDona ." AND year = ". $current_year .' "';
+                          $weekDona ." AND year = 2015";
           $res_dona = mysqli_query($conn, $query_dona);
           $x = 0;
           $cont_dona = array();

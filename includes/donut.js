@@ -6,7 +6,7 @@ $(function () {
             y: 55.11,
             color: colors[0],
             drilldown: {
-                name: 'MSIE versions',
+                name: 'Caballero',
                 categories: ['MSIE 6.0', 'MSIE 7.0', 'MSIE 8.0', 'MSIE 9.0'],
                 data: [10.85, 7.35, 33.06, 2.81],
                 color: colors[0]

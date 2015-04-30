@@ -508,15 +508,15 @@
             color: colors[0],
             drilldown: {
                 name: 'Caballero',
-                categories: ['MSIE 6.0', 'MSIE 7.0', 'MSIE 8.0', 'MSIE 9.0'],
+                categories: ['FW', 'Accesorios', 'Partes Altas', 'Partes Altas'],
                 data: [<?php echo $cont_dona[0][0];?>, 7.35, 33.06, 2.81],
                 color: colors[0]
             }
         }, {
             y: 21.63,
-            color: colors[1],
+            color: colors[2],
             drilldown: {
-                name: 'Firefox versions',
+                name: 'Dama',
                 categories: ['Firefox 2.0', 'Firefox 3.0', 'Firefox 3.5', 'Firefox 3.6', 'Firefox 4.0'],
                 data: [9, 0.83, 1.58, 13.12, 5.43],
                 color: colors[1]

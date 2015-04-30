@@ -216,13 +216,10 @@
           <div class="container" style="float: left; width: 70%; margin-left: 30%;">
             <div id="piechart" style="float: left; width: 80%; margin: 0 auto"></div>
           </div>
-      </br><hr id="losMasVendidos">
+      </br>
         <!--Slide los más vendidos-->
-        <div style="color: black; float: left; margin-left: 30%;">
-          <h1>Lo + Vendido</h1>
-        </div>
         <div class="container" style="width: 70% !important; margin: 40% auto 0 20%;">
-          <hr>
+          <hr id="losMasVendidos">
           <h1>Lo + Vendido</h1>
         <div class="row">
         <div class="col-md-12">
@@ -343,14 +340,12 @@
         </div>
       </div>
     </div><!--.container-->
-  </br><hr id="losMasVistos">
+  </br>
 
            <!--==========================Slide los más vistos============================================-->
-           <div style="color: black; float: left; margin: 0 0 0 30%;">
-              <h1>Lo + Visto</h1>
-            </div>
-
         <div class="container" style="width: 70% !important; margin: 10% auto 0px 20%;">
+          <hr id="losMasVistos">
+          <h1>Lo + Visto</h1>
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel_vistos" class="carousel slide">

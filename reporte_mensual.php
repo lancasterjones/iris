@@ -197,6 +197,7 @@
           $res_dona = mysqli_query($conn, $query_dona);
           $x = 0;
           $cont_dona = array();
+          $totalMesDona = array();
           while($row_dona = mysqli_fetch_array($res_dona)){
             $cont_dona[$x][0] = $row_dona['ella_footwear'];
             $cont_dona[$x][1] = $row_dona['ella_accesorios'];
@@ -208,6 +209,10 @@
             $cont_dona[$x][7] = $row_dona['el_partes_bajas'];
             $x++;
           }
+          //suma de semanas para mostrar resultado mensual
+            for($x = 0; $x < $columnasReporte; $x++){
+              $totalMesDona[0] += $cont_dona[$x][0];
+            }
 
 
          ?>
@@ -509,7 +514,7 @@
             drilldown: {
                 name: 'Caballero',
                 categories: ['FW', 'Accesorios', 'Partes Altas', 'Partes Altas'],
-                data: [<?php echo $cont_dona[0][4] . ", " . $cont_dona[0][5] . ", " . $cont_dona[0][6] . ", " . $cont_dona[0][7];?>],
+                data: [<?php echo $totalMesDona[0] . ", " . $cont_dona[0][5] . ", " . $cont_dona[0][6] . ", " . $cont_dona[0][7];?>],
                 color: colors[0]
             }
         }, {

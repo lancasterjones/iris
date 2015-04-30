@@ -200,6 +200,12 @@
           while($row_dona = mysqli_fetch_array($res_dona)){
             $cont_dona[$x][0] = $row_dona['ella_footwear'];
             $cont_dona[$x][1] = $row_dona['ella_accesorios'];
+            $cont_dona[$x][2] = $row_dona['ella_partes_altas'];
+            $cont_dona[$x][3] = $row_dona['ella_partes_bajas'];
+            $cont_dona[$x][4] = $row_dona['el_footwear'];
+            $cont_dona[$x][5] = $row_dona['el_accesorios'];
+            $cont_dona[$x][6] = $row_dona['el_partes_altas'];
+            $cont_dona[$x][7] = $row_dona['el_partes_bajas'];
             $x++;
           }
 
@@ -227,7 +233,6 @@
                 for($y = 0; $y < 5; $y++){
                   echo " fw" .$cont_dona[$y][0];
                   echo " ac". $cont_dona[$y][1];}
-
             ?></h1> 
              <hr>
                 <div id="donut" style="float: left; width: 80%; margin: 0 auto"></div>       
@@ -497,7 +502,7 @@
     $(function () {
 
     var colors = Highcharts.getOptions().colors,
-        categories = ['El', 'Ella', 'Safari', 'Opera'],
+        categories = ['El', '', 'Ella'],
         data = [{
             y: 55.11,
             color: colors[0],

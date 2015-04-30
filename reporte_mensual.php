@@ -190,12 +190,19 @@
           }else{
             $limit_vistos = 10;
           }
+          //====================Script para grafica de dona===========================
+          $weekDona = date('W')-$columnasReporte;
+          $query_dona = "SELECT * FROM magento_venta WHERE week = $weekDona AND year = $current_year";
+          $res_dona = mysqli_query($conn, $query_dona);
+          $x = 0;
+          $cont_dona = array();
+          while($row_dona = mysqli_fetch_array($res_dona)){
+            $cont_dona[$x][0] = $row_dona['ella_footwear'];
+            $x++;
+          }
+
+
          ?>
-         <script>
-         $(function() {
-          $('html').smoothScroll(500);
-         });
-        </script>
          <!--Logo vende-->
          <div class="pull-left" style="margin: 5% 0 0 25%; ">
            <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">

@@ -17,7 +17,7 @@ $(function () {
             drilldown: {
                 name: 'Firefox versions',
                 categories: ['Firefox 2.0', 'Firefox 3.0', 'Firefox 3.5', 'Firefox 3.6', 'Firefox 4.0'],
-                data: [0.20, 0.83, 1.58, 13.12, 5.43],
+                data: [<?php echo 9; ?>, 0.83, 1.58, 13.12, 5.43],
                 color: colors[1]
             }
         }, {

@@ -504,7 +504,7 @@
     var colors = Highcharts.getOptions().colors,
         categories = ['El', '', 'Ella'],
         data = [{
-            y: 55.11,
+            y: 50,
             color: colors[0],
             drilldown: {
                 name: 'Caballero',
@@ -513,11 +513,11 @@
                 color: colors[0]
             }
         }, {
-            y: 21.63,
+            y: 50,
             color: colors[2],
             drilldown: {
                 name: 'Dama',
-                categories: ['Firefox 2.0', 'Firefox 3.0', 'Firefox 3.5', 'Firefox 3.6', 'Firefox 4.0'],
+                categories: ['FW', 'Accesorios', 'Partes Altas', 'Partes Altas'],
                 data: [9, 0.83, 1.58, 13.12, 5.43],
                 color: colors[1]
             }

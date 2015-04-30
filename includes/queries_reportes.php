@@ -23,7 +23,7 @@
           ON     (LEFT(YEARWEEK(sales_flat_order.created_at, 7), 4) =
                      Subquery.```year```)
              AND (WEEK(sales_flat_order.created_at, 7) = Subquery.semana)
- WHERE sales_flat_order.status IN ('complete', 'processing') ";
+ WHERE sales_flat_order.status IN ('complete', 'processing') GROUP BY WEEK(sales_flat_order.created_at, 7) ";
 
 
      //query para fraudes

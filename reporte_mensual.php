@@ -214,7 +214,7 @@
           <hr>
         <!--Div contenedor de la grafica de pie-->
         
-          <div id="piechart" style="float: left; min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto auto 35%"></div>
+          
         </section>
       </br>
         <!--Slide los más vendidos-->
@@ -476,7 +476,7 @@
         </div>
       </div>
     </div><!--.container-->
-
+<div id="piechart" style="float: left; min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto auto 35%"></div>
 
     <!--Scripts-->
     <script src="includes/piechart.js"></script>

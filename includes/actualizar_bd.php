@@ -65,10 +65,13 @@
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }else{ echo "Conexion MySql Ok";}
 
+    $year_act = date('Y');
+    $week_act = date('W')-5;
+
     //Se elimina información en tabla masVendidos y masVistos server VENDE 
     mysqli_query($con,"TRUNCATE TABLE mas_vendidos");
     mysqli_query($con,"TRUNCATE TABLE mas_vistos");
-    mysqli_query($con,"TRUNCATE TABLE magento_venta");
+    mysqli_query($con, "DELETE FROM magento_venta WHERE year = $year_act AND week > $week_act");
 
 	 //llenar tabla vende con arreglo
       foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos, $venta, $semana, $year, $fraudes))

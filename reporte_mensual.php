@@ -47,7 +47,6 @@
           //script con queries para generar info de reportes
           include 'includes/queries_reportes.php';
       ?>
-         <script src="http://code.highcharts.com/highcharts.js"></script>
          <script src="http://code.highcharts.com/modules/exporting.js"></script>      
 
          <?php            

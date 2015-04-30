@@ -82,7 +82,7 @@ $(function () {
     }
 
     // Create the chart
-    $('#container').highcharts({
+    $('#donut').highcharts({
         chart: {
             type: 'pie'
         },

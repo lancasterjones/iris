@@ -212,11 +212,10 @@
             </div>
           </br>
          
-        <!--Div contenedor de la grafica de pie y dona-->
+        <!--Div contenedor de la grafica de dona-->
           <div class="container" style="position: relative; width: 80%; margin-left: 20%;">
              <hr>
-               <div id="piechart" style="float: left; width: 50%; margin: 0 auto"></div>
-                <div id="donut" style="float: left; width: 40%; margin: 0 auto"></div>       
+                <div id="donut" style="float: left; width: 70%; margin: 0 auto"></div>       
           </div>
       </br>
         <!--Slide los más vendidos-->
@@ -478,7 +477,6 @@
 
 
     <!--Scripts-->
-    <script src="includes/piechart.js"></script>
     <script src="includes/donut.js"></script>
          <script>
               $(function () {

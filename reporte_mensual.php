@@ -222,6 +222,8 @@
           <h1>Lo + Vendido</h1>
         </div>
         <div class="container" style="width: 70% !important; margin: 40% auto 0 20%;">
+          <hr>
+          <h1>Lo + Vendido</h1>
         <div class="row">
         <div class="col-md-12">
                     <div id="Carousel" class="carousel slide">

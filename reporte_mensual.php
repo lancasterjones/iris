@@ -221,6 +221,10 @@
          
         <!--Div contenedor de la grafica de dona-->
           <div class="container" style="position: relative; width: 70%; margin-left: 20%; margin-right: 10%;">
+            <h1><?php
+                for($y = 0; $y < 5; $y++);
+                  echo $cont_dona[$y][0];
+            ?></h1> 
              <hr>
                 <div id="donut" style="float: left; width: 80%; margin: 0 auto"></div>       
           </div>

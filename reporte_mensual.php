@@ -191,7 +191,7 @@
             $limit_vistos = 10;
           }
           //====================Script para grafica de dona===========================
-          $weekDona = date('W')-5;          
+          $weekDona = date('W')-$columnasReporte;          
           $query_dona = "SELECT * FROM magento_venta WHERE week > " .
                           $weekDona ." AND year = $current_year";
           $res_dona = mysqli_query($conn, $query_dona);
@@ -576,7 +576,7 @@
             valueSuffix: '.°°'
         },
         series: [{
-            name: 'Browsers',
+            name: 'Total',
             data: browserData,
             size: '60%',
             dataLabels: {

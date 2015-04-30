@@ -215,7 +215,7 @@
         <!--Div contenedor de la grafica de pie-->
           <div class="container" style="float: left; width: 70%; margin-left: 30%;">
              <hr>
-               <!-- <div id="piechart" style="float: left; width: 40%; margin: 0 auto"></div>-->
+               <div id="piechart" style="float: left; width: 40%; margin: 0 auto"></div>
                 <div id="donut" style="float: left; width: 40%; margin: 0 auto"></div>
        
           </div>

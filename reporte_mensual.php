@@ -518,7 +518,7 @@
             drilldown: {
                 name: 'Dama',
                 categories: ['FW', 'Accesorios', 'Partes Altas', 'Partes Altas'],
-                data: [9, 0.83, 1.58, 13.12, 5.43],
+                data: [<?php echo $cont_dona[0][0] . ", " . $cont_dona[0][1] . ", " . $cont_dona[0][2] . ", " . $cont_dona[0][3];?>],
                 color: colors[1]
             }
         }],
@@ -573,7 +573,7 @@
             }
         },
         tooltip: {
-            valueSuffix: '%'
+            valueSuffix: '.°°'
         },
         series: [{
             name: 'Browsers',

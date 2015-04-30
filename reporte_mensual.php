@@ -211,14 +211,15 @@
               <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div> 
             </div>
           </br>
-          <hr>
+         
         <!--Div contenedor de la grafica de pie-->
           <div class="container" style="float: left; width: 70%; margin-left: 30%;">
+             <hr>
             <div id="piechart" style="float: left; width: 80%; margin: 0 auto"></div>
           </div>
       </br>
         <!--Slide los más vendidos-->
-        <div class="container" style="width: 70% !important; margin: 40% auto 0 20%;">
+        <div class="container" style="width: 70% !important; margin: 0 auto 0 20%;">
           <hr id="losMasVendidos">
           <h1>Lo + Vendido</h1>
         <div class="row">
@@ -343,7 +344,7 @@
   </br>
 
            <!--==========================Slide los más vistos============================================-->
-        <div class="container" style="width: 70% !important; margin: 10% auto 0px 20%;">
+        <div class="container" style="width: 70% !important; margin: 0 auto 0px 20%;">
           <hr id="losMasVistos">
           <h1>Lo + Visto</h1>
         <div class="row">

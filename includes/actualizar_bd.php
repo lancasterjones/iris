@@ -68,6 +68,7 @@
     //Se elimina información en tabla masVendidos y masVistos server VENDE 
     mysqli_query($con,"TRUNCATE TABLE mas_vendidos");
     mysqli_query($con,"TRUNCATE TABLE mas_vistos");
+    mysqli_query($con,"TRUNCATE TABLE magento_venta");
 
 	 //llenar tabla vende con arreglo
       foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos, $venta, $semana, $year, $fraudes))

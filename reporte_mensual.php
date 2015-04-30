@@ -215,7 +215,10 @@
         <!--Div contenedor de la grafica de pie-->
           <div class="container" style="float: left; width: 70%; margin-left: 30%;">
              <hr>
-            <div id="piechart" style="float: left; width: 80%; margin: 0 auto"></div>
+             <div style="clear: both">
+                <div id="piechart" style="float: left; width: 40%; margin: 0 auto"></div>
+                <div id="donut" style="float: left; width: 40%; margin: 0 auto"></div>
+             </div>
           </div>
       </br>
         <!--Slide los más vendidos-->
@@ -478,6 +481,7 @@
 
     <!--Scripts-->
     <script src="includes/piechart.js"></script>
+    <script src="includes/donut.js"></script>
          <script>
               $(function () {
                 $('#container').highcharts({

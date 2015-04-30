@@ -68,7 +68,6 @@
     //Se elimina información en tabla masVendidos y masVistos server VENDE 
     mysqli_query($con,"TRUNCATE TABLE mas_vendidos");
     mysqli_query($con,"TRUNCATE TABLE mas_vistos");
-    mysqli_query($con, "TRUNCATE TABLE magento_venta");
 
 	 //llenar tabla vende con arreglo
       foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos, $venta, $semana, $year, $fraudes))
@@ -76,6 +75,7 @@
         mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
         mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
         mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year, fraudes) VALUES ('$pedidos', '$venta', '$semana', 'LOB', '$year', '$fraudes')");
+        /*mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year, fraudes) SELECT * FROM ('$pedidos', '$venta', '$semana', 'LOB', '$year', '$fraudes') AS tmp WHERE NOT EXIST(SELECT ) ");*/
     }
 
 	

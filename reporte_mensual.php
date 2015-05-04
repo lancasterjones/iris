@@ -243,7 +243,7 @@
           </div>
       </br>
         <!--Slide los más vendidos-->
-        <div class="container" style="width: 70% !important; margin: 0 auto 0 20%;">
+        <div class="container" style="<?php if($limite == 0) echo "display: none; " ?>width: 70% !important; margin: 0 auto 0 20%;">
           <hr id="losMasVendidos">
           <h1>Lo + Vendido</h1>
         <div class="row">

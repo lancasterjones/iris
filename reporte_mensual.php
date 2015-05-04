@@ -110,7 +110,7 @@
               $calcular_mes->setISODate($current_year, $week);
               $mes_formato = $calcular_mes->format('n');
                   if($mes_formato == $mesComparar){      
-                        $numColum = $x;                
+                        $numColum = $x + 1;                
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
                         if ($debug == 1){  echo "semana: " . $semanaReporte[$x];  }

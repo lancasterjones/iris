@@ -47,7 +47,7 @@ if ($login->isUserLoggedIn() == true) {
     // for demonstration purposes, we simply show the "you are logged in" view.
     echo "
           <script>
-              location.href='reportebasico.php';
+              location.href='reporte_mensual.php';
           </script>
        ";
 

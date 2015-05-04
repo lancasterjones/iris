@@ -117,7 +117,7 @@
                         //query que obtiene ventas y pedidos
                         $query = "
                               SELECT * FROM magento_venta
-                              WHERE week = $semana";
+                              WHERE week = $semana AND year = $current_year";
                         if ($debug == 1){
                         echo "posicion : " . $x;
                         echo "<h1>Semana: " . $semana . "</h1>";

@@ -48,7 +48,8 @@
           include 'includes/queries_reportes.php';
       ?>   
 
-         <?php            
+         <?php    
+            $usuario = $_SESSION['user_name'];
             $current_year = date("Y");   //año actual            
             $mes_actual = date("n");//Mes actual
 
@@ -225,7 +226,7 @@
            <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">
          </div>
          <div style="position: relative; margin: 0 auto; text-align: center;">
-            <b>Usuario: <?php echo $_SESSION['user_name'];?></b>
+            <b>Usuario: <?php echo $usuario;?></b>
          </div>
          <!--Logo cliente-->
          <div class="pull-right" style="margin: 5% 10% 0 0">

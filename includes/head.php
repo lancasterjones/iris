@@ -26,7 +26,5 @@ echo '
     <!--Estilo para el slider tipo carrusel-->
     <link rel="stylesheet" href="css/simple_carousel.css" type="text/css"/>
     <script src="includes/simple_carousel.js"></script>
-    <!--Scroll-->
-    <script src="includes/jquery.smoothscroll.min.js"></script>
 ';
 ?>

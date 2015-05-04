@@ -17,9 +17,8 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros Meses <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span></a>
 					<ul class="dropdown-menu forAnimate" role="menu">
-						<li><?php $current_year = date("Y"); echo $current_year; ?></li>
-						<li class='divider'></li>
 						<?php 
+    						$current_year = date("y");
 							$mes_actual = date('n');
 							$limite = 1;
 							for($x = $mes_actual; $x >= $limite; $x--){
@@ -39,7 +38,7 @@
 							        case 12: $mes = "Diciembre "; break;
 							    }
 						?>
-						<li><a href="?mes=<?php echo $x;?>"><?php echo $mes; ?> </a>
+						<li><a href="?mes=<?php echo $x;?>"><?php echo $mes . " '" .$current_year; ?> </a>
 						<?php
 								
 						  }
@@ -49,7 +48,7 @@
 				<li ><a href="#">Categorías<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicons-pie-chart"><i class="fa fa-pie-chart"></i></span></a></li>
 				<li ><a href="#losMasVendidos">Los Más Vendidos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
 				<li ><a href="#losMasVistos">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
-				<li><a href="#" onclick="actualizar();">Sincronizar<i id="icono" style="font-size: 16px;" class="glyphicon glyphicon-refresh hidden-xs pull-right"></i></a></li>
+				<li><a href="#" onclick="actualizar();">Sincronizar<i style="font-size: 16px;" class="glyphicon glyphicon-refresh hidden-xs pull-right"></i></a></li>
 				<li><a href="index.php?logout">Salir <i class="glyphicon glyphicon-log-out hidden-xs pull-right"></i></a></li>
 			</ul>
 		</div>
@@ -58,10 +57,8 @@
 
 <script>
 	function actualizar(){
-		//$.get("includes/actualizar_bd.php");
-		$('#icono').remove();
-		$('a').append("");
-		//alert("Sincronización completa!");
+		$.get("includes/actualizar_bd.php");
+		alert("Sincronización completa!");
 		return false;
 	}
 </script>

@@ -136,6 +136,7 @@
                           echo "Fraudes : " . $fraud[$x];
                         }
                         $x++;
+                        $numColum = $x;
                   }
             }
            //contar elementos del array, para saber la cantidad de columnas a imprimir
@@ -617,7 +618,7 @@
                     },
                     xAxis: [{
                         categories: [<?php 
-                        for($x = 0; $x < $columnasReporte; $x++){
+                        for($x = 0; $x < $numColum; $x++){
                             echo "'S " . $semanaReporte[$x] . "', "; 
                          }
                         ?>

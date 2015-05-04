@@ -778,7 +778,6 @@
 
  }
 
-               echo "Bienvenido: " . $_SESSION['user_name']; 
 
                 ?>
             

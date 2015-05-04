@@ -782,6 +782,7 @@
                 ?>
             
          </table>
+         <?php }echo $numColum; ?>
      
   </body>
 

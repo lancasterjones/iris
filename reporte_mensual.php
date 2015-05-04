@@ -224,8 +224,8 @@
          <div class="pull-left" style="margin: 5% 0 0 25%; ">
            <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">
          </div>
-         <div style="float: left;">
-            <b>Bienvenido: </b>
+         <div style="position: relative; margin: 0 auto; text-align: center;">
+            <b>Usuario: <?php echo $_SESSION['user_name'];?></b>
          </div>
          <!--Logo cliente-->
          <div class="pull-right" style="margin: 5% 10% 0 0">

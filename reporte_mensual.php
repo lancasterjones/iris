@@ -232,6 +232,7 @@
          <!--Div contenedor de la grafica reporte mensual-->
      
             <div class="container">
+              <?php echo "Bienvenido: " . $_SESSION['user_name']; ?>
               <div id="container" style="float: left; min-width: 70%; height: 400px; margin: 7% auto 5% 20%"></div> 
             </div>
           </br>
@@ -782,7 +783,6 @@
                 ?>
             
          </table>
-         <?php }echo $numColum; ?>
      
   </body>
 

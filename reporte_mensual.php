@@ -225,7 +225,7 @@
          <div class="pull-left" style="margin: 5% 0 0 25%; ">
            <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">
          </div>
-         <div style="position: relative; margin: 0 auto; text-align: center;">
+         <div style="position: relative; margin: 0 auto; display: none; text-align: center;">
             <b>Usuario: <?php echo $usuario;?></b>
          </div>
          <!--Logo cliente-->

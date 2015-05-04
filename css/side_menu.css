@@ -33,7 +33,7 @@
 
 		/*Allow main to be next to Nav*/
 		.main{
-			position: absolute;
+			position: relative;
 			width: calc(100% - 40px); /*keeps 100% minus nav size*/
 			margin-left: 40px;
 			float: right;

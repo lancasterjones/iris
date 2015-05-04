@@ -412,7 +412,7 @@
        </button>
           </div>';
 
-          echo "<h1>Bienvenido: " . "</h1>";
+          echo "<h1>Bienvenido: " . $_SESSION['user_name'] . "</h1>";
 
   ?>
   <script>

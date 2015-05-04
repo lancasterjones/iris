@@ -49,7 +49,7 @@
       ?>   
 
          <?php    
-            $usuario = $_SESSION['user_name'];
+            $usuario = $_SESSION['user_email'];
             $current_year = date("Y");   //año actual            
             $mes_actual = date("n");//Mes actual
 

@@ -47,7 +47,7 @@
 				</li>
 				<li ><a href="#">Categorías<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicons-pie-chart"><i class="fa fa-pie-chart"></i></span></a></li>
 				<li ><a id="lmven" href="#">Los Más Vendidos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
-				<li ><a href="#lmvis">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
+				<li ><a id="lmvis" href="#">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
 				<li><a href="#" onclick="actualizar();">Sincronizar<i style="font-size: 16px;" class="glyphicon glyphicon-refresh hidden-xs pull-right"></i></a></li>
 				<li><a href="index.php?logout">Salir <i class="glyphicon glyphicon-log-out hidden-xs pull-right"></i></a></li>
 			</ul>

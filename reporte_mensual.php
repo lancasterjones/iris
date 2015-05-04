@@ -109,7 +109,8 @@
             for($week = $semanaUno; $week < 54; $week++){ 
               $calcular_mes->setISODate($current_year, $week);
               $mes_formato = $calcular_mes->format('n');
-                  if($mes_formato == $mesComparar){                      
+                  if($mes_formato == $mesComparar){      
+                        $numColum += 1;                
                         $semanaReporte[$x] = $week - $ajusteSemana; /*cada año se ajusta la semana dependiendo
                         de cuando empieza*/
                         if ($debug == 1){  echo "semana: " . $semanaReporte[$x];  }
@@ -136,7 +137,6 @@
                           echo "Fraudes : " . $fraud[$x];
                         }
                         $x++;
-                        $numColum = $x;
                   }
             }
            //contar elementos del array, para saber la cantidad de columnas a imprimir

@@ -237,7 +237,7 @@
           </br>
          
         <!--Div contenedor de la grafica de dona-->
-          <div class="container" style="position: relative; width: 70%; margin-left: 20%; margin-right: 10%;"> 
+          <div class="container" style="display: none; position: relative; width: 70%; margin-left: 20%; margin-right: 10%;"> 
              <hr>
                 <div id="donut" style="float: left; width: 80%; margin: 0 auto"></div>       
           </div>

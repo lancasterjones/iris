@@ -412,7 +412,9 @@
        </button>
           </div>';
 
-          echo "<h1>Bienvenido: " . $_SESSION['user_name'] . "</h1>";
+          $usuario = $_SESSION['user_name'];
+          $usuario = strtoupper($usuario);
+          echo "<h1>Bienvenido: " . $usuario . "</h1>";
 
   ?>
   <script>

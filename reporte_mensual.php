@@ -214,6 +214,7 @@
           for($y = 0; $y < 8; $y++){
             for($x = 0; $x <= $columnasReporte; $x++){
               $totalMesDona[$y] += $cont_dona[$x][4];
+              $totalMesDona[$y] += $cont_dona[$x][5];
             }
           }
 
@@ -512,7 +513,7 @@
             drilldown: {
                 name: 'Caballero',
                 categories: ['FW', 'Accesorios', 'Partes Altas', 'Partes Altas'],
-                data: [<?php echo $totalMesDona[0] . ", " . $cont_dona[0][5] . ", " . $cont_dona[0][6] . ", " . $cont_dona[0][7];?>],
+                data: [<?php echo $totalMesDona[0] . ", " . $totalMesDona[1] . ", " . $cont_dona[0][6] . ", " . $cont_dona[0][7];?>],
                 color: colors[0]
             }
         }, {

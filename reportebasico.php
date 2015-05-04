@@ -412,6 +412,8 @@
        </button>
           </div>';
 
+          echo "<h1>Bienvenido: " . "</h1>";
+
   ?>
   <script>
       //script para botón actualizar

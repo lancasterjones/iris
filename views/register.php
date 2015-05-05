@@ -20,6 +20,9 @@ if (isset($registration)) {
 ?>
 
 <div class="container" style="width: 50%;">
+    <div class="pull-left" style="margin: 5% 0 0 25%; ">
+           <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">
+         </div>
 
     <!-- register form -->
     <form method="post" action="register.php" class="form-horizontal" role="form" name="registerform">

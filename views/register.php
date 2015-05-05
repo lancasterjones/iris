@@ -19,7 +19,7 @@ if (isset($registration)) {
 }
 ?>
 
-<div class="container" align="center">
+<div class="container" style="width: 50%;">
 
     <!-- register form -->
     <form method="post" action="register.php" class="form-horizontal" role="form" name="registerform">

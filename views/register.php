@@ -46,6 +46,8 @@ if (isset($registration)) {
 
     </form>
 
-    <!-- backlink -->
-    <a href="index.php">Regresar</a>      
+    <!-- Link para volver -->     
+    <ul class="pager">
+      <li><a href="index.php">Regresar</a></li>
+    </ul> 
 </div>

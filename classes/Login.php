@@ -108,7 +108,7 @@ class Login
         $_SESSION = array();
         session_destroy();
         // return a little feeedback message
-        $this->messages[] = "Tu sesión se ha cerrado exitosamente.";
+        $this->messages[] = "<script> alert('Tu sesión se ha cerrado exitosamente.'); </script>";
 
     }
 

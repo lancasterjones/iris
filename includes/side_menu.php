@@ -17,7 +17,7 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes 
 						<span class="caret"></span> 
-						<span style="font-size: 16px;" class="pull-right hidden-xs showopacity ghlyphicon glyphicon-th"></span>
+						<span style="font-size: 16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span>
 					</a>
 					<ul class="dropdown-menu forAnimate" role="menu">
 						<li><a href="reporte_mensual.php">LOB</a></li>

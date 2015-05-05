@@ -46,6 +46,7 @@ if (isset($registration)) {
         }
     }
 }
+include 'includes/side_menu.php';
 ?>
 
 <div class="container" style="width: 50%;">

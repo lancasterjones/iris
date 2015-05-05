@@ -39,7 +39,9 @@
     
   </head>
   <body>
-      <?php include 'includes/side_menu.php';
+      <?php 
+          $usuario = $_SESSION['user_email'];
+          include 'includes/side_menu.php';
 
           //conectar base de datos Vende
           include 'includes/data_base.php';
@@ -49,7 +51,7 @@
       ?>   
 
          <?php    
-            $usuario = $_SESSION['user_email'];
+            
             $current_year = date("Y");   //año actual            
             $mes_actual = date("n");//Mes actual
 

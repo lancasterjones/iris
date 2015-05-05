@@ -28,7 +28,7 @@ if (isset($registration)) {
             <div class='form-group'>
                 <!-- the user name input field uses a HTML5 pattern check -->
                 <label class="col-lg-2 control-label" for="login_input_username">Usuario: </label>
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <input id="login_input_username" class="form-control" type="text" name="user_name" required />
                 </div>
             </div>

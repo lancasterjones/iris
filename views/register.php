@@ -90,6 +90,6 @@ if (isset($registration)) {
 
     <!-- Link para volver -->     
     <ul class="pager">
-      <li><a href="index.php">Regresar</a></li>
+      <li><a href="reporte_mensual.php">Regresar</a></li>
     </ul> 
 </div>

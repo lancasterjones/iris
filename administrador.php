@@ -25,7 +25,7 @@
        ";
 
     } 
-    
+    $usuario = $_SESSION['user_email'];
 ?>
 
 <!DOCTYPE html>

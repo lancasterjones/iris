@@ -45,11 +45,20 @@ $login = new Login();
 if ($login->isUserLoggedIn() == true) {
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
-    echo "
-          <script>
-              location.href='reporte_mensual.php';
-          </script>
-       ";
+    $companyName = $_SESSION['user_email'] ;
+
+    switch ($companyName) {
+    	case 'Vende':
+    		echo " <script> location.href='administrador.php';  </script> ";
+    		break;
+    	case 'Lob':
+    		echo " <script> location.href='reporte_mensual.php';  </script> ";
+    		break;
+    	default:
+    		echo " <script> alert('error'); </script> ";
+    		break;
+    }
+    
 
 } else {
     // the user is not logged in. you can do whatever you want here.

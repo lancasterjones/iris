@@ -48,7 +48,7 @@ if (isset($registration)) {
  include 'includes/side_menu.php';
 ?>
 <div class="container">
-    <div class="pull-right" style="margin: 5% 0 0 25%; ">
+    <div class="pull-right" style="margin: 5% 20% 0 25%; ">
        <img style="width: 100px;" src="http://vende.io/wp-content/uploads/2015/03/Logo-rect-130px.png">
      </div>
 </div>

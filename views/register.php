@@ -46,10 +46,10 @@ if (isset($registration)) {
         }
     }
 }
+ include 'includes/side_menu.php';
 ?>
 
 <div class="container">
-    <?php include 'includes/side_menu.php';?>
     <!-- register form -->
     <form method="post" action="register.php" class="form-horizontal" role="form" name="registerform">
         <fieldset>

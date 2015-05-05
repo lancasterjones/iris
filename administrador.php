@@ -26,6 +26,9 @@
 
     } 
     $usuario = $_SESSION['user_email'];
+    if($usuario != 'Vende'){
+      echo "<script> location.href='index.php?logout' </script>";
+    }
 ?>
 
 <!DOCTYPE html>

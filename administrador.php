@@ -27,6 +27,7 @@
     } 
     $usuario = $_SESSION['user_email'];
     if($usuario != 'Vende'){
+      //si el usuario no es administrador se desloguea 
       echo "<script> location.href='index.php?logout' </script>";
     }
 ?>

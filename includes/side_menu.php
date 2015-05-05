@@ -50,7 +50,7 @@
 				<li ><a id="lmvis" href="#">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
 
 				<?php if($usuario == "Vende") {?>
-				<li><a href="#" id="registrar">Registrar<i id="icon_reg" style="font-size: 16px;" class="glyphicon glyphicon-pencil"></i></a></li>
+				<li><a href="#" id="registrar">Registrar<i id="icon_reg" style="font-size: 16px;" class="glyphicon glyphicon-pencil hidden-xs pull-right"></i></a></li>
 				<?php }?>
 
 				<?php if($usuario == "Vende") {?>

@@ -85,7 +85,11 @@ if (isset($registration)) {
                     <input id="login_input_password_repeat" class="form-control" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
                 </div>
             </div>
-            <input type="submit"  class="btn btn-success pull-right" name="register" value="Registrar" />
+            <div class="form-group">
+              <div class="col-lg-6 col-lg-offset-2">
+                <input type="submit"  class="btn btn-success pull-right" name="register" value="Registrar" />
+              </div>
+            </div>
         </fieldset>
     </form>
 

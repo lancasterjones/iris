@@ -20,7 +20,8 @@
 						<span style="font-size: 16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span>
 					</a>
 					<ul class="dropdown-menu forAnimate" role="menu">
-						<li><a href="reporte_mensual.php">LOB</a></li>
+						<li><a href="reporte_mensual.php">Lob</a></li>
+						<li><a href="reporte_mensual.php">Tecno lite</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">

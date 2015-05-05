@@ -82,14 +82,13 @@ if (isset($registration)) {
             </div>
             <div class="form-group">
               <div class="col-lg-6 col-lg-offset-2">
+                <!-- Link para volver -->     
+                <ul class="pager">
+                  <li><a href="index.php">Regresar</a></li>
+                </ul> 
                 <input type="submit"  class="btn btn-success pull-right" name="register" value="Registrar" />
               </div>
             </div>
         </fieldset>
     </form>
-
-    <!-- Link para volver -->     
-    <ul class="pager">
-      <li><a href="index.php">Regresar</a></li>
-    </ul> 
 </div>

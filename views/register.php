@@ -46,6 +46,7 @@ if (isset($registration)) {
         }
     }
 }
+    $usuario = $_SESSION['user_email'];
  include 'includes/side_menu.php';
 ?>
 

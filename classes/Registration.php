@@ -95,9 +95,9 @@ class Registration
 
                     // if user has been added successfully
                     if ($query_new_user_insert) {
-                        $this->messages[] = "Your account has been created successfully. You can now log in.";
+                        $this->messages[] = "<script> alert('Listo! Se ha creado una nueva cuenta exitosamente.'); </script>";
                     } else {
-                        $this->errors[] = "Sorry, your registration failed. Please go back and try again.";
+                        $this->errors[] = "<script> alert('Ha ocurrido un Error, por favor vuelve a intentarlo.'); </script>";
                     }
                 }
             } else {

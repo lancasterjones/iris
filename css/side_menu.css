@@ -33,7 +33,7 @@
 
 		/*Allow main to be next to Nav*/
 		.main{
-			position: relative !important;
+			position: relative;
 			width: calc(100% - 40px); /*keeps 100% minus nav size*/
 			margin-left: 40px;
 			float: right;
@@ -94,6 +94,7 @@
 
 		/*gives sidebar width/height*/
 		nav.sidebar{
+			position: fixed;
 			width: 200px;
 			height: 100%;
 			margin-left: -160px;

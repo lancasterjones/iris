@@ -36,17 +36,23 @@ if (isset($registration)) {
             <div class='form-group'>
                 <!-- the email input field uses a HTML5 email type check -->
                 <label class="col-lg-2 control-label" for="login_input_email">Compañía: </label>
-                <input id="login_input_email" class="form-control" type="text" name="user_email" required />
+                <div class="col-lg-6">
+                     <input id="login_input_email" class="form-control" type="text" name="user_email" required />
+                </div>
             </div>
             <div class='form-group'>
                 <label class="col-lg-2 control-label" for="login_input_password_new">Contraseña: </label>
-                <input id="login_input_password_new" class="form-control" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
+                <div class="col-lg-6">
+                    <input id="login_input_password_new" class="form-control" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />
+                </div>
             </div>
             <div class='form-group'>
                 <label class="col-lg-2 control-label" for="login_input_password_repeat">Repetir Contraseña: </label>
-                <input id="login_input_password_repeat" class="form-control" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
-                <input type="submit"  class="btn btn-success" name="register" value="Registrar" />
+                <div class="col-lg-6">
+                    <input id="login_input_password_repeat" class="form-control" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
+                </div>
             </div>
+            <input type="submit"  class="btn btn-success" name="register" value="Registrar" />
         </fieldset>
     </form>
 

@@ -87,7 +87,7 @@ if (isset($registration)) {
             </div>
             <div class="form-group">
               <div class="col-lg-6 col-lg-offset-2">
-                <input type="submit"  class="btn btn-success pull-right" name="register" value="Registrar" />
+                <input type="submit"  class="btn btn-success pull-right" <?php if($usuario == "Vende") {echo 'name="register"'; }?> value="Registrar" />
               </div>
             </div>
         </fieldset>

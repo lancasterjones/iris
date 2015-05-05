@@ -41,7 +41,7 @@ if (isset($registration)) {
         <div class='form-group'>
             <label class="control-label col-sm-5" for="login_input_password_repeat">Repetir Contraseña: </label>
             <input id="login_input_password_repeat" class="form-control" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />
-            <input type="submit"  name="register" value="Registrar" />
+            <input type="submit"  class="btn btn-success" name="register" value="Registrar" />
         </div>
 
     </form>

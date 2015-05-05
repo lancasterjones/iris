@@ -51,7 +51,7 @@ if (isset($registration)) {
 
 <div class="container">
     <!-- register form -->
-    <form method="post" action="register.php" class="form-horizontal" role="form" name="registerform">
+    <form method="post" action="register.php" style="margin: 5% auto 0 30%;" class="form-horizontal" role="form" name="registerform">
         <fieldset>
             <legend>Registro de nuevos usuarios</legend>
             <div class='form-group'>

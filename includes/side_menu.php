@@ -58,7 +58,10 @@
 					</ul>
 				</li>
 				<li ><a style="cursor: not-allowed;" href="#">Categorías<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicons-pie-chart"><i class="fa fa-pie-chart"></i></span></a></li>
-				<li ><a id="lmven" href="#">Los Más Vendidos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
+
+				<li ><a id="lmven" href="#">Los Más Vendidos<span style="<?php 
+				 if($usuario == 'Vende') { echo ' display: none; '; }  ?>font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
+				 
 				<li ><a id="lmvis" href="#">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
 
 				<?php if($usuario == "Vende") {?>

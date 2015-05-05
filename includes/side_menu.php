@@ -63,7 +63,9 @@
 				<li ><a id="lmven" href="#">Los Más Vendidos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
 				<?php } ?>
 
+				<?php if($usuario != 'Vende') { ?>
 				<li ><a id="lmvis" href="#">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
+				<?php } ?>
 
 				<?php if($usuario == "Vende") {?>
 				<li><a href="register.php" id="registrar">Registrar<i id="icon_reg" style="font-size: 16px;" class="glyphicon glyphicon-pencil hidden-xs pull-right"></i></a></li>

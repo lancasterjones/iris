@@ -90,7 +90,7 @@ if (isset($registration)) {
     </form>
 
     <!-- Link para volver -->     
-    <ul class="pager">
+    <ul class="pager" style="float: left; margin-left: 20%;">
       <li><a href="administrador.php">Regresar</a></li>
     </ul> 
 </div>

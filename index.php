@@ -51,7 +51,7 @@ if ($login->isUserLoggedIn() == true) {
     	case 'Vende':
     		echo " <script> location.href='administrador.php';  </script> ";
     		break;
-    	case 'Lob':
+    	case 'LOB':
     		echo " <script> location.href='reporte_mensual.php';  </script> ";
     		break;
     	default:

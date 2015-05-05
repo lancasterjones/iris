@@ -13,7 +13,17 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a href="reporte_mensual.php">Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+				<li><a <?php 
+				switch ($usuario) {
+					case 'Vende':
+						echo 'href="administrador.php"'; 
+						break;	
+					case 'LOB':
+						echo 'href="reporte_mensual.php"'; 
+						break;
+				}
+
+				?>   >Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
 			<?php if($usuario == "Vende") {?>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes 

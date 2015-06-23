@@ -46,10 +46,11 @@
           </div>
           <div id="logo_cliente" class="col-sm-2" style="background-color: #ccc;"></div>
         </div><!--row-->
+
         <div class="row">
-          <div id="fila_uno" class="col-sm-offset-3 col-sm-9" background-color="blue">
-          </div>
+          <div id="fila_uno" class="col-sm-offset-3 col-sm-9" background-color="blue"></div>
         </div><!--row-->
+
       </div>
 
   <script>
@@ -60,7 +61,7 @@
           url: ruta,
           dataType: "html",
           success: function(result){
-              $("#" + elemento).after(result);
+              $("#" + elemento).html(result);
           }
         });
 

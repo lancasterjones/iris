@@ -1,7 +1,7 @@
-<div id="vistos" class="carousel slide">
+<div id="vendidos" class="carousel slide">
 	<ol class="carousel-indicators">
-		<li data-target="#vistos" data-slide-to="0" class="active">
-		<li data-target="#vistos" data-slide-to="1">
+		<li data-target="#vendidos" data-slide-to="0" class="active">
+		<li data-target="#vendidos" data-slide-to="1">
 	</ol>
 	<div class="carousel-inner">
 		<div class="item active">

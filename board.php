@@ -48,7 +48,7 @@
         </div><!--row-->
 
         <div class="row">
-          <div id="fila_uno" class="col-sm-offset-3 col-sm-9" background-color="blue"></div>
+          <div id="fila_uno" class="col-sm-offset-2 col-sm-10" background-color="blue"></div>
         </div><!--row-->
 
       </div>
@@ -68,7 +68,9 @@
     }
 
     $(document).ready(function(){
+        cargarContenido("logo_cliente", "tecnolite", "logo");
         cargarContenido("fila_uno", "tecnolite", "tablero_principal");
+
     })
   </script>
 

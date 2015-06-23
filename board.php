@@ -38,5 +38,19 @@
   </head>
   <body>
       <?php include 'includes/side_menu.php'; ?>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-offset-2 col-sm-2" style="background-color: #ccc;">
+          </div>
+          <div class="col-sm-4" style="background-color: #000;">
+          </div>
+          <div class="col-sm-2" style="background-color: #ccc;">
+          </div>
+        </div><!--row-->
+        <div class="row">
+          <div>
+          </div>
+        </div><!--row-->
+      </div>
   </body>
 </html>

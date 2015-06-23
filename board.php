@@ -47,7 +47,11 @@
         </div><!--row-->
 
         <div class="row">
-          <div id="fila_uno" class="col-sm-offset-2 col-sm-10" background-color="blue"></div>
+          <div id="fila_uno" class="col-sm-offset-2 col-sm-10"></div>
+        </div><!--row-->
+
+        <div class="row">
+          <div id="fila_dos" class="col-sm-offset-2 col-sm-10"></div>
         </div><!--row-->
 
       </div>
@@ -70,6 +74,7 @@
         cargarContenido("logo_vende", "vende", "logo");
         cargarContenido("logo_cliente", "tecnolite", "logo");
         cargarContenido("fila_uno", "tecnolite", "tablero_principal");
+        cargarContenido("fila_dos", "tecnolite", "vistos");
 
     })
   </script>

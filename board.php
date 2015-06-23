@@ -44,13 +44,32 @@
           </div>
           <div class="col-sm-4" style="background-color: #000;">
           </div>
-          <div class="col-sm-2" style="background-color: #ccc;">
-          </div>
+          <div id="logo_cliente" class="col-sm-2" style="background-color: #ccc;"></div>
         </div><!--row-->
         <div class="row">
-          <div class="col-sm-offset-3 col-sm-9" background-color="blue">
+          <div id="fila_uno" class="col-sm-offset-3 col-sm-9" background-color="blue">
           </div>
         </div><!--row-->
       </div>
+
+  <script>
+    function cargarContenido(elemento, empresa, archivo){
+      var ruta = "clientes/" + empresa + "/" + archivo + ".php";
+        $.ajax({
+          method: "POST",
+          url: ruta,
+          dataType: "html",
+          success: function(result){
+              $("#" + elemento).after(result);
+          }
+        });
+
+    }
+
+    $(document).ready(function(){
+        cargarContenido("fila_uno", "tecnolite", "tablero_principal");
+    })
+  </script>
+
   </body>
 </html>

@@ -39,12 +39,11 @@
   <body>
       <?php include 'includes/side_menu.php'; ?>
       <div class="container-fluid">
+        
         <div class="row">
-          <div id="logo_vende" class="col-sm-offset-3 col-sm-2">
-          </div>
-          <div class="col-sm-4" style="background-color: #000;">
-          </div>
-          <div id="logo_cliente" class="col-sm-2"></div>
+            <div id="logo_vende" class="col-sm-offset-3 col-sm-2"></div>
+            <div class="col-sm-4"></div>
+            <div id="logo_cliente" class="col-sm-2"></div>
         </div><!--row-->
 
         <div class="row">

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang='es'>
 	<head>
@@ -12,13 +11,13 @@
 			<div class="container">
 				</br></br></br>
 				<img class="pull-left" src="includes/vende.png">
-				<div class="pull-right"><h2>IRIS</h2></div>
-				<h1>Bienvenido</h1>	</br>
+				<div class="pull-right">
+					<h2>IRIS</h2>
+				</div>
+				<h1>Bienvenido</h1></br>
 				<h4>Ingresa tu usuario y contraseña para poder acceder a la aplicación.</h4>			
 			</div>
-			</br><hr></br>
-
-			
+			</br><hr></br>			
 			</div>
 		</div>
 
@@ -53,6 +52,9 @@ if ($login->isUserLoggedIn() == true) {
     		break;
     	case 'LOB':
     		echo " <script> location.href='reporte_mensual.php';  </script> ";
+    		break;
+    	case 'TECNOLITE':
+    		echo " <script> location.href='board.php';  </script> ";
     		break;
     	default:
     		echo " <script> alert('error'); </script> ";

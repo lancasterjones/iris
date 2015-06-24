@@ -40,21 +40,21 @@
       <?php include 'includes/side_menu.php'; ?>
       <div class="container-fluid">
 
-        <div class="row" style="margin-top: 3%;">
+        <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
             <div id="logo_vende" class="col-sm-offset-3 col-sm-2"></div>
             <div class="col-sm-4"></div>
             <div id="logo_cliente" class="col-sm-2"></div>
         </div><!--row-->
 
-        <div class="row">
+        <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
           <div id="fila_uno" class="col-sm-offset-2 col-sm-10"></div>
         </div><!--row-->
 
-        <div class="row">
+        <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
           <div id="fila_dos" class="col-sm-offset-2 col-sm-10"></div>
         </div><!--row-->
 
-        <div class="row">
+        <div class="row" style="margin-top: 3%; margin-bottom: 3%;"> 
           <div id="fila_tres" class="col-sm-offset-2 col-sm-10"></div>
         </div><!--row-->
       </div>

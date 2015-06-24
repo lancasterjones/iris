@@ -37,6 +37,6 @@
 			</div>
 		</div><!--Item-->
 	</div>
-	<a data-slide="prev" href="#slider" class="left carousel-control">‹</a>
-    <a data-slide="next" href="#slider" class="right carousel-control">›</a>
+	<a data-slide="prev" href="#slider" class="left carousel-control"  style="margin-top: 15%;">‹</a>
+    <a data-slide="next" href="#slider" class="right carousel-control" style="margin-top: 15%;">›</a>
 </div>

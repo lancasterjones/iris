@@ -5,6 +5,7 @@
         $meses = array("Enero", "Febrero", "Marzo", "Abril", 
             "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
                         "Octubre", "Noviembre", "Diciembre");
+
         $fecha = $meses[$mes_actual-1] . " " . $current_year;
         echo $fecha;
     }
@@ -79,17 +80,18 @@
                 name: 'Pedidos',
                 type: 'column',
                 yAxis: 1,
-                data: [2],
+                data: [2, 5],
+                color: '#FF9900'
             }, {
                 name: 'Fraudes',
                 type: 'column',
                 yAxis: 1,
-                data: [5],
+                data: [5, 7],
                 color: '#c82536'
             }, {
                 name: 'Venta',
                 type: 'spline',
-                data: [6],
+                data: [6, 9],
                 tooltip: {
                     valuePrefix: '$ '
                 }

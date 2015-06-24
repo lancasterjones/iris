@@ -52,5 +52,5 @@
 	}//cierre de clase
 
 	$main = new slider;
-	$main->crearSlider();
+	$main->crearSlider("Lo + vendido");
 ?>

@@ -2,10 +2,25 @@
     function periodoActual(){
         $current_year = date("Y");
         $mes_actual   = date("n");
-        $meses = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
+        $meses = array("Enero", "Febrero", "Marzo", "Abril", 
+            "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
                         "Octubre", "Noviembre", "Diciembre");
         $fecha = $meses[$mes_actual-1] . " " . $current_year;
         echo $fecha;
+    }
+
+    function semanasMesActual(){
+        $mes_actual = date('n');
+        $year       = date('Y');
+        $semanas    = new DateTime();
+        for($sem = 1; $sem < 53; $sem++)
+        {
+            $semanas->setISODate($year, $sem);
+            $fecha = $semanas->format('n');
+                if($fecha == $mes_actual){
+                    echo "'S" . $sem . "', ";
+                }
+        }
     }
 ?>
 
@@ -25,7 +40,7 @@
             title: { text: 'TECNOLITE'       },
             subtitle: { text: 'https://tienda.tecnolite.com.mx' },
             xAxis: [{
-                categories: ['S1'],
+                categories: [<?php semanasMesActual(); ?>],
                 crosshair: true
             }],
             yAxis: [{ 

@@ -1,5 +1,5 @@
-<div class="container-fluid">
-    <legend>JUNIO 2015</legend>
+<div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
+    <legend >JUNIO 2015</legend>
 	<div id="reporte_principal"></div>
 </div>
 

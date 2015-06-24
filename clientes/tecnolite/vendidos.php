@@ -1,4 +1,5 @@
 <div id="vendidos" class="carousel slide">
+	<legend>Lo + vendido</legend>
 	<ol class="carousel-indicators">
 		<li data-target="#vendidos" data-slide-to="0" class="active">
 		<li data-target="#vendidos" data-slide-to="1">

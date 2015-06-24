@@ -1,4 +1,5 @@
 <div id="vistos" class="carousel slide">
+	<legend>Lo + visto</legend>
 	<ol class="carousel-indicators">
 		<li data-target="#vistos" data-slide-to="0" class="active">
 		<li data-target="#vistos" data-slide-to="1">

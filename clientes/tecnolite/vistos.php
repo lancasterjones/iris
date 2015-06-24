@@ -3,6 +3,7 @@
 	<ol class="carousel-indicators">
 		<li data-target="#slider" data-slide-to="0" class="active">
 		<li data-target="#slider" data-slide-to="1">
+		<li data-target="#slider" data-slide-to="2">
 	</ol>
 	<div class="carousel-inner">
 		<div class="item active">

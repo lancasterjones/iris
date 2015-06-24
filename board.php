@@ -75,14 +75,16 @@
     }
 
     $(document).ready(function(){
-        cargarContenido("menu", "tecnolite", "menu");
+        var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
+
+        cargarContenido("menu", cliente, "menu");
         cargarContenido("logo_vende", "vende", "logo");
-        cargarContenido("logo_cliente", "tecnolite", "logo");
-        cargarContenido("fila_uno", "tecnolite", "tablero_principal");
-        cargarContenido("fila_dos", "tecnolite", "vistos");
-        cargarContenido("fila_tres", "tecnolite", "vendidos");
-        var empresa = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
-        console.log("Cliente: " + empresa);
+        cargarContenido("logo_cliente", cliente, "logo");
+        cargarContenido("fila_uno", cliente, "tablero_principal");
+        cargarContenido("fila_dos", cliente, "vistos");
+        cargarContenido("fila_tres", cliente, "vendidos");
+        
+        console.log("Cliente: " + cliente);
     })
   </script>
 

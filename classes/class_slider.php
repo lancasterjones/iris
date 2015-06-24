@@ -2,7 +2,7 @@
 	class slider
 	{
 		define("maximo_en_fila", 4);
-		private $titulo;
+		public $titulo;
 
 		function crearSlider($titulo)
 		{
@@ -51,6 +51,6 @@
 		}//metodo crearSlider
 	}//cierre de clase
 
-	$main = new slider;
+	$main = new slider();
 	$main->crearSlider("Lo + vendido");
 ?>

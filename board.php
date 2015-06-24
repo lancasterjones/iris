@@ -81,9 +81,8 @@
         cargarContenido("fila_uno", "tecnolite", "tablero_principal");
         cargarContenido("fila_dos", "tecnolite", "vistos");
         cargarContenido("fila_tres", "tecnolite", "vendidos");
-        var empresa = <?php echo strtolower($cliente); ?>;
-        console.log(empresa);
-
+        var empresa = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
+        console.log("Cliente: " + empresa);
     })
   </script>
 

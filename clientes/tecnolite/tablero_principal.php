@@ -6,7 +6,7 @@
 	$(function () {
         $('#reporte_principal').highcharts({
             chart: { zoomType: 'xy' },
-            title: { text: ''       },
+            title: { text: 'TECNOLITE'       },
             subtitle: { text: 'https://tienda.tecnolite.com.mx' },
             xAxis: [{
                 categories: ['S1'],

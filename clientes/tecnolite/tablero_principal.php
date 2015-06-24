@@ -8,7 +8,7 @@
             "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
                         "Octubre", "Noviembre", "Diciembre");
 
-        $fecha = $meses[$mes_actual-1] . " " . $current_year;
+        $fecha = $meses[$GLOBALS['mes_actual']-1] . " " . $GLOBALS['current_year'];
         echo $fecha;
     }
 
@@ -18,9 +18,9 @@
 
         for($sem = 1; $sem < 53; $sem++)
         {
-            $semanas->setISODate($current_year, $sem);
+            $semanas->setISODate($GLOBALS['current_year'], $sem);
             $fecha = $semanas->format('n');
-                if($fecha == $mes_actual){
+                if($fecha == $GLOBALS['mes_actual']){
                     echo "'S" . $sem . "', ";
                 }
         }
@@ -32,9 +32,9 @@
 
         for($sem = 1; $sem < 53; $sem++)
         {
-            $semanas->setISODate($current_year, $sem);
+            $semanas->setISODate($GLOBALS['current_year'], $sem);
             $fecha = $semanas->format('n');
-                if($fecha == $mes_actual)
+                if($fecha == $GLOBALS['mes_actual'])
                 {
                     echo rand(1, 50) . ", ";
                 }

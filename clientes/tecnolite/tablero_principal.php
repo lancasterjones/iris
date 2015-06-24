@@ -1,5 +1,20 @@
+<?php
+    function periodoActual(){
+        $current_year = date("Y");
+        $mes_actual   = date("n");
+        $meses = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
+                        "Octubre", "Noviembre", "Diciembre");
+        $fecha = $meses[$mes_actual-1] . " " . $current_year;
+        echo $fecha;
+    }
+?>
+
+
+
 <div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
-    <legend >JUNIO 2015</legend>
+    <legend >
+        <?php periodoActual(); ?>
+    </legend>
 	<div id="reporte_principal"></div>
 </div>
 

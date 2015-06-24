@@ -9,7 +9,7 @@
 ?>
 			<div id="slider" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 				<legend>
-					<?php echo $this->$titulo; ?>
+					<?php echo $this->titulo; ?>
 				</legend>
 				<ol class="carousel-indicators">
 					<li data-target="#slider" data-slide-to="0" class="active">
@@ -50,7 +50,4 @@
 <?php
 		}//metodo crearSlider
 	}//cierre de clase
-	include '../includes/head.php';
-	$main = new slider();
-	$main->crearSlider("Lo + vendido");
 ?>

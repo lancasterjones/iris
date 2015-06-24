@@ -1,4 +1,4 @@
-<div id="vendidos" class="carousel slide">
+<div id="vendidos" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 	<legend>Lo + vendido</legend>
 	<ol class="carousel-indicators">
 		<li data-target="#vendidos" data-slide-to="0" class="active">

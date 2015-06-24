@@ -1,4 +1,5 @@
 <div class="container-fluid">
+    <legend>JUNIO 2015</legend>
 	<div id="reporte_principal"></div>
 </div>
 

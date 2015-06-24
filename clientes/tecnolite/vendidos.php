@@ -1,9 +1,9 @@
-<div id="slider" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
+<div id="vendidos" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 	<legend>Lo + vendido</legend>
 	<ol class="carousel-indicators">
-		<li data-target="#slider" data-slide-to="0" class="active">
-		<li data-target="#slider" data-slide-to="1">
-		<li data-target="#slider" data-slide-to="2">
+		<li data-target="#vendidos" data-slide-to="0" class="active">
+		<li data-target="#vendidos" data-slide-to="1">
+		<li data-target="#vendidos" data-slide-to="2">
 	</ol>
 	<div class="carousel-inner">
 		<div class="item active">
@@ -48,6 +48,6 @@
 			</div>
 		</div><!--Item-->
 	</div>
-	<a data-slide="prev" href="#slider" class="left carousel-control"  style="margin-top: 15%;">‹</a>
-    <a data-slide="next" href="#slider" class="right carousel-control" style="margin-top: 15%;">›</a>
+	<a data-slide="prev" href="#vendidos" class="left carousel-control"  style="margin-top: 15%;">‹</a>
+    <a data-slide="next" href="#vendidos" class="right carousel-control" style="margin-top: 15%;">›</a>
 </div>

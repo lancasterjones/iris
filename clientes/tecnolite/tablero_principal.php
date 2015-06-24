@@ -1,7 +1,8 @@
 <?php
+    $current_year = date("Y");
+    $mes_actual   = date("n");
+
     function periodoActual(){
-        $current_year = date("Y");
-        $mes_actual   = date("n");
         $meses = array("Enero", "Febrero", "Marzo", "Abril", 
             "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
                         "Octubre", "Noviembre", "Diciembre");
@@ -11,12 +12,11 @@
     }
 
     function semanasMesActual(){
-        $mes_actual = date('n');
-        $year       = date('Y');
         $semanas    = new DateTime();
+        
         for($sem = 1; $sem < 53; $sem++)
         {
-            $semanas->setISODate($year, $sem);
+            $semanas->setISODate($current_year, $sem);
             $fecha = $semanas->format('n');
                 if($fecha == $mes_actual){
                     echo "'S" . $sem . "', ";

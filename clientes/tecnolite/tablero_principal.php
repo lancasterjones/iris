@@ -2,7 +2,8 @@
     $current_year = date("Y");
     $mes_actual   = date("n");
 
-    function periodoActual(){
+    function periodoActual()
+    {
         $meses = array("Enero", "Febrero", "Marzo", "Abril", 
             "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
                         "Octubre", "Noviembre", "Diciembre");
@@ -11,9 +12,10 @@
         echo $fecha;
     }
 
-    function semanasMesActual(){
+    function semanasMesActual()
+    {
         $semanas    = new DateTime();
-        
+
         for($sem = 1; $sem < 53; $sem++)
         {
             $semanas->setISODate($current_year, $sem);
@@ -23,6 +25,22 @@
                 }
         }
     }
+
+    function pedidos()
+    {
+        $semanas    = new DateTime();
+
+        for($sem = 1; $sem < 53; $sem++)
+        {
+            $semanas->setISODate($current_year, $sem);
+            $fecha = $semanas->format('n');
+                if($fecha == $mes_actual)
+                {
+                    echo rand(1, 50) . ", ";
+                }
+        }
+    }
+
 ?>
 
 
@@ -80,7 +98,7 @@
                 name: 'Pedidos',
                 type: 'column',
                 yAxis: 1,
-                data: [2, 5],
+                data: [<?php pedidos(); ?>],
                 color: '#FF9900'
             }, {
                 name: 'Fraudes',

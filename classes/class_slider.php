@@ -19,7 +19,7 @@
 					<div class="item active">
 						<div class="row">
 
-							<?php for($x = 1; $x <= $maximo_en_fila; $x++) { ?> 
+							<?php for($x = 1; $x <= $this->maximo_en_fila; $x++) { ?> 
 								<div class="col-md-3">
 									<a href="#" class="thumbnail" style="margin: 0px;">
 										<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-az.jpg">
@@ -33,7 +33,7 @@
 					<div class="item">
 						<div class="row">
 
-							<?php for($x = 1; $x <= $maximo_en_fila; $x++) { ?> 
+							<?php for($x = 1; $x <= $this->maximo_en_fila; $x++) { ?> 
 								<div class="col-md-3">
 									<a href="#" class="thumbnail" style="margin: 0px;">
 										<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-bc.jpg">
@@ -50,7 +50,7 @@
 <?php
 		}//metodo crearSlider
 	}//cierre de clase
-
+	include '../includes/head.php';
 	$main = new slider();
 	$main->crearSlider();
 ?>

@@ -37,8 +37,9 @@
     
   </head>
   <body>
-      <?php include 'includes/side_menu.php'; ?>
-      <div class="container-fluid">
+      <nav id="menu" class="navbar navbar-inverse sidebar" role="navigation"></nav>
+
+      <div class="container-fluid" style="background-color: #FAFAF6;">
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
             <div id="logo_vende" class="col-sm-offset-3 col-sm-2"></div>
@@ -74,6 +75,7 @@
     }
 
     $(document).ready(function(){
+        cargarContenido("menu", "tecnolite", "menu");
         cargarContenido("logo_vende", "vende", "logo");
         cargarContenido("logo_cliente", "tecnolite", "logo");
         cargarContenido("fila_uno", "tecnolite", "tablero_principal");

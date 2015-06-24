@@ -2,14 +2,14 @@
 	class slider
 	{
 		private $maximo_en_fila = 4;
-		public $titulo;
+		//public $titulo;
 
-		function crearSlider($titulo)
+		function crearSlider()
 		{
 ?>
 			<div id="slider" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 				<legend>
-					<?php echo $this->titulo; ?>
+					<?php //echo $this->titulo; ?>
 				</legend>
 				<ol class="carousel-indicators">
 					<li data-target="#slider" data-slide-to="0" class="active">

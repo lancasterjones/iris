@@ -26,8 +26,10 @@
         }
     }
 
-    function pedidos()
+    function crearEstadisticas()
     {
+        //if($campo == "pedidos")
+
         $semanas    = new DateTime();
 
         for($sem = 1; $sem < 53; $sem++)
@@ -98,18 +100,19 @@
                 name: 'Pedidos',
                 type: 'column',
                 yAxis: 1,
-                data: [<?php pedidos(); ?>],
+                data: [<?php crearEstadisticas(); ?>],
                 color: '#FF9900'
             }, {
                 name: 'Fraudes',
                 type: 'column',
                 yAxis: 1,
-                data: [5, 7],
+                data: [<?php crearEstadisticas(); ?>],
                 color: '#c82536'
             }, {
                 name: 'Venta',
                 type: 'spline',
-                data: [6, 9],
+                data: [<?php crearEstadisticas(); ?>],
+                color: '#47D147',
                 tooltip: {
                     valuePrefix: '$ '
                 }

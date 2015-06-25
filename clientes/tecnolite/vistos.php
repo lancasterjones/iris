@@ -35,6 +35,13 @@
 						<a href="#" class="thumbnail" style="margin: 0px;">
 							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-bc.jpg">
 						</a>
+						<span class="col-md-offset-4 label label-success" style="display: none">
+							<i class="glyphicon glyphicon-ok"></i>							
+						</span>
+						<span class="col-md-offset-4 label label-danger"> 
+							<i class="glyphicon glyphicon-remove"></i>
+						</span>
+						MR16-LED
 					</div>		
 				<?php } ?>
 
@@ -49,6 +56,13 @@
 						<a href="#" class="thumbnail" style="margin: 0px;">
 							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-bc.jpg">
 						</a>
+						<span class="col-md-offset-4 label label-success">
+							<i class="glyphicon glyphicon-ok"></i>							
+						</span>
+						<span class="col-md-offset-4 label label-danger" style="display: none"> 
+							<i class="glyphicon glyphicon-remove"></i>
+						</span>
+						MR16-LED
 					</div>		
 				<?php } ?>
 

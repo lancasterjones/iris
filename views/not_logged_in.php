@@ -23,8 +23,13 @@
         ?>
         
         <div class="container-fluid">
-                <div class="col-md-offset-3 col-md-6">
-                    <div class="jumbotron">
+            <div class="col-md-offset-3 col-md-6">
+                <div class="jumbotron">
+                    <div class="row" style="margin-top: 3%;">
+                        <div class="pull-right">
+                            <img src="includes/vende.png">
+                        </div>
+                    </div>
                     <form class="form-horizontal" method="post" action="index.php" role="form" name="loginform">
                         <!--Input ingresar usuario-->
                         <div class='form-group'>
@@ -43,9 +48,9 @@
                         </div>
                         <!--boton ingresar-->
 
-                        <div class="col-md-4">
+                        <div class="col-md-offset-4 col-md-4">
                             <button class="btn btn-success btn-block" name="login"> 
-                                Ingresar<span style="margin: 0 0 0 4px;" class="glyphicon glyphicon-lock"></span>
+                                Ingresar<span style="margin-left: 2%;" class="glyphicon glyphicon-lock"></span>
                             </button>
                         </div> 
                     </form>

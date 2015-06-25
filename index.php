@@ -7,24 +7,6 @@
 		?>     
 	</head>
 	<body>
-		<div id="divForm" class='container-fluid' style="background-color: #EAEAE0;">
-			<div class="row">
-				<div class="col-md-4">
-					<img class="pull-left" src="includes/vende.png">
-				</div>				
-				<div class="col-md-4">
-					<h1>Bienvenido</h1>
-				</div>				
-				<div class="col-md-4">
-					<h2>IRIS</h2>
-				</div>							
-			</div>	
-			<div class="row">
-				<div class="col-md-offset-3 col-md-5">
-					<h4>Ingresa tu usuario y contraseña para poder acceder a la aplicación.</h4>
-				</div>
-			</div>	
-		</div>
 
 		<?php
 			if (version_compare(PHP_VERSION, '5.3.7', '<')) {

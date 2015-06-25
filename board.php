@@ -61,6 +61,22 @@
       </div>
 
   <script>
+
+    function deslizar()
+    {      
+      $('#menu_vistos').click(function(){
+          $('html, body').animate({
+              scrollTop: $('#fila_dos').offset().top
+          }, 1000);
+      });
+      $("#menu_vendidos").click(function(){
+          $('html, body').animate({
+              scrollTop: $('#fila_tres').offset().top
+          }, 1000);
+      });
+      
+    }
+
     function cargarContenido(elemento, empresa, archivo){
       var ruta = "clientes/" + empresa + "/" + archivo + ".php";
         $.ajax({

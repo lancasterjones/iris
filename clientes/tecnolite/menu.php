@@ -63,12 +63,12 @@
 				</a>
 			</li>		
 			<li >
-				<a id="lmven" href="#">
+				<a id="menu_vendidos" href="#">
 					Los Más Vendidos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span>
 				</a>
 			</li>
 			<li >
-				<a id="lmvis" href="#">
+				<a id="menu_vistos" href="#">
 					Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span>
 				</a>
 			</li>				
@@ -81,3 +81,7 @@
 		</ul>
 	</div>
 </div>
+
+<script>
+	deslizar();
+</script>

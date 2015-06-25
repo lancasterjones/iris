@@ -29,6 +29,7 @@
 		{
 		    $companyName = $_SESSION['user_email'] ;
 		    $mes = date('n');
+		    $year = date('Y');
 
 		    switch ($companyName) {
 		    	case 'Vende':
@@ -38,7 +39,7 @@
 		    		echo " <script> location.href='reporte_mensual.php';  </script> ";
 		    		break;
 		    	case 'TECNOLITE':
-		    		echo " <script> location.href='board.php?mes=" . $mes . "';  </script> ";
+		    		echo " <script> location.href='board.php?m=" . $mes . "&y=" . $year ."';  </script> ";
 		    		break;
 		    	default:
 		    		echo " <script> alert('error'); </script> ";

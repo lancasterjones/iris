@@ -23,7 +23,8 @@
       } 
 
     $cliente = $_SESSION['user_email'];
-    $mes     = $_REQUEST['mes'];
+    $mes     = $_REQUEST['m'];
+    $year    = $_REQUEST['y'];
 ?>
 
 <!DOCTYPE html>
@@ -81,6 +82,7 @@
     function cargarContenido(elemento, empresa, archivo, mes){
       var ruta = "clientes/" + empresa + "/" + archivo + ".php";
       var mes  = '<?php echo $mes; ?>';
+      var year = '<?php echo $year; ?>';
         $.ajax({
           method: "POST",
           url: ruta,

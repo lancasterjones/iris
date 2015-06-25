@@ -7,18 +7,23 @@
 		?>     
 	</head>
 	<body>
-		<div id="divForm" align="center" class='container'>
-			<div class="container">
-				</br></br></br>
-				<img class="pull-left" src="includes/vende.png">
-				<div class="pull-right">
+		<div id="divForm" align="center" class='container-fluid'>
+			<div class="row">
+				<div class="col-md-4">
+					<img class="pull-left" src="includes/vende.png">
+				</div>				
+				<div class="col-md-4">
+					<h1>Bienvenido</h1>
+				</div>				
+				<div class="col-md-4">
 					<h2>IRIS</h2>
+				</div>							
+			</div>	
+			<div class="row">
+				<div class="col-md-offset-3 col-md-5">
+					<h4>Ingresa tu usuario y contraseña para poder acceder a la aplicación.</h4>
 				</div>
-				<h1>Bienvenido</h1></br>
-				<h4>Ingresa tu usuario y contraseña para poder acceder a la aplicación.</h4>			
-			</div>
-			</br><hr></br>			
-			</div>
+			</div>	
 		</div>
 
 		<?php

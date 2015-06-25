@@ -23,7 +23,7 @@
         ?>
         
         <div class="container-fluid" style="background-color: #F5F5F2">
-            <div class="col-md-offset-3 col-md-6" style="margin-top: 12%">
+            <div class="col-md-offset-3 col-md-6" style="margin-top: 8%">
                 <div class="jumbotron">
                     <div class="row" style="margin-bottom: 5%;">
                         <div class="pull-right">
@@ -33,7 +33,7 @@
 
                     <div class="row">
                         <div class="col-md-offset-3 col-md-6">
-                            <legend>Ingres tu usurio y contraseña</legend>
+                            <legend>Ingresa tu usuario y contraseña</legend>
                         </div>
                     </div>
 
@@ -50,7 +50,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row" style="margin-bottom: 2%;">
                             <!--Input ingresar contraseña-->
                             <div class='form-group'>
                                 <label class="col-md-offset-3 col-md-2 control-label" for="login_input_password">
@@ -62,7 +62,7 @@
                             </div>
                         </div>
 
-                        <div class="row" style="margin-bottom: 3%;">
+                        <div class="row" style="margin-bottom: 2%;">
                             <!--boton ingresar-->
                             <div class="col-md-offset-4 col-md-4" >
                                 <button class="btn btn-success btn-block" name="login"> 

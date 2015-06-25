@@ -74,7 +74,7 @@
 				<?php for($x = 5; $x <= 8; $x++) { ?> 
 					<div class="col-md-3">
 						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-bc.jpg">
+							<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
 						</a>
 						<span class="col-md-offset-4 label label-success" style="display: none">
 							<i class="glyphicon glyphicon-ok"></i>							
@@ -95,17 +95,23 @@
 				<?php for($x = 9; $x <= 10; $x++) { ?> 
 					<div class="col-md-3">
 						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-bc.jpg">
+							<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
 						</a>
-						<span class="col-md-offset-4 label label-success">
-							<i class="glyphicon glyphicon-ok"></i>							
-						</span>
-						<span class="col-md-offset-4 label label-danger" style="display: none"> 
-							<i class="glyphicon glyphicon-remove"></i>
-						</span>
-						<?php echo $modelo[$x]; ?>
+
+						<?php 
+							if($existencia == 1) { ?>
+								<span class="col-md-offset-4 label label-success">
+									<i class="glyphicon glyphicon-ok"></i>							
+								</span>
+						<?php } elseif($existencia == 0) { ?>
+
+								<span class="col-md-offset-4 label label-danger"> 
+									<i class="glyphicon glyphicon-remove"></i>
+								</span>
+						<?php } echo $modelo[$x]; ?>
+
 					</div>		
-				<?php } ?>
+				<?php } //for?>
 
 			</div>
 		</div><!--Item-->

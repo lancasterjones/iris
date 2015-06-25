@@ -28,6 +28,10 @@
 		}
 		
 	}
+
+	$mes  = date('n');
+	$year = date('Y'); 
+	$link = "board.php?m=" . $mes . "&y=" . $year;
 ?>
 
 <div class="container-fluid">
@@ -38,12 +42,12 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="board.php">Iris</a>
+		<a class="navbar-brand" href="<?php echo $link; ?>">Iris</a>
 	</div>
 	<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 		<ul class="nav navbar-nav">
 			<li>
-				<a href="board.php">
+				<a href="<?php echo $link; ?>">
 					Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
 				</a>
 			</li>

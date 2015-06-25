@@ -1,6 +1,6 @@
 <?php
-    $current_year = date("Y");
-    $mes_actual   = date("n");
+    $current_year = $_REQUEST['year'];
+    $mes_actual   = $_REQUEST['mes'];
 
     function periodoActual()
     {
@@ -82,13 +82,13 @@
                 title: {
                     text: 'Pedidos',
                     style: {
-                        color: Highcharts.getOptions().colors[0]
+                        color: Highcharts.getOptions().colors[1]
                     }
                 },
                 labels: {
                     format: '{value}',
                     style: {
-                        color: Highcharts.getOptions().colors[0]
+                        color: Highcharts.getOptions().colors[1]
                     }
                 },
                 opposite: true

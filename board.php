@@ -86,7 +86,9 @@
         $.ajax({
           method: "POST",
           url: ruta,
-          data: {mes: mes},
+          data: {
+            mes: mes,
+            year: year },
           dataType: "html",
           success: function(result){
               $("#" + elemento).html(result);

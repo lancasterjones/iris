@@ -22,14 +22,21 @@
         }
         ?>
         
-        <div class="container-fluid">
-            <div class="col-md-offset-3 col-md-6">
+        <div class="container-fluid" style="background-color: #F5F5F2">
+            <div class="col-md-offset-3 col-md-6" style="margin-top: 12%">
                 <div class="jumbotron">
-                    <div class="row" style="margin-top: 1%;">
+                    <div class="row" style="margin-bottom: 5%;">
                         <div class="pull-right">
                             <img src="includes/vende.png">
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <legend>Ingres tu usurio y contraseña</legend>
+                        </div>
+                    </div>
+
                     <form class="form-horizontal" method="post" action="index.php" role="form" name="loginform">
                         <div class="row">
                             <!--Input ingresar usuario-->
@@ -55,12 +62,14 @@
                             </div>
                         </div>
 
-                        <!--boton ingresar-->
-                        <div class="col-md-offset-4 col-md-4" style="margin-bottom: 1%;">
-                            <button class="btn btn-success btn-block" name="login"> 
-                                Ingresar<span style="margin-left: 2%;" class="glyphicon glyphicon-lock"></span>
-                            </button>
-                        </div> 
+                        <div class="row" style="margin-bottom: 3%;">
+                            <!--boton ingresar-->
+                            <div class="col-md-offset-4 col-md-4" >
+                                <button class="btn btn-success btn-block" name="login"> 
+                                    Ingresar<span style="margin-left: 2%;" class="glyphicon glyphicon-lock"></span>
+                                </button>
+                            </div>
+                        </div>                         
                     </form>
                 </div>  <!--jumbotron-->  
             </div>      

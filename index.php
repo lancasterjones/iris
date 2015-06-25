@@ -7,7 +7,7 @@
 		?>     
 	</head>
 	<body>
-		<div id="divForm" align="center" class='container-fluid'>
+		<div id="divForm" class='container-fluid' style="background-color: #EAEAE0;">
 			<div class="row">
 				<div class="col-md-4">
 					<img class="pull-left" src="includes/vende.png">

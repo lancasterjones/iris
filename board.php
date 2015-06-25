@@ -50,7 +50,7 @@
         </div>
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-          <div id="fila_uno_info col-sm-offset-2 col-sm-3"></div>
+          <div id="fila_uno_info" class="col-sm-offset-2 col-sm-3"></div>
           <div id="fila_uno" class="col-sm-7"></div>
         </div>
 

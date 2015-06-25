@@ -1,3 +1,31 @@
+<?php
+	function registroMeses()
+	{
+		$mes_actual = date('n') - 1;
+		$year       = date('Y');
+		$ultimoRegistro = $year - 1;
+		
+		$spanish = array("Enero", "Febrero", "Marzo", "Abril", 
+						 "Mayo", "Junio", "Julio", "Agosto", 
+						 "Septiembre", "Octubre", "Noviembre", 
+						 "Diciembre");
+
+		for($x = $mes_actual; $x >= 0; $x--)
+		{
+			echo "<li><a>" . $spanish[$x] . " " . $year . "</li></a>";
+			if($x == 0)
+			{
+				for($x = 11; $x >= $mes_actual; $x--)
+				{
+					echo "<li><a>" . $spanish[$x] . " " . $ultimoRegistro . "</li></a>";
+				}
+				break;
+			}
+		}
+		
+	}
+?>
+
 <div class="container-fluid">
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
@@ -6,47 +34,26 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="#">Iris</a>
+		<a class="navbar-brand" href="board.php">Iris</a>
 	</div>
 	<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 		<ul class="nav navbar-nav">
 			<li>
-				<a href="#">
+				<a href="board.php">
 					Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
 				</a>
 			</li>
 		
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros Meses <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span></a>
-				<ul class="dropdown-menu forAnimate" role="menu">
-					<?php 
-						$current_year = date("y");
-						$mes_actual = date('n');
-						$limite = 1;
-						for($x = $mes_actual; $x >= $limite; $x--){
-							//este switch cambia el numero por una palabra para identificar el nombre del mes
-						    switch($x){
-						        case 1: $mes = "Enero "; break;
-						        case 2: $mes = "Febrero "; break;
-						        case 3: $mes = "Marzo "; break;
-						        case 4: $mes = "Abril "; break;
-						        case 5: $mes = "Mayo "; break;
-						        case 6: $mes = "Junio "; break;
-						        case 7: $mes = "Julio "; break;
-						        case 8: $mes = "Agosto "; break;
-						        case 9: $mes = "Septiembre "; break;
-						        case 10: $mes = "Octubre "; break;
-						        case 11: $mes = "Noviembre "; break;
-						        case 12: $mes = "Diciembre "; break;
-						    }
-					?>
-					<li><a href="?mes=<?php echo $x;?>"><?php echo $mes . " '" .$current_year; ?> </a>
-					<?php
-							
-					  }
-					?>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Otros Meses <span class="caret"></span>
+						<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span>
+				</a>
+				<ul class="dropdown-menu forAnimate" role="menu">				
+					<?php registroMeses(); ?>					
 				</ul>
 			</li>	
+
 			<li >
 				<a style="cursor: not-allowed;" href="#">
 					Categorías

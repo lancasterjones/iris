@@ -6,7 +6,7 @@
 			  include 'includes/head.php';
 		?>     
 	</head>
-	<body>
+	<body style="background-color: #F5F5F2; ">
 
 		<?php
 			if (version_compare(PHP_VERSION, '5.3.7', '<')) {

@@ -36,7 +36,9 @@
     <script type="text/javascript" src="includes/script_reportes.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
-    
+    <style type="text/css">
+          @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+    </style>
   </head>
   <body>
       <nav id="menu" class="navbar navbar-inverse sidebar" role="navigation"></nav>

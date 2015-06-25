@@ -14,6 +14,7 @@
 						<a href="#" class="thumbnail" style="margin: 0px;">
 							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-az.jpg">
 						</a>
+						<span class="label label-warning"><i class="glyphicon glyphicon-ok"></i></span>
 					</div>		
 				<?php } ?>
 

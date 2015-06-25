@@ -12,13 +12,13 @@
 
 		for($x = $mes_actual; $x >= 0; $x--)
 		{
-			echo "<li><a href='board.php?m=" . $mes_actual + 1 . "&y=" . $year ."';>" .
+			echo "<li><a href='?m=" . $mes_actual + 1 . "&y=" . $year ."';>" .
 							    $spanish[$x] . " " . $year . "</li></a>";
 			if($x == 0)
 			{
 				for($x = 11; $x >= $mes_actual; $x--)
 				{
-					echo "<li><a href='board.php?m=" . $mes_actual + 1 . "&y=" . $ultimoRegistro ."';>" . 
+					echo "<li><a href='?m=" . $mes_actual + 1 . "&y=" . $ultimoRegistro ."';>" . 
 					$spanish[$x] . " " . $ultimoRegistro . "</li></a>";
 				}
 				break;

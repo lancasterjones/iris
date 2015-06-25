@@ -23,6 +23,7 @@
       } 
 
     $cliente = $_SESSION['user_email'];
+    $mes     = $_REQUEST['mes'];
 ?>
 
 <!DOCTYPE html>
@@ -77,11 +78,13 @@
       
     }
 
-    function cargarContenido(elemento, empresa, archivo){
+    function cargarContenido(elemento, empresa, archivo, mes){
       var ruta = "clientes/" + empresa + "/" + archivo + ".php";
+      var mes  = '<?php echo $mes; ?>';
         $.ajax({
           method: "POST",
           url: ruta,
+          data: {mes: mes},
           dataType: "html",
           success: function(result){
               $("#" + elemento).html(result);
@@ -100,7 +103,6 @@
         cargarContenido("fila_dos", cliente, "vistos");
         cargarContenido("fila_tres", cliente, "vendidos");
         
-        console.log("Cliente: " + cliente);
     })
   </script>
 

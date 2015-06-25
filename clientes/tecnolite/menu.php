@@ -4,7 +4,6 @@
 		$mes_actual = date('n') - 1;
 		$year       = date('Y');
 		$ultimoRegistro = $year - 1;
-		$mes = date('n'); //para url
 		
 		$spanish = array("Enero", "Febrero", "Marzo", "Abril", 
 						 "Mayo", "Junio", "Julio", "Agosto", 
@@ -12,13 +11,15 @@
 						 "Diciembre");
 
 		for($x = $mes_actual; $x >= 0; $x--)
-		{
+		{	
+			$mes = $x + 1;
 			echo "<li><a href='?m=" . $mes . "&y=" . $year ."';>" .
 							    $spanish[$x] . " " . $year . "</li></a>";
 			if($x == 0)
 			{
 				for($x = 11; $x >= $mes_actual; $x--)
 				{
+					$mes = $x + 1;
 					echo "<li><a href='?m=" . $mes . "&y=" . $ultimoRegistro ."';>" . 
 					$spanish[$x] . " " . $ultimoRegistro . "</li></a>";
 				}

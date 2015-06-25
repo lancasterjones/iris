@@ -38,7 +38,7 @@
 		    		echo " <script> location.href='reporte_mensual.php';  </script> ";
 		    		break;
 		    	case 'TECNOLITE':
-		    		echo " <script> location.href='board.php?mes=" . $mes . ";  </script> ";
+		    		echo " <script> location.href='board.php?mes=" . $mes . "';  </script> ";
 		    		break;
 		    	default:
 		    		echo " <script> alert('error'); </script> ";

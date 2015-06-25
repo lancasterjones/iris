@@ -47,19 +47,20 @@
             <div id="logo_vende" class="col-sm-offset-3 col-sm-2"></div>
             <div class="col-sm-4"></div>
             <div id="logo_cliente" class="col-sm-2"></div>
-        </div><!--row-->
+        </div>
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-          <div id="fila_uno" class="col-sm-offset-2 col-sm-10"></div>
-        </div><!--row-->
+          <div id="fila_uno_info col-sm-offset-2 col-sm-3"></div>
+          <div id="fila_uno" class="col-sm-7"></div>
+        </div>
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
           <div id="fila_dos" class="col-sm-offset-2 col-sm-10"></div>
-        </div><!--row-->
+        </div>
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;"> 
           <div id="fila_tres" class="col-sm-offset-2 col-sm-10"></div>
-        </div><!--row-->
+        </div>
       </div>
 
   <script>
@@ -88,7 +89,7 @@
           url: ruta,
           data: {
             mes: mes,
-            year: year },
+            year: year   },
           dataType: "html",
           success: function(result){
               $("#" + elemento).html(result);
@@ -103,6 +104,7 @@
         cargarContenido("menu", cliente, "menu");
         cargarContenido("logo_vende", "vende", "logo");
         cargarContenido("logo_cliente", cliente, "logo");
+        cargarContenido("fila_uno_info", cliente, "info");
         cargarContenido("fila_uno", cliente, "tablero_principal");
         cargarContenido("fila_dos", cliente, "vistos");
         cargarContenido("fila_tres", cliente, "vendidos");

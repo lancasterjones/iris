@@ -12,15 +12,25 @@
 							<h4>N° de visitantes</h4>
 						</td>
 						<td>
-							
+							<h4>12,983</h4>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<i class="fa fa-cart-plus" style="color: #ff9900; font-size: 25px;"></i>
+							<i class="fa fa-smile-o" style="color: #ff9900; font-size: 25px;"></i>
 							<h4>% de conversión</h4>
 						</td>
 						<td>
+							<h4>3%</h4>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<i class="fa fa-money" style="color: #ff9900; font-size: 25px;"></i>
+							<h4>Ticket promedio</h4>
+						</td>
+						<td>
+							<h4>$3,598.60</h4>
 						</td>
 					</tr>
 				</tbody>

@@ -22,7 +22,7 @@
         }
         ?>
         
-        <div class="container-fluid" style="background-color: #F5F5F2">
+        <div class="container-fluid" style="background-color: #F9F9F8">
             <div class="col-md-offset-3 col-md-6" style="margin-top: 8%">
                 <div class="jumbotron">
                     <div class="row" style="margin-bottom: 5%;">

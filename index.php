@@ -4,7 +4,7 @@
 		<title>.::IRIS::.</title>
 		<?php  include 'includes/head.php';	?>     
 	</head>
-	<body style="background-color: #F5F5F2; ">
+	<body style="background-color: #F9F9F8; ">
 		<?php
 			if (version_compare(PHP_VERSION, '5.3.7', '<')) {
 		    exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
@@ -38,7 +38,7 @@
 		    		echo " <script> location.href='reporte_mensual.php';  </script> ";
 		    		break;
 		    	case 'TECNOLITE':
-		    		echo " <script> location.href='board.php?mes=<?php $mes; ?>';  </script> ";
+		    		echo " <script> location.href='board.php?mes=" . $mes . ";  </script> ";
 		    		break;
 		    	default:
 		    		echo " <script> alert('error'); </script> ";

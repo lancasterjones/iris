@@ -76,13 +76,23 @@
 						<a href="#" class="thumbnail" style="margin: 0px;">
 							<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
 						</a>
-						<span class="col-md-offset-4 label label-success" style="display: none">
-							<i class="glyphicon glyphicon-ok"></i>							
-						</span>
-						<span class="col-md-offset-4 label label-danger"> 
-							<i class="glyphicon glyphicon-remove"></i>
-						</span>
-						<?php echo $modelo[$x]; ?>
+
+						<?php 
+							if($existencia[$x] == 1) 
+							{ 
+					     ?>
+								<span class="col-md-offset-4 label label-success">
+									<i class="glyphicon glyphicon-ok"></i>							
+								</span>
+						<?php } 
+						      elseif($existencia[$x] == 0) 
+						      { 
+						?>
+								<span class="col-md-offset-4 label label-danger"> 
+									<i class="glyphicon glyphicon-remove"></i>
+								</span>
+						<?php } echo $modelo[$x]; ?>
+
 					</div>		
 				<?php } ?>
 
@@ -99,12 +109,16 @@
 						</a>
 
 						<?php 
-							if($existencia == 1) { ?>
+							if($existencia[$x] == 1) 
+							{ 
+					     ?>
 								<span class="col-md-offset-4 label label-success">
 									<i class="glyphicon glyphicon-ok"></i>							
 								</span>
-						<?php } elseif($existencia == 0) { ?>
-
+						<?php } 
+						      elseif($existencia[$x] == 0) 
+						      { 
+						?>
 								<span class="col-md-offset-4 label label-danger"> 
 									<i class="glyphicon glyphicon-remove"></i>
 								</span>

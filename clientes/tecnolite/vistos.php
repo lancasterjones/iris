@@ -35,6 +35,7 @@
 					$existencia[$x] = 1;				
 				else
 					$existencia[$x] = 0;
+			$elementos = $x;
 			$x++;
 		}
 ?>
@@ -49,91 +50,106 @@
 	<div class="carousel-inner">
 		<div class="item active">
 			<div class="row">
+				<?php 
+					if($elementos > 0)
+					{
+						for($x = 1; $x <= 4; $x++) 
+						{ 
+				?> 
+							<div class="col-md-3">
+								<a href="#" class="thumbnail" style="margin: 0px;">
+									<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
+								</a>
 
-				<?php for($x = 1; $x <= 4; $x++) { ?> 
-					<div class="col-md-3">
-						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
-						</a>
-
-						<?php 
-							if($existencia[$x] == 1) 
-							{ 
-					     ?>
-								<span class="col-md-offset-4 label label-success">
-									<i class="glyphicon glyphicon-ok"></i>							
-								</span>
-						<?php } 
-						      elseif($existencia[$x] == 0) 
-						      { 
-						?>
-								<span class="col-md-offset-4 label label-danger"> 
-									<i class="glyphicon glyphicon-remove"></i>
-								</span>
-						<?php } echo $modelo[$x]; ?>
-					</div>		
-				<?php } ?>
-
+								<?php 
+									if($existencia[$x] == 1) 
+									{ 
+							     ?>
+										<span class="col-md-offset-4 label label-success">
+											<i class="glyphicon glyphicon-ok"></i>							
+										</span>
+								<?php } 
+								      elseif($existencia[$x] == 0) 
+								      { 
+								?>
+										<span class="col-md-offset-4 label label-danger"> 
+											<i class="glyphicon glyphicon-remove"></i>
+										</span>
+								<?php } echo $modelo[$x]; ?>
+							</div>		
+				<?php   }
+				    }
+				?>
 			</div>
 		</div><!--Item active-->
 
 		<div class="item">
 			<div class="row">
+				<?php 
+					if($elementos > 4)
+					{
+						for($x = 5; $x <= 8; $x++) 
+						{ 
+				?> 
+							<div class="col-md-3">
+								<a href="#" class="thumbnail" style="margin: 0px;">
+									<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
+								</a>
 
-				<?php for($x = 5; $x <= 8; $x++) { ?> 
-					<div class="col-md-3">
-						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
-						</a>
-
-						<?php 
-							if($existencia[$x] == 1) 
-							{ 
-					     ?>
-								<span class="col-md-offset-4 label label-success">
-									<i class="glyphicon glyphicon-ok"></i>							
-								</span>
-						<?php } 
-						      elseif($existencia[$x] == 0) 
-						      { 
-						?>
-								<span class="col-md-offset-4 label label-danger"> 
-									<i class="glyphicon glyphicon-remove"></i>
-								</span>
-						<?php } echo $modelo[$x]; ?>
-					</div>		
-				<?php } ?>
-
+								<?php 
+									if($existencia[$x] == 1) 
+									{ 
+							     ?>
+										<span class="col-md-offset-4 label label-success">
+											<i class="glyphicon glyphicon-ok"></i>							
+										</span>
+								<?php } 
+								      elseif($existencia[$x] == 0) 
+								      { 
+								?>
+										<span class="col-md-offset-4 label label-danger"> 
+											<i class="glyphicon glyphicon-remove"></i>
+										</span>
+								<?php } echo $modelo[$x]; ?>
+							</div>		
+				<?php   }
+				    }
+				?>
 			</div>
 		</div><!--Item-->
 
 		<div class="item">
 			<div class="row">
+				<?php 
+					if($elementos > 8)
+					{
+						for($x = 9; $x <= 10; $x++) 
+						{ 
+				?> 
+							<div class="col-md-3">
+								<a href="#" class="thumbnail" style="margin: 0px;">
+									<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
+								</a>
 
-				<?php for($x = 9; $x <= 10; $x++) { ?> 
-					<div class="col-md-3">
-						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
-						</a>
-
-						<?php 
-							if($existencia[$x] == 1) 
-							{ 
-					     ?>
-								<span class="col-md-offset-4 label label-success">
-									<i class="glyphicon glyphicon-ok"></i>							
-								</span>
-						<?php } 
-						      elseif($existencia[$x] == 0) 
-						      { 
-						?>
-								<span class="col-md-offset-4 label label-danger"> 
-									<i class="glyphicon glyphicon-remove"></i>
-								</span>
-						<?php } echo $modelo[$x]; ?>
-					</div>		
-				<?php } //for?>
-
+								<?php 
+									if($existencia[$x] == 1) 
+									{ 
+							     ?>
+										<span class="col-md-offset-4 label label-success">
+											<i class="glyphicon glyphicon-ok"></i>							
+										</span>
+								<?php } 
+								      elseif($existencia[$x] == 0) 
+								      { 
+								?>
+										<span class="col-md-offset-4 label label-danger"> 
+											<i class="glyphicon glyphicon-remove"></i>
+										</span>
+								<?php } echo $modelo[$x]; ?>
+							</div>		
+				<?php   }
+				    }
+				?>
 			</div>
 		</div><!--Item-->
 	</div>

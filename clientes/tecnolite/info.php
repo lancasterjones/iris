@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<div class="panel panel-success">
+	<div class="panel panel-default">
 		<div class="panel-heading">
 			<legend class="panel-title">Métricas</legend>
 		</div>
@@ -8,12 +8,19 @@
 				<tbody>
 					<tr>
 						<td>
-							<i class="fa fa-users"></i>
-							<p>N° de visitantes</p>
+							<i class="fa fa-users" style="color: #ff9900; font-size: 25px;"></i>
+							<h4>N° de visitantes</h4>
 						</td>
 						<td>
-							<i class="fa fa-cart-plus"></i>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<i class="fa fa-cart-plus" style="color: #ff9900; font-size: 25px;"></i>
 							<h4>% de conversión</h4>
+						</td>
+						<td>
 						</td>
 					</tr>
 				</tbody>

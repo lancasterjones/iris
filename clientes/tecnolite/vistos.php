@@ -15,12 +15,12 @@
 							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-az.jpg">
 						</a>
 						<span class="label label-success">
-							<i class="glyphicon glyphicon-ok"></i>
-							MR16-LED
+							<i class="glyphicon glyphicon-ok"></i>							
 						</span>
 						<span class="label label-danger" style="display: none"> 
 							<i class="glyphicon glyphicon-remove"></i>
 						</span>
+						MR16-LED
 					</div>		
 				<?php } ?>
 

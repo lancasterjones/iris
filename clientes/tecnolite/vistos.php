@@ -53,7 +53,7 @@
 				<?php for($x = 1; $x <= 4; $x++) { ?> 
 					<div class="col-md-3">
 						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-az.jpg">
+							<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
 						</a>
 						<span class="col-md-offset-4 label label-success">
 							<i class="glyphicon glyphicon-ok"></i>							

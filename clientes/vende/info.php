@@ -9,7 +9,7 @@
 					<tr>
 						<td>
 							<i class="fa fa-users" style="color: #ff9900; font-size: 25px;"></i>
-							<h4>Última actualización</h4>
+							<h4>Visitas</h4>
 						</td>
 						<td>
 							<h4>12,983</h4>

@@ -50,8 +50,8 @@
         </div>
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-          <div id="fila_uno_info" class="col-sm-offset-2 col-sm-3"></div>
-          <div id="fila_uno" class="col-sm-7"></div>
+          <div id="fila_uno_info"    class="col-sm-offset-2 col-sm-3"></div>
+          <div id="fila_uno_usuarios" class="col-sm-3"></div>
         </div>
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
@@ -104,7 +104,7 @@
         cargarContenido("menu", cliente, "menu");
         cargarContenido("logo_cliente", cliente, "logo");
         cargarContenido("fila_uno_info", cliente, "info");
-        cargarContenido("fila_uno", cliente, "tablero_principal");
+        cargarContenido("fila_uno_usuarios", cliente, "usuarios");
         cargarContenido("fila_dos", cliente, "vendidos");
         cargarContenido("fila_tres", cliente, "vistos");
         

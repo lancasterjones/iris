@@ -1,3 +1,47 @@
+<?php
+	//recolectar variables
+	$mes  = $_REQUEST['mes'];
+	$year = $_REQUEST['year'];
+
+	if($mes < 10) $fecha = $year . "0" . $mes;
+	else $fecha = $year . $mes;
+
+	//conexión a base de datos
+	$servidor = "104.236.137.39";
+	$db_name  = "admin_sistemaproductos";
+	$usuario  = "admin_fotos";
+	$pass     = "9Fdvi3D4LR";
+
+	$conect = new mysqli($servidor, $usuario, $pass, $db_name)
+			  or die("Imposible conectar a DB");
+
+	//crear consulta
+	$query = "SELECT mas_vendidos.mes,
+	       mas_vendidos.foto,
+	       inventarios.modelo,
+	       inventarios.inventario,
+	       mas_vendidos.cantidad
+		   FROM admin_sistemaproductos.inventarios inventarios
+	       INNER JOIN admin_sistemaproductos.mas_vendidos mas_vendidos
+	       ON (inventarios.sku = mas_vendidos.sku)
+	       WHERE (mas_vendidos.mes = '$fecha')
+	       ORDER BY mas_vendidos.cantidad DESC";
+
+	$consulta = mysqli_query($conect, $query);
+	$x = 1;
+		while($row = mysqli_fetch_array($consulta))
+		{
+			$foto[$x]       = $row['foto'];
+			$modelo[$x]     = $row['modelo'];
+				if($row['qty'] > 0)				
+					$existencia[$x] = 1;				
+				else
+					$existencia[$x] = 0;
+			$elementos = $x;
+			$x++;
+		}
+?>
+
 <div id="vendidos" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 	<legend>Lo + vendido</legend>
 	<ol class="carousel-indicators">
@@ -8,43 +52,115 @@
 	<div class="carousel-inner">
 		<div class="item active">
 			<div class="row">
+				<?php 
+					if($elementos > 0)
+					{
+						for($x = 1; $x <= 4; $x++) 
+						{ 
+				?> 
+							<div class="col-md-3">
+								<a href="#" class="thumbnail" style="margin: 0px;">
+									<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
+								</a>
 
-				<?php for($x = 1; $x <= 4; $x++) { ?> 
-					<div class="col-md-3">
-						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="http://www.tecnolite.com.mx/hogar/public/images/uploads/products/big/ctl-8050.jpg">
-						</a>
-					</div>		
-				<?php } ?>
-
+								<?php 
+									if($existencia[$x] == 1) 
+									{ 
+							     ?>
+										<span class="col-md-offset-4 label label-success">
+											<i class="glyphicon glyphicon-ok"></i>							
+										</span>
+										<span class="label label-default">
+								<?php } 
+								      elseif($existencia[$x] == 0) 
+								      { 
+								?>
+										<span class="col-md-offset-4 label label-danger"> 
+											<i class="glyphicon glyphicon-remove"></i>
+										</span>
+										<span class="label label-default">
+											<?php } echo $modelo[$x]; ?>
+										</span>
+							</div>		
+				<?php   }
+				    }
+				?>
 			</div>
 		</div><!--Item active-->
 
 		<div class="item">
 			<div class="row">
+				<?php 
+					if($elementos > 4)
+					{
+						for($x = 5; $x <= 8; $x++) 
+						{ 
+				?> 
+							<div class="col-md-3">
+								<a href="#" class="thumbnail" style="margin: 0px;">
+									<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
+								</a>
 
-				<?php for($x = 1; $x <= 4; $x++) { ?> 
-					<div class="col-md-3">
-						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="http://tienda.tecnolite.com.mx/media/catalog/product/cache/1/image/500x593/9df78eab33525d08d6e5fb8d27136e95/t/i/tiras_mled-60-ip68-5050_1.jpg">
-						</a>
-					</div>		
-				<?php } ?>
-
+								<?php 
+									if($existencia[$x] == 1) 
+									{ 
+							     ?>
+										<span class="col-md-offset-4 label label-success">
+											<i class="glyphicon glyphicon-ok"></i>							
+										</span>
+										<span class="label label-default">
+								<?php } 
+								      elseif($existencia[$x] == 0) 
+								      { 
+								?>
+										<span class="col-md-offset-4 label label-danger"> 
+											<i class="glyphicon glyphicon-remove"></i>
+										</span>
+										<span class="label label-default">
+											<?php } echo $modelo[$x]; ?>
+										</span>								
+							</div>		
+				<?php   }
+				    }
+				?>
 			</div>
 		</div><!--Item-->
 
 		<div class="item">
 			<div class="row">
+				<?php 
+					if($elementos > 8)
+					{
+						for($x = 9; $x <= 10; $x++) 
+						{ 
+				?> 
+							<div class="col-md-3">
+								<a href="#" class="thumbnail" style="margin: 0px;">
+									<img src="http://d1x736u1i353au.cloudfront.net/media/catalog/product<?php echo $foto[$x]; ?>">
+								</a>
 
-				<?php for($x = 1; $x <= 2; $x++) { ?> 
-					<div class="col-md-3">
-						<a href="#" class="thumbnail" style="margin: 0px;">
-							<img src="https://tienda.tecnolite.com.mx/media/catalog/product/cache/1/small_image/500x593/9df78eab33525d08d6e5fb8d27136e95/b/o/bombillas_a19led-3.5w-fil-bc.jpg">
-						</a>
-					</div>		
-				<?php } ?>
-
+								<?php 
+									if($existencia[$x] == 1) 
+									{ 
+							     ?>
+										<span class="col-md-offset-4 label label-success">
+											<i class="glyphicon glyphicon-ok"></i>							
+										</span>
+										<span class="label label-default">
+								<?php } 
+								      elseif($existencia[$x] == 0) 
+								      { 
+								?>
+										<span class="col-md-offset-4 label label-danger"> 
+											<i class="glyphicon glyphicon-remove"></i>
+										</span>
+										<span class="label label-default">
+											<?php } echo $modelo[$x]; ?>
+										</span>
+							</div>		
+				<?php   }
+				    }
+				?>
 			</div>
 		</div><!--Item-->
 	</div>

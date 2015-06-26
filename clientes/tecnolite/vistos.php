@@ -75,7 +75,7 @@
 										<span class="label label-danger"> 
 											<i class="glyphicon glyphicon-remove"></i>
 										</span>
-										<span class="col-md-offset-4 ">
+										<span class="col-md-offset-3">
 											<?php } echo $modelo[$x]; ?>
 										</span>
 							</div>		
@@ -112,7 +112,7 @@
 										<span class="label label-danger"> 
 											<i class="glyphicon glyphicon-remove"></i>
 										</span>
-										<span class="col-md-offset-4 ">
+										<span class="col-md-offset-3">
 											<?php } echo $modelo[$x]; ?>
 										</span>								
 							</div>		
@@ -149,7 +149,7 @@
 										<span class="label label-danger"> 
 											<i class="glyphicon glyphicon-remove"></i>
 										</span>
-										<span class="col-md-offset-4 ">
+										<span class="col-md-offset-3">
 											<?php } echo $modelo[$x]; ?>
 										</span>
 							</div>		

@@ -1,3 +1,38 @@
+<?php
+	function registroMeses()
+	{
+		$mes_actual = date('n') - 1;
+		$year       = date('Y');
+		$ultimoRegistro = $year - 1;
+		
+		$spanish = array("Enero", "Febrero", "Marzo", "Abril", 
+						 "Mayo", "Junio", "Julio", "Agosto", 
+						 "Septiembre", "Octubre", "Noviembre", 
+						 "Diciembre");
+
+		for($x = $mes_actual; $x >= 0; $x--)
+		{	
+			$mes = $x + 1;
+			echo "<li><a href='?m=" . $mes . "&y=" . $year ."';>" .
+							    $spanish[$x] . " " . $year . "</li></a>";
+			if($x == 0)
+			{
+				for($x = 11; $x >= $mes_actual; $x--)
+				{
+					$mes = $x + 1;
+					echo "<li><a href='?m=" . $mes . "&y=" . $ultimoRegistro ."';>" . 
+					$spanish[$x] . " " . $ultimoRegistro . "</li></a>";
+				}
+				break;
+			}
+		}
+		
+	}
+
+	$mes  = date('n');
+	$year = date('Y'); 
+	$link = "board.php?m=" . $mes . "&y=" . $year;
+?>
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -31,48 +66,29 @@
 				</li>
 			<?php } // cierre if validar usuario vende?>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Otros Meses <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span></a>
-					<ul class="dropdown-menu forAnimate" role="menu">
-						<?php 
-    						$current_year = date("y");
-							$mes_actual = date('n');
-							$limite = 1;
-							for($x = $mes_actual; $x >= $limite; $x--){
-								//este switch cambia el numero por una palabra para identificar el nombre del mes
-							    switch($x){
-							        case 1: $mes = "Enero "; break;
-							        case 2: $mes = "Febrero "; break;
-							        case 3: $mes = "Marzo "; break;
-							        case 4: $mes = "Abril "; break;
-							        case 5: $mes = "Mayo "; break;
-							        case 6: $mes = "Junio "; break;
-							        case 7: $mes = "Julio "; break;
-							        case 8: $mes = "Agosto "; break;
-							        case 9: $mes = "Septiembre "; break;
-							        case 10: $mes = "Octubre "; break;
-							        case 11: $mes = "Noviembre "; break;
-							        case 12: $mes = "Diciembre "; break;
-							    }
-						?>
-						<li><a href="?mes=<?php echo $x;?>"><?php echo $mes . " '" .$current_year; ?> </a>
-						<?php
-								
-						  }
-						?>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Meses <span class="caret"></span>
+						<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span>
+					</a>
+					<ul class="dropdown-menu forAnimate" role="menu">				
+						<?php registroMeses(); ?>					
 					</ul>
 				</li>
-				<li ><a style="cursor: not-allowed;" href="#">Categorías<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicons-pie-chart"><i class="fa fa-pie-chart"></i></span></a></li>
-		
-				<li ><a id="lmven" href="#">Lo Más Vendido<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
-		
-
-				<li ><a id="lmvis" href="#">Lo Más Visto<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
-	
-				<li><a href="register.php" id="registrar">Registrar<i id="icon_reg" style="font-size: 16px;" class="glyphicon glyphicon-pencil hidden-xs pull-right"></i></a></li>
-		
-				<li><a href="#" id="anc_act" onclick="actualizar();">Sincronizar<i id="icon_act" style="font-size: 16px;" class="glyphicon glyphicon-refresh hidden-xs pull-right"></i></a></li>
-
-				<li><a href="index.php?logout">Salir <i class="glyphicon glyphicon-log-out hidden-xs pull-right"></i></a></li>
+				<li>
+					<a href="register.php" id="registrar">
+						Registrar<i id="icon_reg" style="font-size: 16px;" class="glyphicon glyphicon-pencil hidden-xs pull-right"></i>
+					</a>
+				</li>		
+				<li>
+					<a href="#" id="anc_act" onclick="actualizar();">
+						Sincronizar<i id="icon_act" style="font-size: 16px;" class="glyphicon glyphicon-refresh hidden-xs pull-right"></i>
+					</a>
+				</li>
+				<li>
+					<a href="index.php?logout">
+						Salir <i class="glyphicon glyphicon-log-out hidden-xs pull-right"></i>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>

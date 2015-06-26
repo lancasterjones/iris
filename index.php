@@ -33,7 +33,7 @@
 
 		    switch ($companyName) {
 		    	case 'Vende':
-		    		echo " <script> location.href='administrador.php';  </script> ";
+		    		echo " <script> location.href='administrador.php?m=" . $mes . "&y=" . $year ."';  </script> ";
 		    		break;
 		    	case 'LOB':
 		    		echo " <script> location.href='reporte_mensual.php';  </script> ";

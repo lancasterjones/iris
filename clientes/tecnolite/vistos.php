@@ -68,6 +68,7 @@
 										<span class="col-md-offset-4 label label-success">
 											<i class="glyphicon glyphicon-ok"></i>							
 										</span>
+										<span class="label label-default">
 								<?php } 
 								      elseif($existencia[$x] == 0) 
 								      { 
@@ -105,6 +106,7 @@
 										<span class="col-md-offset-4 label label-success">
 											<i class="glyphicon glyphicon-ok"></i>							
 										</span>
+										<span class="label label-default">
 								<?php } 
 								      elseif($existencia[$x] == 0) 
 								      { 
@@ -142,6 +144,7 @@
 										<span class="col-md-offset-4 label label-success">
 											<i class="glyphicon glyphicon-ok"></i>							
 										</span>
+										<span class="label label-default">
 								<?php } 
 								      elseif($existencia[$x] == 0) 
 								      { 

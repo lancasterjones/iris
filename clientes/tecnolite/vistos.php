@@ -41,7 +41,7 @@
 ?>
 
 <div id="vistos" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
-	<legend>Lo + vendido</legend>
+	<legend>Lo + visto</legend>
 	<ol class="carousel-indicators">
 		<li data-target="#vistos" data-slide-to="0" class="active">
 
@@ -105,7 +105,10 @@
 				<?php 
 					if($elementos > 4)
 					{
-						for($x = 5; $x <= 8; $x++) 
+						if($elementos > 8) $stop = 8;
+							else $stop = $elementos;
+
+						for($x = 5; $x <= $stop; $x++) 
 						{ 
 				?> 
 							<div class="col-md-3">
@@ -143,7 +146,10 @@
 				<?php 
 					if($elementos > 8)
 					{
-						for($x = 9; $x <= 10; $x++) 
+						if($elementos > 10) $stop = 10;
+							else $stop = $elementos;
+
+						for($x = 9; $x <= $stop; $x++) 
 						{ 
 				?> 
 							<div class="col-md-3">

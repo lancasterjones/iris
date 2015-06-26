@@ -107,7 +107,10 @@
 				<?php 
 					if($elementos > 4)
 					{
-						for($x = 5; $x <= 8; $x++) 
+						if($elementos > 8) $stop = 8;
+							else $stop = $elementos;
+							
+						for($x = 5; $x <= $stop; $x++) 
 						{ 
 				?> 
 							<div class="col-md-3">
@@ -145,7 +148,10 @@
 				<?php 
 					if($elementos > 8)
 					{
-						for($x = 9; $x <= 10; $x++) 
+						if($elementos > 10) $stop = 10;
+							else $stop = $elementos;
+
+						for($x = 9; $x <= $stop; $x++) 
 						{ 
 				?> 
 							<div class="col-md-3">

@@ -102,7 +102,6 @@
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
         cargarContenido("menu", cliente, "menu");
-        cargarContenido("logo_vende", "vende", "logo");
         cargarContenido("logo_cliente", cliente, "logo");
         cargarContenido("fila_uno_info", cliente, "info");
         cargarContenido("fila_uno", cliente, "tablero_principal");
@@ -113,4 +112,4 @@
   </script>
 
   </body>
-</html>
+</html> 

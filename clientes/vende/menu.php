@@ -47,7 +47,7 @@
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li>
-					<a <?php echo $link; ?>   >
+					<a href='<?php echo $link; ?>'>
 						Inicio
 						<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
 					</a>

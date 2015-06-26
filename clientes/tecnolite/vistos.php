@@ -72,10 +72,12 @@
 								      elseif($existencia[$x] == 0) 
 								      { 
 								?>
-										<span class="col-md-offset-4 label label-danger"> 
+										<span class="label label-danger"> 
 											<i class="glyphicon glyphicon-remove"></i>
 										</span>
-								<?php } echo $modelo[$x]; ?>
+										<span class="col-md-offset-4 ">
+											<?php } echo $modelo[$x]; ?>
+										</span>
 							</div>		
 				<?php   }
 				    }
@@ -107,10 +109,12 @@
 								      elseif($existencia[$x] == 0) 
 								      { 
 								?>
-										<span class="col-md-offset-4 label label-danger"> 
+										<span class="label label-danger"> 
 											<i class="glyphicon glyphicon-remove"></i>
 										</span>
-								<?php } echo $modelo[$x]; ?>
+										<span class="col-md-offset-4 ">
+											<?php } echo $modelo[$x]; ?>
+										</span>								
 							</div>		
 				<?php   }
 				    }
@@ -142,10 +146,12 @@
 								      elseif($existencia[$x] == 0) 
 								      { 
 								?>
-										<span class="col-md-offset-4 label label-danger"> 
+										<span class="label label-danger"> 
 											<i class="glyphicon glyphicon-remove"></i>
 										</span>
-								<?php } echo $modelo[$x]; ?>
+										<span class="col-md-offset-4 ">
+											<?php } echo $modelo[$x]; ?>
+										</span>
 							</div>		
 				<?php   }
 				    }

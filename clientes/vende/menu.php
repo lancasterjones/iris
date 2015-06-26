@@ -14,14 +14,8 @@
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a <?php 
-				switch ($cliente) {
-					case 'Vende':
 						echo 'href="administrador.php"'; 
-						break;	
-					case 'LOB':
-						echo 'href="reporte_mensual.php"'; 
-						break;
-				}
+				
 
 				?>   >Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
 			<?php if($cliente == "Vende") {?>
@@ -67,26 +61,17 @@
 						?>
 					</ul>
 				</li>
-
-				<?php if($cliente != 'Vende') { ?>
 				<li ><a style="cursor: not-allowed;" href="#">Categorías<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicons-pie-chart"><i class="fa fa-pie-chart"></i></span></a></li>
-				<?php } ?>
+		
+				<li ><a id="lmven" href="#">Lo Más Vendido<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
+		
 
-				<?php if($cliente != 'Vende') { ?>
-				<li ><a id="lmven" href="#">Los Más Vendidos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star-empty"></span></a></li>
-				<?php } ?>
-
-				<?php if($cliente != 'Vende') { ?>
-				<li ><a id="lmvis" href="#">Los Más Vistos<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
-				<?php } ?>
-
-				<?php if($cliente == "Vende") {?>
+				<li ><a id="lmvis" href="#">Lo Más Visto<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-star"></span></a></li>
+	
 				<li><a href="register.php" id="registrar">Registrar<i id="icon_reg" style="font-size: 16px;" class="glyphicon glyphicon-pencil hidden-xs pull-right"></i></a></li>
-				<?php }?>
-
-				<?php if($cliente == "Vende") {?>
+		
 				<li><a href="#" id="anc_act" onclick="actualizar();">Sincronizar<i id="icon_act" style="font-size: 16px;" class="glyphicon glyphicon-refresh hidden-xs pull-right"></i></a></li>
-				<?php }?>
+
 				<li><a href="index.php?logout">Salir <i class="glyphicon glyphicon-log-out hidden-xs pull-right"></i></a></li>
 			</ul>
 		</div>

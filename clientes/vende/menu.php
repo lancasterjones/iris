@@ -1,4 +1,15 @@
 <?php
+	require_once("config/db.php");
+    require_once("classes/Login.php");
+    $login = new Login();
+
+		if ($login->isUserLoggedIn() == false) 
+		{
+			echo "<script>
+		        location.href='index.php';
+		        </script>";
+		}
+
 	function registroMeses()
 	{
 		$mes_actual = date('n') - 1;
@@ -29,9 +40,10 @@
 		
 	}
 
-	$mes  = date('n');
-	$year = date('Y'); 
-	$link = "administrador.php?m=" . $mes . "&y=" . $year;
+	$mes  = $_REQUEST['m'];
+	$year = $_REQUEST['y']; 
+	$cliente = $_SESSION['user_email'];
+	$link = "administrador.php?m=" . $mes . "&y=" . $year . "&c=" . $cliente;
 ?>
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
@@ -61,7 +73,7 @@
 					</a>
 					<ul class="dropdown-menu forAnimate" role="menu">
 						<li>
-							<a href="#">
+							<a href="<?php echo "administrador.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>">
 								Lob
 							</a>
 						</li>

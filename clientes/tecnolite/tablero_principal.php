@@ -64,7 +64,7 @@
                     $consulta  = mysqli_query($GLOBALS['conect'], $query);
                     $registros = mysqli_fetch_array($consulta);
                     $dato      = $registros[$campo];
-                    echo $dato[0];
+                    echo $dato[0] . ", ";
                 }
         }
     }

@@ -1,6 +1,4 @@
 <?php
-    $debug = 0;
-
       if (version_compare(PHP_VERSION, '5.3.7', '<')) 
       {
           exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
@@ -108,8 +106,8 @@
         cargarContenido("logo_cliente", cliente, "logo");
         cargarContenido("fila_uno_info", cliente, "info");
         cargarContenido("fila_uno", cliente, "tablero_principal");
-        cargarContenido("fila_dos", cliente, "vistos");
-        cargarContenido("fila_tres", cliente, "vendidos");
+        cargarContenido("fila_dos", cliente, "vendidos");
+        cargarContenido("fila_tres", cliente, "vistos");
         
     })
   </script>

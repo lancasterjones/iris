@@ -43,8 +43,8 @@
 		
 	}
 
-	$mes  = $_REQUEST['m'];
-	$year = $_REQUEST['y']; 
+	$mes  = date('n');
+	$year = date('Y'); 
 	$cliente = $_SESSION['user_email'];
 	$link = "administrador.php?m=" . $mes . "&y=" . $year . "&c=" . $cliente;
 ?>

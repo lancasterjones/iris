@@ -1,7 +1,7 @@
 <?php
     ini_set('display_errors', 'On');
     error_reporting(E_ALL);
-    
+
     $current_year = $_REQUEST['year'];
     $mes_actual   = $_REQUEST['mes'];
 
@@ -14,16 +14,7 @@
     $conect = new mysqli($servidor, $usuario, $pass, $db_name)
               or die("Imposible conectar a DB");
 
-    $query = "SELECT magento_venta.week,
-           magento_venta.cliente,
-           magento_venta.`year`,
-           magento_venta.cantidad AS ventas,
-           magento_venta.pedidos,
-           magento_venta.fraudes
-           FROM admin_sistemaproductos.magento_venta magento_venta
-           WHERE (magento_venta.week = $sem)
-           AND (magento_venta.cliente = 'LOB')
-           AND (magento_venta.`year` = 2015)";
+    
 
     function periodoActual()
     {
@@ -60,7 +51,17 @@
                 if($fecha == $GLOBALS['mes_actual'])
                 {
                     //echo rand(1, 50) . ", ";
-                    $consulta  = mysqli_query($GLOBALS['conect'], $GLOBALS['query']);
+                    $query = "SELECT magento_venta.week,
+           magento_venta.cliente,
+           magento_venta.`year`,
+           magento_venta.cantidad AS ventas,
+           magento_venta.pedidos,
+           magento_venta.fraudes
+           FROM admin_sistemaproductos.magento_venta magento_venta
+           WHERE (magento_venta.week = $sem)
+           AND (magento_venta.cliente = 'LOB')
+           AND (magento_venta.`year` = 2015)";
+                    $consulta  = mysqli_query($GLOBALS['conect'], $query);
                     $registros = mysqli_fetch_array($consulta);
                     echo $registros[$campo];
                 }

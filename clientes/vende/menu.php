@@ -31,11 +31,10 @@
 
 	$mes  = date('n');
 	$year = date('Y'); 
-	$link = "board.php?m=" . $mes . "&y=" . $year;
+	$link = "administrador.php?m=" . $mes . "&y=" . $year;
 ?>
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
 				<span class="sr-only">Toggle navigation</span>
@@ -45,26 +44,35 @@
 			</button>
 			<a class="navbar-brand" href="#">Iris</a>
 		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li><a <?php 
-						echo 'href="administrador.php"'; 
-				
+				<li>
+					<a <?php echo $link; ?>   >
+						Inicio
+						<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+					</a>
+				</li>
 
-				?>   >Inicio<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-			<?php if($cliente == "Vende") {?>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Clientes 
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Clientes 
 						<span class="caret"></span> 
 						<span style="font-size: 16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span>
 					</a>
 					<ul class="dropdown-menu forAnimate" role="menu">
-						<li><a href="reporte_mensual.php">Lob</a></li>
-						<li><a href="reporte_mensual.php">Tecno lite</a></li>
+						<li>
+							<a href="#">
+								Lob
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Tecno lite
+							</a>
+						</li>
 					</ul>
 				</li>
-			<?php } // cierre if validar usuario vende?>
+			
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Meses <span class="caret"></span>

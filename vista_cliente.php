@@ -20,7 +20,7 @@
 
       } 
 
-    $cliente = $_SESSION['user_email'];
+    $cliente = $_REQUEST['c'];
     $mes     = $_REQUEST['m'];
     $year    = $_REQUEST['y'];
 ?>

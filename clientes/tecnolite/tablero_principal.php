@@ -42,7 +42,8 @@
 
     function crearEstadisticas($campo)
     {
-        $semanas   = new DateTime();
+        $semanas = new DateTime();
+        $year    = $GLOBALS['current_year'];
 
         for($sem = 1; $sem < 53; $sem++)
         {
@@ -50,17 +51,16 @@
             $fecha = $semanas->format('n');
                 if($fecha == $GLOBALS['mes_actual'])
                 {
-                    //echo rand(1, 50) . ", ";
                     $query = "SELECT magento_venta.week,
-           magento_venta.cliente,
-           magento_venta.`year`,
-           magento_venta.cantidad AS ventas,
-           magento_venta.pedidos,
-           magento_venta.fraudes
-           FROM admin_sistemaproductos.magento_venta magento_venta
-           WHERE (magento_venta.week = $sem)
-           AND (magento_venta.cliente = 'LOB')
-           AND (magento_venta.`year` = 2015)";
+                           magento_venta.cliente,
+                           magento_venta.`year`,
+                           magento_venta.cantidad AS ventas,
+                           magento_venta.pedidos,
+                           magento_venta.fraudes
+                           FROM admin_sistemaproductos.magento_venta magento_venta
+                           WHERE (magento_venta.week = $sem)
+                           AND (magento_venta.cliente = 'LOB')
+                           AND (magento_venta.`year` = $year)";
                     $consulta  = mysqli_query($GLOBALS['conect'], $query);
                     $registros = mysqli_fetch_array($consulta);
                     echo $registros[$campo] . ", ";

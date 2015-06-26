@@ -76,12 +76,12 @@
 					</a>
 					<ul class="dropdown-menu forAnimate" role="menu">
 						<li>
-							<a href="<?php echo "administrador.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>">
+							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>">
 								Lob
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=TECNOLITE";?>">
 								Tecno lite
 							</a>
 						</li>

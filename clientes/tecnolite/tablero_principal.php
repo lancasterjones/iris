@@ -12,9 +12,7 @@
     $pass     = "9Fdvi3D4LR";
 
     $conect = new mysqli($servidor, $usuario, $pass, $db_name)
-              or die("Imposible conectar a DB");
-
-    
+              or die("Imposible conectar a DB");    
 
     function periodoActual()
     {

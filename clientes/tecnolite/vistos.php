@@ -40,20 +40,34 @@
 		}
 ?>
 
-<div id="slider" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
-	<legend>Lo + visto</legend>
+<div id="vistos" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
+	<legend>Lo + vendido</legend>
 	<ol class="carousel-indicators">
-		<li data-target="#slider" data-slide-to="0" class="active">
-		<li data-target="#slider" data-slide-to="1">
-		<li data-target="#slider" data-slide-to="2">
+		<li data-target="#vistos" data-slide-to="0" class="active">
+
+		<?php 
+			if($elementos > 4) { 
+		?>
+			<li data-target="#vistos" data-slide-to="1">
+
+		<?php
+			} 
+			if($elementos > 8) { 
+		?>
+			<li data-target="#vistos" data-slide-to="2">
+		<?php } ?>
+
 	</ol>
 	<div class="carousel-inner">
 		<div class="item active">
 			<div class="row">
 				<?php 
 					if($elementos > 0)
-					{
-						for($x = 1; $x <= 4; $x++) 
+					{	
+						if($elementos > 4) $stop = 4;
+							else $stop = $elementos;
+
+						for($x = 1; $x <= $stop; $x++) 
 						{ 
 				?> 
 							<div class="col-md-3">
@@ -162,6 +176,10 @@
 			</div>
 		</div><!--Item-->
 	</div>
-	<a data-slide="prev" href="#slider" class="left carousel-control"  style="margin-top: 15%;">‹</a>
-    <a data-slide="next" href="#slider" class="right carousel-control" style="margin-top: 15%;">›</a>
+	<?php
+		if($elementos > 4){
+	?>
+		<a data-slide="prev" href="#vistos" class="left carousel-control"  style="margin-top: 15%;">‹</a>
+	    <a data-slide="next" href="#vistos" class="right carousel-control" style="margin-top: 15%;">›</a>
+    <?php } ?>
 </div>

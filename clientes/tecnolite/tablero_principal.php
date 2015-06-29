@@ -2,6 +2,18 @@
     ini_set('display_errors', 'On');
     error_reporting(E_ALL);
 
+    require_once("../../config/db.php");
+    require_once("../../classes/Login.php");
+    $login = new Login();
+
+        if ($login->isUserLoggedIn() == false) 
+        {
+            echo "<script>
+                location.href='index.php';
+                </script>";
+        }
+    $cliente = $_SESSION['user_email'];
+
     $current_year = $_REQUEST['year'];
     $mes_actual   = $_REQUEST['mes'];
 
@@ -81,7 +93,7 @@
 	$(function () {
         $('#reporte_principal').highcharts({
             chart: { zoomType: 'xy' },
-            title: { text: 'TECNOLITE'       },
+            title: { text: '<?php echo $cliente; ?>'       },
             subtitle: { text: 'https://tienda.tecnolite.com.mx' },
             xAxis: [{
                 categories: [<?php semanasMesActual(); ?>],

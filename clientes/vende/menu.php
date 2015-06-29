@@ -78,12 +78,10 @@
 						<span style="font-size: 16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span>
 					</a>
 					<ul class="dropdown-menu forAnimate" role="menu">
-						<li>
+						<li onclick="console.log($(this).html(););">
 							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>">
 								Lob
 							</a>
-							<input type="month" placeholder="M">
-							<input type="number" placeholder="A">
 						</li>
 						<li>
 							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=TECNOLITE";?>">

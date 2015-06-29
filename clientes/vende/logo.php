@@ -17,7 +17,7 @@
     $con_logo   = new mysqli("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
     $query_logo = "SELECT url_logo FROM sistema_multicliente WHERE cliente = 'VENDE'";
     $consulta_logo = mysqli_query($con_logo, $query_logo);
-    while($row = mysqli_fetch_array()){
+    while($row = mysqli_fetch_array($consulta_logo)){
         $logo = $row['url_logo'];
     }
 ?>

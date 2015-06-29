@@ -78,8 +78,8 @@
 						<span style="font-size: 16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span>
 					</a>
 					<ul class="dropdown-menu forAnimate" role="menu">
-						<li onclick="console.log($(this).html());">
-							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>">
+						<li>
+							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>" onclick="console.log($this.html());">
 								Lob
 							</a>
 						</li>

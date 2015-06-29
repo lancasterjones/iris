@@ -69,7 +69,7 @@
                            magento_venta.fraudes
                            FROM admin_sistemaproductos.magento_venta magento_venta
                            WHERE (magento_venta.week = $sem)
-                           AND (magento_venta.cliente = 'LOB')
+                           AND (magento_venta.cliente = '$cliente')
                            AND (magento_venta.`year` = $year)";
                     $consulta  = mysqli_query($GLOBALS['conect'], $query);
                     $registros = mysqli_fetch_array($consulta);
@@ -94,7 +94,6 @@
         $('#reporte_principal').highcharts({
             chart: { zoomType: 'xy' },
             title: { text: '<?php echo $cliente; ?>'       },
-            subtitle: { text: 'https://tienda.tecnolite.com.mx' },
             xAxis: [{
                 categories: [<?php semanasMesActual(); ?>],
                 crosshair: true

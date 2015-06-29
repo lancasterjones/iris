@@ -2,11 +2,13 @@
 
 	//conectar con magento
 		include 'db_magento_connect.php';
+    include 'db_magento_tecnolite.php';
 
 	//traer información
 		include 'querymasvendidos.php';
     include 'querymasvistos.php';
     include 'queries_reportes.php';
+    include 'query_tecnolite_venta.php';
 
 		
 	//almacenar esa info en arreglo
@@ -57,8 +59,8 @@
 		print_r($contenedor);
 		echo $contenedor;
 
-	//conectar bd vende
-    $con=mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
+	 //conectar bd vende
+    $con = mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
 
     // Log de Errores
     if (mysqli_connect_errno()) {
@@ -71,15 +73,37 @@
     //Se elimina información en tabla masVendidos y masVistos server VENDE 
     mysqli_query($con,"TRUNCATE TABLE mas_vendidos");
     mysqli_query($con,"TRUNCATE TABLE mas_vistos");
-    mysqli_query($con, "DELETE FROM magento_venta WHERE year = $year_act AND week > $week_act");
 
-	 //llenar tabla vende con arreglo
-      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, $modelo, $month, $price, $vistas, $qty, $pic, $pedidos, $venta, $semana, $year, $fraudes))
+    mysqli_query($con, "DELETE FROM magento_venta 
+                        WHERE year = $year_act AND week > $week_act");
+
+	 //--------------------------------Actualizar LOB---------------------------------------------------------
+      foreach ($contenedor as list($sku, $mes, $precio, $foto, $cantidad, 
+        $modelo, $month, $price, $vistas, $qty, $pic, 
+        $pedidos, $venta, $semana, $year, $fraudes))
     {
-        mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
-        mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
-        mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year, fraudes) VALUES ('$pedidos', '$venta', '$semana', 'LOB', '$year', '$fraudes')");
-        /*mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year, fraudes) SELECT * FROM ('$pedidos', '$venta', '$semana', 'LOB', '$year', '$fraudes') AS tmp WHERE NOT EXIST(SELECT ) ");*/
+        mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) 
+                            VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
+
+        mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) 
+                            VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
+
+        mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year, fraudes) 
+                            VALUES ('$pedidos', '$venta', '$semana', 'LOB', '$year', '$fraudes')");
+       
+    }
+
+    // -----------------------------Actualizar Tecnolite---------------------------------------------------
+
+    $consulta_tecnolite = mysqli_query($con_tecnolite, $query_tecnolite_venta);
+    while($row_tecnolite = mysqli_fetch_array($consulta_tecnolite))
+    {
+        $year  = $row_tecnolite['year'];
+        $sem   = $row_tecnolite['semana'];;
+        $qty   = $row_tecnolite['pedidos'];;
+        $monto = $row_tecnolite['monto'];;
+        mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year)
+                            VALUES ('$qty', '$monto', '$sem', 'TECNOLITE', '$year')");
     }
 
 	

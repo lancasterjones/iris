@@ -102,6 +102,7 @@
         $sem   = $row_tecnolite['semana'];;
         $qty   = $row_tecnolite['pedidos'];;
         $monto = $row_tecnolite['monto'];;
+        echo "Tecnolite " . $year . " " . $sem . " " . $monto . " -- " ; 
         mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year)
                             VALUES ('$qty', '$monto', '$sem', 'TECNOLITE', '$year')");
     }

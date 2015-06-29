@@ -1,4 +1,17 @@
 <?php
+	require_once("config/db.php");
+    require_once("classes/Login.php");
+    $login = new Login();
+
+      if ($login->isUserLoggedIn() == false) 
+      {
+         echo "<script>
+                location.href='index.php';
+              </script>";
+
+      } 
+
+    $cliente = $_SESSION['user_email'];
 	//recolectar variables
 	$mes  = $_REQUEST['mes'];
 	$year = $_REQUEST['year'];
@@ -22,7 +35,7 @@
 	       mas_vistos.modelo,
 	       mas_vistos.vistas
 	 	   FROM admin_sistemaproductos.mas_vistos mas_vistos
-	       WHERE (mas_vistos.mes = $fecha)
+	       WHERE (mas_vistos.mes = 201505) AND mas_vistos.cliente = '$cliente'
 	       ORDER BY mas_vistos.vistas DESC";
 
 	$consulta = mysqli_query($conect, $query);

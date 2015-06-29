@@ -82,6 +82,8 @@
 							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>">
 								Lob
 							</a>
+							<input type="month" placeholder="M">
+							<input type="number" placeholder="A">
 						</li>
 						<li>
 							<a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=TECNOLITE";?>">

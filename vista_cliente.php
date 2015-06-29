@@ -101,7 +101,7 @@
     $(document).ready(function(){
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
-        cargarContenido("menu", cliente, "menu");
+        cargarContenido("menu", "vende", "menu");
         cargarContenido("logo_cliente", cliente, "logo");
         cargarContenido("fila_uno_info", cliente, "info");
         cargarContenido("fila_uno", cliente, "tablero_principal");

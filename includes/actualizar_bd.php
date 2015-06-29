@@ -56,8 +56,8 @@
     }
 
 	//imprimir esa información
-		print_r($contenedor);
-		echo $contenedor;
+		/*print_r($contenedor);
+		echo $contenedor;*/
 
 	 //conectar bd vende
     $con = mysqli_connect("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
@@ -65,7 +65,7 @@
     // Log de Errores
     if (mysqli_connect_errno()) {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    }else{ echo "Conexion MySql Ok";}
+    }else{ echo "Conexion MySql Vende Ok";}
 
     $year_act = date('Y');
     $week_act = date('W')-5;

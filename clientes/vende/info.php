@@ -9,30 +9,13 @@
 					<tr>
 						<td>
 							<i class="fa fa-users" style="color: #ff9900; font-size: 25px;"></i>
-							<h4>Visitas</h4>
+							<h4>Última actualización</h4>
 						</td>
 						<td>
-							<h4>12,983</h4>
+							<h4>28/06/2015</h4>
 						</td>
 					</tr>
-					<tr>
-						<td>
-							<i class="fa fa-smile-o" style="color: #ff9900; font-size: 25px;"></i>
-							<h4>% de conversión</h4>
-						</td>
-						<td>
-							<h4>3%</h4>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<i class="fa fa-money" style="color: #ff9900; font-size: 25px;"></i>
-							<h4>Ticket promedio</h4>
-						</td>
-						<td>
-							<h4>$3,598.60</h4>
-						</td>
-					</tr>
+					
 				</tbody>
 			</table>
 		</div>

@@ -104,7 +104,7 @@
         cargarContenido("menu", "vende" , "menu");
         cargarContenido("logo_cliente", cliente, "logo");
         cargarContenido("fila_uno_info", cliente, "info");
-        cargarContenido("fila_uno_usuarios", cliente, "");
+        cargarContenido("fila_uno_usuarios", cliente, "usuarios");
         cargarContenido("fila_dos", cliente, "vendidos");
         cargarContenido("fila_tres", cliente, "vistos");
         

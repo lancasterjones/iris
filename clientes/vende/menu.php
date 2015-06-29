@@ -49,6 +49,7 @@
 	$link = "administrador.php?m=" . $mes . "&y=" . $year . "&c=" . $cliente;
 
 	$url = $_SERVER['REQUEST_URI'];
+	$host = $_SERVER['HTTP_HOST'];
 ?>
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
@@ -128,4 +129,6 @@
 	}
 
 	console.log("<?php echo $url; ?>");
+	console.log("<?php echo $host; ?>");
+
 </script>

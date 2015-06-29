@@ -1,8 +1,8 @@
 <?php
 
 	$server_tecnolite  = "192.241.212.235";
-	$usuario_tecnolite = "user_tec";
-	$pass_tecnolite    = "u8eJ[R?5dynf9@j";
+	$usuario_tecnolite = "iris";
+	$pass_tecnolite    = "iris";
 	$db_name_tecnolite = "magento";
 
 	$con_tecnolite = new mysqli($server_tecnolite, $usuario_tecnolite, $pass_tecnolite, $db_name_tecnolite)

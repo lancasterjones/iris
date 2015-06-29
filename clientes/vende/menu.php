@@ -47,6 +47,8 @@
 	$year = date('Y'); 
 	$cliente = $_SESSION['user_email'];
 	$link = "administrador.php?m=" . $mes . "&y=" . $year . "&c=" . $cliente;
+
+	$url = $_SERVER['REQUEST_URI'];
 ?>
 <nav class="navbar navbar-inverse sidebar" role="navigation">
     <div class="container-fluid">
@@ -124,4 +126,6 @@
 		$('#anc_act').append('<i id="icon_nvo" style="font-size: 16px;" class="glyphicon glyphicon-ok hidden-xs pull-right"></i>');
 		return false;
 	}
+
+	console.log("<?php echo $url; ?>");
 </script>

@@ -13,7 +13,7 @@
 					<tr>
 						<td>
 							<i class="fa fa-user" style="color: #ff9900; font-size: 20px;"></i>
-							<h4>Tecnolite/h4>
+							<h4>tecnolite</h4>
 						</td>
 						<td>
 							<h4>Vende</h4>

@@ -82,11 +82,11 @@
         $modelo, $month, $price, $vistas, $qty, $pic, 
         $pedidos, $venta, $semana, $year, $fraudes))
     {
-        mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad) 
-                            VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad')");
+        mysqli_query($con,"INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad, cliente) 
+                            VALUES ('$sku', '$mes', '$precio', '$foto', '$cantidad', 'LOB')");
 
-        mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto) 
-                            VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic') ");
+        mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto, cliente) 
+                            VALUES ('$modelo', '$month', '$price', '$vistas', '$qty', '$pic', 'LOB') ");
 
         mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year, fraudes) 
                             VALUES ('$pedidos', '$venta', '$semana', 'LOB', '$year', '$fraudes')");

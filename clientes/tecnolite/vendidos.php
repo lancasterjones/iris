@@ -1,4 +1,18 @@
 <?php
+	require_once("config/db.php");
+    require_once("classes/Login.php");
+    $login = new Login();
+
+      if ($login->isUserLoggedIn() == false) 
+      {
+         echo "<script>
+                location.href='index.php';
+              </script>";
+
+      } 
+
+    $cliente = $_SESSION['user_email'];
+
 	//recolectar variables
 	$mes  = $_REQUEST['mes'];
 	$year = $_REQUEST['year'];
@@ -20,11 +34,12 @@
 	       mas_vendidos.foto,
 	       inventarios.modelo,
 	       inventarios.inventario,
-	       mas_vendidos.cantidad
+	       mas_vendidos.cantidad,
+           mas_vendidos.cliente
 		   FROM admin_sistemaproductos.inventarios inventarios
 	       INNER JOIN admin_sistemaproductos.mas_vendidos mas_vendidos
 	       ON (inventarios.sku = mas_vendidos.sku)
-	       WHERE (mas_vendidos.mes = '$fecha')
+	       WHERE (mas_vendidos.mes = '$fecha') AND (mas_vendidos.cliente = '$cliente')
 	       ORDER BY mas_vendidos.cantidad DESC";
 
 	$consulta = mysqli_query($conect, $query);

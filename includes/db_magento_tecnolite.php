@@ -5,7 +5,7 @@
 	$pass_tecnolite    = "u8eJ[R?5dynf9@j";
 	$db_name_tecnolite = "magento";
 
-	$con_tecnolite = new mysqli($server_tecnolite, $usuario_tecnolite, $pass_tecnolite, $db_name_tecnolite)
+	$con_tecnolite = new mysqli($server_tecnolite, $usuario_tecnolite, $pass_tecnolite)
 						or die("Error " . mysqli_error($con_tecnolite));
 
 	if ($con_tecnolite->connect_error) {

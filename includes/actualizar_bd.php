@@ -94,19 +94,8 @@
     }
 
     // -----------------------------Actualizar Tecnolite---------------------------------------------------
-    $server_tecnolite  = "192.241.212.235";
-  $usuario_tecnolite = "root";
-  $pass_tecnolite    = "u8eJ[R?5dynf9@j";
-  $db_name_tecnolite = "magento";
 
-  $con_tecnolite = new mysqli($server_tecnolite, $usuario_tecnolite, $pass_tecnolite, $db_name_tecnolite)
-            or die("Error " . mysqli_error($con_tecnolite));
-
-  if ($con_tecnolite->connect_error) {
-      die("Conexión a DB Tecnolite falló: " . $con_tecnolite->connect_error);
-  } else echo "Conexión Tecnolite OK.";
-
-    $consulta_tecnolite = mysqli_query($con_tecnolite, $query_tecnolite_venta);
+    /*$consulta_tecnolite = mysqli_query($con_tecnolite, $query_tecnolite_venta);
     while($row_tecnolite = mysqli_fetch_array($consulta_tecnolite))
     {
         $year  = $row_tecnolite['year'];
@@ -117,6 +106,33 @@
         mysqli_query($con, "INSERT INTO magento_venta(pedidos, cantidad, week, cliente, year)
                             VALUES ('$qty', '$monto', '$sem', 'TECNOLITE', '$year')");
     }
+
+    $consulta_tecnolite_vistos   = mysqli_query($con_tecnolite, $query_tecnolite_vistos);
+    while($row_tecnolite_vistos = mysqli_fetch_array($consulta_tecnolite_vistos))
+    {
+        $year  = $row_tecnolite['year'];
+        $sem   = $row_tecnolite['semana'];;
+        $qty   = $row_tecnolite['pedidos'];;
+        $monto = $row_tecnolite['monto'];;
+        echo "Tecnolite " . $year . " " . $sem . " " . $monto . " -- " ; 
+        mysqli_query($con, "INSERT INTO mas_vistos(modelo, mes, precio, vistas, qty, foto, cliente) 
+                            VALUES ('$qty', '$monto', '$sem', 'TECNOLITE', '$year')");
+    }
+
+    $consulta_tecnolite_fraudes  = mysqli_query($con_tecnolite, $query_tecnolite_fraudes);
+
+    $consulta_tecnolite_vendidos = mysqli_query($con_tecnolite, $query_tecnolite_vendidos);
+    while($row_tecnolite_vendidos = mysqli_fetch_array($consulta_tecnolite_vendidos))
+    {
+        $year  = $row_tecnolite['year'];
+        $sem   = $row_tecnolite['semana'];;
+        $qty   = $row_tecnolite['pedidos'];;
+        $monto = $row_tecnolite['monto'];;
+        echo "Tecnolite " . $year . " " . $sem . " " . $monto . " -- " ; 
+        mysqli_query($con, "INSERT INTO mas_vendidos(sku, mes, precio, foto, cantidad, cliente) 
+                            VALUES ('$qty', '$monto', '$sem', 'TECNOLITE', '$year')");
+    }*/
+    
 
 	
 ?>

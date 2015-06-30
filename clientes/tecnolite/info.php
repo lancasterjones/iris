@@ -25,7 +25,7 @@
             "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
                         "Octubre", "Noviembre", "Diciembre");
 
-        $fecha = $meses[$GLOBALS['mes_actual']-1] . " " . $GLOBALS['current_year'];
+        $fecha = $meses[$GLOBALS['mes']-1] . " " . $GLOBALS['year'];
         echo $fecha;
     }
 

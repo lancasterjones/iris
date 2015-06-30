@@ -75,6 +75,7 @@
 
 
 <div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
+    <legend style="color: #fff;">Reporte de ventas</legend>
 	<div id="reporte_principal"></div>
 </div>
 

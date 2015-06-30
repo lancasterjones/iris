@@ -12,7 +12,6 @@
                 location.href='index.php';
                 </script>";
         }
-    $cliente = $_SESSION['user_email'];
 
     $current_year = $_REQUEST['year'];
     $mes_actual   = $_REQUEST['mes'];
@@ -54,6 +53,7 @@
     {
         $semanas = new DateTime();
         $year    = $GLOBALS['current_year'];
+        $cliente = $_SESSION['user_email'];
 
         for($sem = 1; $sem < 53; $sem++)
         {

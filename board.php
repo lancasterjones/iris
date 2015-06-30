@@ -101,13 +101,13 @@
     $(document).ready(function(){
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
-        cargarContenido("menu", cliente, "menu");
+        cargarContenido("menu", "reportes", "menu");
         cargarContenido("logo_vende", "vende", "logo");
-        cargarContenido("logo_cliente", cliente, "logo");
-        cargarContenido("fila_uno_info", cliente, "info");
-        cargarContenido("fila_uno", cliente, "tablero_principal");
-        cargarContenido("fila_dos", cliente, "vendidos");
-        cargarContenido("fila_tres", cliente, "vistos");
+        cargarContenido("logo_cliente", "reportes", "logo");
+        cargarContenido("fila_uno_info", "reportes", "info");
+        cargarContenido("fila_uno", "reportes", "tablero_principal");
+        cargarContenido("fila_dos", "reportes", "vendidos");
+        cargarContenido("fila_tres", "reportes", "vistos");
         
     })
   </script>

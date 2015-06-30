@@ -10,6 +10,6 @@ or die("Error al conectar a Magento " . mysqli_error($connm));
 // Check connection
 if ($connm->connect_error) {
     die("Conexión a DB Sistema Productos falló: " . $connm->connect_error);
-} 
+} else "Conexion LOB ok"
 
 ?>

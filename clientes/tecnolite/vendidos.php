@@ -30,17 +30,14 @@
 			  or die("Imposible conectar a DB");
 
 	//crear consulta
-	$query = "SELECT mas_vendidos.mes,
-	       mas_vendidos.foto,
-	       inventarios.modelo,
-	       inventarios.inventario,
-	       mas_vendidos.cantidad,
-           mas_vendidos.cliente
-		   FROM admin_sistemaproductos.inventarios inventarios
-	       INNER JOIN admin_sistemaproductos.mas_vendidos mas_vendidos
-	       ON (inventarios.sku = mas_vendidos.sku)
-	       WHERE (mas_vendidos.mes = '$fecha') AND (mas_vendidos.cliente = '$cliente')
-	       ORDER BY mas_vendidos.cantidad DESC";
+	$query = "SELECT mas_vendidos.sku,
+       mas_vendidos.mes,
+       mas_vendidos.precio,
+       mas_vendidos.foto,
+       mas_vendidos.cantidad,
+       mas_vendidos.cliente
+ 	   FROM admin_sistemaproductos.mas_vendidos mas_vendidos
+       WHERE (mas_vendidos.mes = '$fecha') AND (mas_vendidos.cliente = '$cliente')";
 
 	$consulta = mysqli_query($conect, $query);
 	$x = 1;

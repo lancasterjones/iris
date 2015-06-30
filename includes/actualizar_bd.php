@@ -2,7 +2,7 @@
 
 	//conectar con magento
 		include 'db_magento_connect.php';
-    include 'db_magento_tecnolite.php';
+    //include 'db_magento_tecnolite.php';
 
 	//traer información
 		include 'querymasvendidos.php';
@@ -95,7 +95,20 @@
 
     // -----------------------------Actualizar Tecnolite---------------------------------------------------
 
-    /*$consulta_tecnolite = mysqli_query($con_tecnolite, $query_tecnolite_venta);
+    $server_tecnolite  = "192.241.212.235";
+  $usuario_tecnolite = "iris";
+  $pass_tecnolite    = "iris";
+  $db_name_tecnolite = "magento";
+
+  $con_tecnolite = new mysqli($server_tecnolite, $usuario_tecnolite, $pass_tecnolite, $db_name_tecnolite)
+            or die("Error " . mysqli_error($con_tecnolite));
+
+
+if ($con_tecnolite->connect_error) {
+      die("Conexion a DB Tecnolite fallo: " . $con_tecnolite->connect_error);
+  } else echo "Conexion Tecnolite OK.";
+
+    $consulta_tecnolite = mysqli_query($con_tecnolite, $query_tecnolite_venta);
     while($row_tecnolite = mysqli_fetch_array($consulta_tecnolite))
     {
         $year  = $row_tecnolite['year'];
@@ -107,7 +120,7 @@
                             VALUES ('$qty', '$monto', '$sem', 'TECNOLITE', '$year')");
     }
 
-    $consulta_tecnolite_vistos   = mysqli_query($con_tecnolite, $query_tecnolite_vistos);
+    /*$consulta_tecnolite_vistos   = mysqli_query($con_tecnolite, $query_tecnolite_vistos);
     while($row_tecnolite_vistos = mysqli_fetch_array($consulta_tecnolite_vistos))
     {
         $year  = $row_tecnolite['year'];

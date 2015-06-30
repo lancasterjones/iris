@@ -1,15 +1,14 @@
 <?php
-$servername = "54.215.253.12";
-$username = "databaseread";
-$password = "N46g3ta6skXqbete";
-$db = "shop_production";
+ 	$server_tecnolite  = "192.241.212.235";
+    $usuario_tecnolite = "iris";
+    $pass_tecnolite    = "iris";
+    $db_name_tecnolite = "magento";
 
-// Conectar
-$connm = new mysqli($servername, $username, $password, $db) 
-or die("Error al conectar a Magento " . mysqli_error($connm));
-// Check connection
-if ($connm->connect_error) {
-    die("Conexión a DB Sistema Productos falló: " . $connm->connect_error);
-} else "Conexion LOB ok"
+    $con_tecnolite = new mysqli($server_tecnolite, $usuario_tecnolite, $pass_tecnolite, $db_name_tecnolite)
+              or die("Error " . mysqli_error($con_tecnolite));
 
+
+    if ($con_tecnolite->connect_error) {
+          die("Conexion a DB Tecnolite fallo: " . $con_tecnolite->connect_error);
+      } else echo "Conexion Tecnolite OK.";
 ?>

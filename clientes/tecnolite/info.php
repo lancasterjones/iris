@@ -35,7 +35,9 @@
 	$consulta_info = mysqli_query($conect, $query_info);
 	while($row_info = mysqli_fetch_array($consulta_info))
 	{
-		$visitas = $row_info['visitas'];
+		$visitas    = $row_info['visitas'];
+		$conversion = $row_info['conversion'];
+		$ticket     = $row_info['ticket'];
 	}
 
 ?>
@@ -54,25 +56,25 @@
 							<h4>N° de visitantes</h4>
 						</td>
 						<td>
-							<h4><?php echo $visitas; ?></h4>
+							<h5><?php echo $visitas; ?></h5>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<i class="fa fa-smile-o" style="color: #ff9900; font-size: 25px;"></i>
-							<h4>% de conversión</h4>
+							<h5>% de conversión</h5>
 						</td>
 						<td>
-							<h4>3%</h4>
+							<h4><?php echo $conversion; ?>%</h4>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<i class="fa fa-money" style="color: #ff9900; font-size: 25px;"></i>
-							<h4>Ticket promedio</h4>
+							<h5>Ticket promedio</h5>
 						</td>
 						<td>
-							<h4>$3,598.60</h4>
+							<h4>$<?php echo $ticket; ?></h4>
 						</td>
 					</tr>
 				</tbody>

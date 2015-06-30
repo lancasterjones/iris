@@ -53,10 +53,10 @@
 					<tr>
 						<td>
 							<i class="fa fa-users" style="color: #ff9900; font-size: 25px;"></i>
-							<h4>N° de visitantes</h4>
+							<h5>N° de visitantes</h5>
 						</td>
 						<td>
-							<h5><?php echo $visitas; ?></h5>
+							<h4><?php echo $visitas; ?></h4>
 						</td>
 					</tr>
 					<tr>

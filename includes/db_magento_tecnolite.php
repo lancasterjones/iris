@@ -11,4 +11,16 @@
     if ($con_tecnolite->connect_error) {
           die("Conexion a DB Tecnolite fallo: " . $con_tecnolite->connect_error);
       } else echo "Conexion Tecnolite OK.";
+
+
+try {
+    $conn = new PDO("mysql:host=$server_tecnolite;dbname=$db_name_tecnolite", $usuario_tecnolite, $pass_tecnolite);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully"; 
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
 ?>

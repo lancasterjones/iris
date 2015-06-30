@@ -26,16 +26,6 @@
     $conect = new mysqli($servidor, $usuario, $pass, $db_name)
               or die("Imposible conectar a DB");    
 
-    function periodoActual()
-    {
-        $meses = array("Enero", "Febrero", "Marzo", "Abril", 
-            "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
-                        "Octubre", "Noviembre", "Diciembre");
-
-        $fecha = $meses[$GLOBALS['mes_actual']-1] . " " . $GLOBALS['current_year'];
-        echo $fecha;
-    }
-
     function semanasMesActual()
     {
         $semanas    = new DateTime();
@@ -85,9 +75,6 @@
 
 
 <div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
-    <legend >
-        <?php periodoActual(); ?>
-    </legend>
 	<div id="reporte_principal"></div>
 </div>
 

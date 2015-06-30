@@ -19,6 +19,16 @@
 	if($mes < 10) $fecha = $year . "0" . $mes;
 	else $fecha = $year . $mes;
 
+	 function periodoActual()
+    {
+        $meses = array("Enero", "Febrero", "Marzo", "Abril", 
+            "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
+                        "Octubre", "Noviembre", "Diciembre");
+
+        $fecha = $meses[$GLOBALS['mes_actual']-1] . " " . $GLOBALS['current_year'];
+        echo $fecha;
+    }
+
 	//conexión a base de datos
 	$servidor = "104.236.137.39";
 	$db_name  = "admin_sistemaproductos";
@@ -35,7 +45,7 @@
 <div class="container-fluid">
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<legend class="panel-title">Métricas</legend>
+			<legend class="panel-title"><?php periodoActual(); ?></legend>
 		</div>
 		<div class="panel-body">
 			<table class="table table-hover">

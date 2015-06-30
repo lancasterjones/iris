@@ -85,7 +85,7 @@
 				?> 
 							<div class="col-md-3">
 								<a href="#" class="thumbnail" style="margin: 0px;">
-									<img src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
+									<img style="height: 270px;" src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
 								</a>
 
 								<?php 
@@ -126,7 +126,7 @@
 				?> 
 							<div class="col-md-3">
 								<a href="#" class="thumbnail" style="margin: 0px;">
-									<img src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
+									<img style="height: 270px;" src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
 								</a>
 
 								<?php 
@@ -167,7 +167,7 @@
 				?> 
 							<div class="col-md-3">
 								<a href="#" class="thumbnail" style="margin: 0px;">
-									<img src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
+									<img style="height: 270px;" src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
 								</a>
 
 								<?php 

@@ -30,7 +30,7 @@
 			  or die("Imposible conectar a DB");
 
 	//crear consulta
-	$query = "SELECT mas_vendidos.sku,
+	$query = "SELECT mas_vendidos.sku AS modelo,
        mas_vendidos.mes,
        mas_vendidos.precio,
        mas_vendidos.foto,

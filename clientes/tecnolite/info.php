@@ -19,16 +19,6 @@
 	if($mes < 10) $fecha = $year . "0" . $mes;
 	else $fecha = $year . $mes;
 
-	 function periodoActual()
-    {
-        $meses = array("Enero", "Febrero", "Marzo", "Abril", 
-            "Mayo", "Junio", "Julio", "Agosto", "Septiembre", 
-                        "Octubre", "Noviembre", "Diciembre");
-
-        $fecha = $meses[$GLOBALS['mes']-1] . " " . $GLOBALS['year'];
-        echo $fecha;
-    }
-
 	//conexión a base de datos
 	$servidor = "104.236.137.39";
 	$db_name  = "admin_sistemaproductos";
@@ -40,12 +30,20 @@
 
 	//crear consulta
 
+	$query_info    = "SELECT * FROM metricas 
+						WHERE cliente = '$cliente' AND fecha = $fecha";
+	$consulta_info = mysqli_query($conect, $query_info);
+	while($row_info = mysqli_fetch_array($consulta_info))
+	{
+		$visitas = $row_info['visitas'];
+	}
+
 ?>
 
 <div class="container-fluid">
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<legend class="panel-title"><?php periodoActual(); ?></legend>
+			<legend class="panel-title"></legend>
 		</div>
 		<div class="panel-body">
 			<table class="table table-hover">
@@ -56,7 +54,7 @@
 							<h4>N° de visitantes</h4>
 						</td>
 						<td>
-							<h4></h4>
+							<h4><?php echo $visitas; ?></h4>
 						</td>
 					</tr>
 					<tr>

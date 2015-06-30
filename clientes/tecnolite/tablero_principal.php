@@ -74,7 +74,8 @@
                            AND (magento_venta.`year`  = $year)";
                     $consulta  = mysqli_query($GLOBALS['conect'], $query);
                     $registros = mysqli_fetch_array($consulta);
-                    echo $registros[$campo] . ", ";
+                    if($registros[$campo] == '') echo "0";
+                    else echo $registros[$campo] . ", ";
                 }
         }
     }

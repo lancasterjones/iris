@@ -13,8 +13,9 @@
                 </script>";
         }
 
-    $current_year = $_REQUEST['year'];
-    $mes_actual   = $_REQUEST['mes'];
+    $global_cliente = $_SESSION['user_email'];
+    $current_year   = $_REQUEST['year'];
+    $mes_actual     = $_REQUEST['mes'];
 
     //conexión a base de datos
     $servidor = "104.236.137.39";
@@ -68,9 +69,9 @@
                            magento_venta.pedidos,
                            magento_venta.fraudes
                            FROM admin_sistemaproductos.magento_venta magento_venta
-                           WHERE (magento_venta.week = $sem)
+                           WHERE (magento_venta.week  = $sem)
                            AND (magento_venta.cliente = '$cliente')
-                           AND (magento_venta.`year` = $year)";
+                           AND (magento_venta.`year`  = $year)";
                     $consulta  = mysqli_query($GLOBALS['conect'], $query);
                     $registros = mysqli_fetch_array($consulta);
                     echo $registros[$campo] . ", ";
@@ -93,7 +94,7 @@
 	$(function () {
         $('#reporte_principal').highcharts({
             chart: { zoomType: 'xy' },
-            title: { text: '<?php echo $cliente; ?>'       },
+            title: { text: '<?php echo $global_cliente; ?>'       },
             xAxis: [{
                 categories: [<?php semanasMesActual(); ?>],
                 crosshair: true

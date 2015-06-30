@@ -35,7 +35,7 @@
 	       mas_vistos.modelo,
 	       mas_vistos.vistas
 	 	   FROM admin_sistemaproductos.mas_vistos mas_vistos
-	       WHERE (mas_vistos.mes = 201505) AND mas_vistos.cliente = '$cliente'
+	       WHERE (mas_vistos.mes = $fecha) AND mas_vistos.cliente = '$cliente'
 	       ORDER BY mas_vistos.vistas DESC";
 
 	$consulta = mysqli_query($conect, $query);

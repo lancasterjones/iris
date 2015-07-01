@@ -67,12 +67,12 @@
 
     function deslizar()
     {      
-      $('#menu_vistos').click(function(){
+      $('#menu_vendidos').click(function(){
           $('html, body').animate({
               scrollTop: $('#fila_dos').offset().top
           }, 1000);
       });
-      $("#menu_vendidos").click(function(){
+      $("#menu_vistos").click(function(){
           $('html, body').animate({
               scrollTop: $('#fila_tres').offset().top
           }, 1000);

@@ -99,7 +99,7 @@
                                 });
 
                     $('#configurar_fraudes').val(param[3]);
-                        $("#muestra_pedidos").css({
+                        $("#muestra_fraudes").css({
                                   "border-style": "solid", 
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
@@ -122,13 +122,24 @@
 
     function guardarConfiguracion()
       {
+          var cliente = $('#select_cliente').val();
           var logo    = $('#configurar_logo').val();
           var foto    = $('#configurar_foto').val();
           var pedidos = $('#configurar_pedidos').val();
           var fraudes = $('#configurar_fraudes').val();
           var ventas  = $('#configurar_venta').val();
+
+          /*$.post("includes/guardar_configuracion.php", {
+                  cliente : cliente,
+                  logo: logo,
+                  foto: foto,
+                  pedidos: pedidos,
+                  fraudes: fraudes,
+                  ventas: ventas
+                   });*/
+
           $('#btn-configuracion').addClass('fa fa-check');
-          console.log("Datos guardados: logo: " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);
+          console.log("Datos guardados: cliente: " + cliente + " " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);
       }
 
     function cargarContenido(elemento, empresa, archivo, mes){

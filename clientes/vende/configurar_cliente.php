@@ -12,30 +12,44 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Logo: </label>
 			<div class="col-md-4">
 				<input type="text" class="form-control" placeholder="url">
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Fotos: </label>
 			<div class="col-md-4">
 				<input type="text" class="form-control" placeholder="url">
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Color-pedidos: </label>
 			<div class="col-md-4">
 				<input type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="row form-group">
+			<label class="col-md-offset-3 col-md-2 control-label">Color-fraudes: </label>
+			<div class="col-md-4">
+				<input type="text" class="form-control" placeholder="#xxxxxx">
+			</div>
+		</div>
+
+		<div class="row form-group">
+			<label class="col-md-offset-3 col-md-2 control-label">Color-ventas: </label>
+			<div class="col-md-4">
+				<input type="text" class="form-control" placeholder="#xxxxxx">
+			</div>
+		</div>
+
+		<div class="row form-group">
 			<div class="col-md-offset-5">
-				<button class="btn btn-default">Guardar</button>
+				<button class="btn btn-success">Guardar</button>
 			</div>
 		</div>
 	</form>

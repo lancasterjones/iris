@@ -94,6 +94,7 @@
         $('#reporte_principal').highcharts({
             chart: { zoomType: 'xy' },
             title: { text: '<?php echo $global_cliente; ?>'       },
+            subtitle: { text: '<?php periodoActual(); ?>' },
             xAxis: [{
                 categories: [<?php semanasMesActual(); ?>],
                 crosshair: true

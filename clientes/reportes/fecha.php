@@ -32,6 +32,6 @@
 
 <div class="col-sm-2">
 		<legend> 
-            <?php pediodoActual(); ?>
+            <?php periodoActual(); ?>
         </legend>
 </div>

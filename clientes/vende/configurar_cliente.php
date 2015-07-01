@@ -30,7 +30,7 @@
 			<label class="col-md-offset-3 col-md-2 control-label">Color-pedidos: </label>
 			<div class="col-md-4">
 				<input id="configurar_pedidos" type="text" class="form-control" placeholder="#xxxxxx">
-				<div class="col-md-1" id="muestra_pedidos">
+				<div class="col-md-1" id="muestra_pedidos"></div>
 			</div>
 			</div>
 		</div>

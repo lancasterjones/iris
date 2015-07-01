@@ -94,7 +94,8 @@
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
                                   "height" : "40px",
-                                  "background-color" : param[2]);
+                                  "background-color" : param[2]
+                                });
                     $('#configurar_fraudes').val(param[3]);
                         $("#muestra_pedidos").css("background-color", "'" + param[2] + "'");
                     $('#configurar_venta').val(param[4]);

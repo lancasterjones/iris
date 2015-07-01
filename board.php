@@ -102,7 +102,7 @@
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
         cargarContenido("menu", "reportes", "menu");
-        cargarContenido("fecha", "vende", "fecha");
+        cargarContenido("fecha", "reportes", "fecha");
         cargarContenido("logo_cliente", "reportes", "logo");
         cargarContenido("fila_uno_info", "reportes", "info");
         cargarContenido("fila_uno", "reportes", "tablero_principal");

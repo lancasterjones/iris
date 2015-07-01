@@ -114,11 +114,13 @@
 			</div>
 		</div><!--Item active-->
 
-		<div class="item">
-			<div class="row">
-				<?php 
-					if($elementos > 4)
-					{
+		<?php 
+			if($elementos > 4)
+			{
+		?>
+				<div class="item">
+					<div class="row">
+				<?php				
 						if($elementos > 8) $stop = 8;
 							else $stop = $elementos;
 							
@@ -149,12 +151,13 @@
 											<?php } echo $modelo[$x]; ?>
 										</span>								
 							</div>		
-				<?php   }
-				    }
+				<?php   
+				    }  //cierre for
 				?>
 			</div>
 		</div><!--Item-->
 		<?php 
+			} // cierre if > 4
 			if($elementos > 8)
 			{
 		?>
@@ -198,10 +201,12 @@
 		</div><!--Item-->
 	<?php } ?>
 	</div>
+
 	<?php
 		if($elementos > 4){
 	?>
 		<a data-slide="prev" href="#vendidos" class="left carousel-control"  style="margin-top: 15%;">‹</a>
 	    <a data-slide="next" href="#vendidos" class="right carousel-control" style="margin-top: 15%;">›</a>
     <?php } ?>
+
 </div>

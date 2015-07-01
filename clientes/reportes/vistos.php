@@ -106,18 +106,19 @@
 										<span class="label label-default">
 											<?php } echo $modelo[$x]; ?>
 										</span>
-							</div>		
+							</div>	<!--fila-->	
 				<?php   }
 				    }
 				?>
-			</div>
+			</div><!--row-->
 		</div><!--Item active-->
-
-		<div class="item">
-			<div class="row">
-				<?php 
-					if($elementos > 4)
-					{
+		<?php 
+			if($elementos > 4)
+			{
+		?>
+				<div class="item">
+					<div class="row">
+				<?php
 						if($elementos > 8) $stop = 8;
 							else $stop = $elementos;
 
@@ -147,18 +148,20 @@
 										<span class="label label-default">
 											<?php } echo $modelo[$x]; ?>
 										</span>								
-							</div>		
-				<?php   }
+							</div>	<!--fila-->	
+				<?php   
 				    }
 				?>
-			</div>
+			</div><!--row-->
 		</div><!--Item-->
-
-		<div class="item">
-			<div class="row">
-				<?php 
-					if($elementos > 8)
-					{
+		<?php 
+			} // cierre if > 4
+			if($elementos > 8)
+			{
+		?>  
+				<div class="item">
+					<div class="row">
+				<?php
 						if($elementos > 10) $stop = 10;
 							else $stop = $elementos;
 
@@ -188,17 +191,19 @@
 										<span class="label label-default">
 											<?php } echo $modelo[$x]; ?>
 										</span>
-							</div>		
-				<?php   }
+							</div>	<!--fila-->	
+				<?php   
 				    }
 				?>
-			</div>
+			</div><!--row-->
 		</div><!--Item-->
-	</div>
+	</div><!--carrousel-->
+
 	<?php
+		}// cierre if > 8
 		if($elementos > 4){
 	?>
 		<a data-slide="prev" href="#vistos" class="left carousel-control"  style="margin-top: 15%;">‹</a>
 	    <a data-slide="next" href="#vistos" class="right carousel-control" style="margin-top: 15%;">›</a>
     <?php } ?>
-</div>
+</div><!--principal-->

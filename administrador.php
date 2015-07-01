@@ -67,12 +67,12 @@
 
     function deslizar()
     {      
-      $('#menu_vistos').click(function(){
+      $('#menu_vendidos').click(function(){
           $('html, body').animate({
               scrollTop: $('#fila_dos').offset().top
           }, 1000);
       });
-      $("#menu_vendidos").click(function(){
+      $("#menu_vistos").click(function(){
           $('html, body').animate({
               scrollTop: $('#fila_tres').offset().top
           }, 1000);
@@ -102,11 +102,11 @@
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
         cargarContenido("menu", "vende" , "menu");
-        cargarContenido("logo_cliente", cliente, "logo");
-        cargarContenido("fila_uno_info", cliente, "info");
-        cargarContenido("fila_uno_usuarios", cliente, "usuarios");
-        cargarContenido("fila_dos", cliente, "vendidos");
-        cargarContenido("fila_tres", cliente, "vistos");
+        cargarContenido("logo_cliente", "vende", "logo");
+        cargarContenido("fila_uno_info", "vende", "info");
+        cargarContenido("fila_uno_usuarios", "vende", "usuarios");
+        cargarContenido("fila_dos", "vende", "vendidos");
+        cargarContenido("fila_tres", "vende", "vistos");
         
     })
   </script>

@@ -102,7 +102,12 @@
 				</li>
 				<li>
 					<a href="register.php" id="registrar">
-						Registrar<i id="icon_reg" style="font-size: 16px;" class="glyphicon glyphicon-pencil hidden-xs pull-right"></i>
+						Nuevo cliente<i id="icon_reg" style="font-size: 16px;" class="fa fa-user-plus hidden-xs pull-right"></i>
+					</a>
+				</li>
+				<li>
+					<a href="register.php" id="registrar">
+						Nuevo usuario<i id="icon_reg" style="font-size: 16px;" class="fa fa-user hidden-xs pull-right"></i>
 					</a>
 				</li>		
 				<li>

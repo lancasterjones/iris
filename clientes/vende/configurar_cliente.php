@@ -48,8 +48,8 @@
 			<label class="col-md-offset-3 col-md-2 control-label">Color-ventas: </label>
 			<div class="col-md-4">
 				<input id="configurar_venta" type="text" class="form-control" placeholder="#xxxxxx">
-				<div class="col-md-1" id="muestra_ventas" style="border-style: solid; border-width: 1px; border-color: #ccc; height: 40px; background-color: #FAFAF6;">
 			</div>
+			<div class="col-md-1" id="muestra_ventas" style="border-style: solid; border-width: 1px; border-color: #ccc; height: 40px; background-color: #FAFAF6;">
 			</div>
 		</div>
 

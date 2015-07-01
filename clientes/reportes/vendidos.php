@@ -154,12 +154,13 @@
 				?>
 			</div>
 		</div><!--Item-->
-
-		<div class="item">
-			<div class="row">
-				<?php 
-					if($elementos > 8)
-					{
+		<?php 
+			if($elementos > 8)
+			{
+		?>
+				<div class="item">
+					<div class="row">	
+				<?php			
 						if($elementos > 10) $stop = 10;
 							else $stop = $elementos;
 
@@ -190,11 +191,12 @@
 											<?php } echo $modelo[$x]; ?>
 										</span>
 							</div>		
-				<?php   }
+				<?php   
 				    }
 				?>
 			</div>
 		</div><!--Item-->
+	<?php } ?>
 	</div>
 	<?php
 		if($elementos > 4){

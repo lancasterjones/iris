@@ -25,5 +25,12 @@
 				<input type="text" class="form-control" placeholder="url">
 			</div>
 		</div>
+
+		<div class="form-group">
+			<label class="col-md-offset-3 col-md-2 control-label">Color-pedidos: </label>
+			<div class="col-md-4">
+				<input type="text" class="form-control" placeholder="#xxxxxx">
+			</div>
+		</div>
 	</form>
 </div>

@@ -106,22 +106,23 @@
 										<span class="label label-default">
 											<?php } echo $modelo[$x]; ?>
 										</span>
-							</div>	<!--fila-->	
+							</div>		
 				<?php   }
 				    }
 				?>
-			</div><!--row-->
+			</div>
 		</div><!--Item active-->
+
 		<?php 
 			if($elementos > 4)
 			{
 		?>
 				<div class="item">
 					<div class="row">
-				<?php
+				<?php				
 						if($elementos > 8) $stop = 8;
 							else $stop = $elementos;
-
+							
 						for($x = 5; $x <= $stop; $x++) 
 						{ 
 				?> 
@@ -148,20 +149,20 @@
 										<span class="label label-default">
 											<?php } echo $modelo[$x]; ?>
 										</span>								
-							</div>	<!--fila-->	
+							</div>		
 				<?php   
-				    }
+				    }  //cierre for
 				?>
-			</div><!--row-->
+			</div>
 		</div><!--Item-->
 		<?php 
 			} // cierre if > 4
 			if($elementos > 8)
 			{
-		?>  
+		?>
 				<div class="item">
-					<div class="row">
-				<?php
+					<div class="row">	
+				<?php			
 						if($elementos > 10) $stop = 10;
 							else $stop = $elementos;
 
@@ -191,19 +192,20 @@
 										<span class="label label-default">
 											<?php } echo $modelo[$x]; ?>
 										</span>
-							</div>	<!--fila-->	
+							</div>		
 				<?php   
 				    }
 				?>
-			</div><!--row-->
+			</div>
 		</div><!--Item-->
-	</div><!--carrousel-->
+	<?php } ?>
+	</div>
 
 	<?php
-		}// cierre if > 8
 		if($elementos > 4){
 	?>
 		<a data-slide="prev" href="#vistos" class="left carousel-control"  style="margin-top: 15%;">‹</a>
 	    <a data-slide="next" href="#vistos" class="right carousel-control" style="margin-top: 15%;">›</a>
     <?php } ?>
-</div><!--principal-->
+
+</div>

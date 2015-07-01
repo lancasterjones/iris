@@ -11,8 +11,8 @@
 		</div>
 
 		<div class="form-group">
-			<label class="control-label">Logo: </label>
-			<input type="text" class="form-control" placeholder="url">
+			<label class="col-md-offset-3 col-md-2 control-label">Logo: </label>
+			<input type="text" class="col-md-4 form-control" placeholder="url">
 		</div>
 	</form>
 </div>

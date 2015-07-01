@@ -22,28 +22,28 @@
 		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Fotos: </label>
 			<div class="col-md-4">
-				<input type="text" class="form-control" placeholder="url">
+				<input id="configurar_foto" type="text" class="form-control" placeholder="url">
 			</div>
 		</div>
 
 		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Color-pedidos: </label>
 			<div class="col-md-4">
-				<input type="text" class="form-control" placeholder="#xxxxxx">
+				<input id="configurar_pedidos" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
 		</div>
 
 		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Color-fraudes: </label>
 			<div class="col-md-4">
-				<input type="text" class="form-control" placeholder="#xxxxxx">
+				<input id="configurar_fraudes" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
 		</div>
 
 		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Color-ventas: </label>
 			<div class="col-md-4">
-				<input type="text" class="form-control" placeholder="#xxxxxx">
+				<input id="configurar_venta" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
 		</div>
 

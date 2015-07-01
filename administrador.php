@@ -87,8 +87,10 @@
                 success: function(data){
                     var param = data.split("***");
                     $('#configurar_logo').html(param[0]);
-                    $('#configurar_logo').val(param[0]);
-                    consolo.log(param[0]);
+                    $('#configurar_foto').val(param[1]);
+                    $('#configurar_pedidos').val(param[2]);
+                    $('#configurar_fraudes').val(param[3]);
+                    $('#configurar_venta').val(param[4]);
                 }
              });
         });

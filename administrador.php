@@ -66,19 +66,22 @@
   <script>
 
     function deslizar()
-    {      
-      $('#menu_vendidos').click(function(){
+    {  
+      $("#conf_cliente").click(function(){
           $('html, body').animate({
               scrollTop: $('#fila_dos').offset().top
           }, 1000);
       });
-      $("#menu_vistos").click(function(){
-          $('html, body').animate({
-              scrollTop: $('#fila_tres').offset().top
-          }, 1000);
-      });
       
     }
+
+    function guardarConfiguracion()
+      {
+          $('#select_cliente').change(function(){
+               var cliente = $(this).val();
+               console.log(cliente);
+          });
+      }
 
     function cargarContenido(elemento, empresa, archivo, mes){
       var ruta = "clientes/" + empresa + "/" + archivo + ".php";

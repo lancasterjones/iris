@@ -32,5 +32,11 @@
 				<input type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
 		</div>
+
+		<div class="form-group">
+			<div class="col-md-offset-5">
+				<button class="btn btn-default">Guardar</button>
+			</div>
+		</div>
 	</form>
 </div>

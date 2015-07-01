@@ -7,7 +7,7 @@
 				<select class="form-control" id="select_cliente">
 					<option></option>
 					<option>LOB</option>
-					<option>Tecnolite</option>
+					<option>TECNOLITE</option>
 				</select>
 			</div>
 		</div>
@@ -57,5 +57,5 @@
 
 <script>
 	deslizar();
-	guardarConfiguracion();
+	traerConfiguracion();
 </script>

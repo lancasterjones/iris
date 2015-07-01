@@ -75,12 +75,25 @@
       
     }
 
+    function traerConfiguracion()
+      {
+        $('#select_cliente').change(function(){
+             var cliente = $(this).val();
+             $.ajax({
+                method: "POST",
+                url: "includes/traer_configuracion.php",
+                data: {cliente: cliente},
+                dataType: "text",
+                success: function(data){
+                    console.log(data);
+                }
+             });
+        });
+      }
+
     function guardarConfiguracion()
       {
-          $('#select_cliente').change(function(){
-               var cliente = $(this).val();
-               console.log(cliente);
-          });
+          
       }
 
     function cargarContenido(elemento, empresa, archivo, mes){

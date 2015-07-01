@@ -102,12 +102,12 @@
 				</li>
 				<li>
 					<a href="configurar_cliente.php" id="conf_cliente">
-						Nuevo cliente<i id="icon_reg" style="font-size: 16px;" class="fa fa-user-plus hidden-xs pull-right"></i>
+						Configurar cliente<i id="icon_reg" style="font-size: 16px;" class="fa fa-cogs hidden-xs pull-right"></i>
 					</a>
 				</li>
 				<li>
 					<a href="register.php" id="registrar">
-						Nuevo usuario<i id="icon_reg" style="font-size: 16px;" class="fa fa-user hidden-xs pull-right"></i>
+						Nuevo usuario<i id="icon_reg" style="font-size: 16px;" class="fa fa-user-plus hidden-xs pull-right"></i>
 					</a>
 				</li>		
 				<li>

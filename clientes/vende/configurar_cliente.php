@@ -1,6 +1,6 @@
 <div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 	<legend>Configurar Vista de Cliente</legend>
-	<form>
+
 		<div class="row form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Seleccionar cliente: </label>
 			<div class="col-md-4 ">
@@ -55,7 +55,6 @@
 				<button id="btn-configuracion" class="btn btn-success" onclick="guardarConfiguracion();">Guardar</button>
 			</div>
 		</div>
-	</form>
 </div>
 
 <script>

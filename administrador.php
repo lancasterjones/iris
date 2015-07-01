@@ -129,14 +129,14 @@
           var fraudes = $('#configurar_fraudes').val();
           var ventas  = $('#configurar_venta').val();
 
-          /*$.post("includes/guardar_configuracion.php", {
+          $.post("includes/guardar_configuracion.php", {
                   cliente : cliente,
                   logo: logo,
                   foto: foto,
                   pedidos: pedidos,
                   fraudes: fraudes,
                   ventas: ventas
-                   });*/
+                   });
 
           $('#btn-configuracion').addClass('fa fa-check');
           console.log("Datos guardados: cliente: " + cliente + " " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);

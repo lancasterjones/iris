@@ -101,7 +101,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="register.php" id="registrar">
+					<a href="configurar_cliente.php" id="conf_cliente">
 						Nuevo cliente<i id="icon_reg" style="font-size: 16px;" class="fa fa-user-plus hidden-xs pull-right"></i>
 					</a>
 				</li>

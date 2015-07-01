@@ -3,16 +3,27 @@
 	<form>
 		<div class="form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Seleccionar cliente: </label>
-			<select class="col-md-4 form-control">
-				<option></option>
-				<option>LOB</option>
-				<option>Tecnolite</option>
-			</select>
+			<div class="col-md-4 ">
+				<select class="form-control">
+					<option></option>
+					<option>LOB</option>
+					<option>Tecnolite</option>
+				</select>
+			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="col-md-offset-3 col-md-2 control-label">Logo: </label>
-			<input type="text" class="col-md-4 form-control" placeholder="url">
+			<div class="col-md-4">
+				<input type="text" class="form-control" placeholder="url">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-offset-3 col-md-2 control-label">Fotos: </label>
+			<div class="col-md-4">
+				<input type="text" class="form-control" placeholder="url">
+			</div>
 		</div>
 	</form>
 </div>

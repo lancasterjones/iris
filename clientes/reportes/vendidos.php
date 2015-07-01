@@ -52,6 +52,15 @@
 			$elementos = $x;
 			$x++;
 		}
+
+	$consulta_url = mysqli_query($conect, 
+		"SELECT url_foto FROM sistema_multicliente 
+			WHERE cliente = '$cliente' ");
+
+		while($row_url = mysqli_fetch_array($consulta_url))
+		{
+			$url = $row_url['url_foto'];
+		}
 ?>
 
 <div id="vendidos" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
@@ -86,7 +95,7 @@
 				?> 
 							<div class="col-md-3">
 								<a href="#" class="thumbnail" style="margin: 0px;">
-									<img style="height: 270px;" src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
+									<img style="height: 270px;" src="<?php echo $url . $foto[$x]; ?>">
 								</a>
 
 								<?php 
@@ -129,7 +138,7 @@
 				?> 
 							<div class="col-md-3">
 								<a href="#" class="thumbnail" style="margin: 0px;">
-									<img style="height: 270px;" src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
+									<img style="height: 270px;" src="<?php echo $url . $foto[$x]; ?>">
 								</a>
 
 								<?php 
@@ -172,7 +181,7 @@
 				?> 
 							<div class="col-md-3">
 								<a href="#" class="thumbnail" style="margin: 0px;">
-									<img style="height: 270px;" src="http://tienda.tecnolite.com.mx/media/catalog/product<?php echo $foto[$x]; ?>">
+									<img style="height: 270px;" src="<?php echo $url . $foto[$x]; ?>">
 								</a>
 
 								<?php 

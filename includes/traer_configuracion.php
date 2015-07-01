@@ -20,5 +20,5 @@
 				$col_frau = $row['color_fraudes'];
 				$col_vent = $row['color_ventas'];
 			}
-		echo $url_logo ."***" . $url_foto ."***" . $url_pedi ."***" . $url_frau ."***" . $url_vent;
+		echo $url_logo ."***" . $url_foto ."***" . $col_pedi ."***" . $col_frau ."***" . $col_vent;
 ?>

@@ -85,7 +85,10 @@
                 data: {cliente: cliente},
                 dataType: "text",
                 success: function(data){
-                    console.log(data);
+                    var param = data.split("***");
+                    $('#configurar_logo').html(param[0]);
+                    $('#configurar_logo').val(param[0]);
+                    consolo.log(param[0]);
                 }
              });
         });

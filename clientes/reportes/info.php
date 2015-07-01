@@ -56,7 +56,7 @@
 							<h5>N° de visitantes</h5>
 						</td>
 						<td>
-							<h4><?php echo $visitas; ?></h4>
+							<h4><?php echo number_format($visitas); ?></h4>
 						</td>
 					</tr>
 					<tr>

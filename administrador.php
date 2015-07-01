@@ -88,6 +88,7 @@
                     var param = data.split("***");
                     $('#configurar_logo').val(param[0]);
                     $('#configurar_foto').val(param[1]);
+
                     $('#configurar_pedidos').val(param[2]);
                         $("#muestra_pedidos").css({
                                   "border-style": "solid", 
@@ -96,9 +97,24 @@
                                   "height" : "40px",
                                   "background-color" : param[2]
                                 });
+
                     $('#configurar_fraudes').val(param[3]);
-                        $("#muestra_pedidos").css("background-color", "'" + param[2] + "'");
+                        $("#muestra_pedidos").css({
+                                  "border-style": "solid", 
+                                  "border-width": "1px", 
+                                  "border-color": "#ccc",
+                                  "height" : "40px",
+                                  "background-color" : param[3]
+                                });
+
                     $('#configurar_venta').val(param[4]);
+                        $('#muestra_ventas').css({
+                                  "border-style": "solid", 
+                                  "border-width": "1px", 
+                                  "border-color": "#ccc",
+                                  "height" : "40px",
+                                  "background-color" : param[4]
+                                });
                 }
              });
         });

@@ -51,6 +51,16 @@
 			$elementos = $x;
 			$x++;
 		}
+
+	$consulta_url = mysqli_query($conect, 
+		"SELECT url_foto FROM sistema_multicliente 
+			WHERE cliente = '$cliente' ");
+
+		while($row_url = mysqli_fetch_array($consulta_url))
+		{
+			$url = $row_url['url_foto'];
+		}
+	
 ?>
 
 <div id="vistos" class="carousel slide" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
@@ -209,3 +219,7 @@
     <?php } ?>
 
 </div>
+
+<script>
+	console.log('<?php echo $url; ?>');
+</script>

@@ -85,7 +85,7 @@
 
 
 <div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
-    <legend style="color: #C1C1AF;"><?php periodoActual(); ?></legend>
+    <legend style="color: #C1C1AF;"></legend>
 	<div id="reporte_principal"></div>
 </div>
 

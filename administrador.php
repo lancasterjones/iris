@@ -86,7 +86,7 @@
                 dataType: "text",
                 success: function(data){
                     var param = data.split("***");
-                    $('#configurar_logo').html(param[0]);
+                    $('#configurar_logo').val(param[0]);
                     $('#configurar_foto').val(param[1]);
                     $('#configurar_pedidos').val(param[2]);
                     $('#configurar_fraudes').val(param[3]);
@@ -98,7 +98,13 @@
 
     function guardarConfiguracion()
       {
-          
+          var logo    = $('#configurar_logo').val();
+          var foto    = $('#configurar_foto').val();
+          var pedidos = $('#configurar_pedidos').val();
+          var fraudes = $('#configurar_fraudes').val();
+          var ventas  = $('#configurar_venta').val();
+          $('#btn-configuracion').addClass('fa fa-check');
+          console.log("Datos guardados: logo: " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);
       }
 
     function cargarContenido(elemento, empresa, archivo, mes){

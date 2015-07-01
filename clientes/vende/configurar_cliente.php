@@ -38,6 +38,8 @@
 			<div class="col-md-4">
 				<input id="configurar_fraudes" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
+			<div class="col-md 1" style="background-color: #ff9900;">
+			</div>
 		</div>
 
 		<div class="row form-group">
@@ -49,7 +51,7 @@
 
 		<div class="row form-group">
 			<div class="col-md-offset-5">
-				<button class="btn btn-success">Guardar</button>
+				<button id="btn-configuracion" class="btn btn-success" onclick="guardarConfiguracion();">Guardar</button>
 			</div>
 		</div>
 	</form>

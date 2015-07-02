@@ -46,7 +46,7 @@
 			<div class="col-md-4">
 				<input id="configurar_fraudes" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
-			<div class="col-md-1" id="muestra_fraudes"></div>
+			<div class="col-md-1" id="muestra_fraudes" style="width: 45px;"></div>
 		</div>
 
 		<div class="row form-group">
@@ -54,7 +54,7 @@
 			<div class="col-md-4">
 				<input id="configurar_venta" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
-			<div class="col-md-1" id="muestra_ventas"></div>
+			<div class="col-md-1" id="muestra_ventas" style="width: 45px;"></div>
 		</div>
 
 		<div class="row form-group">

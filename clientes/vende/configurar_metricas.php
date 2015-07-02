@@ -8,12 +8,12 @@
 			for($x = $mes_actual; $x >= 1; $x--)
 			{				
 				echo "<option value='" . $year . $x . "'>" .  $year . $x . "</option>";
-				if($x == 0)
+				if($x == 1)
 				{
 					for($x = 12; $x >= $mes_actual; $x--)
 					{
 						$periodo =  $ultimoRegistro . $x ;
-						"<option value='" . $periodo . "'>" . $periodo . "</option>"
+						echo "<option value='" . $periodo . "'>" . $periodo . "</option>";
 					}
 					break;
 				}

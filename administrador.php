@@ -142,6 +142,14 @@
         });
       }
 
+    function traerMetricas()
+      {
+          $('#select_periodo').change(function(){
+                var periodo = $(this).val();
+                console.log("periodo " + periodo);
+          });
+      }
+
     function guardarConfiguracion()
       {
           var cliente = $('#nuevo_cliente').val();

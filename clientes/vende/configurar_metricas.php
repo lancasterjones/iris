@@ -6,8 +6,8 @@
 			<div class="col-md-4 ">
 				<select class="form-control" id="select_periodo">
 					<option></option>
-					<option>Junio 2015</option>
-					<option>Julio 2015</option>
+					<option value="201506">Junio 2015</option>
+					<option value="201507">Julio 2015</option>
 				</select>
 			</div>
 		</div>

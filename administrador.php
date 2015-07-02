@@ -149,6 +149,8 @@
       {
           $('#select_cte_metricas, #select_periodo').change(function(){
                 var cliente = $('#select_cte_metricas').val();
+                    if(cliente != '') $('#configurar_metricas_cliente').attr('disabled');
+
                 var periodo = $('#select_periodo').val();
                 var visitas = $('#configurar_visitas').val();
                 var conversion = $('#configurar_conversion').val();

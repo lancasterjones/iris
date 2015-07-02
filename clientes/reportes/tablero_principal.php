@@ -25,6 +25,14 @@
 
     $conect = new mysqli($servidor, $usuario, $pass, $db_name)
               or die("Imposible conectar a DB");    
+
+    $consulta = mysqli_query($conect, "SELECT * FROM sistema_multicliente WHERE cliente = '$global_cliente'");
+        while($row = mysqli_fetch_array($consulta))
+            {
+                $pedidos = $row['color_pedidos'];
+                $fraudes = $row['color_fraudes'];
+                $ventas  = $row['color_ventas'];
+            }
               
      function periodoActual()
         {
@@ -90,6 +98,7 @@
 </div>
 
 <script>
+    console.log('<?php echo "pedidos" . $pedidos . " fraudes " . $fraudes . " ventas " . $ventas; ?>');
 	$(function () {
         $('#reporte_principal').highcharts({
             chart: { zoomType: 'xy' },

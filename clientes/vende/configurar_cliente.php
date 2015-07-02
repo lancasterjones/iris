@@ -2,7 +2,7 @@
 	<legend>Configurar Vista de Cliente</legend>
 
 		<div class="row form-group">
-			<label class="col-md-offset-3 col-md-2 control-label">Seleccionar cliente: </label>
+			<label class="col-md-offset-2 col-md-2 control-label">Seleccionar cliente: </label>
 			<div class="col-md-4 ">
 				<select class="form-control" id="select_cliente">
 					<option></option>
@@ -13,21 +13,21 @@
 		</div>
 
 		<div class="row form-group">
-			<label class="col-md-offset-3 col-md-2 control-label">Logo: </label>
+			<label class="col-md-offset-2 col-md-2 control-label">Logo: </label>
 			<div class="col-md-4">
 				<input id="configurar_logo" type="text" class="form-control" placeholder="url">
 			</div>
 		</div>
 
 		<div class="row form-group">
-			<label class="col-md-offset-3 col-md-2 control-label">Fotos: </label>
+			<label class="col-md-offset-2 col-md-2 control-label">Fotos: </label>
 			<div class="col-md-4">
 				<input id="configurar_foto" type="text" class="form-control" placeholder="url">
 			</div>
 		</div>
 
 		<div class="row form-group">
-			<label class="col-md-offset-3 col-md-2 control-label">Color-pedidos: </label>
+			<label class="col-md-offset-2 col-md-2 control-label">Color-pedidos: </label>
 			<div class="col-md-4">
 				<input id="configurar_pedidos" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
@@ -35,7 +35,7 @@
 		</div>
 
 		<div class="row form-group">
-			<label class="col-md-offset-3 col-md-2 control-label">Color-fraudes: </label>
+			<label class="col-md-offset-2 col-md-2 control-label">Color-fraudes: </label>
 			<div class="col-md-4">
 				<input id="configurar_fraudes" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>
@@ -43,7 +43,7 @@
 		</div>
 
 		<div class="row form-group">
-			<label class="col-md-offset-3 col-md-2 control-label">Color-ventas: </label>
+			<label class="col-md-offset-2 col-md-2 control-label">Color-ventas: </label>
 			<div class="col-md-4">
 				<input id="configurar_venta" type="text" class="form-control" placeholder="#xxxxxx">
 			</div>

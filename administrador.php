@@ -95,6 +95,7 @@
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
                                   "height" : "40px",
+                                  "border-radius" : "5px",
                                   "background-color" : param[2]
                                 });
 
@@ -104,6 +105,7 @@
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
                                   "height" : "40px",
+                                  "border-radius" : "5px",
                                   "background-color" : param[3]
                                 });
 
@@ -113,6 +115,7 @@
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
                                   "height" : "40px",
+                                  "border-radius" : "5px",
                                   "background-color" : param[4]
                                 });
                 }

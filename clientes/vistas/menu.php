@@ -37,14 +37,14 @@
     { 
       $mes = $x + 1;
       echo "<li><a href='?m=" . $mes . "&y=" . $year ."';>" .
-                  $spanish[$x] . " " . $year . "&c=" . $cliente . "</li></a>";
+                  $spanish[$x] . " " . $year . "&c=" . $GLOBLAS['cliente'] . "</li></a>";
       if($x == 0)
       {
         for($x = 11; $x >= $mes_actual; $x--)
         {
           $mes = $x + 1;
           echo "<li><a href='?m=" . $mes . "&y=" . $ultimoRegistro ."';>" . 
-          $spanish[$x] . " " . $ultimoRegistro . "&c=" . $cliente .  "</li></a>";
+          $spanish[$x] . " " . $ultimoRegistro . "&c=" . $GLOBLAS['cliente'] .  "</li></a>";
         }
         break;
       }

@@ -36,15 +36,15 @@
     for($x = $mes_actual; $x >= 0; $x--)
     { 
       $mes = $x + 1;
-      echo "<li><a href='?m=" . $mes . "&y=" . $year ."'>" .
-                  $spanish[$x] . " " . $year . "&c=" . $GLOBALS['cliente'] . "</li></a>";
+      echo "<li><a href='?m=" . $mes . "&y=" . $year . "&c=" . $GLOBALS['cliente'] . "'>" .
+                  $spanish[$x] . " " . $year . "</li></a>";
       if($x == 0)
       {
         for($x = 11; $x >= $mes_actual; $x--)
         {
           $mes = $x + 1;
-          echo "<li><a href='?m=" . $mes . "&y=" . $ultimoRegistro ."'>" . 
-          $spanish[$x] . " " . $ultimoRegistro . "&c=" . $GLOBALS['cliente'] .  "</li></a>";
+          echo "<li><a href='?m=" . $mes . "&y=" . $ultimoRegistro . "&c=" . $GLOBALS['cliente'] . "'>" . 
+          $spanish[$x] . " " . $ultimoRegistro .  "</li></a>";
         }
         break;
       }

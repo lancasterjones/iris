@@ -44,7 +44,7 @@
       <div class="container-fluid" style="background-color: #FAFAF6;">
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-            <div id="logo_vende" class="col-sm-offset-3 col-sm-2"></div>
+            <div id="periodo" class="col-sm-offset-3 col-sm-2"></div>
             <div class="col-sm-4"></div>
             <div id="logo_cliente" class="col-sm-2"></div>
         </div>
@@ -103,7 +103,7 @@
     $(document).ready(function(){
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
-        cargarContenido("menu", "vende", "menu");
+        cargarContenido("periodo", "vistas", "fecha");
         cargarContenido("logo_cliente", "vistas", "logo");
         cargarContenido("fila_uno_info", "vistas", "info");
         cargarContenido("fila_uno", "vistas", "tablero_principal");

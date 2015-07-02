@@ -1,4 +1,18 @@
 <?php
+	//conexión a bd
+
+	$server_vende  = "104.236.137.39";
+	$usuario_vende = "admin_fotos";
+	$pass_vende    = "9Fdvi3D4LR";
+	$db_name_vende = "admin_sistemaproductos";
+
+	$con_vende = new mysqli($server_vende, $usuario_vende, $pass_vende, $db_name_vende)
+						or die("Error " . mysqli_error($con_tecnolite));
+
+	$consulta = mysqli_query($con_vende, "SELECT metricas.cliente
+						    FROM admin_sistemaproductos.metricas metricas
+							GROUP BY metricas.cliente");
+
 	function crearPeriodos()
 		{
 			$mes_actual = date('n');
@@ -39,8 +53,14 @@
 			<div class="col-md-4 ">
 				<select class="form-control" id="select_cte_metricas">
 					<option></option>
-					<option>LOB</option>
-					<option>TECNOLITE</option>
+
+					<?php
+						while($row = mysqli_fetch_array($consulta))
+							{
+								echo "<option>" . $row['cliente'] . "</option>";
+							}
+					?>
+					
 				</select>
 			</div>
 		</div>

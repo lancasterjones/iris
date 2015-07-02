@@ -167,20 +167,19 @@
                   fraudes: fraudes,
                   ventas: ventas
             },
-            success: function(){
+            success: function()
+            {
                 $('#icono_btn_conf').addClass('fa-check');
                 $('#btn_configuracion').html('Guardado');
                       setTimeout(function(){
-                            $('#icono_btn_conf').removeClass('fa-check');
-                            $('#btn_configuracion').html('Guardar');
-                      });
+                            cargarContenido("fila_dos", "vende", "configurar_cliente");
+                      }, 3000);
 
                 console.log("Datos guardados: cliente: " + cliente + " " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);
-                cargarContenido("fila_dos", "vende", "configurar_cliente");
-            }
-        });
+            } //success
+        }); //ajax
 
-      }
+      }//funcion
 
     
     $(document).ready(function(){

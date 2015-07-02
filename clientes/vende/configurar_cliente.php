@@ -13,7 +13,7 @@
 		</div>
 
 		<div class="row form-group">
-			<label class="col-md-offset-2 col-md-2 control-label">Nuevo: </label>
+			<label class="col-md-offset-2 col-md-2 control-label">Registrar nuevo: </label>
 			<div class="col-md-4">
 				<input id="nuevo_cliente" type="text" class="form-control">
 			</div>

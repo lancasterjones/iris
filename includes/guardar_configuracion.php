@@ -16,5 +16,6 @@
 
     $consulta = mysqli_query($con_vende, "INSERT INTO sistema_multicliente(cliente, url_logo, url_foto, color_pedidos, color_fraudes, color_ventas) 
     										VALUES ('$cliente', '$logo', '$foto', '$pedidos', '$fraudes', '$ventas') 
-    										   ON DUPLICATE KEY UPDATE url_logo = $logo, url_foto = $foto");
+    										   ON DUPLICATE KEY UPDATE url_logo = $logo, url_foto = $foto, color_pedidos = $pedidos,
+                                                                      color_fraudes = $fraudes, color_ventas = $ventas");
 ?>

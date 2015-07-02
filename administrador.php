@@ -146,8 +146,23 @@
                   ventas: ventas
                    });*/
 
-          $('#btn-configuracion').addClass('fa fa-check');
-          console.log("Datos guardados: cliente: " + cliente + " " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);
+        $.ajax({
+            method: "POST",
+            url: "includes/guardar_configuracion.php",
+            data: {
+                  cliente : cliente,
+                  logo: logo,
+                  foto: foto,
+                  pedidos: pedidos,
+                  fraudes: fraudes,
+                  ventas: ventas
+            },
+            success: function(){
+                $('#btn-configuracion').addClass('fa fa-check');
+                console.log("Datos guardados: cliente: " + cliente + " " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);
+            }
+        });
+
       }
 
     function cargarContenido(elemento, empresa, archivo, mes){

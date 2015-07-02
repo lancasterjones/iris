@@ -170,7 +170,7 @@
             success: function()
             {
                 $('#icono_btn_conf').addClass('fa-check');
-                $('#btn_configuracion').html('Guardado');
+                $('#btn-configuracion').html('Guardado');
                       setTimeout(function(){
                             cargarContenido("fila_dos", "vende", "configurar_cliente");
                       }, 3000);

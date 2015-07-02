@@ -12,7 +12,7 @@
                 location.href='index.php';
                 </script>";
         }
-    $cliente = $_SESSION['user_email'];
+    $cliente = $_REQUEST['cliente'];
     
     $con_logo   = new mysqli("104.236.137.39","admin_fotos","9Fdvi3D4LR","admin_sistemaproductos");
     $query_logo = "SELECT url_logo FROM sistema_multicliente WHERE cliente = '$cliente'";

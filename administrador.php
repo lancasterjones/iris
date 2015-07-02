@@ -144,15 +144,27 @@
 
     function traerMetricas()
       {
+          $('#select_cte_metricas, #select_periodo').change(function(){
+                var cliente = $('#select_cte_metricas').val();
+                var periodo = $('#select_periodo').val();
+                var visitas = $('#configurar_visitas').val;
+                var conversion = $('#configurar_conversion').val;
+                var ticket = $('#configurar_ticket').val;
 
-          $('#select_cte_metricas').change(function(){
-                var cliente = $(this).val();
-                console.log("cliente " + cliente);
-          });
+                $.ajax({
+                    method: "POST",
+                    url: "includes/traer_metricas.php",
+                    data: {cliente: cliente, periodo: periodo},
+                    dataType: "text",
+                    success: function(data){
+                        var datos = data.split("***");
+                        $('#configurar_visitas').val(datos[0]);
+                        $('#configurar_conversion').val(datos[1]);
+                        $('#configurar_ticket').val(datos[2]);
 
-          $('#select_periodo').change(function(){
-                var periodo = $(this).val();
-                console.log("periodo " + periodo);
+                        console.log("cliente " + cliente + " periodo: " + periodo + " visitas " + visitas + " conversion " + conversion + " ticket " + ticket);
+                    }
+                });    //ajax            
           });
       }
 

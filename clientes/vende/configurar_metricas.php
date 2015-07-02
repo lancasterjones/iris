@@ -60,7 +60,7 @@
 								echo "<option>" . $row['cliente'] . "</option>";
 							}
 					?>
-					
+
 				</select>
 			</div>
 		</div>
@@ -72,6 +72,13 @@
 					<option></option>
 					<?php crearPeriodos(); ?>
 				</select>
+			</div>
+		</div>
+
+		<div class="row form-group">
+			<label class="col-md-offset-2 col-md-2 control-label">Registrar cliente: </label>
+			<div class="col-md-4">
+				<input id="configurar_metricas_cliente" type="text" class="form-control" placeholder="Solo mayusculas">
 			</div>
 		</div>
 

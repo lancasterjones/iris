@@ -98,7 +98,6 @@
 </div>
 
 <script>
-    console.log('<?php echo "pedidos" . $pedidos . " fraudes " . $fraudes . " ventas " . $ventas; ?>');
 	$(function () {
         $('#reporte_principal').highcharts({
             chart: { zoomType: 'xy' },
@@ -145,18 +144,18 @@
                 type: 'column',
                 yAxis: 1,
                 data: [<?php crearEstadisticas("pedidos"); ?>],
-                color: '#FF9900'
+                color: '<?php echo $pedidos; ?>'
             }, {
                 name: 'Fraudes',
                 type: 'column',
                 yAxis: 1,
                 data: [<?php crearEstadisticas("fraudes"); ?>],
-                color: '#c82536'
+                color: '<?php echo $fraudes; ?>'
             }, {
                 name: 'Venta',
                 type: 'spline',
                 data: [<?php crearEstadisticas("ventas"); ?>],
-                color: '#47D147',
+                color: '<?php echo $ventas; ?>',
                 tooltip: {
                     valuePrefix: '$ '
                 }

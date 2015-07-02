@@ -1,8 +1,8 @@
 <?php
-	$cliente = $_REQUEST['cliente'];
-	$fecha   = $_REQUEST['fecha'];
-    $visitas = intval($_REQUEST['visitas']); 
-    $ticket  = floatval($_REQUEST['ticket']);
+	$cliente   = $_REQUEST['cliente'];
+	$fecha     = $_REQUEST['fecha'];
+    $visitas   = intval($_REQUEST['visitas']); 
+    $ticket    = floatval($_REQUEST['ticket']);
     $conversion = floatval($_REQUEST['conversion']);
 
     $server_vende  = "104.236.137.39";

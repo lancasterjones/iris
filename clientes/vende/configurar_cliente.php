@@ -1,3 +1,20 @@
+<?php
+	//conexión a bd
+
+	$server_vende  = "104.236.137.39";
+	$usuario_vende = "admin_fotos";
+	$pass_vende    = "9Fdvi3D4LR";
+	$db_name_vende = "admin_sistemaproductos";
+
+	$con_vende = new mysqli($server_vende, $usuario_vende, $pass_vende, $db_name_vende)
+						or die("Error " . mysqli_error($con_tecnolite));
+
+	$consulta = mysqli_query($con_vende, "SELECT sistema_multicliente.cliente
+						    FROM admin_sistemaproductos.sistema_multicliente sistema_multicliente
+							GROUP BY sistema_multicliente.cliente");
+
+?>
+
 <div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 	<legend>Configurar Vista de Cliente</legend>
 
@@ -6,8 +23,15 @@
 			<div class="col-md-4 ">
 				<select class="form-control" id="select_cliente">
 					<option></option>
-					<option>LOB</option>
-					<option>TECNOLITE</option>
+
+					<?php
+						while($row = mysqli_fetch_array($consulta))
+							{
+								if($row['cliente'] != 'VENDE')
+									echo "<option>" . $row['cliente'] . "</option>";
+							}
+					?>
+
 				</select>
 			</div>
 		</div>
@@ -15,7 +39,7 @@
 		<div class="row form-group">
 			<label class="col-md-offset-2 col-md-2 control-label">Registrar nuevo: </label>
 			<div class="col-md-4">
-				<input id="nuevo_cliente" type="text" class="form-control">
+				<input id="nuevo_cliente" type="text" class="form-control" placeholder="Sólo mayúsculas">
 			</div>
 		</div>
 

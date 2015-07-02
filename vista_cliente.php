@@ -1,116 +1,139 @@
 <?php
-      if (version_compare(PHP_VERSION, '5.3.7', '<')) 
-      {
-          exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
-      } 
-      else if (version_compare(PHP_VERSION, '5.5.0', '<')) 
-      {
-          require_once("libraries/password_compatibility_library.php");
-      }
+  ini_set('display_errors', 'On');
+    error_reporting(E_ALL);
 
-    require_once("config/db.php");
-    require_once("classes/Login.php");
+  require_once("../../config/db.php");
+    require_once("../../classes/Login.php");
     $login = new Login();
 
-      if ($login->isUserLoggedIn() == false) 
+    if ($login->isUserLoggedIn() == false) 
+    {
+      echo "<script>
+            location.href='index.php';
+            </script>";
+    }
+
+
+  $mes  = date('n');
+  $year = date('Y'); 
+  $cliente = $_REQUEST['cliente'];
+  $link = "administrador.php?m=" . $mes . "&y=" . $year . "&c=" . $cliente;
+
+  $url  = $_SERVER['REQUEST_URI'];
+  $host = $_SERVER['HTTP_HOST'];
+
+  function registroMeses()
+  {
+    $mes_actual = date('n') - 1;
+    $year       = date('Y');
+    $ultimoRegistro = $year - 1;
+    
+    $spanish = array("Enero", "Febrero", "Marzo", "Abril", 
+             "Mayo", "Junio", "Julio", "Agosto", 
+             "Septiembre", "Octubre", "Noviembre", 
+             "Diciembre");
+
+    for($x = $mes_actual; $x >= 0; $x--)
+    { 
+      $mes = $x + 1;
+      echo "<li><a href='?m=" . $mes . "&y=" . $year ."';>" .
+                  $spanish[$x] . " " . $year . "&c=" . $cliente . "</li></a>";
+      if($x == 0)
       {
-         echo "<script>
-                location.href='index.php';
-              </script>";
+        for($x = 11; $x >= $mes_actual; $x--)
+        {
+          $mes = $x + 1;
+          echo "<li><a href='?m=" . $mes . "&y=" . $ultimoRegistro ."';>" . 
+          $spanish[$x] . " " . $ultimoRegistro . "&c=" . $cliente .  "</li></a>";
+        }
+        break;
+      }
+    }
+    
+  }
 
-      } 
-
-    $cliente = $_REQUEST['c'];
-    $mes     = $_REQUEST['m'];
-    $year    = $_REQUEST['y'];
 ?>
+<nav class="navbar navbar-inverse sidebar" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Iris</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href='<?php echo $link; ?>'>
+            Inicio
+            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+          </a>
+        </li>
 
-<!DOCTYPE html>
-<html lang='es'>
-  <head>
-    <title><?php echo $cliente; ?> :: IRIS</title>
-    <?php include 'includes/head.php'; ?>
-    <script type="text/javascript" src="includes/Chart.js"></script>
-    <script type="text/javascript" src="includes/script_reportes.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="http://code.highcharts.com/modules/exporting.js"></script>
-    <style type="text/css">
-          @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
-    </style>
-  </head>
-  <body>
-      <nav id="menu" class="navbar navbar-inverse sidebar" role="navigation"></nav>
-
-      <div class="container-fluid" style="background-color: #FAFAF6;">
-
-        <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-            <div id="periodo" class="col-sm-offset-3 col-sm-2"></div>
-            <div class="col-sm-4"></div>
-            <div id="logo_cliente" class="col-sm-2"></div>
-        </div>
-
-        <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-          <div id="fila_uno_info" class="col-sm-offset-2 col-sm-3"></div>
-          <div id="fila_uno" class="col-sm-7"></div>
-        </div>
-
-        <div class="row" style="margin-top: 3%; margin-bottom: 3%;">
-          <div id="fila_dos" class="col-sm-offset-2 col-sm-10"></div>
-        </div>
-
-        <div class="row" style="margin-top: 3%; margin-bottom: 3%;"> 
-          <div id="fila_tres" class="col-sm-offset-2 col-sm-10"></div>
-        </div>
-      </div>
-
-  <script>
-
-    function deslizar()
-    {      
-      $('#menu_vistos').click(function(){
-          $('html, body').animate({
-              scrollTop: $('#fila_dos').offset().top
-          }, 1000);
-      });
-      $("#menu_vendidos").click(function(){
-          $('html, body').animate({
-              scrollTop: $('#fila_tres').offset().top
-          }, 1000);
-      });
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Clientes 
+            <span class="caret"></span> 
+            <span style="font-size: 16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-th"></span>
+          </a>
+          <ul class="dropdown-menu forAnimate" role="menu">
+            <li>
+              <a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=LOB";?>" onclick="console.log($this.html());">
+                Lob
+              </a>
+            </li>
+            <li>
+              <a href="<?php echo "vista_cliente.php?m=" . $mes . "&y=" . $year . "&c=TECNOLITE";?>">
+                Tecno lite
+              </a>
+            </li>
+          </ul>
+        </li>
       
-    }
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Meses <span class="caret"></span>
+            <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-calendar"></span>
+          </a>
+          <ul class="dropdown-menu forAnimate" role="menu">       
+            <?php registroMeses(); ?>         
+          </ul>
+        </li>
+        <li>
+          <a href="#" id="conf_cliente">
+            Configurar cliente<i id="icon_reg" style="font-size: 16px;" class="fa fa-cogs hidden-xs pull-right"></i>
+          </a>
+        </li>
+        <li>
+          <a href="register.php" id="registrar">
+            Nuevo usuario<i id="icon_reg" style="font-size: 16px;" class="fa fa-user-plus hidden-xs pull-right"></i>
+          </a>
+        </li>   
+        <li>
+          <a href="#" id="anc_act" onclick="actualizar();">
+            Sincronizar<i id="icon_act" style="font-size: 16px;" class="glyphicon glyphicon-refresh hidden-xs pull-right"></i>
+          </a>
+        </li>
+        <li>
+          <a href="index.php?logout">
+            Salir <i class="glyphicon glyphicon-log-out hidden-xs pull-right"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    function cargarContenido(elemento, empresa, archivo, mes){
-      var ruta = "clientes/" + empresa + "/" + archivo + ".php";
-      var mes  = '<?php echo $mes; ?>';
-      var year = '<?php echo $year; ?>';
-      var cliente = '<?php echo $cliente; ?>';
-        $.ajax({
-          method: "POST",
-          url: ruta,
-          data: {
-            mes: mes,
-            cliente : cliente,
-            year: year   },
-          dataType: "html",
-          success: function(result){
-              $("#" + elemento).html(result);
-          }
-        });
+<script>
+  function actualizar(){
+    $.get("includes/actualizar_bd.php");
+    $('#icon_act').remove();
+    $('#anc_act').append('<i id="icon_nvo" style="font-size: 16px;" class="glyphicon glyphicon-ok hidden-xs pull-right"></i>');
+    return false;
+  }
 
-    }
 
-    $(document).ready(function(){
-        cargarContenido("menu", "vende" , "menu");
-        cargarContenido("periodo", "vistas", "fecha");
-        cargarContenido("logo_cliente", "vistas", "logo");
-        cargarContenido("fila_uno_info", "vistas", "info");
-        cargarContenido("fila_uno", "vistas", "tablero_principal");
-        cargarContenido("fila_dos", "vistas", "vendidos");
-        cargarContenido("fila_tres", "vistas", "vistos");
-        
-    })
-  </script>
-
-  </body>
-</html> 
+</script>

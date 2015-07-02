@@ -48,7 +48,7 @@
 	$cliente = $_SESSION['user_email'];
 	$link = "administrador.php?m=" . $mes . "&y=" . $year . "&c=" . $cliente;
 
-	$url = $_SERVER['REQUEST_URI'];
+	$url  = $_SERVER['REQUEST_URI'];
 	$host = $_SERVER['HTTP_HOST'];
 ?>
 <nav class="navbar navbar-inverse sidebar" role="navigation">

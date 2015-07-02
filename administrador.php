@@ -65,6 +65,25 @@
 
   <script>
 
+    function cargarContenido(elemento, empresa, archivo, mes)
+      {
+        var ruta = "clientes/" + empresa + "/" + archivo + ".php";
+        var mes  = '<?php echo $mes; ?>';
+        var year = '<?php echo $year; ?>';
+          $.ajax({
+            method: "POST",
+            url: ruta,
+            data: {
+              mes: mes,
+              year: year   },
+            dataType: "html",
+            success: function(result){
+                $("#" + elemento).html(result);
+            }
+          });
+      }
+
+
     function deslizar()
     {  
       $("#conf_cliente").click(function(){
@@ -91,11 +110,11 @@
 
                     $('#configurar_pedidos').val(param[2]);
                         $("#muestra_pedidos").css({
+                                  "width" : "45px;",
                                   "border-style": "solid", 
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
                                   "height" : "40px",
-                                  "width" : "45px;",
                                   "border-radius" : "5px",
                                   "background-color" : param[2]
                                 });
@@ -137,15 +156,6 @@
           var fraudes = $('#configurar_fraudes').val();
           var ventas  = $('#configurar_venta').val();
 
-          /*$.post("includes/guardar_configuracion.php", {
-                  cliente : cliente,
-                  logo: logo,
-                  foto: foto,
-                  pedidos: pedidos,
-                  fraudes: fraudes,
-                  ventas: ventas
-                   });*/
-
         $.ajax({
             method: "POST",
             url: "includes/guardar_configuracion.php",
@@ -158,31 +168,21 @@
                   ventas: ventas
             },
             success: function(){
-                $('#btn-configuracion').addClass('fa fa-check');
+                $('#icono_btn_conf').addClass('fa-check');
+                $('#btn_configuracion').html('Guardado');
+                      setTimeout(function(){
+                            $('#icono_btn_conf').removeClass('fa-check');
+                            $('#btn_configuracion').html('Guardar');
+                      });
+
                 console.log("Datos guardados: cliente: " + cliente + " " + logo + " foto: " + foto + " pedidos: " + pedidos + fraudes + ventas);
+                cargarContenido("fila_dos", "vende", "configurar_cliente");
             }
         });
 
       }
 
-    function cargarContenido(elemento, empresa, archivo, mes){
-      var ruta = "clientes/" + empresa + "/" + archivo + ".php";
-      var mes  = '<?php echo $mes; ?>';
-      var year = '<?php echo $year; ?>';
-        $.ajax({
-          method: "POST",
-          url: ruta,
-          data: {
-            mes: mes,
-            year: year   },
-          dataType: "html",
-          success: function(result){
-              $("#" + elemento).html(result);
-          }
-        });
-
-    }
-
+    
     $(document).ready(function(){
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 

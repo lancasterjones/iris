@@ -59,7 +59,9 @@
 
 		<div class="row form-group">
 			<div class="col-md-offset-5">
-				<button id="btn-configuracion" class="btn btn-success" onclick="guardarConfiguracion();">Guardar</button>
+				<button id="btn-configuracion" class="btn btn-success" onclick="guardarConfiguracion();">
+					Guardar <i class="fa" style="margin-left: 1 %;" id="icono_btn_conf"></i>
+				</button>
 			</div>
 		</div>
 </div>

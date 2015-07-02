@@ -64,7 +64,7 @@
       </div>
 
   <script>
-
+    //------busca e inserta los modulos html------------------------
     function cargarContenido(elemento, empresa, archivo, mes)
       {
         var ruta = "clientes/" + empresa + "/" + archivo + ".php";
@@ -83,6 +83,7 @@
           });
       }
 
+    //-------al elegir una opción en el menú se desliza hasta hasta el div correspondiente--
 
     function deslizar()
     {  
@@ -93,6 +94,8 @@
       });
       
     }
+
+    //------trae los colores y url personalizados de la vista cliente----------
 
     function traerConfiguracion()
       {
@@ -167,6 +170,38 @@
                 });    //ajax            
           });
       }
+
+    //------almacena los datos del formulario metricas en tabla metricas, db vende--------
+    function guardarMetricas()
+      {
+            var cliente = $('#configurar_metricas_cliente').val();
+               if(cliente == '') cliente = $('#select_cte_metricas').val();
+
+            var periodo = $('#select_periodo').val();
+            var visitas = $('#configurar_visitas').val;
+            var conversion = $('#configurar_conversion').val;
+            var ticket = $('#configurar_ticket').val;  
+
+            $.ajax({
+                method: "POST",
+                url: "includes/guardar_metricas.php",
+                data: {
+                    cliente: cliente,
+                    fecha: periodo,
+                    visitas: visitas,
+                    ticket: ticket,
+                    conversion: conversion
+                },
+                success: function(){
+                  $('#icono_btn_metri').addClass('fa-check');
+                  $('#btn-metricas').html('Guardado');
+                      setTimeout(function(){
+                            cargarContenido("fila_tres", "vende", "configurar_metricas");
+                      }, 3000);
+                }
+            }); 
+      }
+
 
     function guardarConfiguracion()
       {

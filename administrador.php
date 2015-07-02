@@ -147,7 +147,7 @@
 
     function traerMetricas()
       {
-          $('#select_cte_metricas, #select_periodo').change(function(){
+          $('#select_periodo').change(function(){
                 var cliente = $('#select_cte_metricas').val();
                 var periodo = $('#select_periodo').val();
                 var visitas = $('#configurar_visitas').val;
@@ -180,9 +180,11 @@
             var periodo = $('#select_periodo').val();
             var visitas = $('#configurar_visitas').val;
             var conversion = $('#configurar_conversion').val;
-            var ticket = $('#configurar_ticket').val;  
+            var ticket = $('#configurar_ticket').val; 
 
-            $.ajax({
+            console.log(" cliente: " + cliente + " periodo " + periodo + " visitas " visitas + " conversion " + conversion + "ticket" + ticket); 
+
+            /*$.ajax({
                 method: "POST",
                 url: "includes/guardar_metricas.php",
                 data: {
@@ -199,7 +201,7 @@
                             cargarContenido("fila_tres", "vende", "configurar_metricas");
                       }, 3000);
                 }
-            }); 
+            }); */
       }
 
 

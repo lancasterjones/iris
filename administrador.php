@@ -101,6 +101,9 @@
       {
         $('#select_cliente').change(function(){
              var cliente = $(this).val();
+                if(cliente != '') $('#nuevo_cliente').prop('disabled', true);
+                    else $('#nuevo_cliente').prop('disabled', false);
+
              $.ajax({
                 method: "POST",
                 url: "includes/traer_configuracion.php",

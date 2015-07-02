@@ -11,7 +11,7 @@
 
       } 
 
-    $cliente = $_SESSION['user_email'];
+    $cliente = $_REQUEST['clientes'];
 
 	//recolectar variables
 	$mes  = $_REQUEST['mes'];

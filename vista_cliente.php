@@ -104,11 +104,11 @@
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
         cargarContenido("menu", "vende", "menu");
-        cargarContenido("logo_cliente", "reportes_admin", "logo");
-        cargarContenido("fila_uno_info", "reportes_admin", "info");
+        cargarContenido("logo_cliente", "vistas", "logo");
+        cargarContenido("fila_uno_info", "vistas", "info");
         cargarContenido("fila_uno", "vistas", "tablero_principal");
-        cargarContenido("fila_dos", "reportes_admin", "vendidos");
-        cargarContenido("fila_tres", "reportes_admin", "vistos");
+        cargarContenido("fila_dos", "vistas", "vendidos");
+        cargarContenido("fila_tres", "vistas", "vistos");
         
     })
   </script>

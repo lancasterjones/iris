@@ -101,8 +101,7 @@
     }
 
     $(document).ready(function(){
-        var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
-
+        cargarContenido("menu", "vende" , "menu");
         cargarContenido("periodo", "vistas", "fecha");
         cargarContenido("logo_cliente", "vistas", "logo");
         cargarContenido("fila_uno_info", "vistas", "info");

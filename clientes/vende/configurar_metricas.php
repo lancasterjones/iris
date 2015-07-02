@@ -1,3 +1,26 @@
+<?php
+	function crearPeriodos()
+		{
+			$mes_actual = date('m');
+			$year       = date('Y');
+			$ultimoRegistro = $year - 1;
+
+			for($x = $mes_actual; $x >= 1; $x--)
+			{				
+				echo "<option value='" . $year . $x . "'>" .  $year . $x . "</option>";
+				if($x == 0)
+				{
+					for($x = 12; $x >= $mes_actual; $x--)
+					{
+						$periodo =  $ultimoRegistro . $x ;
+						"<option value='" . $periodo . "'>" . $periodo . "</option>"
+					}
+					break;
+				}
+			}
+			
+		}
+?>
 <div class="container-fluid" style="border-top-style: solid; border-color: #E7E7E6; border-width: 3px;">
 	<legend>Asignar métricas a Vista-Cliente</legend>
 
@@ -17,8 +40,7 @@
 			<div class="col-md-4 ">
 				<select class="form-control" id="select_periodo">
 					<option></option>
-					<option value="201506">Junio 2015</option>
-					<option value="201507">Julio 2015</option>
+					<?php crearPeriodos(); ?>
 				</select>
 			</div>
 		</div>

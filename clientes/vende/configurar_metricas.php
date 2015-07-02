@@ -1,19 +1,29 @@
 <?php
 	function crearPeriodos()
 		{
-			$mes_actual = date('m');
+			$mes_actual = date('n');
 			$year       = date('Y');
 			$ultimoRegistro = $year - 1;
+			$meses = array("","Enero", "Febrero", "Marzo", "Abril", 
+						 "Mayo", "Junio", "Julio", "Agosto", 
+						 "Septiembre", "Octubre", "Noviembre", 
+						 "Diciembre");
+
 
 			for($x = $mes_actual; $x >= 1; $x--)
-			{				
-				echo "<option value='" . $year . $x . "'>" .  $year . $x . "</option>";
+			{		
+				if($x < 10) $periodo = $year . "0" . $x;
+				$fecha = $meses[$x] . " " . $year;
+
+				echo "<option value='" . $periodo . "'>" .  $fecha  . "</option>";
 				if($x == 1)
 				{
 					for($x = 12; $x >= $mes_actual; $x--)
 					{
-						$periodo =  $ultimoRegistro . $x ;
-						echo "<option value='" . $periodo . "'>" . $periodo . "</option>";
+						if($x < 10) $periodo = $ultimoRegistro . "0" . $x;
+						$fecha = $meses[$x] . " " . $ultimoRegistro;
+
+						echo "<option value='" . $periodo . "'>" . $fecha . "</option>";
 					}
 					break;
 				}

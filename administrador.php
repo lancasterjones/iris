@@ -144,6 +144,12 @@
 
     function traerMetricas()
       {
+
+          $('#select_cte_metricas').change(function(){
+                var cliente = $(this).val();
+                console.log("cliente " + cliente);
+          });
+
           $('#select_periodo').change(function(){
                 var periodo = $(this).val();
                 console.log("periodo " + periodo);

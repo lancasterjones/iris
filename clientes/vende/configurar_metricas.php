@@ -2,6 +2,17 @@
 	<legend>Asignar métricas a Vista-Cliente</legend>
 
 		<div class="row form-group">
+			<label class="col-md-offset-2 col-md-2 control-label">Seleccionar cliente: </label>
+			<div class="col-md-4 ">
+				<select class="form-control" id="select_cte_metricas">
+					<option></option>
+					<option>LOB</option>
+					<option>TECNOLITE</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row form-group">
 			<label class="col-md-offset-2 col-md-2 control-label">Seleccionar periodo: </label>
 			<div class="col-md-4 ">
 				<select class="form-control" id="select_periodo">
@@ -42,3 +53,7 @@
 			</div>
 		</div>
 </div>
+
+<script>
+	traerMetricas();
+</script>

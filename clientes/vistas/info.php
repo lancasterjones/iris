@@ -40,6 +40,12 @@
 		$ticket     = $row_info['ticket'];
 	}
 
+	$consulta = mysqli_query($conect, "SELECT * FROM sistema_multicliente WHERE cliente = '$global_cliente'");
+        while($row = mysqli_fetch_array($consulta))
+            {
+                $color = $row['color_pedidos'];
+            }
+
 ?>
 
 <div class="container-fluid">
@@ -52,7 +58,7 @@
 				<tbody>
 					<tr>
 						<td>
-							<i class="fa fa-users" style="color: #ff9900; font-size: 25px;"></i>
+							<i class="fa fa-users" style="color: <?php echo $color; ?>; font-size: 25px;"></i>
 							<h5>N° de visitantes</h5>
 						</td>
 						<td>
@@ -61,7 +67,7 @@
 					</tr>
 					<tr>
 						<td>
-							<i class="fa fa-smile-o" style="color: #ff9900; font-size: 25px;"></i>
+							<i class="fa fa-smile-o" style="color: <?php echo $color; ?>; font-size: 25px;"></i>
 							<h5>% de conversión</h5>
 						</td>
 						<td>
@@ -70,7 +76,7 @@
 					</tr>
 					<tr>
 						<td>
-							<i class="fa fa-money" style="color: #ff9900; font-size: 25px;"></i>
+							<i class="fa fa-money" style="color: <?php echo $color; ?>; font-size: 25px;"></i>
 							<h5>Ticket promedio</h5>
 						</td>
 						<td>

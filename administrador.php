@@ -182,8 +182,6 @@
             var conversion = $('#configurar_conversion').val();
             var ticket = $('#configurar_ticket').val(); 
 
-            console.log(" cliente: " + cliente + " periodo " + periodo + " visitas " visitas + " conversion " + conversion + "ticket" + ticket); 
-
             $.ajax({
                 method: "POST",
                 url: "includes/guardar_metricas.php",

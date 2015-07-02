@@ -78,7 +78,7 @@
 		<div class="row form-group">
 			<label class="col-md-offset-2 col-md-2 control-label">Registrar cliente: </label>
 			<div class="col-md-4">
-				<input id="configurar_metricas_cliente" type="text" class="form-control" placeholder="Solo mayusculas">
+				<input id="configurar_metricas_cliente" type="text" class="form-control" placeholder="Sólo mayúsculas">
 			</div>
 		</div>
 
@@ -106,7 +106,7 @@
 
 		<div class="row form-group">
 			<div class="col-md-offset-5">
-				<button id="btn-metricas" class="btn btn-success" onclick="guardarConfiguracion();">
+				<button id="btn-metricas" class="btn btn-success" onclick="guardarMetricas();">
 					Guardar <i class="fa" style="margin-left: 1 %;" id="icono_btn_metri"></i>
 				</button>
 			</div>

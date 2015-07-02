@@ -13,6 +13,13 @@
 		</div>
 
 		<div class="row form-group">
+			<label class="col-md-offset-2 col-md-2 control-label">Nuevo: </label>
+			<div class="col-md-4">
+				<input id="nuevo_cliente" type="text" class="form-control">
+			</div>
+		</div>
+
+		<div class="row form-group">
 			<label class="col-md-offset-2 col-md-2 control-label">Logo: </label>
 			<div class="col-md-4">
 				<input id="configurar_logo" type="text" class="form-control" placeholder="url">

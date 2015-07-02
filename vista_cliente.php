@@ -84,11 +84,13 @@
       var ruta = "clientes/" + empresa + "/" + archivo + ".php";
       var mes  = '<?php echo $mes; ?>';
       var year = '<?php echo $year; ?>';
+      var cliente = '<?php echo $cliente; ?>';
         $.ajax({
           method: "POST",
           url: ruta,
           data: {
             mes: mes,
+            cliente : cliente,
             year: year   },
           dataType: "html",
           success: function(result){
@@ -102,11 +104,11 @@
         var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
 
         cargarContenido("menu", "vende", "menu");
-        cargarContenido("logo_cliente", cliente, "logo");
-        cargarContenido("fila_uno_info", cliente, "info");
-        cargarContenido("fila_uno", cliente, "tablero_principal");
-        cargarContenido("fila_dos", cliente, "vendidos");
-        cargarContenido("fila_tres", cliente, "vistos");
+        cargarContenido("logo_cliente", "reportes_admin", "logo");
+        cargarContenido("fila_uno_info", "reportes_admin", "info");
+        cargarContenido("fila_uno", "reportes_admin", "tablero_principal");
+        cargarContenido("fila_dos", "reportes_admin", "vendidos");
+        cargarContenido("fila_tres", "reportes_admin", "vistos");
         
     })
   </script>

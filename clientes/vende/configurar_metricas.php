@@ -4,7 +4,7 @@
 		<div class="row form-group">
 			<label class="col-md-offset-2 col-md-2 control-label">Seleccionar periodo: </label>
 			<div class="col-md-4 ">
-				<select class="form-control" id="select_cliente">
+				<select class="form-control" id="select_periodo">
 					<option></option>
 					<option>Junio 2015</option>
 					<option>Julio 2015</option>

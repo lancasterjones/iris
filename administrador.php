@@ -110,7 +110,6 @@
 
                     $('#configurar_pedidos').val(param[2]);
                         $("#muestra_pedidos").css({
-                                  "width" : "45px;",
                                   "border-style": "solid", 
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
@@ -125,7 +124,6 @@
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
                                   "height" : "40px",
-                                  "width" : "45px;",
                                   "border-radius" : "5px",
                                   "background-color" : param[3]
                                 });
@@ -136,7 +134,6 @@
                                   "border-width": "1px", 
                                   "border-color": "#ccc",
                                   "height" : "40px",
-                                  "width" : "45px;",
                                   "border-radius" : "5px",
                                   "background-color" : param[4]
                                 });
@@ -183,14 +180,12 @@
 
     
     $(document).ready(function(){
-        var cliente = <?php echo "'" .  strtolower($cliente) . "'"; ?>;
-
         cargarContenido("menu", "vende" , "menu");
         cargarContenido("logo_cliente", "vende", "logo");
         cargarContenido("fila_uno_info", "vende", "info");
         cargarContenido("fila_uno_usuarios", "vende", "usuarios");
         cargarContenido("fila_dos", "vende", "configurar_cliente");
-        cargarContenido("fila_tres", "vende", "vistos");
+        cargarContenido("fila_tres", "vende", "configurar_metricas");
         
     })
   </script>

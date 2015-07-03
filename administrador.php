@@ -34,7 +34,7 @@
     <script type="text/javascript" src="includes/script_reportes.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
-    <script type="text/javascript" src="jscolor/jscolor.js"></script>
+    <script type="text/javascript" src="includes/jscolor/jscolor.js"></script>
     <style type="text/css">
           @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
     </style>

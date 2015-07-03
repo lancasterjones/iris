@@ -98,4 +98,5 @@
 <script>
 	deslizar();
 	traerConfiguracion();
+	comprobarColor();
 </script>

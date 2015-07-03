@@ -34,6 +34,7 @@
     <script type="text/javascript" src="includes/script_reportes.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="jscolor/jscolor.js"></script>
     <style type="text/css">
           @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
     </style>
@@ -112,6 +113,7 @@
                 success: function(data){
                     var param = data.split("***");
                     $('#configurar_logo').val(param[0]);
+
                     $('#configurar_foto').val(param[1]);
 
                     $('#configurar_pedidos').val(param[2]);
@@ -244,7 +246,16 @@
         }); //ajax
 
       }//funcion
+    function comprobarColor()
+      {
+        $('#configurar_pedidos, #configurar_fraudes, #configurar_venta').change(function(){
+              var color = $(this).val();
+              var id = $(this).closest('div').attr('id');
+              console.log(color + " id " + id);
 
+              //$().css();
+        });
+      }
     
     $(document).ready(function(){
         cargarContenido("menu", "vende" , "menu");

@@ -10,7 +10,7 @@
 
 	$query = "SELECT users.user_name AS usuario, 
 					 users.user_email AS empresa
-  			FROM admin_sistemaproductos.users users"
+  			FROM admin_sistemaproductos.users users";
   	$consulta = mysqli_query($conect, $query);
 
 ?>

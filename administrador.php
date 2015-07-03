@@ -59,7 +59,7 @@
         </div>
 
         <div class="row" style="margin-top: 3%; margin-bottom: 3%;"> 
-          <div id="fila_tres" class="col-sm-offset-2 col-sm-10"></div>
+          <div id="fila_tres" class="col-sm-offset-3 col-sm-8"></div>
         </div>
       </div>
 

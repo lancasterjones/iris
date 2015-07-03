@@ -62,7 +62,7 @@
     {
         $semanas = new DateTime();
         $year    = $GLOBALS['current_year'];
-        $cliente = $_SESSION['user_email'];
+        $cliente = $_REQUEST['cliente'];
 
         for($sem = 1; $sem < 53; $sem++)
         {

@@ -28,8 +28,6 @@
 	$conect = new mysqli($servidor, $usuario, $pass, $db_name)
 			  or die("Imposible conectar a DB");
 
-	//crear consulta
-
 	$query_info    = "SELECT * FROM metricas 
 						WHERE cliente = '$cliente' AND fecha = $fecha";
 	$consulta_info = mysqli_query($conect, $query_info);
@@ -40,7 +38,7 @@
 		$ticket     = $row_info['ticket'];
 	}
 
-	$consulta = mysqli_query($conect, "SELECT * FROM sistema_multicliente WHERE cliente = '$global_cliente'");
+	$consulta = mysqli_query($conect, "SELECT * FROM sistema_multicliente WHERE cliente = '$cliente'");
         while($row = mysqli_fetch_array($consulta))
             {
                 $color = $row['color_pedidos'];

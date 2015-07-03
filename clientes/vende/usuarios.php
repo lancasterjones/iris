@@ -23,8 +23,12 @@
 		<div class="panel-body">
 			<table class="table table-hover">
 				<thead>
-					<th>Usuario</th>
-					<th>Compañía</th>
+					<th>
+						<span class="label label-success"> Usuario </span>
+					</th>
+					<th>
+						<span class="label label-success">Compañía </span>
+					</th>
 				</thead>
 				<tbody>
 

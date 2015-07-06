@@ -11,7 +11,7 @@
 
       } 
 
-    $cliente = $_REQUEST['clientes'];
+    $cliente = $_REQUEST['cliente'];
 
 	//recolectar variables
 	$mes  = $_REQUEST['mes'];

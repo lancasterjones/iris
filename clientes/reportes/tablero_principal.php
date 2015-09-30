@@ -163,4 +163,6 @@
             }]
         });
     });
+
+    console.log("Pedidos: <?php echo $pedidos; ?> Fraudes: <?php echo $fraudes; ?> Ventas: <?php echo $ventas; ?>");
 </script>
